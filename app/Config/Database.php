@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'rsuiyakssi',
+        'database' => 'rapmafm',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

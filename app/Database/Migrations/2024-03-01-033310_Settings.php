@@ -15,19 +15,35 @@ class Settings extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'nama' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
             'owner' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'telepon' => [
+            'slogan' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'author' => [
+            'nama_mtalent' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'no_mtalent' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'nama_medpart' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'no_medpart' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'ymail' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'gmail' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
@@ -35,19 +51,7 @@ class Settings extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'jadwal' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
-            'email' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
-            'fax' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
-            'instagram' => [
+            'twitter' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
@@ -55,13 +59,42 @@ class Settings extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
+            'instagram' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'youtube' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'spotify' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'whatsapp' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'blogger' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'line' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'tiktok' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'streaming' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
             'created_at' => [
                 'type'       => 'DATETIME',
             ],
             'updated_at' => [
-                'type'       => 'DATETIME',
-            ],
-            'deleted_at' => [
                 'type'       => 'DATETIME',
             ],
         ]);
