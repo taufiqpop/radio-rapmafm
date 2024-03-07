@@ -1,0 +1,66 @@
+.thumbnail {
+    height: 100px;
+    /* border-radius: 50%; */
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table > tbody > tr > th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table > thead > tr > th {
+    text-align: center;
+}
+
+/* Users */
+.user-details {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.role-profile {
+    margin-left: 15px;
+    text-align: center;
+}
+
+/* Details Data Backend */
+.detail-img {
+    margin-bottom: 10px;
+}
+
+.tombol-detail {
+    margin-top: 20px;
+}
+
+/* Sidebar Navbar */
+#accordionSidebar {
+    position: relative;
+}
+#navbar {
+    position: relative;
+}
+#page-content {
+    position: relative;
+}
+
+/* Cursor Mode */
+.cursor-active {
+    cursor: pointer;
+}
+
+.cursor-stop {
+    cursor: not-allowed;
+}
+
+/* Background Images */
+.bg-img {
+    background: url('/img/Wallpaper.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
