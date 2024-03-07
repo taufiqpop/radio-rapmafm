@@ -19,7 +19,7 @@ class User extends BaseController
     public function index()
     {
         $data = [
-            'title'         => 'RSUI YAKSSI | Dashboard',
+            'title'         => 'Rapma FM | Dashboard',
             'jmlUsers'      => $this->usersModel->jumlahUsers(),
             'jmlPasien'     => $this->pasienModel->jumlahPasien(),
             'jmlPesan'      => $this->pesanModel->jumlahPesan(),
@@ -29,11 +29,22 @@ class User extends BaseController
     }
 
     // My Profile
-    public function profile()
+    public function profile($id)
     {
         $data = [
-            'title' => 'RSUI YAKSSI| My Profile',
+            'title' => 'Rapma FM| My Profile',
+            'users' => $this->usersModel->findAll(),
         ];
+
+        $db      = \Config\Database::connect();
+        $builder = $db->table('users');
+        $builder->select('users.id as userid, username, email, fullname, user_image, name');
+        $builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
+        $builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
+        $builder->where('users.id', $id);
+        $query   = $builder->get();
+
+        $data['users'] = $query->getResultArray();
 
         return view('user/profile', $data);
     }
@@ -42,7 +53,7 @@ class User extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'      => 'RSUI YAKSSI | Form Edit Data',
+            'title'      => 'Rapma FM | Form Edit Data',
             'users'      => $this->usersModel->find($id),
             'validation' => \Config\Services::validation()
         ];
@@ -106,6 +117,6 @@ class User extends BaseController
 
         session()->setFlashdata('pesan', 'Data User Berhasil Diubah!');
 
-        return redirect('profile');
+        return redirect('admin');
     }
 }

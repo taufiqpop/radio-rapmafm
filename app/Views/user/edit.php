@@ -59,7 +59,7 @@
                     <!-- Button -->
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <a href="<?= base_url(); ?>profile" class="btn btn-dark mb-1">Back</a>
+                            <a href="<?= base_url(); ?>profile/<?= $user['id']; ?>" class="btn btn-dark mb-1">Back</a>
                             <button type="submit" class="btn btn-primary mb-1">Confirm Changes</button>
                         </div>
                     </div>

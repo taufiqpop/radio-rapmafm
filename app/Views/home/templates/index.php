@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+
+<!-- Teknisi On Air 2021 (Taufiq Pop) -->
+
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title; ?></title>
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -13,109 +16,107 @@
     <link rel="icon" href="<?= base_url(); ?>logo.ico">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|
+    Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,
+    700i" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="<?= base_url(); ?>vendor-frontend/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>vendor-frontend/animate.css/animate.min.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>vendor-frontend/aos/aos.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>vendor-frontend/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>vendor-frontend/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>vendor-frontend/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>vendor-frontend/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>vendor-frontend/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="<?= base_url(); ?>css/aos/aos.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>css/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>css/glightbox/glightbox.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>css/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- CSS Link -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Main CSS -->
-    <link href="<?= base_url(); ?>css/style-frontend.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/css/style.css" rel="stylesheet">
 
-    <!-- My CSS Frontend -->
-    <link href="<?= base_url(); ?>css/my-style-frontend.css" rel="stylesheet">
+    <!-- My CSS -->
+    <link href="<?= base_url(); ?>/css/my-style-frontend.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Top Bar -->
-    <?php foreach ($settings as $setting) : ?>
-        <div id="topbar" class="d-flex align-items-center fixed-top">
-            <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
-                <div class="align-items-center d-none d-md-flex">
-                    <i class="bi bi-clock"></i> <?= $setting['jadwal']; ?>
-                </div>
-                <div class="d-flex align-items-center">
-                    <i class="bi bi-clock d-flex align-items-center ms-4"></i>
-                    <span>
-                        <?php
-                        // Time Zone
-                        date_default_timezone_set('Asia/Jakarta');
-                        $hariIni = new DateTime();
-                        echo $hariIni->format('l, d F Y')
-                        ?>
-                        (<span id="jam"></span>
-                        <?= $hariIni->format('A') ?>)
-                    </span>
-                </div>
+    <!-- Mobile Nav Toggle Button -->
+    <i class="bi bi-list mobile-nav-toggle"></i>
+
+    <!-- Header -->
+    <header id="header" stats="false">
+        <div class="d-flex flex-column">
+            <div class="profile">
+                <img src="<?= base_url('img/RapmaFM Header.png') ?>" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="<?= base_url('rapmafm'); ?>" title="Rapma FM">Rapma FM</a></h1>
+            </div>
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a href="<?= base_url('/rapmafm/index'); ?>" class="nav-link scrollto"><i class="bx bx-home" title="Home"></i>
+                            <span>Home</span></a></li>
+                    <li><a href="<?= base_url('/rapmafm/structure'); ?>" class="nav-link scrollto"><i class="bx bx-user" title="Structure"></i>
+                            <span>Structure</span></a></li>
+                    <li><a href="<?= base_url('/rapmafm/program'); ?>" class="nav-link scrollto"><i class="bx bx-headphone" title="Program"></i>
+                            <span>Program</span></a></li>
+                    <li><a href="<?= base_url('/rapmafm/podcast'); ?>" class="nav-link scrollto"><i class="bx bx-microphone" title="Program"></i>
+                            <span>Podcast</span></a></li>
+                    <li><a href="<?= base_url('/rapmafm/newsflash'); ?>" class="nav-link scrollto"><i class="bx bx-news" title="Rapma News"></i>
+                            <span>Rapma News</span></a></li>
+                    <li><a href="<?= base_url('/rapmafm/events'); ?>" class="nav-link scrollto"><i class="bx bx-calendar-event" title="Event"></i>
+                            <span>Events</span></a></li>
+                    <li><a href="<?= base_url('/rapmafm/achievements'); ?>" class="nav-link scrollto"><i class="bx bx-trophy" title="achievement"></i>
+                            <span>Achievements</span></a></li>
+                    <li><a href="<?= base_url('/rapmafm/index#chart'); ?>" class="nav-link scrollto"><i class="bx bx-music" title="Top Chart"></i>
+                            <span>Top Chart</span></a></li>
+                    <li><a href="<?= base_url('/rapmafm/contact'); ?>" class="nav-link scrollto"><i class="bx bx-envelope" title="Contact"></i>
+                            <span>Contact</span></a></li>
+                </ul>
+            </nav>
+            <audio id="demosMenu" controls style="width: auto; height: 25px;">
+                <source src="https://c2.siar.us:9999/stream" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <?= $this->renderSection('page-content'); ?>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                Copyright <a href="<?= base_url(); ?>user" style="color:black;" target="_blank">
+                    &copy;</a> <strong><span><?= date('Y'); ?> Taufiq Pop</span></strong>
             </div>
         </div>
-
-        <!-- Header -->
-        <header id="header" class="fixed-top">
-            <div class="container d-flex align-items-center">
-                <!-- Logo RSUI -->
-                <a href="<?= base_url(); ?>" class="logo me-auto"><img src="<?= base_url(); ?>img/logo.png" alt=""> <?= $setting['nama']; ?></a>
-
-                <!-- Navbar -->
-                <nav id="navbar" class="navbar order-last order-lg-0">
-                    <ul>
-                        <li><a class="nav-link scrollto" href="index#hero">Home</a></li>
-                        <li><a class="nav-link scrollto" href="index#about">About</a></li>
-                        <li><a class="nav-link scrollto" href="index#services">Pelayanan</a></li>
-                        <li><a class="nav-link scrollto" href="index#departments">Poliklinik</a></li>
-                        <li><a class="nav-link scrollto" href="index#doctors">Dokter</a></li>
-                        <li class="dropdown"><a href="#"><span>Berita</span> <i class="bi bi-chevron-down"></i></a>
-                            <ul>
-                                <li><a href="#">Umum</a></li>
-                                <li><a href="#">Event</a></li>
-                                <li><a href="#">Karir</a></li>
-                                <li><a href="#">Kerja Sama</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="nav-link scrollto" href="<?= base_url(); ?>contact">Contact</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav>
-                <a href="https://api.whatsapp.com/send?phone=<?= $setting['telepon']; ?>&text=Halo%20Admin%20Saya%20Mau%20Booking%20Daftar" target="_blank" class="appointment-btn scrollto"><span class="d-none d-md-inline"><strong>Booking</span> Online</strong></a>
-            </div>
-        </header>
-
-
-        <!-- Main Content -->
-        <div id="content">
-
-            <?= $this->renderSection('page-content'); ?>
-
-        </div>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="container">
-                <div class="copyright">
-                    Copyright <strong><?= date('Y'); ?> <a href="<?= base_url(); ?>admin" style="color:black;" target="_blank">&copy;</a> <span><?= $setting['owner']; ?></span></strong>. All Rights Reserved
-                </div>
-            </div>
-        </footer>
-    <?php endforeach; ?>
+    </footer>
 
     <!-- JavaScript -->
-    <script src="<?= base_url(); ?>vendor-frontend/purecounter/purecounter_vanilla.js"></script>
-    <script src="<?= base_url(); ?>vendor-frontend/aos/aos.js"></script>
-    <script src="<?= base_url(); ?>vendor-frontend/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url(); ?>vendor-frontend/glightbox/js/glightbox.min.js"></script>
-    <script src="<?= base_url(); ?>vendor-frontend/swiper/swiper-bundle.min.js"></script>
+    <script src="<?= base_url(); ?>js/aos/aos.js"></script>
+    <script src="<?= base_url(); ?>js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url(); ?>js/glightbox/glightbox.min.js"></script>
+    <script src="<?= base_url(); ?>js/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="<?= base_url(); ?>js/purecounter/purecounter.js"></script>
+    <script src="<?= base_url(); ?>js/swiper/swiper-bundle.min.js"></script>
+    <script src="<?= base_url(); ?>js/typed.js/typed.min.js"></script>
+    <script src="<?= base_url(); ?>js/waypoints/noframework.waypoints.js"></script>
+    <script src="<?= base_url(); ?>vendor/jquery/jquery.min.js"></script>
+    <script src="<?= base_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url(); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Main JS -->
-    <script src="<?= base_url(); ?>js/main-frontend.js"></script>
+    <!-- JS Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- My JS Frontend -->
-    <script src="<?= base_url(); ?>js/my-scripts-frontend.js"></script>
+    <!-- Main JavaScript -->
+    <script src="<?= base_url(); ?>/js/main-frontend.js"></script>
+
+    <!-- My JS -->
+    <script src="<?= base_url(); ?>/js/my-scripts-frontend.js"></script>
 </body>
 
 </html>

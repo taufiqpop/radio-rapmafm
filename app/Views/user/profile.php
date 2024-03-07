@@ -19,6 +19,12 @@
                     <div class="col-md-4">
                         <!-- User Image -->
                         <img src="<?= base_url('/img/user/' . user()->user_image); ?>" class="card-img user-details" alt="<?= user()->username; ?>">
+
+                        <?php foreach ($users as $user) : ?>
+                            <div class="role-profile mt-1 mb-2">
+                                <span class="badge badge-danger"><?= $user['name']; ?></span>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
 
                     <!-- Card -->

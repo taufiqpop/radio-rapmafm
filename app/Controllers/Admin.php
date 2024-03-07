@@ -28,8 +28,8 @@ class Admin extends BaseController
         $users->orderBy('id', 'DESC');
 
         $data = [
-            'title'       => 'RSUI YAKSSI | User List',
-            'users'       => $users->paginate(5, 'users'),
+            'title'       => 'Rapma FM | User List',
+            'users'       => $users->paginate(10, 'users'),
             'pager'       => $users->pager,
             'currentPage' => $currentPage,
         ];
@@ -41,7 +41,7 @@ class Admin extends BaseController
     public function detail($id)
     {
         $data = [
-            'title' => 'RSUI YAKSSI | User Detail',
+            'title' => 'Rapma FM | User Detail',
             'users' => $this->usersModel->findAll(),
         ];
 

@@ -26,7 +26,7 @@ class Pesan extends BaseController
         $pesan->orderBy('id', 'DESC');
 
         $data = [
-            'title'         => 'RSUI YAKSSI | Pesan',
+            'title'         => 'Rapma FM | Pesan',
             'pesan'         => $pesan->paginate(5, 'pesan'),
             'pager'         => $pesan->pager,
             'currentPage'   => $currentPage,

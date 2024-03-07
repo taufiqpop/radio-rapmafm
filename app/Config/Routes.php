@@ -37,15 +37,15 @@ $routes->get('/contact', 'Contact::index');
 $routes->add('/contact/save', 'Contact::save');
 
 // Admin
-$routes->add('/admin', 'Admin::index', ['filter' => 'role:admin']);
-$routes->get('/admin/detail/(:segment)', 'Admin::detail/$1', ['filter' => 'role:admin']);
-$routes->delete('/user/admin/(:num)', 'Admin::delete/$1', ['filter' => 'role:admin']);
+$routes->add('/admin', 'Admin::index', ['filter' => 'role:Admin']);
+$routes->get('/admin/detail/(:num)', 'Admin::detail/$1', ['filter' => 'role:Admin']);
+$routes->delete('/user/admin/(:num)', 'Admin::delete/$1', ['filter' => 'role:Admin']);
 
 // User
 $routes->get('/user', 'User::index');
-$routes->get('/profile', 'User::profile');
-$routes->get('/user/edit/(:segment)', 'User::edit/$1');
-$routes->add('/user/update/(:segment)', 'User::update/$1');
+$routes->get('/profile/(:num)', 'User::profile/$1');
+$routes->get('/user/edit/(:num)', 'User::edit/$1');
+$routes->add('/user/update/(:num)', 'User::update/$1');
 
 // Password
 $routes->get('/password/(:num)', 'ChangePassword::index/$1');
@@ -56,15 +56,15 @@ $routes->add('/pesan', 'Pesan::index');
 
 // Settings
 $routes->get('/control/settings', 'Settings::index');
-$routes->add('/settings/update/(:segment)', 'Settings::update/$1');
+$routes->add('/settings/update/(:num)', 'Settings::update/$1');
 
 // Pages
 $routes->add('/control/pages', 'Pages::index');
 $routes->get('/control/pages/form', 'Pages::form');
 $routes->add('/pages/insert', 'Pages::insert');
-$routes->get('/control/pages/edit/(:segment)', 'Pages::edit/$1');
-$routes->add('/pages/update/(:segment)', 'Pages::update/$1');
-$routes->get('/control/pages/detail/(:segment)', 'Pages::detail/$1');
+$routes->get('/control/pages/edit/(:num)', 'Pages::edit/$1');
+$routes->add('/pages/update/(:num)', 'Pages::update/$1');
+$routes->get('/control/pages/detail/(:num)', 'Pages::detail/$1');
 $routes->delete('/control/pages/(:num)', 'Pages::delete/$1');
 
 /*

@@ -49,7 +49,7 @@
                 </div>
 
                 <!-- Button -->
-                <a href="<?= base_url(); ?>profile" class="btn btn-dark ml-2 mb-1">Back</a>
+                <a href="<?= base_url(); ?>profile/<?= $id; ?>" class="btn btn-dark ml-2 mb-1">Back</a>
                 <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah anda yakin?');">Change Password</button>
             </form>
         </div>

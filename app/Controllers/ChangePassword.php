@@ -13,7 +13,7 @@ class ChangePassword extends BaseController
             return redirect()->to(base_url('user/profile'));
         } else {
             $data = [
-                'title' => 'RSUI YAKSSI | Change Password',
+                'title' => 'Rapma FM | Change Password',
                 'id'    => $id,
             ];
 

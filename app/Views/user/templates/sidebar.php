@@ -19,7 +19,7 @@
     </li>
 
     <!-- User Management -->
-    <?php if (in_groups('admin')) : ?>
+    <?php if (in_groups('Admin')) : ?>
         <!-- Divider -->
         <hr class="sidebar-divider">
 
@@ -37,7 +37,7 @@
 
     <!-- My Profile -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>profile">
+        <a class="nav-link" href="<?= base_url(); ?>profile/<?= user()->id; ?>">
             <i class="fas fa-user"></i>
             <span>My Profile</span>
         </a>

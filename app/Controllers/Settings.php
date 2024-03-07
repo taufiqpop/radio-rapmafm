@@ -16,7 +16,7 @@ class Settings extends BaseController
         $settings = $this->settingsModel;
 
         $data = [
-            'title'       => 'RSUI YAKSSI | Settings',
+            'title'       => 'Rapma FM | Settings',
             'settings'    => $settings->paginate(5, 'settings'),
         ];
 

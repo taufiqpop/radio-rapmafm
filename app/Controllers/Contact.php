@@ -16,7 +16,7 @@ class Contact extends BaseController
     public function index()
     {
         $data = [
-            'title'       => 'RSUI YAKSSI | Contact',
+            'title'       => 'Rapma FM | Contact',
             'settings'    => $this->settingsModel->paginate(5, 'settings'),
         ];
 

@@ -26,7 +26,7 @@ class Pasien extends BaseController
         $pasien->orderBy('id', 'DESC');
 
         $data = [
-            'title'       => 'RSUI YAKSSI | Pasien',
+            'title'       => 'Rapma FM | Pasien',
             'pasien'      => $pasien->paginate(5, 'pasien'),
             'pager'       => $pasien->pager,
             'currentPage' => $currentPage,
@@ -39,7 +39,7 @@ class Pasien extends BaseController
     public function detail($id)
     {
         $data = [
-            'title' => 'RSUI YAKSSI | Detail Pasien',
+            'title' => 'Rapma FM | Detail Pasien',
             'pasien' => $this->pasienModel->find($id),
         ];
 
@@ -58,7 +58,7 @@ class Pasien extends BaseController
     public function form()
     {
         $data = [
-            'title'      => 'RSUI YAKSSI | Form Pasien',
+            'title'      => 'Rapma FM | Form Pasien',
             'validation' => \Config\Services::validation()
         ];
 
