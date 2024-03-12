@@ -5,19 +5,18 @@ namespace App\Controllers;
 class Settings extends BaseController
 {
     protected $settingsModel;
+
     public function __construct()
     {
         $this->settingsModel = new \App\Models\SettingsModel();
     }
 
-    // List Settings
+    // Settings
     public function index()
     {
-        $settings = $this->settingsModel;
-
         $data = [
             'title'       => 'Rapma FM | Settings',
-            'settings'    => $settings->paginate(5, 'settings'),
+            'settings'    => $this->settingsModel->paginate(5, 'settings'),
         ];
 
         return view('control/settings/index', $data);
@@ -27,17 +26,26 @@ class Settings extends BaseController
     public function update($id)
     {
         $this->settingsModel->save([
-            'id'         => $id,
-            'nama'       => $this->request->getVar('nama'),
-            'owner'      => $this->request->getVar('owner'),
-            'telepon'    => $this->request->getVar('telepon'),
-            'author'     => $this->request->getVar('author'),
-            'email'      => $this->request->getVar('email'),
-            'fax'        => $this->request->getVar('fax'),
-            'instagram'  => $this->request->getVar('instagram'),
-            'facebook'   => $this->request->getVar('facebook'),
-            'alamat'     => $this->request->getVar('alamat'),
-            'jadwal'     => $this->request->getVar('jadwal'),
+            'id'            => $id,
+            'owner'         => $this->request->getVar('owner'),
+            'slogan'        => $this->request->getVar('slogan'),
+            'nama_mtalent'  => $this->request->getVar('nama_mtalent'),
+            'no_mtalent'    => $this->request->getVar('no_mtalent'),
+            'nama_medpart'  => $this->request->getVar('nama_medpart'),
+            'no_medpart'    => $this->request->getVar('no_medpart'),
+            'ymail'         => $this->request->getVar('ymail'),
+            'gmail'         => $this->request->getVar('gmail'),
+            'alamat'        => $this->request->getVar('alamat'),
+            'twitter'       => $this->request->getVar('twitter'),
+            'facebook'      => $this->request->getVar('facebook'),
+            'instagram'     => $this->request->getVar('instagram'),
+            'youtube'       => $this->request->getVar('youtube'),
+            'spotify'       => $this->request->getVar('spotify'),
+            'whatsapp'      => $this->request->getVar('whatsapp'),
+            'blogger'       => $this->request->getVar('blogger'),
+            'line'          => $this->request->getVar('line'),
+            'tiktok'        => $this->request->getVar('tiktok'),
+            'streaming'     => $this->request->getVar('streaming'),
         ]);
 
         session()->setFlashdata('pesan', 'Data Settings Berhasil Diubah!');

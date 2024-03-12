@@ -35,51 +35,52 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Main CSS -->
-    <link href="<?= base_url(); ?>/css/style.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>css/style.css" rel="stylesheet">
 
     <!-- My CSS -->
-    <link href="<?= base_url(); ?>/css/my-style-frontend.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>css/my-style-frontend.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Mobile Nav Toggle Button -->
     <i class="bi bi-list mobile-nav-toggle"></i>
 
-    <!-- Header -->
-    <header id="header" stats="false">
-        <div class="d-flex flex-column">
-            <div class="profile">
-                <img src="<?= base_url('img/RapmaFM Header.png') ?>" class="img-fluid rounded-circle">
-                <h1 class="text-light"><a href="<?= base_url('rapmafm'); ?>" title="Rapma FM">Rapma FM</a></h1>
+    <?php foreach ($settings as $setting) : ?>
+        <!-- Header -->
+        <header id="header" stats="false">
+            <div class="d-flex flex-column">
+                <div class="profile">
+                    <img src="<?= base_url(); ?>img/home/RapmaFM Header.png" class="img-fluid rounded-circle">
+                    <h1 class="text-light"><a href="<?= base_url(); ?>" title="Rapma FM"><?= $setting['owner']; ?></a></h1>
+                </div>
+                <nav id="navbar" class="nav-menu navbar">
+                    <ul>
+                        <li><a href="<?= base_url(); ?>#hero" class="nav-link scrollto active"><i class="bx bx-home" title="Home"></i>
+                                <span>Home</span></a></li>
+                        <li><a href="<?= base_url(); ?>#structure" class="nav-link scrollto"><i class="bx bx-user" title="Structure"></i>
+                                <span>Structure</span></a></li>
+                        <li><a href="<?= base_url(); ?>#program" class="nav-link scrollto"><i class="bx bx-microphone" title="Program"></i>
+                                <span>Program</span></a></li>
+                        <li><a href="<?= base_url(); ?>#chart" class="nav-link scrollto"><i class="bx bx-music" title="Top Chart"></i>
+                                <span>Top Chart</span></a></li>
+                        <li><a href="<?= base_url(); ?>#event" class="nav-link scrollto"><i class="bx bx-calendar-event" title="Event"></i>
+                                <span>Event</span></a></li>
+                        <li><a href="<?= base_url(); ?>#achievement" class="nav-link scrollto"><i class="bx bx-trophy" title="achievement"></i>
+                                <span>Achievement</span></a></li>
+                        <li><a href="<?= base_url(); ?>#news" class="nav-link scrollto"><i class="bx bx-news" title="Rapma News"></i>
+                                <span>Rapma News</span></a></li>
+                        <li><a href="<?= base_url(); ?>#contact" class="nav-link scrollto"><i class="bx bx-envelope" title="Contact"></i>
+                                <span>Contact</span></a></li>
+                    </ul>
+                </nav>
+                <audio id="demosMenu" controls autoplay style="width: auto; height: 25px;">
+                    <source src="<?= $setting['streaming']; ?>" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
-            <nav id="navbar" class="nav-menu navbar">
-                <ul>
-                    <li><a href="<?= base_url('/rapmafm/index'); ?>" class="nav-link scrollto"><i class="bx bx-home" title="Home"></i>
-                            <span>Home</span></a></li>
-                    <li><a href="<?= base_url('/rapmafm/structure'); ?>" class="nav-link scrollto"><i class="bx bx-user" title="Structure"></i>
-                            <span>Structure</span></a></li>
-                    <li><a href="<?= base_url('/rapmafm/program'); ?>" class="nav-link scrollto"><i class="bx bx-headphone" title="Program"></i>
-                            <span>Program</span></a></li>
-                    <li><a href="<?= base_url('/rapmafm/podcast'); ?>" class="nav-link scrollto"><i class="bx bx-microphone" title="Program"></i>
-                            <span>Podcast</span></a></li>
-                    <li><a href="<?= base_url('/rapmafm/newsflash'); ?>" class="nav-link scrollto"><i class="bx bx-news" title="Rapma News"></i>
-                            <span>Rapma News</span></a></li>
-                    <li><a href="<?= base_url('/rapmafm/events'); ?>" class="nav-link scrollto"><i class="bx bx-calendar-event" title="Event"></i>
-                            <span>Events</span></a></li>
-                    <li><a href="<?= base_url('/rapmafm/achievements'); ?>" class="nav-link scrollto"><i class="bx bx-trophy" title="achievement"></i>
-                            <span>Achievements</span></a></li>
-                    <li><a href="<?= base_url('/rapmafm/index#chart'); ?>" class="nav-link scrollto"><i class="bx bx-music" title="Top Chart"></i>
-                            <span>Top Chart</span></a></li>
-                    <li><a href="<?= base_url('/rapmafm/contact'); ?>" class="nav-link scrollto"><i class="bx bx-envelope" title="Contact"></i>
-                            <span>Contact</span></a></li>
-                </ul>
-            </nav>
-            <audio id="demosMenu" controls style="width: auto; height: 25px;">
-                <source src="https://c2.siar.us:9999/stream" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-    </header>
+        </header>
+    <?php endforeach ?>
+
 
     <!-- Main Content -->
     <?= $this->renderSection('page-content'); ?>
@@ -113,10 +114,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Main JavaScript -->
-    <script src="<?= base_url(); ?>/js/main-frontend.js"></script>
+    <script src="<?= base_url(); ?>js/main-frontend.js"></script>
 
     <!-- My JS -->
-    <script src="<?= base_url(); ?>/js/my-scripts-frontend.js"></script>
+    <script src="<?= base_url(); ?>js/my-scripts-frontend.js"></script>
 </body>
 
 </html>

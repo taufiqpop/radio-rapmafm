@@ -24,48 +24,88 @@
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <label for="nama">Nama Website</label>
-                                                <input type="text" class="form-control" name="nama" value="<?= $setting['nama']; ?>" autofocus required>
-                                            </td>
-                                            <td>
-                                                <label for="author">Author Website</label>
-                                                <input type="text" class="form-control" name="author" value="<?= $setting['author']; ?>" required>
-                                            </td>
-                                            <td>
                                                 <label for="owner">Owner Website</label>
                                                 <input type="text" class="form-control" name="owner" value="<?= $setting['owner']; ?>" required>
                                             </td>
-                                        </tr>
-                                        <tr>
                                             <td>
-                                                <label for="email">Email</label>
-                                                <input type="text" class="form-control" name="email" value="<?= $setting['email']; ?>" required>
+                                                <label for="no_mtalent">Slogan</label>
+                                                <input type="text" class="form-control" name="slogan" value="<?= $setting['slogan']; ?>" required>
                                             </td>
                                             <td>
-                                                <label for="telepon">Telepon</label>
-                                                <input type="text" class="form-control" name="telepon" value="<?= $setting['telepon']; ?>" required>
+                                                <label for="gmail">Gmail</label>
+                                                <input type="text" class="form-control" name="gmail" value="<?= $setting['gmail']; ?>" required>
                                             </td>
                                             <td>
-                                                <label for="fax">Fax</label>
-                                                <input type="text" class="form-control" name="fax" value="<?= $setting['fax']; ?>" required>
+                                                <label for="ymail">Ymail</label>
+                                                <input type="text" class="form-control" name="ymail" value="<?= $setting['ymail']; ?>" required>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <label for="jadwal">Jadwal</label>
-                                                <input type="text" class="form-control" name="jadwal" value="<?= $setting['jadwal']; ?>" required>
+                                                <label for="nama_mtalent">M-Talent</label>
+                                                <input type="text" class="form-control" name="nama_mtalent" value="<?= $setting['nama_mtalent']; ?>" required>
+                                            </td>
+                                            <td>
+                                                <label for="no_mtalent">Kontak M-Talent</label>
+                                                <input type="text" class="form-control" name="no_mtalent" value="<?= $setting['no_mtalent']; ?>" required>
+                                            </td>
+                                            <td>
+                                                <label for="nama_medpart">Media Partner</label>
+                                                <input type="text" class="form-control" name="nama_medpart" value="<?= $setting['nama_medpart']; ?>" required>
+                                            </td>
+                                            <td>
+                                                <label for="no_medpart">Kontak Medpart</label>
+                                                <input type="text" class="form-control" name="no_medpart" value="<?= $setting['no_medpart']; ?>" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="twitter">Twitter</label>
+                                                <input type="text" class="form-control" name="twitter" value="<?= $setting['twitter']; ?>" required>
+                                            </td>
+                                            <td>
+                                                <label for="facebook">Facebook</label>
+                                                <input type="text" class="form-control" name="facebook" value="<?= $setting['facebook']; ?>" required>
                                             </td>
                                             <td>
                                                 <label for="instagram">Instagram</label>
                                                 <input type="text" class="form-control" name="instagram" value="<?= $setting['instagram']; ?>" required>
                                             </td>
                                             <td>
-                                                <label for="facebook">Facebook</label>
-                                                <input type="text" class="form-control" name="facebook" value="<?= $setting['facebook']; ?>" required>
+                                                <label for="youtube">Youtube</label>
+                                                <input type="text" class="form-control" name="youtube" value="<?= $setting['youtube']; ?>" required>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td colspan="3">
+                                            <td>
+                                                <label for="spotify">Spotify</label>
+                                                <input type="text" class="form-control" name="spotify" value="<?= $setting['spotify']; ?>" required>
+                                            </td>
+                                            <td>
+                                                <label for="whatsapp">Whatsapp</label>
+                                                <input type="text" class="form-control" name="whatsapp" value="<?= $setting['whatsapp']; ?>" required>
+                                            </td>
+                                            <td>
+                                                <label for="blogger">Blogger</label>
+                                                <input type="text" class="form-control" name="blogger" value="<?= $setting['blogger']; ?>" required>
+                                            </td>
+                                            <td>
+                                                <label for="tiktok">Tiktok</label>
+                                                <input type="text" class="form-control" name="tiktok" value="<?= $setting['tiktok']; ?>" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <label for="line">Line</label>
+                                                <input type="text" class="form-control" name="line" value="<?= $setting['line']; ?>" required>
+                                            </td>
+                                            <td colspan="2">
+                                                <label for="streaming">Streaming</label>
+                                                <input type="text" class="form-control" name="streaming" value="<?= $setting['streaming']; ?>" required>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
                                                 <label for="alamat">Alamat</label>
                                                 <input type="text" class="form-control" name="alamat" value="<?= $setting['alamat']; ?>" required>
                                             </td>

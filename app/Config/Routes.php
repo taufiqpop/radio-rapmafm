@@ -33,8 +33,7 @@ $routes->set404Override();
 // Home
 $routes->get('/', 'Home::index');
 $routes->get('/index', 'Home::index');
-$routes->get('/contact', 'Contact::index');
-$routes->add('/contact/save', 'Contact::save');
+$routes->add('/contact/save', 'Home::save');
 
 // Admin
 $routes->add('/admin', 'Admin::index', ['filter' => 'role:Admin']);
