@@ -5,13 +5,11 @@ namespace App\Controllers;
 class User extends BaseController
 {
     protected $usersModel;
-    protected $pasienModel;
     protected $pesanModel;
 
     public function __construct()
     {
         $this->usersModel       = new \App\Models\UsersModel();
-        $this->pasienModel      = new \App\Models\PasienModel();
         $this->pesanModel       = new \App\Models\PesanModel();
     }
 
@@ -21,7 +19,6 @@ class User extends BaseController
         $data = [
             'title'         => 'Rapma FM | Dashboard',
             'jmlUsers'      => $this->usersModel->jumlahUsers(),
-            'jmlPasien'     => $this->pasienModel->jumlahPasien(),
             'jmlPesan'      => $this->pesanModel->jumlahPesan(),
         ];
 
