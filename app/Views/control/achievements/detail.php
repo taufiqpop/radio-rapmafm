@@ -1,25 +1,25 @@
 <?= $this->extend('user/templates/index'); ?>
-<?= $this->section('page-content'); ?>
+<?= $this->section('achievement-content'); ?>
 
-<!-- Detail Pages -->
+<!-- Detail Achievements -->
 <div class="container-fluid">
-    <h1 class="h3 mb-4 text-gray-800">Detail Pages</h1>
+    <h1 class="h3 mb-4 text-gray-800">Detail Achievements</h1>
 
     <!-- Card -->
-    <?php foreach ($pages as $page) : ?>
+    <?php foreach ($achievements as $achievement) : ?>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card mb-3" style="max-width: 1000px;">
                     <div class="row no-gutters">
                         <div class="col-md-6">
-                            <img src="<?= base_url(); ?>img/pages/<?= $page['images']; ?>" class="card-img detail-img img-thumbnail">
+                            <img src="<?= base_url(); ?>img/achievements/<?= $achievement['images']; ?>" class="card-img detail-img img-thumbnail">
                             <center>
-                                <div class="container tombol-pages">
-                                    <a href="<?= base_url(); ?>control/pages" class="btn btn-dark col-3"><i class="fas fa-arrow-left"></i></a>
-                                    <a href="<?= base_url(); ?>control/pages/edit/<?= $page['id']; ?>" class="btn btn-warning col-3"><i class="fas fa-edit"></i></a>
+                                <div class="container tombol-achievements">
+                                    <a href="<?= base_url(); ?>control/achievements" class="btn btn-dark col-3"><i class="fas fa-arrow-left"></i></a>
+                                    <a href="<?= base_url(); ?>control/achievements/edit/<?= $achievement['id']; ?>" class="btn btn-warning col-3"><i class="fas fa-edit"></i></a>
 
                                     <!-- Delete -->
-                                    <form action="<?= base_url(); ?>control/pages/<?= $page['id']; ?>" method="post" class="d-inline">
+                                    <form action="<?= base_url(); ?>control/achievements/<?= $achievement['id']; ?>" method="post" class="d-inline">
                                         <?= csrf_field(); ?>
                                         <input type="hidden" name="_method" value="DELETE">
                                         <button type="submit" class="btn btn-danger col-3" onclick="return confirm('Apakah anda yakin?');"><i class="fas fa-trash"></i></button>
@@ -34,10 +34,10 @@
                             <div class="card-body">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">
-                                        <h4><?= $page['judul']; ?></h4>
+                                        <h4><?= $achievement['judul']; ?></h4>
                                     </li>
                                     <li class="list-group-item">
-                                        <p><?= $page['content']; ?></p>
+                                        <p><?= $achievement['content']; ?></p>
                                     </li>
                                 </ul>
                             </div>

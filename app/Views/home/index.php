@@ -19,6 +19,22 @@
     <div class="social-links">
       <div class="d-flex flex-column">
         <div class="profile">
+
+          <!-- Clock -->
+          <div class="mt-3" style="color: green;">
+            <span>
+              <?php
+              // Time Zone
+              date_default_timezone_set('Asia/Jakarta');
+              $hariIni = new DateTime();
+              echo $hariIni->format('l, d F Y')
+              ?>
+              (<span id="jam"></span>
+              <?= $hariIni->format('A') ?>)
+            </span>
+          </div>
+
+          <!-- Sosmed Button -->
           <div class="social-links mt-3 text-center">
             <a href="<?= $setting['twitter']; ?>" target="_blank" title="Twitter">
               <i class="bx bxl-twitter"></i></a>

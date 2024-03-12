@@ -45,6 +45,7 @@
     <!-- Mobile Nav Toggle Button -->
     <i class="bi bi-list mobile-nav-toggle"></i>
 
+
     <?php foreach ($settings as $setting) : ?>
         <!-- Header -->
         <header id="header" stats="false">
@@ -53,6 +54,8 @@
                     <img src="<?= base_url(); ?>img/home/RapmaFM Header.png" class="img-fluid rounded-circle">
                     <h1 class="text-light"><a href="<?= base_url(); ?>" title="Rapma FM"><?= $setting['owner']; ?></a></h1>
                 </div>
+
+                <!-- Navbar -->
                 <nav id="navbar" class="nav-menu navbar">
                     <ul>
                         <li><a href="<?= base_url(); ?>#hero" class="nav-link scrollto active"><i class="bx bx-home" title="Home"></i>

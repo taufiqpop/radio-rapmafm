@@ -57,14 +57,14 @@ $routes->add('/pesan', 'Pesan::index');
 $routes->get('/control/settings', 'Settings::index');
 $routes->add('/settings/update/(:num)', 'Settings::update/$1');
 
-// Pages
-$routes->add('/control/pages', 'Pages::index');
-$routes->get('/control/pages/form', 'Pages::form');
-$routes->add('/pages/insert', 'Pages::insert');
-$routes->get('/control/pages/edit/(:num)', 'Pages::edit/$1');
-$routes->add('/pages/update/(:num)', 'Pages::update/$1');
-$routes->get('/control/pages/detail/(:num)', 'Pages::detail/$1');
-$routes->delete('/control/pages/(:num)', 'Pages::delete/$1');
+// Achievements
+$routes->add('/control/achievements', 'Achievements::index');
+$routes->get('/control/achievements/form', 'Achievements::form');
+$routes->add('/achievements/insert', 'Achievements::insert');
+$routes->get('/control/achievements/edit/(:num)', 'Achievements::edit/$1');
+$routes->add('/achievements/update/(:num)', 'Achievements::update/$1');
+$routes->get('/control/achievements/detail/(:num)', 'Achievements::detail/$1');
+$routes->delete('/control/achievements/(:num)', 'Achievements::delete/$1');
 
 /*
  * --------------------------------------------------------------------

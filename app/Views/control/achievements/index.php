@@ -1,12 +1,12 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- List Pasien -->
+<!-- List Achievements -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1 class="h3 mb-4 text-gray-800">Daftar Pasien</h1>
-            <a href="<?= base_url(); ?>control/pasien/form" class="btn btn-primary">Add Pasien</a>
+            <h1 class="h3 mb-4 text-gray-800">Daftar Achievements</h1>
+            <a href="<?= base_url(); ?>control/achievements/form" class="btn btn-primary">Add Achievements</a>
             <br><br>
 
             <!-- Search Bar -->
@@ -37,24 +37,24 @@
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
                                     <th scope="col" class="cursor-stop">Photo</th>
-                                    <th scope="col" class="cursor-active">Jenis</th>
-                                    <th scope="col" class="cursor-active">Deskripsi</th>
+                                    <th scope="col" class="cursor-active">Judul</th>
+                                    <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-stop">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($pasien as $index => $patient) : ?>
-                                    <?php $data = json_decode($patient['value']) ?>
+                                <?php foreach ($achievements as $index => $achievement) : ?>
+                                    <?php $data = json_decode($achievement['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td>
-                                            <img src="<?= base_url(); ?>img/pasien/<?= $data->images ?>" class=" thumbnail">
+                                            <img src="<?= base_url(); ?>img/achievements/<?= $data->images ?>" class=" thumbnail">
                                         </td>
-                                        <td><?= $data->jenis ?></td>
-                                        <td style="max-width: 500px;"><?= $data->deskripsi ?></td>
+                                        <td><?= $data->judul ?></td>
+                                        <td style="max-width: 500px;"><?= $achievement['tahun'] ?></td>
                                         <td>
-                                            <a href="<?= base_url(); ?>control/pasien/edit/<?= $patient['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                            <form action="<?= base_url(); ?>control/pasien/<?= $patient['id']; ?>" method="post" class="d-inline">
+                                            <a href="<?= base_url(); ?>control/achievements/edit/<?= $achievement['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                            <form action="<?= base_url(); ?>control/achievements/<?= $achievement['id']; ?>" method="post" class="d-inline">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah anda yakin?');"><i class="fas fa-trash"></i></button>
@@ -66,7 +66,7 @@
                         </table>
 
                         <!-- Pagers -->
-                        <?= $pager->links('pasien', 'data_pagination'); ?>
+                        <?= $pager->links('achievements', 'data_pagination'); ?>
                     </div>
                 </div>
             </div>
