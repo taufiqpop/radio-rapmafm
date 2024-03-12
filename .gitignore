@@ -61,6 +61,7 @@ writable/uploads/*
 !writable/uploads/index.html
 
 writable/debugbar/*
+!writable/debugbar/.gitkeep
 
 php_errors.log
 
@@ -79,6 +80,11 @@ tests/coverage*
 
 # Don't save phpunit under version control.
 phpunit
+
+#-------------------------
+# Composer
+#-------------------------
+vendor/
 
 #-------------------------
 # IDE / Development Files
