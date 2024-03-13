@@ -57,10 +57,13 @@ $routes->add('/pesan', 'Pesan::index');
 $routes->get('/control/settings', 'Settings::index');
 $routes->add('/settings/update/(:num)', 'Settings::update/$1');
 
+// GMPA //
 // About
 $routes->get('/control/about', 'About::index');
 $routes->add('/about/update/(:num)', 'About::update/$1');
 
+
+// DIVISI UMUM //
 // Achievements
 $routes->add('/control/achievements', 'Achievements::index');
 $routes->get('/control/achievements/form', 'Achievements::form');
@@ -78,6 +81,20 @@ $routes->get('/control/structure/edit/(:num)', 'Structure::edit/$1');
 $routes->add('/structure/update/(:num)', 'Structure::update/$1');
 $routes->get('/control/structure/detail/(:num)', 'Structure::detail/$1');
 $routes->delete('/control/structure/(:num)', 'Structure::delete/$1');
+
+// DIVISI KEPENYIARAN //
+// Program
+$routes->add('/control/program', 'Program::index');
+$routes->get('/control/program/form', 'Program::form');
+$routes->add('/program/insert', 'Program::insert');
+$routes->get('/control/program/edit/(:num)', 'Program::edit/$1');
+$routes->add('/program/update/(:num)', 'Program::update/$1');
+$routes->get('/control/program/detail/(:num)', 'Program::detail/$1');
+$routes->delete('/control/program/(:num)', 'Program::delete/$1');
+
+// DIVISI MARKETING //
+
+// DIVISI PERSONALIA //
 
 /*
  * --------------------------------------------------------------------
