@@ -15,10 +15,6 @@ class About extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'key' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
             'value' => [
                 'type'       => 'TEXT',
             ],

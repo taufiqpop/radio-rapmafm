@@ -39,7 +39,7 @@ class Achievements extends BaseController
     public function detail($id)
     {
         $data = [
-            'title' => 'RSUI YAKSSI | Detail Achievements',
+            'title' => 'Rapma FM | Detail Achievements',
             'achievements' => $this->achievementsModel->find($id),
         ];
 

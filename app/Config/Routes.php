@@ -57,6 +57,10 @@ $routes->add('/pesan', 'Pesan::index');
 $routes->get('/control/settings', 'Settings::index');
 $routes->add('/settings/update/(:num)', 'Settings::update/$1');
 
+// About
+$routes->get('/control/about', 'About::index');
+$routes->add('/about/update/(:num)', 'About::update/$1');
+
 // Achievements
 $routes->add('/control/achievements', 'Achievements::index');
 $routes->get('/control/achievements/form', 'Achievements::form');
@@ -65,6 +69,15 @@ $routes->get('/control/achievements/edit/(:num)', 'Achievements::edit/$1');
 $routes->add('/achievements/update/(:num)', 'Achievements::update/$1');
 $routes->get('/control/achievements/detail/(:num)', 'Achievements::detail/$1');
 $routes->delete('/control/achievements/(:num)', 'Achievements::delete/$1');
+
+// Structure
+$routes->add('/control/structure', 'Structure::index');
+$routes->get('/control/structure/form', 'Structure::form');
+$routes->add('/structure/insert', 'Structure::insert');
+$routes->get('/control/structure/edit/(:num)', 'Structure::edit/$1');
+$routes->add('/structure/update/(:num)', 'Structure::update/$1');
+$routes->get('/control/structure/detail/(:num)', 'Structure::detail/$1');
+$routes->delete('/control/structure/(:num)', 'Structure::delete/$1');
 
 /*
  * --------------------------------------------------------------------
