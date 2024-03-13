@@ -29,14 +29,23 @@ class Home extends BaseController
 
     public function index()
     {
+
+        // Events
+        $events = $this->eventsModel;
+        $events->orderBy('id', 'DESC');
+
+        // Achievements
+        $achievements = $this->achievementsModel;
+        $achievements->orderBy('id', 'DESC');
+
         $data = [
             'title'         => 'Rapma FM',
             'about'         => $this->aboutModel->paginate(5, 'about'),
-            'achievements'  => $this->achievementsModel->paginate(5, 'achievements'),
-            'events'        => $this->eventsModel->paginate(5, 'events'),
+            'achievements'  => $achievements->paginate(5, 'achievements'),
+            'crew'          => $this->crewModel->paginate(1, 'crew'),
+            'events'        => $events->paginate(100, 'events'),
             'program'       => $this->programModel->paginate(5, 'program'),
             'structure'     => $this->structureModel->paginate(5, 'structure'),
-            'crew'          => $this->crewModel->paginate(1, 'crew'),
             'topchart'      => $this->topchartModel->paginate(5, 'topchart'),
             'settings'      => $this->settingsModel->paginate(5, 'settings'),
         ];

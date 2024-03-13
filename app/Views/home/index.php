@@ -158,184 +158,24 @@
               <li data-filter="*" class="filter-active" title="All Program">All</li>
               <li data-filter=".filter-app" title="Regular Program">Regular Program</li>
               <li data-filter=".filter-card" title="Special Program">Special Program</li>
+              <li data-filter=".filter-book" title="Podcast">Podcast</li>
             </ul>
           </div>
         </div>
-        <!-- Regular Program -->
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/BasoSapi.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/BasoSapi.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/0H0UTyvK4su14jJVDcfk2X?si=0e221fd2423c4e70" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/11N1.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/11N1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/2xZvhNVfFhs729lHLLKEbs?si=70f8296146fb44e0" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/Rapmanesia.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/Rapmanesia.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/7rl9eIYGm9jOpvPd21PobJ?si=a2ffbdd78c874a9e" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/TGV.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/TGV.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/0wJCTRfCwIqT7RBrAENsux?si=d5982fb80c624fbf" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/THR.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/THR.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://www.instagram.com/p/CNo82DepmKo/?igshid=lr40gy7v92is" target="_blank"><i class="bx bxl-instagram" title="Open Instagram"></i></a>
-              </div>
-            </div>
-          </div> -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/KhasanahPetang.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/KhasanahPetang.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/2OpCjIc6YBl883Aw3qJ1bQ?si=zW2mHW2VToeFD_1M_5L7jg" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/MusicBox.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/MusicBox.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/7DvP3sMJa5LpgLSfkAR2mm?si=3a09928028b94df3" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/Afterday.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/Afterday.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/3ED6VNFrqqjrAJd2TdQDso?si=Oq_TJuU3SKWsPObAYSO1BQ" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/TOP15.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/TOP15.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/3SzzwZRfHLyEJFSdhM9gVW?si=b0ce528bac70443d" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/Rapmatalks.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/Rapmatalks.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/0GTBdHxXfaJxVA2mxsegxQ?si=fca30f035610492d" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
 
-          <!-- Special Program -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/MovieScreen.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/MovieScreen.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/0c3UrX8b5sVauco3iEXYNA?si=fa275c68c3834fd9" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          <?php foreach ($program as $siaran) : ?>
+            <?php $data = json_decode($siaran['value']) ?>
+            <div class="col-lg-4 col-md-6 portfolio-item <?= $data->filter; ?>">
+              <div class="portfolio-wrap">
+                <img src="<?= base_url(); ?>img/program/<?= $data->images; ?>" class="img-fluid" alt="<?= $data->program; ?>">
+                <div class="portfolio-links">
+                  <a href="<?= base_url(); ?>img/program/<?= $data->images; ?>" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
+                  <a href="<?= $data->link; ?>" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/KingNQueen.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/KingNQueen.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/3UQz9EO6DUvuurHthAvlkI?si=9c9273e359c54c02" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/Indiezone.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/Indiezone.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/Teksas.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/Teksas.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/6eSgHfMK6972yDe9Ch2o8F?si=800d1f78b93d4425" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/Merinding.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/Merinding.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/1T4gXy589d4nDZ820F0W2q?si=b43b7113efea4f2b" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/K-Arena.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/K-Arena.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/1dAcappKAmIOxcbZMjyHG9?si=fa7a3c9fab694581" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/SudutKampus.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/SudutKampus.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/5JCrqf2RRplT0WexV3UqOP?si=980ed3002a6e4946" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/NoSatnight.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/NoSatnight.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/2mru4VWHqOk0g702FerJDl?si=1ab330e8de2d41f9" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?= base_url(); ?>img/ClassicNight.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="<?= base_url(); ?>img/ClassicNight.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-zoom-in" title="Zoom In"></i></a>
-                <a href="https://open.spotify.com/episode/55unnCEFHtseDyaKI9REcs?si=70cf567daa564741" target="_blank"><i class="bx bxl-spotify" title="Open Spotify"></i></a>
-              </div>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </section>
@@ -347,18 +187,15 @@
           <h2 style="text-align: center;">Rapma Top 15</h2>
         </div>
         <div class="row" data-aos="fade-in">
-          <div class="col-lg-6 d-flex align-items-stretch">
-            <div class="row">
-              <h2 style="text-align: center; color: #008C52;">Top 15 Versi Indonesia</h2>
-              <iframe src="https://open.spotify.com/embed/playlist/0rj1HLftduTk5t2OC6t0XD?si=GgqgR4zfSZGfZj3mnjEd3g" width="100%" height="500" frameborder="0"></iframe>
+          <?php foreach ($topchart as $top15) : ?>
+            <?php $data = json_decode($top15['value']) ?>
+            <div class="col-lg-6 d-flex align-items-stretch">
+              <div class="row">
+                <h2 style="text-align: center; color: #008C52;">Top 15 Versi <?= $data->versi; ?></h2>
+                <iframe src="<?= $data->link; ?>" width="100%" height="750" frameborder="0"></iframe>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-stretch">
-            <div class="row">
-              <h2 style="text-align: center; color: #008C52;">Top 15 Versi Manca</h2>
-              <iframe src="https://open.spotify.com/embed/playlist/48GHvGhwDZFBL6X88c20Zd?si=IX3o5iOWTiOxA3xqw8lYGg" width="100%" height="500" frameborder="0"></iframe>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
     </section>
 
@@ -368,36 +205,24 @@
         <div class="section-title">
           <h2 style="text-align: center;">Event</h2>
         </div>
-        <div class="col-6 col-md-6">
-          <div class="card-body">
-            <center>
-              <h2 class="card-title"><b>RAPMADAY #7</b></h2>
-            </center>
-            <center>
-              <img class="card-img-top" src="<?= base_url(); ?>img/Rapmaday7.png" style="width:100%">
-            </center>
+        <?php foreach ($events as $event) : ?>
+          <?php $data = json_decode($event['value']) ?>
+          <div class="col-6 col-md-6">
             <div class="card-body">
               <center>
-                <a href="#" target="_blank" class="btn btn-dark disabled">See Event</a>
+                <h2 class="card-title"><b><?= $data->nama; ?></b></h2>
               </center>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-md-6">
-          <div class="card-body">
-            <center>
-              <h2 class="card-title"><b>RAPMAFEST #8</b></h2>
-            </center>
-            <center>
-              <img class="card-img-top" src="<?= base_url(); ?>img/Rapmafest8.png" style="width:100%">
-            </center>
-            <div class="card-body">
               <center>
-                <a href="tiket-rapmafest.html" target="_blank" class="btn btn-success">See Event</a>
+                <img class="card-img-top" src="<?= base_url(); ?>img/events/<?= $data->images; ?>" style="width:100%">
               </center>
+              <div class="card-body">
+                <center>
+                  <a href="<?= $data->link; ?>" target="_blank" class="btn btn-success">See Event</a>
+                </center>
+              </div>
             </div>
           </div>
-        </div>
+        <?php endforeach; ?>
       </div>
     </section>
 
@@ -407,89 +232,25 @@
         <div class="section-title">
           <h2 style="text-align: center;">Achievement</h2>
         </div>
-        <div class="col-6 col-md-4">
-          <div class="card">
-            <br>
-            <center>
-              <h4 class="card-title">Juara 1 Lomba Siar<br>UNYFEST#7 2019<br></h4>
-            </center>
-            <center>
-              <img class="card-img-top" src="<?= base_url(); ?>img/Lomba 2019.jpg" style="width:75%">
-            </center>
-            <div class="card-body">
+        <?php foreach ($achievements as $achievement) : ?>
+          <?php $data = json_decode($achievement['value']) ?>
+          <div class="col-6 col-md-4">
+            <div class="card">
+              <br>
               <center>
-                <a href="https://www.instagram.com/p/BwyOA9ehluQ/?utm_source=ig_web_copy_link" target="_blank" class="btn btn-success">See Details</a>
+                <h4 class="card-title"><?= $data->judul; ?><br>(<?= $achievement['tahun']; ?>)</h4>
               </center>
+              <center>
+                <img class="card-img-top" src="<?= base_url(); ?>img/achievements/<?= $data->images ?>" style="width:75%">
+              </center>
+              <div class="card-body">
+                <center>
+                  <a href="https://www.instagram.com/p/BwyOA9ehluQ/?utm_source=ig_web_copy_link" target="_blank" class="btn btn-success">See Details</a>
+                </center>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-6 col-md-4">
-          <div class="card">
-            <br>
-            <center>
-              <h4 class="card-title">Juara 2 & 3 Lomba Siar<br>DISTAFEST 2020<br></h4>
-            </center>
-            <center>
-              <img class="card-img-top" src="<?= base_url(); ?>img/Lomba 2020.jpg" style="width:75%">
-            </center>
-            <div class="card-body">
-              <center>
-                <a href="https://www.instagram.com/p/B2N2MLPBCce/?utm_source=ig_web_copy_link" target="_blank" class="btn btn-success">See Details</a>
-              </center>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-md-4">
-          <div class="card">
-            <br>
-            <center>
-              <h4 class="card-title">Juara 3 Lomba<br>Metta Got Talent 2021<br></h4>
-            </center>
-            <center>
-              <img class="card-img-top" src="<?= base_url(); ?>img/Lomba 2021-1.jpg" style="width:75%">
-            </center>
-            <div class="card-body">
-              <center>
-                <a href="https://www.instagram.com/p/COFoXvQpqWi/?utm_source=ig_web_copy_link" target="_blank" class="btn btn-success">See Details</a>
-              </center>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-md-4">
-          <div class="card">
-            <br>
-            <center>
-              <h4 class="card-title">Juara 2 Lomba Siar<br>Galaksiar 2021<br></h4>
-            </center>
-            <center>
-              <img class="card-img-top" src="<?= base_url(); ?>img/Lomba 2021-2.jpg" style="width:75%">
-            </center>
-            <div class="card-body">
-              <center>
-                <a href="https://www.instagram.com/p/CPNZVp_pxEZ/?utm_source=ig_web_copy_link" target="_blank" class="btn btn-success">See Details</a>
-              </center>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 col-md-4">
-          <!-- Blank -->
-        </div>
-        <div class="col-6 col-md-4">
-          <div class="card">
-            <br>
-            <center>
-              <h4 class="card-title">Juara Harapan Lomba Siar<br>Galaksiar 2021<br></h4>
-            </center>
-            <center>
-              <img class="card-img-top" src="<?= base_url(); ?>img/Lomba 2021-3.jpg" style="width:75%">
-            </center>
-            <div class="card-body">
-              <center>
-                <a href="https://www.instagram.com/p/CPNZVp_pxEZ/?utm_source=ig_web_copy_link" target="_blank" class="btn btn-success">See Details</a>
-              </center>
-            </div>
-          </div>
-        </div>
+        <?php endforeach; ?>
       </div>
     </section>
 
