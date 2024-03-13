@@ -92,7 +92,23 @@ $routes->add('/program/update/(:num)', 'Program::update/$1');
 $routes->get('/control/program/detail/(:num)', 'Program::detail/$1');
 $routes->delete('/control/program/(:num)', 'Program::delete/$1');
 
+// Top Chart
+$routes->add('/control/topchart', 'Topchart::index');
+$routes->add('/topchart/insert', 'Topchart::insert');
+$routes->get('/control/topchart/edit/(:num)', 'Topchart::edit/$1');
+$routes->add('/topchart/update/(:num)', 'Topchart::update/$1');
+$routes->delete('/control/topchart/(:num)', 'Topchart::delete/$1');
+
 // DIVISI MARKETING //
+// Events
+$routes->add('/control/events', 'Events::index');
+$routes->get('/control/events/form', 'Events::form');
+$routes->add('/events/insert', 'Events::insert');
+$routes->get('/control/events/edit/(:num)', 'Events::edit/$1');
+$routes->add('/events/update/(:num)', 'Events::update/$1');
+$routes->get('/control/events/detail/(:num)', 'Events::detail/$1');
+$routes->delete('/control/events/(:num)', 'Events::delete/$1');
+
 
 // DIVISI PERSONALIA //
 
