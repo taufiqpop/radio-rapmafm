@@ -53,7 +53,9 @@
                                         <td><?= $data->judul ?></td>
                                         <td style="max-width: 500px;"><?= $achievement['tahun'] ?></td>
                                         <td>
+                                            <a href="<?= base_url(); ?>control/achievements/detail/<?= $achievement['id']; ?>" class="btn btn-info mb-1"><i class="fas fa-info"></i></a>
                                             <a href="<?= base_url(); ?>control/achievements/edit/<?= $achievement['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                            <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
                                             <form action="<?= base_url(); ?>control/achievements/<?= $achievement['id']; ?>" method="post" class="d-inline">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">

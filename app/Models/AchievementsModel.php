@@ -17,7 +17,7 @@ class AchievementsModel extends Model
         return $this->table('achievements')->like('value', $keyword)->orLike('tahun', $keyword);
     }
 
-    public function jumlahPasien()
+    public function jumlahAchievements()
     {
         return $this->table('achievements')->get()->getNumRows();
     }

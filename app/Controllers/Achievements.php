@@ -39,13 +39,13 @@ class Achievements extends BaseController
     public function detail($id)
     {
         $data = [
-            'title'        => 'Rapma FM | Detail Achievements',
+            'title' => 'RSUI YAKSSI | Detail Achievements',
             'achievements' => $this->achievementsModel->find($id),
         ];
 
         $db      = \Config\Database::connect();
         $builder = $db->table('achievements');
-        $builder->select('id, key, value');
+        $builder->select('id, key, value, tahun');
         $builder->where('id', $id);
         $query   = $builder->get();
 

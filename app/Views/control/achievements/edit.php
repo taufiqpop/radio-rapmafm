@@ -26,7 +26,7 @@
                     <div class="form-group row">
                         <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="deskripsi" value="<?= $data->deskripsi ?>" required>
+                            <textarea class="tinymce" name="deskripsi"><?= $data->deskripsi; ?></textarea>
                         </div>
                     </div>
 
