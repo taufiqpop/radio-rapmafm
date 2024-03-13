@@ -41,10 +41,10 @@ class Home extends BaseController
         $data = [
             'title'         => 'Rapma FM',
             'about'         => $this->aboutModel->paginate(5, 'about'),
-            'achievements'  => $achievements->paginate(5, 'achievements'),
+            'achievements'  => $achievements->paginate(100, 'achievements'),
             'crew'          => $this->crewModel->paginate(1, 'crew'),
             'events'        => $events->paginate(100, 'events'),
-            'program'       => $this->programModel->paginate(5, 'program'),
+            'program'       => $this->programModel->paginate(100, 'program'),
             'structure'     => $this->structureModel->paginate(5, 'structure'),
             'topchart'      => $this->topchartModel->paginate(5, 'topchart'),
             'settings'      => $this->settingsModel->paginate(5, 'settings'),

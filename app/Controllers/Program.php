@@ -23,7 +23,7 @@ class Program extends BaseController
             $program = $this->programModel;
         }
 
-        $program->orderBy('id', 'ASC');
+        $program->orderBy('id', 'DESC');
 
         $data = [
             'title'         => 'Rapma FM | Program',

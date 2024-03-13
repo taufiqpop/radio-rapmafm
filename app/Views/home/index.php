@@ -84,9 +84,9 @@
           <?php foreach ($about as $tentang) : ?>
             <?php $data = json_decode($tentang['value']) ?>
             <p style="text-align: justify; text-indent: 60px;"><?= $data->deskripsi; ?></p>
-            <br><br>
+            <br>
             <center>
-              <a href="<?= $data->link; ?>" target="_blank" class="btn btn-success">Read More</a>
+              <a href="<?= $data->link; ?>" target="_blank" class="btn btn-success">Read More..</a>
             </center>
           <?php endforeach; ?>
         </div>
@@ -192,7 +192,7 @@
             <div class="col-lg-6 d-flex align-items-stretch">
               <div class="row">
                 <h2 style="text-align: center; color: #008C52;">Top 15 Versi <?= $data->versi; ?></h2>
-                <iframe src="<?= $data->link; ?>" width="100%" height="750" frameborder="0"></iframe>
+                <iframe src="<?= $data->link; ?>" width="100%" height="500" frameborder="0"></iframe>
               </div>
             </div>
           <?php endforeach; ?>
@@ -201,61 +201,66 @@
 
     <!-- Event -->
     <section id="event" class="portfolio section-bg">
-      <div class="row g-4 g-md-6">
-        <div class="section-title">
-          <h2 style="text-align: center;">Event</h2>
-        </div>
-        <?php foreach ($events as $event) : ?>
-          <?php $data = json_decode($event['value']) ?>
-          <div class="col-6 col-md-6">
-            <div class="card-body">
-              <center>
-                <h2 class="card-title"><b><?= $data->nama; ?></b></h2>
-              </center>
-              <center>
-                <img class="card-img-top" src="<?= base_url(); ?>img/events/<?= $data->images; ?>" style="width:100%">
-              </center>
+      <div class="container">
+
+        <div class="row g-4 g-md-6">
+          <div class="section-title">
+            <h2 style="text-align: center;">Event</h2>
+          </div>
+          <?php foreach ($events as $event) : ?>
+            <?php $data = json_decode($event['value']) ?>
+            <div class="col-6 col-md-6">
               <div class="card-body">
                 <center>
-                  <a href="<?= $data->link; ?>" target="_blank" class="btn btn-success">See Event</a>
+                  <h2 class="card-title"><b><?= $data->nama; ?></b></h2>
                 </center>
+                <center>
+                  <img class="card-img-top" src="<?= base_url(); ?>img/events/<?= $data->images; ?>" style="width:100%">
+                </center>
+                <div class="card-body">
+                  <center>
+                    <a href="<?= $data->link; ?>" target="_blank" class="btn btn-success">See Event</a>
+                  </center>
+                </div>
               </div>
             </div>
-          </div>
-        <?php endforeach; ?>
+          <?php endforeach; ?>
+        </div>
       </div>
     </section>
 
     <!-- Achievement -->
     <section id="achievement">
-      <div class="row g-2 g-md-4">
-        <div class="section-title">
-          <h2 style="text-align: center;">Achievement</h2>
-        </div>
-        <?php foreach ($achievements as $achievement) : ?>
-          <?php $data = json_decode($achievement['value']) ?>
-          <div class="col-6 col-md-4">
-            <div class="card">
-              <br>
-              <center>
-                <h4 class="card-title"><?= $data->judul; ?><br>(<?= $achievement['tahun']; ?>)</h4>
-              </center>
-              <center>
-                <img class="card-img-top" src="<?= base_url(); ?>img/achievements/<?= $data->images ?>" style="width:75%">
-              </center>
-              <div class="card-body">
+      <div class="container">
+        <div class="row g-2 g-md-4">
+          <div class="section-title">
+            <h2 style="text-align: center;">Achievement</h2>
+          </div>
+          <?php foreach ($achievements as $achievement) : ?>
+            <?php $data = json_decode($achievement['value']) ?>
+            <div class="col-6 col-md-4">
+              <div class="card">
+                <br>
                 <center>
-                  <a href="https://www.instagram.com/p/BwyOA9ehluQ/?utm_source=ig_web_copy_link" target="_blank" class="btn btn-success">See Details</a>
+                  <h4 class="card-title"><?= $data->judul; ?><br>(<?= $achievement['tahun']; ?>)</h4>
                 </center>
+                <center>
+                  <img class="card-img-top" src="<?= base_url(); ?>img/achievements/<?= $data->images ?>" style="width:75%">
+                </center>
+                <div class="card-body">
+                  <center>
+                    <a href="https://www.instagram.com/p/BwyOA9ehluQ/?utm_source=ig_web_copy_link" target="_blank" class="btn btn-success">See Details</a>
+                  </center>
+                </div>
               </div>
             </div>
-          </div>
-        <?php endforeach; ?>
+          <?php endforeach; ?>
+        </div>
       </div>
     </section>
 
     <!-- Rapma News -->
-    <section id="news" class="portfolio section-bg">
+    <!-- <section id="news" class="portfolio section-bg">
       <div class="container">
         <div class="section-title">
           <h2 style="text-align: center;">Rapma News</h2>
@@ -305,7 +310,7 @@
             </div>
           </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact -->
     <section id="contact" class="contact">

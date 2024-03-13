@@ -22,6 +22,22 @@
                         </div>
                     </div>
 
+                    <!-- Jenis Program -->
+                    <div class="form-group row">
+                        <label for="jenis" class="col-sm-2 col-form-label">Jenis Program</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="jenis" value="<?= $data->jenis ?>" required>
+                        </div>
+                    </div>
+
+                    <!-- Filter -->
+                    <div class="form-group row">
+                        <label for="filter" class="col-sm-2 col-form-label">Filter</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="filter" value="<?= $data->filter ?>" required>
+                        </div>
+                    </div>
+
                     <!-- Link -->
                     <div class="form-group row">
                         <label for="link" class="col-sm-2 col-form-label">Link</label>
