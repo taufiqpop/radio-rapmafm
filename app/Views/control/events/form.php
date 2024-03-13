@@ -1,45 +1,41 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- Form Program -->
+<!-- Form Events -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-8">
-            <h1 class="h3 mb-4 text-gray-800">Form Add Data Program</h1>
+            <h1 class="h3 mb-4 text-gray-800">Form Add Data Events</h1>
 
             <!-- Forms -->
-            <form action="<?= base_url(); ?>program/insert" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url(); ?>events/insert" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
 
-                <!-- Nama Program -->
+                <!-- Nama Events -->
                 <div class="form-group row">
-                    <label for="program" class="col-sm-2 col-form-label">Nama Program</label>
+                    <label for="nama" class="col-sm-2 col-form-label">Nama Events</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="Nama Program" name="program" required autofocus>
+                        <input type="text" class="form-control" placeholder="Nama Events" name="nama" required autofocus>
                     </div>
                 </div>
 
-                <!-- Jenis Program -->
+                <!-- Jenis Events -->
                 <div class="form-group row">
-                    <label for="jenis" class="col-sm-2 col-form-label">Jenis Program</label>
+                    <label for="jenis" class="col-sm-2 col-form-label">Jenis Events</label>
                     <div class="col-sm-10">
                         <select name="jenis">
-                            <option value="Regular Program">Regular Program</option>
-                            <option value="Special Program">Special Program</option>
-                            <option value="Podcast">Podcast</option>
+                            <option value="RAPMAFEST">RAPMAFEST</option>
+                            <option value="RAPMADAY">RAPMADAY</option>
+                            <option value="OPEN RECRUITMENT">OPEN RECRUITMENT</option>
                         </select>
                     </div>
                 </div>
 
-                <!-- Filter -->
+                <!-- Tahun -->
                 <div class="form-group row">
-                    <label for="filter" class="col-sm-2 col-form-label">Filter</label>
+                    <label for="tahun" class="col-sm-2 col-form-label">Tahun</label>
                     <div class="col-sm-10">
-                        <select name="filter">
-                            <option value="filter-app">Regular</option>
-                            <option value="filter-card">Special</option>
-                            <option value="filter-book">Podcast</option>
-                        </select>
+                        <input type="text" class="form-control" placeholder="Tahun" name="tahun" required>
                     </div>
                 </div>
 
@@ -79,7 +75,7 @@
                 <!-- Button -->
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <a href="<?= base_url(); ?>control/program" class="btn btn-dark mb-1">Back</a>
+                        <a href="<?= base_url(); ?>control/events" class="btn btn-dark mb-1">Back</a>
                         <button type="submit" class="btn btn-primary mb-1">Publish</button>
                     </div>
                 </div>
