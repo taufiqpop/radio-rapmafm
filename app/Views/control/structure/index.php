@@ -7,6 +7,7 @@
         <div class="col-11">
             <h1 class="h3 mb-4 text-gray-800">Structure of Organization</h1>
             <a href="<?= base_url(); ?>control/structure/form" class="btn btn-primary">Add Structure</a>
+            <a href="<?= base_url(); ?>control/structure/crew" class="btn btn-info">Edit Crew</a>
             <br><br>
 
             <!-- Search Bar -->
@@ -39,6 +40,7 @@
                                     <th scope="col" class="cursor-stop">Photo</th>
                                     <th scope="col" class="cursor-active">Divisi</th>
                                     <th scope="col" class="cursor-active">Tahun</th>
+                                    <th scope="col" class="cursor-active">Status</th>
                                     <th scope="col" class="cursor-stop">Action</th>
                                 </tr>
                             </thead>
@@ -52,6 +54,7 @@
                                         </td>
                                         <td><?= $data->divisi; ?></td>
                                         <td><?= $data->tahun; ?></td>
+                                        <td><?= $data->status; ?></td>
                                         <td>
                                             <a href="<?= base_url(); ?>control/structure/detail/<?= $struktur['id']; ?>" class="btn btn-info mb-1"><i class="fas fa-info"></i></a>
                                             <a href="<?= base_url(); ?>control/structure/edit/<?= $struktur['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>

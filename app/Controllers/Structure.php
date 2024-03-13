@@ -5,10 +5,12 @@ namespace App\Controllers;
 class Structure extends BaseController
 {
     protected $structureModel;
+    protected $crewModel;
 
     public function __construct()
     {
         $this->structureModel = new \App\Models\StructureModel();
+        $this->crewModel      = new \App\Models\CrewModel();
     }
 
     // List Structure
@@ -109,6 +111,7 @@ class Structure extends BaseController
             'divisi'    => $this->request->getPost('divisi'),
             'deskripsi' => $this->request->getPost('deskripsi'),
             'tahun'     => $this->request->getPost('tahun'),
+            'status'    => $this->request->getPost('status'),
             'images'    => $namaGambar,
         ];
 
@@ -128,7 +131,7 @@ class Structure extends BaseController
     {
         $data = [
             'title'         => 'RSUI YAKKSI | Edit Data Structure',
-            'structure'  => $this->structureModel->find($id),
+            'structure'     => $this->structureModel->find($id),
             'validation'    => \Config\Services::validation()
         ];
 
@@ -181,6 +184,7 @@ class Structure extends BaseController
             'divisi'    => $this->request->getPost('divisi'),
             'deskripsi' => $this->request->getPost('deskripsi'),
             'tahun'     => $this->request->getPost('tahun'),
+            'status'    => $this->request->getPost('status'),
             'images'    => $namaGambar,
         ];
 
@@ -210,5 +214,78 @@ class Structure extends BaseController
         session()->setFlashdata('pesan', 'Data Structure Berhasil Dihapus!');
 
         return redirect('control/structure');
+    }
+
+    // Edit Data Crew
+    public function crew()
+    {
+        $data = [
+            'title'         => 'RSUI YAKKSI | Crew Rapma FM',
+            'crew'          => $this->crewModel->paginate(1, 'crew'),
+            'validation'    => \Config\Services::validation()
+        ];
+
+        $db      = \Config\Database::connect();
+        $builder = $db->table('crew');
+        $builder->select('id, key, value, created_at, updated_at, deleted_at');
+        $query   = $builder->get();
+
+        $data['crew'] = $query->getResultArray();
+
+        return view('control/structure/crew', $data);
+    }
+
+    // Update Data Crew
+    public function updateCrew($id)
+    {
+        // Validasi Input
+        if (!$this->validate([
+            'images' => [
+                'rules' => 'max_size[images,10240]|is_image[images]|mime_in[images,image/jpg,image/jpeg,image/png,image/svg]',
+                'errors' => [
+                    'max_size' => 'Ukuran Gambar Terlalu Besar',
+                    'is_image' => 'Yang Anda Pilih Bukan Gambar',
+                    'mime_in'  => 'Yang Anda Pilih Bukan Gambar'
+                ]
+            ]
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('control/structure/crew')->withInput()->with('validation', $validation);
+        }
+
+        $gambarStructure = $this->request->getFile('images');
+
+        // Cek Gambar, Apakah Tetap Gambar Lama
+        if ($gambarStructure->getError() == 4) {
+            $namaGambar = $this->request->getVar('imgLama');
+        } else {
+            // Generate Nama File Random
+            $namaGambar = $gambarStructure->getRandomName();
+
+            // Pindahkan Gambar
+            $gambarStructure->move('img/structure', $namaGambar);
+
+            // Hapus File Yang Lama
+            unlink('img/structure/' . $this->request->getVar('imgLama'));
+        }
+
+        $input = [
+            'divisi'    => $this->request->getPost('divisi'),
+            'deskripsi' => $this->request->getPost('deskripsi'),
+            'tahun'     => $this->request->getPost('tahun'),
+            'status'    => $this->request->getPost('status'),
+            'images'    => $namaGambar,
+        ];
+
+        $data = [
+            'id'        => $id,
+            'key'       => $this->request->getPost('divisi'),
+            'value'     => json_encode($input),
+        ];
+
+        $this->crewModel->save($data);
+        session()->setFlashdata('pesan', 'Data Crew Berhasil Diubah!');
+
+        return redirect('control/structure/crew');
     }
 }

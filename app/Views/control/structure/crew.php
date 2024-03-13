@@ -2,15 +2,22 @@
 <?= $this->section('page-content'); ?>
 
 <!-- Edit Structure -->
-<?php foreach ($structure as $struktur) : ?>
-    <?php $data = json_decode($struktur['value']) ?>
+<?php foreach ($crew as $crews) : ?>
+    <?php $data = json_decode($crews['value']) ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
                 <h1 class="h3 mb-4 text-gray-800">Form Edit Data Structure</h1>
 
+                <!-- Messages -->
+                <?php if (session()->getFlashdata('pesan')) : ?>
+                    <div class="alert alert-success" role="alert">
+                        <?= session()->getFlashdata('pesan') ?>
+                    </div>
+                <?php endif; ?>
+
                 <!-- Forms -->
-                <form action="<?= base_url(); ?>structure/update/<?= $struktur['id']; ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url(); ?>structure/crew/update/<?= $crews['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
                     <input type="hidden" name="imgLama" value="<?= $data->images ?>">
 
@@ -27,14 +34,6 @@
                         <label for="tahun" class="col-sm-2 col-form-label">Tahun</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="tahun" value="<?= $data->tahun; ?>" required>
-                        </div>
-                    </div>
-
-                    <!-- Status -->
-                    <div class="form-group row">
-                        <label for="status" class="col-sm-2 col-form-label">Status</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="status" value="<?= $data->status; ?>" required>
                         </div>
                     </div>
 

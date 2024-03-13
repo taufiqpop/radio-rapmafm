@@ -75,6 +75,8 @@ $routes->delete('/control/achievements/(:num)', 'Achievements::delete/$1');
 
 // Structure
 $routes->add('/control/structure', 'Structure::index');
+$routes->get('/control/structure/crew', 'Structure::crew');
+$routes->add('/structure/crew/update/(:num)', 'Structure::updateCrew/$1');
 $routes->get('/control/structure/form', 'Structure::form');
 $routes->add('/structure/insert', 'Structure::insert');
 $routes->get('/control/structure/edit/(:num)', 'Structure::edit/$1');

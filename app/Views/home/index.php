@@ -81,19 +81,14 @@
       <div class="container">
         <div class="section-title">
           <h2 style="text-align: center;">About</h2>
-          <p style="text-align: justify; text-indent: 60px;">
-            RAPMA FM sebagai Radio komunitas kampus dan satu-satunya media elektronik yang dimiliki oleh
-            Universitas Muhammadiyah Surakarta mempunyai peranan sebagai media informasi, hiburan, dan
-            dakwah dengan istilah yang dipakai untuk aplikasi siar yaitu smart, fun, and pure dengan
-            slogan “The First Edutainment Channel In Solo”. RAPMA FM sendiri sebagai salah satu UKM
-            memberikan kontribusi untuk Universitas Muhammadiyah Surakarta dan telah diberikan kepercayaan
-            untuk mempublikasikan dan menginformasikan tentang segala hal mengenai seputaran dunia kampus
-            dan hasil-hasil kampus Universitas Muhammadiyah Surakarta kepada mahasiswa, masyarakat luar
-            ataupun khalayak ramai.
+          <?php foreach ($about as $tentang) : ?>
+            <?php $data = json_decode($tentang['value']) ?>
+            <p style="text-align: justify; text-indent: 60px;"><?= $data->deskripsi; ?></p>
             <br><br>
             <center>
-              <a href="http://rapmafm.ukm.ums.ac.id/p/about-us.html" target="_blank" class="btn btn-success">Read More</a>
+              <a href="<?= $data->link; ?>" target="_blank" class="btn btn-success">Read More</a>
             </center>
+          <?php endforeach; ?>
         </div>
       </div>
     </section>
@@ -105,30 +100,21 @@
           <h2 style="text-align: center;">Structure of Organization</h2>
         </div>
         <div class="row">
+
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              <?php foreach ($structure as $struktur) : ?>
+                <?php $data = json_decode($struktur['value']) ?>
+                <li data-target="#carouselExampleIndicators" data-slide-to="<?= $struktur['id'] - 1; ?>" class="<?= $data->status; ?>"></li>
+              <?php endforeach; ?>
             </ol>
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="<?= base_url(); ?>img/GMPA.png" class="img-fluid" alt="GMPA" data-aos="fade-up">
-              </div>
-              <div class="carousel-item">
-                <img src="<?= base_url(); ?>img/Umum.png" class="img-fluid" alt="Divisi Umum" data-aos="fade-up">
-              </div>
-              <div class="carousel-item">
-                <img src="<?= base_url(); ?>img/Kepenyiaran.png" class="img-fluid" alt="Divisi Kepenyiaran" data-aos="fade-up">
-              </div>
-              <div class="carousel-item">
-                <img src="<?= base_url(); ?>img/Marketing.png" class="img-fluid" alt="Divisi Marketing" data-aos="fade-up">
-              </div>
-              <div class="carousel-item">
-                <img src="<?= base_url(); ?>img/Personalia.png" class="img-fluid" alt="Divisi Personalia" data-aos="fade-up">
-              </div>
+              <?php foreach ($structure as $struktur) : ?>
+                <?php $data = json_decode($struktur['value']) ?>
+                <div class="carousel-item <?= $data->status; ?>">
+                  <img src="<?= base_url(); ?>img/structure/<?= $data->images; ?>" class="img-fluid" alt="<?= $data->divisi; ?>" data-aos="fade-up" width="100%">
+                </div>
+              <?php endforeach; ?>
             </div>
 
             <!-- Previous -->
@@ -149,8 +135,12 @@
         <!-- Crew -->
         <div class="row">
           <div class="col section-bottom-button" data-aos="fade-up">
-            <img src="<?= base_url(); ?>img/Crew.png" class="img-fluid" alt="Crew">
+            <?php foreach ($crew as $crews) : ?>
+              <?php $data = json_decode($crews['value']) ?>
+              <img src="<?= base_url(); ?>img/structure/<?= $data->images; ?>" class="img-fluid" alt="<?= $data->divisi; ?>">
+            <?php endforeach; ?>
           </div>
+
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@
                 <div class="card mb-3" style="max-width: 1000px;">
                     <!-- Card -->
                     <div class="row no-gutters">
-                        <div class="col-md-5">
+                        <div class="col-md-6">
                             <!-- Images -->
                             <img src="<?= base_url(); ?>img/structure/<?= $data->images ?>" class="card-img detail-img img-thumbnail">
 
@@ -35,7 +35,7 @@
                                 </div>
                             </center>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-6">
                             <div class="card-body">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">

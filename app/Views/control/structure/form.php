@@ -27,6 +27,17 @@
                     </div>
                 </div>
 
+                <!-- Status -->
+                <div class="form-group row">
+                    <label for="jenis" class="col-sm-2 col-form-label">Status</label>
+                    <div class="col-sm-10">
+                        <select name="jenis">
+                            <option value="">Not Active</option>
+                            <option value="active">Active</option>
+                        </select>
+                    </div>
+                </div>
+
                 <!-- Images -->
                 <div class="form-group row">
                     <label for="images" class="col-sm-2 col-form-label">Images</label>
@@ -48,7 +59,7 @@
                 <div class="form-group row">
                     <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                     <div class="col-sm-10">
-                        <textarea class="tinymce" placeholder="write here.." name="content"></textarea>
+                        <textarea class="tinymce" placeholder="write here.." name="deskripsi"></textarea>
                     </div>
                 </div>
 
