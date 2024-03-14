@@ -16,4 +16,9 @@ class ProgramModel extends Model
     {
         return $this->table('program')->like('value', $keyword);
     }
+
+    public function jumlahProgram()
+    {
+        return $this->table('program')->get()->getNumRows();
+    }
 }

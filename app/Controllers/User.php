@@ -4,22 +4,31 @@ namespace App\Controllers;
 
 class User extends BaseController
 {
+    protected $achievementsModel;
+    protected $eventsModel;
+    protected $programModel;
     protected $usersModel;
     protected $pesanModel;
 
     public function __construct()
     {
-        $this->usersModel       = new \App\Models\UsersModel();
-        $this->pesanModel       = new \App\Models\PesanModel();
+        $this->achievementsModel = new \App\Models\AchievementsModel();
+        $this->eventsModel       = new \App\Models\EventsModel();
+        $this->programModel      = new \App\Models\ProgramModel();
+        $this->usersModel        = new \App\Models\UsersModel();
+        $this->pesanModel        = new \App\Models\PesanModel();
     }
 
     // Dashboard
     public function index()
     {
         $data = [
-            'title'         => 'Rapma FM | Dashboard',
-            'jmlUsers'      => $this->usersModel->jumlahUsers(),
-            'jmlPesan'      => $this->pesanModel->jumlahPesan(),
+            'title'             => 'Rapma FM | Dashboard',
+            'jmlAchievements'   => $this->achievementsModel->jumlahAchievements(),
+            'jmlEvents'         => $this->eventsModel->jumlahEvents(),
+            'jmlProgram'        => $this->programModel->jumlahProgram(),
+            'jmlUsers'          => $this->usersModel->jumlahUsers(),
+            'jmlPesan'          => $this->pesanModel->jumlahPesan(),
         ];
 
         return view('user/index', $data);

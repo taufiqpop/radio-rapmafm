@@ -16,4 +16,9 @@ class EventsModel extends Model
     {
         return $this->table('events')->like('value', $keyword);
     }
+
+    public function jumlahEvents()
+    {
+        return $this->table('events')->get()->getNumRows();
+    }
 }
