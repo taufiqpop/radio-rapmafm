@@ -62,7 +62,7 @@ class Topchart extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'         => 'RSUI YAKKSI | Edit Data Topchart',
+            'title'         => 'Rapma FM | Edit Data Topchart',
             'topchart'      => $this->topchartModel->find($id),
         ];
 

@@ -5,12 +5,12 @@ namespace App\Controllers;
 class Structure extends BaseController
 {
     protected $structureModel;
-    protected $crewModel;
+    protected $memberModel;
 
     public function __construct()
     {
         $this->structureModel = new \App\Models\StructureModel();
-        $this->crewModel      = new \App\Models\CrewModel();
+        $this->memberModel      = new \App\Models\MemberModel();
     }
 
     // List Structure
@@ -182,7 +182,6 @@ class Structure extends BaseController
 
         $input = [
             'divisi'    => $this->request->getPost('divisi'),
-            'deskripsi' => $this->request->getPost('deskripsi'),
             'tahun'     => $this->request->getPost('tahun'),
             'status'    => $this->request->getPost('status'),
             'images'    => $namaGambar,
@@ -217,26 +216,26 @@ class Structure extends BaseController
     }
 
     // Edit Data Crew
-    public function crew()
+    public function member()
     {
         $data = [
             'title'         => 'RSUI YAKKSI | Crew Rapma FM',
-            'crew'          => $this->crewModel->paginate(1, 'crew'),
+            'member'        => $this->memberModel->paginate(1, 'member'),
             'validation'    => \Config\Services::validation()
         ];
 
         $db      = \Config\Database::connect();
-        $builder = $db->table('crew');
+        $builder = $db->table('member');
         $builder->select('id, key, value, created_at, updated_at, deleted_at');
         $query   = $builder->get();
 
-        $data['crew'] = $query->getResultArray();
+        $data['member'] = $query->getResultArray();
 
-        return view('control/structure/crew', $data);
+        return view('control/structure/member', $data);
     }
 
     // Update Data Crew
-    public function updateCrew($id)
+    public function new($id)
     {
         // Validasi Input
         if (!$this->validate([
@@ -250,7 +249,7 @@ class Structure extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('control/structure/crew')->withInput()->with('validation', $validation);
+            return redirect()->to('control/structure/member')->withInput()->with('validation', $validation);
         }
 
         $gambarStructure = $this->request->getFile('images');
@@ -271,9 +270,7 @@ class Structure extends BaseController
 
         $input = [
             'divisi'    => $this->request->getPost('divisi'),
-            'deskripsi' => $this->request->getPost('deskripsi'),
             'tahun'     => $this->request->getPost('tahun'),
-            'status'    => $this->request->getPost('status'),
             'images'    => $namaGambar,
         ];
 
@@ -283,9 +280,9 @@ class Structure extends BaseController
             'value'     => json_encode($input),
         ];
 
-        $this->crewModel->save($data);
+        $this->memberModel->save($data);
         session()->setFlashdata('pesan', 'Data Crew Berhasil Diubah!');
 
-        return redirect('control/structure/crew');
+        return redirect('control/structure/member');
     }
 }

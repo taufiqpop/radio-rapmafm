@@ -129,7 +129,7 @@ class Events extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'         => 'RSUI YAKKSI | Edit Data Events',
+            'title'         => 'Rapma FM | Edit Data Events',
             'events'        => $this->eventsModel->find($id),
             'validation'    => \Config\Services::validation()
         ];

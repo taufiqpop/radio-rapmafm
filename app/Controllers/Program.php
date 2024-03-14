@@ -35,25 +35,6 @@ class Program extends BaseController
         return view('control/program/index', $data);
     }
 
-    // Detail Program
-    public function detail($id)
-    {
-        $data = [
-            'title'   => 'Rapma FM | Detail Program',
-            'program' => $this->programModel->find($id),
-        ];
-
-        $db      = \Config\Database::connect();
-        $builder = $db->table('program');
-        $builder->select('id, key, value');
-        $builder->where('id', $id);
-        $query   = $builder->get();
-
-        $data['program'] = $query->getResultArray();
-
-        return view('control/program/detail', $data);
-    }
-
     // Create Data
     public function form()
     {
@@ -107,7 +88,6 @@ class Program extends BaseController
 
         $input = [
             'program'   => $this->request->getPost('program'),
-            'deskripsi' => $this->request->getPost('deskripsi'),
             'jenis'     => $this->request->getPost('jenis'),
             'filter'    => $this->request->getPost('filter'),
             'link'      => $this->request->getPost('link'),
@@ -129,7 +109,7 @@ class Program extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'         => 'RSUI YAKKSI | Edit Data Program',
+            'title'         => 'Rapma FM | Edit Data Program',
             'program'       => $this->programModel->find($id),
             'validation'    => \Config\Services::validation()
         ];
@@ -181,7 +161,6 @@ class Program extends BaseController
 
         $input = [
             'program'   => $this->request->getPost('program'),
-            'deskripsi' => $this->request->getPost('deskripsi'),
             'jenis'     => $this->request->getPost('jenis'),
             'filter'    => $this->request->getPost('filter'),
             'link'      => $this->request->getPost('link'),

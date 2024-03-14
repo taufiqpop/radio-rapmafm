@@ -75,14 +75,10 @@ $routes->delete('/control/achievements/(:num)', 'Achievements::delete/$1');
 
 // Structure
 $routes->add('/control/structure', 'Structure::index');
-$routes->get('/control/structure/crew', 'Structure::crew');
-$routes->add('/structure/crew/update/(:num)', 'Structure::updateCrew/$1');
-$routes->get('/control/structure/form', 'Structure::form');
-$routes->add('/structure/insert', 'Structure::insert');
 $routes->get('/control/structure/edit/(:num)', 'Structure::edit/$1');
 $routes->add('/structure/update/(:num)', 'Structure::update/$1');
-$routes->get('/control/structure/detail/(:num)', 'Structure::detail/$1');
-$routes->delete('/control/structure/(:num)', 'Structure::delete/$1');
+$routes->get('/control/structure/member', 'Structure::member');
+$routes->add('/structure/member/update/(:num)', 'Structure::new/$1');
 
 // DIVISI KEPENYIARAN //
 // Program

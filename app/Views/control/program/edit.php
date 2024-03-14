@@ -63,14 +63,6 @@
                         </div>
                     </div>
 
-                    <!-- Deskripsi -->
-                    <div class="form-group row">
-                        <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
-                        <div class="col-sm-10">
-                            <textarea class="tinymce" name="deskripsi"><?= $data->deskripsi; ?></textarea>
-                        </div>
-                    </div>
-
                     <!-- Button -->
                     <div class="form-group row">
                         <div class="col-sm-10">

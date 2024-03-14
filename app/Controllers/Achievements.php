@@ -128,7 +128,7 @@ class Achievements extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'         => 'RSUI YAKKSI | Edit Data Achievements',
+            'title'         => 'Rapma FM | Edit Data Achievements',
             'achievements'  => $this->achievementsModel->find($id),
             'validation'    => \Config\Services::validation()
         ];

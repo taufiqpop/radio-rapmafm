@@ -2,8 +2,8 @@
 <?= $this->section('page-content'); ?>
 
 <!-- Edit Structure -->
-<?php foreach ($crew as $crews) : ?>
-    <?php $data = json_decode($crews['value']) ?>
+<?php foreach ($member as $members) : ?>
+    <?php $data = json_decode($members['value']) ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
@@ -17,7 +17,7 @@
                 <?php endif; ?>
 
                 <!-- Forms -->
-                <form action="<?= base_url(); ?>structure/crew/update/<?= $crews['id']; ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url(); ?>structure/member/update/<?= $members['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
                     <input type="hidden" name="imgLama" value="<?= $data->images ?>">
 
@@ -51,14 +51,6 @@
                                 </div>
                                 <label class="custom-file-label" for="images"><?= $data->images ?></label>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Deskripsi -->
-                    <div class="form-group row">
-                        <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
-                        <div class="col-sm-10">
-                            <textarea class="tinymce" name="deskripsi"><?= $data->deskripsi; ?></textarea>
                         </div>
                     </div>
 
