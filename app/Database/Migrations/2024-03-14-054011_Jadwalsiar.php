@@ -8,11 +8,46 @@ class Jadwalsiar extends Migration
 {
     public function up()
     {
-        //
+        $this->forge->addField([
+            'id' => [
+                'type'           => 'INT',
+                'constraint'     => 11,
+                'unsigned'       => true,
+                'auto_increment' => true,
+            ],
+            'key' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'value' => [
+                'type'       => 'TEXT',
+            ],
+            'hari' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'program' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'created_at' => [
+                'type'       => 'DATETIME',
+            ],
+            'updated_at' => [
+                'type'       => 'DATETIME',
+            ],
+            'deleted_at' => [
+                'type'       => 'DATETIME',
+            ],
+        ]);
+        $this->forge->addKey('id', true);
+        $this->forge->addKey('hari');
+        $this->forge->addKey('program');
+        $this->forge->createTable('jadwalsiar');
     }
 
     public function down()
     {
-        //
+        $this->forge->dropTable('jadwalsiar');
     }
 }
