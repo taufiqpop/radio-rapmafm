@@ -43,14 +43,66 @@
         </a>
     </li>
 
+    <!-- ==================================================================== -->
+
+    <!-- GMPA -->
+    <hr class="sidebar-divider">
+    <div class="sidebar-heading">Divisi GMPA</div>
+
+    <!-- General Manager -->
+    <!-- Timeline GMPA -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/gmpa">
+            <i class="fas fa-business-time"></i>
+            <span>Timeline GMPA</span>
+        </a>
+    </li>
+
+    <!-- Personal Assistant -->
+    <!-- Daftar Surat -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/surat">
+            <i class="fas fa-envelope-open-text"></i>
+            <span>Daftar Surat</span>
+        </a>
+    </li>
+
+    <!-- Data Keuangan -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/keuangan">
+            <i class="	fas fa-dollar-sign"></i>
+            <span>Data Keuangan</span>
+        </a>
+    </li>
+
+    <!-- ==================================================================== -->
+
     <!-- Umum -->
     <hr class="sidebar-divider">
     <div class="sidebar-heading">Divisi Umum</div>
 
+    <!-- Manager -->
+    <!-- Timeline Divisi Umum -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/umum">
+            <i class="fas fa-business-time"></i>
+            <span>Timeline Divum</span>
+        </a>
+    </li>
+
+    <!-- Admisi On Air -->
+    <!-- About -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/about">
+            <i class="fab fa-amilia"></i>
+            <span>About</span>
+        </a>
+    </li>
+
     <!-- Achievements -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/achievements">
-            <i class="fas fa-hand-holding-medical"></i>
+            <i class="fas fa-trophy"></i>
             <span>Achievements</span>
         </a>
     </li>
@@ -63,10 +115,39 @@
         </a>
     </li>
 
+    <!-- Admisi Off Air -->
+    <!-- Data Inventaris -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/inventaris">
+            <i class="fas fa-database"></i>
+            <span>Data Inventaris</span>
+        </a>
+    </li>
+
+    <!-- Teknisi -->
+    <!-- Pemancar -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/pemancar">
+            <i class="fas fa-broadcast-tower"></i>
+            <span>Pemancar</span>
+        </a>
+    </li>
+
+    <!-- ==================================================================== -->
+
     <!-- Kepenyiaran -->
     <hr class="sidebar-divider">
     <div class="sidebar-heading">Divisi Kepenyiaran</div>
 
+    <!-- Timeline Divisi Kepenyiaran -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/kepenyiaran">
+            <i class="fas fa-business-time"></i>
+            <span>Timeline Kepenyiaran</span>
+        </a>
+    </li>
+
+    <!-- Manager -->
     <!-- Jadwal Siar -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/jadwalsiar">
@@ -78,11 +159,12 @@
     <!-- Program Siar -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/program">
-            <i class="fas fa-microphone"></i>
+            <i class="fas fa-grip-horizontal"></i>
             <span>Program Siar</span>
         </a>
     </li>
 
+    <!-- Jurnalistik -->
     <!-- Rapma News -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/news">
@@ -91,18 +173,80 @@
         </a>
     </li>
 
+    <!-- Music Director -->
     <!-- Top Chart -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/topchart">
-            <i class="fas fa-music"></i>
+            <i class="fas fa-file-audio"></i>
             <span>Top Chart</span>
         </a>
     </li>
+
+    <!-- Bank Lagu -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/lagu">
+            <i class="fas fa-music"></i>
+            <span>Bank Lagu</span>
+        </a>
+    </li>
+
+    <!-- Produksi -->
+    <!-- Data Podcast -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/podcast">
+            <i class="fas fa-microphone"></i>
+            <span>Podcast</span>
+        </a>
+    </li>
+
+    <!-- ID's -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/ids">
+            <i class="fas fa-id-card"></i>
+            <span>ID's</span>
+        </a>
+    </li>
+
+    <!-- Radio Expose -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/rexpose">
+            <i class="fas fa-file-audio"></i>
+            <span>Radio Expose (RE)</span>
+        </a>
+    </li>
+
+    <!-- Data Videos -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/videos">
+            <i class="fas fa-video"></i>
+            <span>Videos</span>
+        </a>
+    </li>
+
+    <!-- SPOT -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/spot">
+            <i class="fas fa-film"></i>
+            <span>SPOT</span>
+        </a>
+    </li>
+
+    <!-- ==================================================================== -->
 
     <!-- Marketing -->
     <hr class="sidebar-divider">
     <div class="sidebar-heading">Divisi Marketing</div>
 
+    <!-- Manager -->
+    <!-- Timeline Divisi Marketing -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/marketing">
+            <i class="fas fa-business-time"></i>
+            <span>Timeline Marketing</span>
+        </a>
+    </li>
+
+    <!-- Marketing On Air -->
     <!-- Media Partner -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/medpart">
@@ -111,6 +255,15 @@
         </a>
     </li>
 
+    <!-- Iklan -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/iklan">
+            <i class="fab fa-adversal"></i>
+            <span>Iklan</span>
+        </a>
+    </li>
+
+    <!-- Marketing Off Air -->
     <!-- Events -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/events">
@@ -119,35 +272,60 @@
         </a>
     </li>
 
+    <!-- MC / Moderator -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/mc">
+            <i class="fas fa-star"></i>
+            <span>MC / Moderator</span>
+        </a>
+    </li>
+
+    <!-- Rapma Band -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/rapband">
+            <i class="fas fa-guitar"></i>
+            <span>Rapma Band</span>
+        </a>
+    </li>
+
+    <!-- ==================================================================== -->
+
     <!-- Personalia -->
     <hr class="sidebar-divider">
     <div class="sidebar-heading">Divisi Personalia</div>
+
+    <!-- Manager -->
+    <!-- Timeline Divisi Personalia -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/personalia">
+            <i class="fas fa-business-time"></i>
+            <span>Timeline Personalia</span>
+        </a>
+    </li>
+
+    <!-- Advokat -->
+    <!-- Rules -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/rules">
+            <i class="fas fa-file-alt"></i>
+            <span>Rules</span>
+        </a>
+    </li>
+
+    <!-- HRD -->
+    <!-- Anggota -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/anggota">
+            <i class="fas fa-child"></i>
+            <span>Anggota</span>
+        </a>
+    </li>
 
     <!-- Alumni -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/alumni">
             <i class="fas fa-graduation-cap"></i>
             <span>Alumni</span>
-        </a>
-    </li>
-
-    <!-- GMPA -->
-    <hr class="sidebar-divider">
-    <div class="sidebar-heading">Divisi GMPA</div>
-
-    <!-- About -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/about">
-            <i class="fab fa-amazon"></i>
-            <span>About</span>
-        </a>
-    </li>
-
-    <!-- Surat-Surat -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/surat">
-            <i class="fas fa-envelope-open-text"></i>
-            <span>Daftar Surat</span>
         </a>
     </li>
 

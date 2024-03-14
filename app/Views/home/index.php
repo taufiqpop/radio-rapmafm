@@ -156,8 +156,8 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active" title="All Program">All</li>
-              <li data-filter=".filter-app" title="Regular Program">Regular Program</li>
               <li data-filter=".filter-card" title="Special Program">Special Program</li>
+              <li data-filter=".filter-app" title="Regular Program">Regular Program</li>
               <li data-filter=".filter-book" title="Podcast">Podcast</li>
             </ul>
           </div>
