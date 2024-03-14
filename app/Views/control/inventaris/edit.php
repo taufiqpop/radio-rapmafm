@@ -2,86 +2,62 @@
 <?= $this->section('page-content'); ?>
 
 <!-- Edit Inventaris -->
-<?php foreach ($inventaris as $organizer) : ?>
-    <?php $data = json_decode($organizer['value']) ?>
+<?php foreach ($inventaris as $invent) : ?>
+    <?php $data = json_decode($invent['value']) ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
                 <h1 class="h3 mb-4 text-gray-800">Form Edit Data Inventaris</h1>
 
                 <!-- Forms -->
-                <form action="<?= base_url(); ?>inventaris/update/<?= $organizer['id']; ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url(); ?>inventaris/update/<?= $invent['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
-                    <!-- Nama Inventaris -->
+                    <!-- Nama Barang -->
                     <div class="form-group row">
-                        <label for="nama" class="col-sm-3 col-form-label">Nama Inventaris</label>
+                        <label for="barang" class="col-sm-3 col-form-label">Nama Barang</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="nama" value="<?= $data->nama ?>" autofocus required>
+                            <input type="text" class="form-control" name="barang" value="<?= $data->barang ?>" autofocus required>
                         </div>
                     </div>
 
-                    <!-- Nickname -->
+                    <!-- Nomor Barang -->
                     <div class="form-group row">
-                        <label for="nickname" class="col-sm-3 col-form-label">Nickname</label>
+                        <label for="nomor" class="col-sm-3 col-form-label">Nomor Barang</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="nickname" value="<?= $data->nickname; ?>" required>
+                            <input type="number" class="form-control" name="nomor" value="<?= $data->nomor ?>" required>
                         </div>
                     </div>
 
-                    <!-- Divisi -->
+                    <!-- Jumlah Barang -->
                     <div class="form-group row">
-                        <label for="divisi" class="col-sm-3 col-form-label">Divisi</label>
+                        <label for="jumlah" class="col-sm-3 col-form-label">Jumlah Barang</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="divisi" value="<?= $data->divisi; ?>" required>
+                            <input type="number" class="form-control" name="jumlah" value="<?= $data->jumlah ?>" required>
                         </div>
                     </div>
 
-                    <!-- Sub Divisi -->
+                    <!-- Kode Barang -->
                     <div class="form-group row">
-                        <label for="subdivisi" class="col-sm-3 col-form-label">Sub Divisi</label>
+                        <label for="kode" class="col-sm-3 col-form-label">Kode Barang</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="subdivisi" value="<?= $data->subdivisi; ?>" required>
+                            <input type="text" class="form-control" name="kode" value="<?= $invent['kode']; ?>" required>
                         </div>
                     </div>
 
-                    <!-- Jurusan -->
+                    <!-- Kondisi Barang -->
                     <div class="form-group row">
-                        <label for="jurusan" class="col-sm-3 col-form-label">Jurusan</label>
+                        <label for="kondisi" class="col-sm-3 col-form-label">Kondisi Barang</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="jurusan" value="<?= $data->jurusan; ?>" required>
+                            <input type="text" class="form-control" name="kondisi" value="<?= $invent['kondisi']; ?>" required>
                         </div>
                     </div>
 
-                    <!-- Semester -->
+                    <!-- Tahun -->
                     <div class="form-group row">
-                        <label for="semester" class="col-sm-3 col-form-label">Semester</label>
+                        <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
                         <div class="col-sm-7">
-                            <input type="number" class="form-control" name="semester" value="<?= $data->semester; ?>" required>
-                        </div>
-                    </div>
-
-                    <!-- No HP -->
-                    <div class="form-group row">
-                        <label for="nohp" class="col-sm-3 col-form-label">No HP</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="nohp" value="<?= $data->nohp; ?>" required>
-                        </div>
-                    </div>
-
-                    <!-- Instagram -->
-                    <div class="form-group row">
-                        <label for="instagram" class="col-sm-3 col-form-label">Instagram</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="instagram" value="<?= $data->instagram; ?>" required>
-                        </div>
-                    </div>
-
-                    <!-- Twitter -->
-                    <div class="form-group row">
-                        <label for="twitter" class="col-sm-3 col-form-label">twitter</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="twitter" value="<?= $data->twitter; ?>" required>
+                            <input type="number" class="form-control" name="tahun" value="<?= $invent['tahun']; ?>" required>
                         </div>
                     </div>
 

@@ -5,10 +5,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1 class="h3 mb-4 text-gray-800">Data Inventaris Rapma FM</h1>
+            <h1 class="h3 mb-4 text-gray-800">Data Inventaris</h1>
             <a href="<?= base_url(); ?>control/inventaris/form" class="btn btn-primary">Add Inventaris</a>
-            <a href="<?= base_url(); ?>control/crew" class="btn btn-dark">Data Crew</a>
-            <a href="<?= base_url(); ?>control/alumni" class="btn btn-dark">Data Alumni</a>
             <br><br>
 
             <!-- Search Bar -->
@@ -38,38 +36,34 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
-                                    <th scope="col" class="cursor-active">Nama Lengkap</th>
-                                    <th scope="col" class="cursor-active">Nama Panggilan</th>
-                                    <th scope="col" class="cursor-active">Divisi</th>
-                                    <th scope="col" class="cursor-active">Sub Divisi</th>
-                                    <th scope="col" class="cursor-active">Jurusan</th>
-                                    <th scope="col" class="cursor-active">Semester</th>
-                                    <th scope="col" class="cursor-active">Domisili</th>
-                                    <th scope="col" class="cursor-active">No HP</th>
+                                    <th scope="col" class="cursor-active">ID Barang</th>
+                                    <th scope="col" class="cursor-active">Nama Barang</th>
+                                    <th scope="col" class="cursor-active">Nomor</th>
+                                    <th scope="col" class="cursor-active">Jumlah</th>
+                                    <th scope="col" class="cursor-active">Kode Ruangan</th>
+                                    <th scope="col" class="cursor-active">Kondisi</th>
+                                    <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-stop">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($inventaris as $index => $organizer) : ?>
-                                    <?php $data = json_decode($organizer['value']) ?>
+                                <?php foreach ($inventaris as $index => $invent) : ?>
+                                    <?php $data = json_decode($invent['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->nama; ?></td>
-                                        <td><?= $data->nickname; ?></td>
-                                        <td><?= $data->divisi; ?></td>
-                                        <td><?= $data->subdivisi; ?></td>
-                                        <td><?= $data->jurusan; ?></td>
-                                        <td><?= $data->semester; ?></td>
-                                        <td><?= $data->domisili; ?></td>
-                                        <td><?= $data->nohp; ?></td>
+                                        <td><?= $invent['tahun']; ?>/<?= $invent['kode']; ?>/INV/<?= $data->nomor; ?></td>
+                                        <td><?= $data->barang; ?></td>
+                                        <td><?= $data->nomor; ?></td>
+                                        <td><?= $data->jumlah; ?></td>
+                                        <td><?= $invent['kode']; ?></td>
+                                        <td><?= $invent['kondisi']; ?></td>
+                                        <td><?= $invent['tahun']; ?></td>
                                         <td>
-                                            <a href="https://www.instagram.com/<?= $data->instagram; ?>" target="_blank" class="btn btn-primary mb-1"><i class="fab fa-instagram"></i></a>
-                                            <a href="https://www.x.com/<?= $data->twitter; ?>" target="_blank" class="btn btn-info mb-1"><i class="fab fa-twitter"></i></a>
-                                            <a href="<?= base_url(); ?>control/inventaris/edit/<?= $organizer['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                            <form action="<?= base_url(); ?>control/inventaris/<?= $organizer['id']; ?>" method="post" class="d-inline">
+                                            <a href="<?= base_url(); ?>control/inventaris/edit/<?= $invent['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                            <form action="<?= base_url(); ?>control/inventaris/<?= $invent['id']; ?>" method="post" class="d-inline">
                                                 <?= csrf_field(); ?>
                                                 <input type="hidden" name="_method" value="DELETE">
-                                                <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah anda yakin?');"><i class="fas fa-trash"></i></button>
+                                                <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
                                             </form>
                                         </td>
                                     </tr>

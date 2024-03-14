@@ -26,10 +26,10 @@ class Inventaris extends BaseController
         $inventaris->orderBy('kode', 'ASC');
 
         $data = [
-            'title'         => 'Rapma FM | Inventaris',
-            'inventaris'    => $inventaris->paginate(25, 'inventaris'),
-            'pager'         => $inventaris->pager,
-            'currentPage'   => $currentPage,
+            'title'       => 'Rapma FM | Inventaris',
+            'inventaris'  => $inventaris->paginate(25, 'inventaris'),
+            'pager'       => $inventaris->pager,
+            'currentPage' => $currentPage,
         ];
 
         return view('control/inventaris/index', $data);
@@ -42,10 +42,6 @@ class Inventaris extends BaseController
             'title' => 'Rapma FM | Form Inventaris',
         ];
 
-        $db      = \Config\Database::connect();
-        $builder = $db->table('inventaris');
-        $builder->select('id, key, value, kode, kondisi, tahun');
-
         return view('control/inventaris/form', $data);
     }
 
@@ -55,6 +51,7 @@ class Inventaris extends BaseController
         $input = [
             'barang'    => $this->request->getPost('barang'),
             'jumlah'    => $this->request->getPost('jumlah'),
+            'nomor'     => $this->request->getPost('nomor'),
         ];
 
         $data = [
@@ -75,8 +72,8 @@ class Inventaris extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'         => 'Rapma FM | Edit Data Inventaris',
-            'inventaris'    => $this->inventarisModel->find($id),
+            'title'      => 'Rapma FM | Edit Data Inventaris',
+            'inventaris' => $this->inventarisModel->find($id),
         ];
 
         $db      = \Config\Database::connect();
@@ -94,21 +91,13 @@ class Inventaris extends BaseController
     public function update($id)
     {
         $input = [
-            'nama'      => $this->request->getPost('nama'),
-            'nickname'  => $this->request->getPost('nickname'),
-            'divisi'    => $this->request->getPost('divisi'),
-            'subdivisi' => $this->request->getPost('subdivisi'),
-            'jurusan'   => $this->request->getPost('jurusan'),
-            'semester'  => $this->request->getPost('semester'),
-            'domisili'  => $this->request->getPost('domisili'),
-            'nohp'      => $this->request->getPost('nohp'),
-            'instagram' => $this->request->getPost('instagram'),
-            'twitter'   => $this->request->getPost('twitter'),
+            'barang'    => $this->request->getPost('barang'),
+            'jumlah'    => $this->request->getPost('jumlah'),
         ];
 
         $data = [
             'id'        => $id,
-            'key'       => $this->request->getPost('nama'),
+            'key'       => $this->request->getPost('barang'),
             'value'     => json_encode($input),
             'kode'      => $this->request->getPost('kode'),
             'kondisi'   => $this->request->getPost('kondisi'),

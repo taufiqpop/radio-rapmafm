@@ -11,83 +11,51 @@
             <form action="<?= base_url(); ?>inventaris/insert" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
 
-                <!-- Nama Inventaris -->
+                <!-- Nama Barang -->
                 <div class="form-group row">
-                    <label for="nama" class="col-sm-3 col-form-label">Nama Inventaris</label>
+                    <label for="barang" class="col-sm-3 col-form-label">Nama Barang</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Nama Lengkap" name="nama" required autofocus>
+                        <input type="text" class="form-control" placeholder="Nama Barang" name="barang" required autofocus>
                     </div>
                 </div>
 
-                <!-- Nickname -->
+                <!-- Nomor Barang -->
                 <div class="form-group row">
-                    <label for="nickname" class="col-sm-3 col-form-label">Nama Panggilan</label>
+                    <label for="nomor" class="col-sm-3 col-form-label">Nomor Barang</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Nickname" name="nickname" required>
+                        <input type="number" class="form-control" placeholder="1" name="nomor" required>
                     </div>
                 </div>
 
-                <!-- Divisi -->
+                <!-- Jumlah Barang -->
                 <div class="form-group row">
-                    <label for="divisi" class="col-sm-3 col-form-label">Divisi</label>
+                    <label for="jumlah" class="col-sm-3 col-form-label">Jumlah Barang</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Divisi" name="divisi" required>
+                        <input type="number" class="form-control" placeholder="1" name="jumlah" required>
                     </div>
                 </div>
 
-                <!-- Sub Divisi -->
+                <!-- Kode Barang -->
                 <div class="form-group row">
-                    <label for="subdivisi" class="col-sm-3 col-form-label">Sub Divisi</label>
+                    <label for="kode" class="col-sm-3 col-form-label">Kode Barang</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Sub Divisi" name="subdivisi" required>
+                        <input type="text" class="form-control" placeholder="A" name="kode" required>
                     </div>
                 </div>
 
-                <!-- Jurusan -->
+                <!-- Kondisi Barang -->
                 <div class="form-group row">
-                    <label for="jurusan" class="col-sm-3 col-form-label">Jurusan</label>
+                    <label for="kondisi" class="col-sm-3 col-form-label">Kondisi Barang</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Jurusan Kuliah" name="jurusan" required>
+                        <input type="text" class="form-control" placeholder="Kondisi Barang" name="kondisi" required>
                     </div>
                 </div>
 
-                <!-- Semester -->
+                <!-- Tahun -->
                 <div class="form-group row">
-                    <label for="semester" class="col-sm-3 col-form-label">Semester</label>
+                    <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
                     <div class="col-sm-7">
-                        <input type="number" class="form-control" placeholder="Semester" name="semester" required>
-                    </div>
-                </div>
-
-                <!-- Domisili -->
-                <div class="form-group row">
-                    <label for="domisili" class="col-sm-3 col-form-label">Domisili</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Domisili Saat Ini" name="domisili" required>
-                    </div>
-                </div>
-
-                <!-- No HP -->
-                <div class="form-group row">
-                    <label for="nohp" class="col-sm-3 col-form-label">No HP</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="08**********" name="nohp" required>
-                    </div>
-                </div>
-
-                <!-- Instagram -->
-                <div class="form-group row">
-                    <label for="instagram" class="col-sm-3 col-form-label">Instagram</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Tanpa '@'" name=" instagram" required>
-                    </div>
-                </div>
-
-                <!-- Twitter -->
-                <div class="form-group row">
-                    <label for="twitter" class="col-sm-3 col-form-label">Twitter</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Tanpa '@'" name="twitter" required>
+                        <input type="number" class="form-control" placeholder="20**" name="tahun" required>
                     </div>
                 </div>
 
