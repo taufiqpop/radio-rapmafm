@@ -58,21 +58,21 @@
                 <!-- Navbar -->
                 <nav id="navbar" class="nav-menu navbar">
                     <ul>
-                        <li><a href="<?= base_url(); ?>#hero" class="nav-link scrollto active"><i class="bx bx-home" title="Home"></i>
+                        <li><a href="<?= base_url(); ?>index#hero" class="nav-link scrollto active"><i class="bx bx-home" title="Home"></i>
                                 <span>Home</span></a></li>
-                        <li><a href="<?= base_url(); ?>#structure" class="nav-link scrollto"><i class="bx bx-user" title="Structure"></i>
+                        <li><a href="<?= base_url(); ?>index#structure" class="nav-link scrollto"><i class="bx bx-user" title="Structure"></i>
                                 <span>Structure</span></a></li>
-                        <li><a href="<?= base_url(); ?>#program" class="nav-link scrollto"><i class="bx bx-microphone" title="Program"></i>
+                        <li><a href="<?= base_url(); ?>index#program" class="nav-link scrollto"><i class="bx bx-microphone" title="Program"></i>
                                 <span>Program</span></a></li>
-                        <li><a href="<?= base_url(); ?>#chart" class="nav-link scrollto"><i class="bx bx-music" title="Top Chart"></i>
+                        <li><a href="<?= base_url(); ?>index#chart" class="nav-link scrollto"><i class="bx bx-music" title="Top Chart"></i>
                                 <span>Top Chart</span></a></li>
-                        <li><a href="<?= base_url(); ?>#event" class="nav-link scrollto"><i class="bx bx-calendar-event" title="Event"></i>
+                        <li><a href="<?= base_url(); ?>index#event" class="nav-link scrollto"><i class="bx bx-calendar-event" title="Events"></i>
                                 <span>Events</span></a></li>
-                        <li><a href="<?= base_url(); ?>#achievement" class="nav-link scrollto"><i class="bx bx-trophy" title="achievement"></i>
+                        <li><a href="<?= base_url(); ?>index#achievement" class="nav-link scrollto"><i class="bx bx-trophy" title="Achievements"></i>
                                 <span>Achievements</span></a></li>
-                        <li><a href="<?= base_url(); ?>#news" class="nav-link scrollto"><i class="bx bx-news" title="Rapma News"></i>
+                        <li><a href="<?= base_url(); ?>index#news" class="nav-link scrollto"><i class="bx bx-news" title="Rapma News"></i>
                                 <span>Rapma News</span></a></li>
-                        <li><a href="<?= base_url(); ?>#contact" class="nav-link scrollto"><i class="bx bx-envelope" title="Contact"></i>
+                        <li><a href="<?= base_url(); ?>index#contact" class="nav-link scrollto"><i class="bx bx-envelope" title="Contact"></i>
                                 <span>Contact</span></a></li>
                     </ul>
                 </nav>
@@ -92,8 +92,7 @@
     <footer id="footer">
         <div class="container">
             <div class="copyright">
-                Copyright <strong><span><?= date('Y'); ?> <a href="<?= base_url(); ?>user" style="color:black;" target="_blank">
-                            &copy;</a> Rapma FM</span></strong>
+                Copyright <strong><span><?= date('Y'); ?> <a href="<?= base_url(); ?>user" style="color:black;" target="_blank"> &copy;</a> Rapma FM</span></strong>
             </div>
         </div>
     </footer>

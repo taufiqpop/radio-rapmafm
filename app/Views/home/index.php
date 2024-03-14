@@ -23,14 +23,16 @@
           <!-- Clock -->
           <div class="mt-3" style="color: green;">
             <span>
-              <?php
-              // Time Zone
-              date_default_timezone_set('Asia/Jakarta');
-              $hariIni = new DateTime();
-              echo $hariIni->format('l, d F Y')
-              ?>
-              (<span id="jam"></span>
-              <?= $hariIni->format('A') ?>)
+              <strong>
+                <?php
+                // Time Zone
+                date_default_timezone_set('Asia/Jakarta');
+                $hariIni = new DateTime();
+                echo $hariIni->format('l, d F Y')
+                ?>
+                (<span id="jam"></span>
+                <?= $hariIni->format('A') ?>)
+              </strong>
             </span>
           </div>
 
