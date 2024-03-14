@@ -23,7 +23,7 @@ class Alumni extends BaseController
             $alumni = $this->alumniModel;
         }
 
-        $alumni->orderBy('id', 'DESC');
+        $alumni->orderBy('tahun', 'DESC');
 
         $data = [
             'title'         => 'Rapma FM | Alumni',
@@ -58,6 +58,7 @@ class Alumni extends BaseController
             'divisi'    => $this->request->getPost('divisi'),
             'subdivisi' => $this->request->getPost('subdivisi'),
             'jurusan'   => $this->request->getPost('jurusan'),
+            'domisili'  => $this->request->getPost('domisili'),
             'nohp'      => $this->request->getPost('nohp'),
             'instagram' => $this->request->getPost('instagram'),
         ];
@@ -103,13 +104,14 @@ class Alumni extends BaseController
             'divisi'    => $this->request->getPost('divisi'),
             'subdivisi' => $this->request->getPost('subdivisi'),
             'jurusan'   => $this->request->getPost('jurusan'),
+            'domisili'  => $this->request->getPost('domisili'),
             'nohp'      => $this->request->getPost('nohp'),
             'instagram' => $this->request->getPost('instagram'),
         ];
 
         $data = [
             'id'        => $id,
-            'key'       => $this->request->getPost('alumni'),
+            'key'       => $this->request->getPost('nama'),
             'value'     => json_encode($input),
             'tahun'     => $this->request->getPost('tahun'),
         ];

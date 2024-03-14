@@ -59,6 +59,14 @@
                     </div>
                 </div>
 
+                <!-- Domisili -->
+                <div class="form-group row">
+                    <label for="domisili" class="col-sm-3 col-form-label">Domisili</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" placeholder="Domisili Saat Ini" name="domisili" required>
+                    </div>
+                </div>
+
                 <!-- No HP -->
                 <div class="form-group row">
                     <label for="nohp" class="col-sm-3 col-form-label">No HP</label>

@@ -44,6 +44,7 @@
                                     <th scope="col" class="cursor-active">Sub Divisi</th>
                                     <th scope="col" class="cursor-active">Jurusan</th>
                                     <th scope="col" class="cursor-active">Semester</th>
+                                    <th scope="col" class="cursor-active">Domisili</th>
                                     <th scope="col" class="cursor-active">No HP</th>
                                     <th scope="col" class="cursor-stop">Action</th>
                                 </tr>
@@ -59,6 +60,7 @@
                                         <td><?= $data->subdivisi; ?></td>
                                         <td><?= $data->jurusan; ?></td>
                                         <td><?= $data->semester; ?></td>
+                                        <td><?= $data->domisili; ?></td>
                                         <td><?= $data->nohp; ?></td>
                                         <td>
                                             <a href="https://www.instagram.com/<?= $data->instagram; ?>" target="_blank" class="btn btn-primary mb-1"><i class="fab fa-instagram"></i></a>

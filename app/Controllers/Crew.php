@@ -57,6 +57,7 @@ class Crew extends BaseController
             'nickname'  => $this->request->getPost('nickname'),
             'jurusan'   => $this->request->getPost('jurusan'),
             'semester'  => $this->request->getPost('semester'),
+            'domisili'  => $this->request->getPost('domisili'),
             'nohp'      => $this->request->getPost('nohp'),
             'instagram' => $this->request->getPost('instagram'),
             'twitter'   => $this->request->getPost('twitter'),
@@ -78,7 +79,7 @@ class Crew extends BaseController
     {
         $data = [
             'title'         => 'Rapma FM | Edit Data Crew',
-            'crew'      => $this->crewModel->find($id),
+            'crew'          => $this->crewModel->find($id),
             'validation'    => \Config\Services::validation()
         ];
 
@@ -101,6 +102,7 @@ class Crew extends BaseController
             'nickname'  => $this->request->getPost('nickname'),
             'jurusan'   => $this->request->getPost('jurusan'),
             'semester'  => $this->request->getPost('semester'),
+            'domisili'  => $this->request->getPost('domisili'),
             'nohp'      => $this->request->getPost('nohp'),
             'instagram' => $this->request->getPost('instagram'),
             'twitter'   => $this->request->getPost('twitter'),

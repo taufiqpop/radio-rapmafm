@@ -15,7 +15,7 @@
 
                     <!-- Nama Alumni -->
                     <div class="form-group row">
-                        <label for="nama" class="col-sm-2 col-form-label">Nama Alumni</label>
+                        <label for="nama" class="col-sm-3 col-form-label">Nama Alumni</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="nama" value="<?= $data->nama ?>" autofocus required>
                         </div>
@@ -23,7 +23,7 @@
 
                     <!-- Nickname Alumni -->
                     <div class="form-group row">
-                        <label for="nickname" class="col-sm-2 col-form-label">Nickname Alumni</label>
+                        <label for="nickname" class="col-sm-3 col-form-label">Nickname Alumni</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="nickname" value="<?= $data->nickname ?>" required>
                         </div>
@@ -31,7 +31,7 @@
 
                     <!-- Tahun Kepengurusan -->
                     <div class="form-group row">
-                        <label for="tahun" class="col-sm-2 col-form-label">Tahun Kepengurusan</label>
+                        <label for="tahun" class="col-sm-3 col-form-label">Tahun Kepengurusan</label>
                         <div class="col-sm-7">
                             <input type="number" class="form-control" name="tahun" value="<?= $organizer['tahun']; ?>" required>
                         </div>
@@ -39,7 +39,7 @@
 
                     <!-- Divisi -->
                     <div class="form-group row">
-                        <label for="divisi" class="col-sm-2 col-form-label">Divisi</label>
+                        <label for="divisi" class="col-sm-3 col-form-label">Divisi</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="divisi" value="<?= $data->divisi; ?>" required>
                         </div>
@@ -47,7 +47,7 @@
 
                     <!-- Sub Divisi -->
                     <div class="form-group row">
-                        <label for="subdivisi" class="col-sm-2 col-form-label">Sub Divisi</label>
+                        <label for="subdivisi" class="col-sm-3 col-form-label">Sub Divisi</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="subdivisi" value="<?= $data->subdivisi; ?>" required>
                         </div>
@@ -55,15 +55,23 @@
 
                     <!-- Jurusan -->
                     <div class="form-group row">
-                        <label for="jurusan" class="col-sm-2 col-form-label">Jurusan</label>
+                        <label for="jurusan" class="col-sm-3 col-form-label">Jurusan</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="jurusan" value="<?= $data->jurusan; ?>" required>
                         </div>
                     </div>
 
+                    <!-- Domisili -->
+                    <div class="form-group row">
+                        <label for="domisili" class="col-sm-3 col-form-label">Domisili</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="domisili" value="<?= $data->domisili; ?>" required>
+                        </div>
+                    </div>
+
                     <!-- No HP -->
                     <div class="form-group row">
-                        <label for="nohp" class="col-sm-2 col-form-label">No HP</label>
+                        <label for="nohp" class="col-sm-3 col-form-label">No HP</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="nohp" value="<?= $data->nohp; ?>" required>
                         </div>
@@ -71,7 +79,7 @@
 
                     <!-- Instagram -->
                     <div class="form-group row">
-                        <label for="instagram" class="col-sm-2 col-form-label">Instagram</label>
+                        <label for="instagram" class="col-sm-3 col-form-label">Instagram</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="instagram" value="<?= $data->instagram; ?>" required>
                         </div>

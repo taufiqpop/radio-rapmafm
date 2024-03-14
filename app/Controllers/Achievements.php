@@ -23,11 +23,11 @@ class Achievements extends BaseController
             $achievements = $this->achievementsModel;
         }
 
-        $achievements->orderBy('id', 'DESC');
+        $achievements->orderBy('tahun', 'DESC');
 
         $data = [
             'title'         => 'Rapma FM | Achievements',
-            'achievements'  => $achievements->paginate(10, 'achievements'),
+            'achievements'  => $achievements->paginate(5, 'achievements'),
             'pager'         => $achievements->pager,
             'currentPage'   => $currentPage,
         ];

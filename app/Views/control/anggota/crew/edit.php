@@ -15,7 +15,7 @@
 
                     <!-- Nama Crew -->
                     <div class="form-group row">
-                        <label for="nama" class="col-sm-2 col-form-label">Nama Crew</label>
+                        <label for="nama" class="col-sm-3 col-form-label">Nama Crew</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="nama" value="<?= $data->nama ?>" autofocus required>
                         </div>
@@ -23,7 +23,7 @@
 
                     <!-- Nickname -->
                     <div class="form-group row">
-                        <label for="nickname" class="col-sm-2 col-form-label">Nickname</label>
+                        <label for="nickname" class="col-sm-3 col-form-label">Nickname</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="nickname" value="<?= $data->nickname; ?>" required>
                         </div>
@@ -31,7 +31,7 @@
 
                     <!-- Jurusan -->
                     <div class="form-group row">
-                        <label for="jurusan" class="col-sm-2 col-form-label">Jurusan</label>
+                        <label for="jurusan" class="col-sm-3 col-form-label">Jurusan</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="jurusan" value="<?= $data->jurusan; ?>" required>
                         </div>
@@ -39,7 +39,7 @@
 
                     <!-- Semester -->
                     <div class="form-group row">
-                        <label for="semester" class="col-sm-2 col-form-label">Semester</label>
+                        <label for="semester" class="col-sm-3 col-form-label">Semester</label>
                         <div class="col-sm-7">
                             <input type="number" class="form-control" name="semester" value="<?= $data->semester; ?>" required>
                         </div>
@@ -47,7 +47,7 @@
 
                     <!-- No HP -->
                     <div class="form-group row">
-                        <label for="nohp" class="col-sm-2 col-form-label">No HP</label>
+                        <label for="nohp" class="col-sm-3 col-form-label">No HP</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="nohp" value="<?= $data->nohp; ?>" required>
                         </div>
@@ -55,7 +55,7 @@
 
                     <!-- Instagram -->
                     <div class="form-group row">
-                        <label for="instagram" class="col-sm-2 col-form-label">Instagram</label>
+                        <label for="instagram" class="col-sm-3 col-form-label">Instagram</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="instagram" value="<?= $data->instagram; ?>" required>
                         </div>
@@ -63,7 +63,7 @@
 
                     <!-- Twitter -->
                     <div class="form-group row">
-                        <label for="twitter" class="col-sm-2 col-form-label">twitter</label>
+                        <label for="twitter" class="col-sm-3 col-form-label">twitter</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="twitter" value="<?= $data->twitter; ?>" required>
                         </div>
