@@ -50,7 +50,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; <strong><?= date('Y'); ?> RSUI YAKSSI</span></strong>
+                        <span>Copyright <strong><?= date('Y'); ?> &copy; Taufiq Pop</span></strong>
                     </div>
                 </div>
             </footer>

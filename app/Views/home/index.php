@@ -202,10 +202,9 @@
     <!-- Event -->
     <section id="event" class="portfolio section-bg">
       <div class="container">
-
         <div class="row g-4 g-md-6">
           <div class="section-title">
-            <h2 style="text-align: center;">Event</h2>
+            <h2 style="text-align: center;">Events</h2>
           </div>
           <?php foreach ($events as $event) : ?>
             <?php $data = json_decode($event['value']) ?>
@@ -234,7 +233,7 @@
       <div class="container">
         <div class="row g-2 g-md-4">
           <div class="section-title">
-            <h2 style="text-align: center;">Achievement</h2>
+            <h2 style="text-align: center;">Achievements</h2>
           </div>
           <?php foreach ($achievements as $achievement) : ?>
             <?php $data = json_decode($achievement['value']) ?>

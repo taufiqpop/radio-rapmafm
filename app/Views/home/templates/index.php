@@ -67,9 +67,9 @@
                         <li><a href="<?= base_url(); ?>#chart" class="nav-link scrollto"><i class="bx bx-music" title="Top Chart"></i>
                                 <span>Top Chart</span></a></li>
                         <li><a href="<?= base_url(); ?>#event" class="nav-link scrollto"><i class="bx bx-calendar-event" title="Event"></i>
-                                <span>Event</span></a></li>
+                                <span>Events</span></a></li>
                         <li><a href="<?= base_url(); ?>#achievement" class="nav-link scrollto"><i class="bx bx-trophy" title="achievement"></i>
-                                <span>Achievement</span></a></li>
+                                <span>Achievements</span></a></li>
                         <li><a href="<?= base_url(); ?>#news" class="nav-link scrollto"><i class="bx bx-news" title="Rapma News"></i>
                                 <span>Rapma News</span></a></li>
                         <li><a href="<?= base_url(); ?>#contact" class="nav-link scrollto"><i class="bx bx-envelope" title="Contact"></i>
@@ -92,8 +92,8 @@
     <footer id="footer">
         <div class="container">
             <div class="copyright">
-                Copyright <a href="<?= base_url(); ?>user" style="color:black;" target="_blank">
-                    &copy;</a> <strong><span><?= date('Y'); ?> Taufiq Pop</span></strong>
+                Copyright <strong><span><?= date('Y'); ?> <a href="<?= base_url(); ?>user" style="color:black;" target="_blank">
+                            &copy;</a> Rapma FM</span></strong>
             </div>
         </div>
     </footer>
