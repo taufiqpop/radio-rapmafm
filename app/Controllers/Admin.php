@@ -9,7 +9,7 @@ class Admin extends BaseController
 
     public function __construct()
     {
-        $this->userModel = new \Myth\Auth\Models\UserModel();
+        $this->userModel  = new \Myth\Auth\Models\UserModel();
         $this->usersModel = new \App\Models\UsersModel();
     }
 

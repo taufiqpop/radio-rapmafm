@@ -24,16 +24,11 @@ class Topchart extends BaseController
         }
 
         $topchart->orderBy('id', 'DESC');
-
-        $db      = \Config\Database::connect();
-        $builder = $db->table('topchart');
-        $builder->select('id, key, value');
-
         $data = [
-            'title'         => 'Rapma FM | Topchart',
-            'topchart'      => $topchart->paginate(5, 'topchart'),
-            'pager'         => $topchart->pager,
-            'currentPage'   => $currentPage,
+            'title'       => 'Rapma FM | Top Chart',
+            'topchart'    => $topchart->paginate(5, 'topchart'),
+            'pager'       => $topchart->pager,
+            'currentPage' => $currentPage,
         ];
 
         return view('control/topchart/index', $data);
@@ -43,7 +38,7 @@ class Topchart extends BaseController
     public function insert($id = '')
     {
         $input = [
-            'versi'   => $this->request->getPost('versi'),
+            'versi'     => $this->request->getPost('versi'),
             'link'      => $this->request->getPost('link'),
         ];
 
@@ -53,7 +48,7 @@ class Topchart extends BaseController
         ];
 
         $this->topchartModel->save($data);
-        session()->setFlashdata('pesan', 'Data Top Cart Berhasil Ditambahkan!');
+        session()->setFlashdata('pesan', 'Data Top Chart Berhasil Ditambahkan!');
 
         return redirect('control/topchart');
     }
@@ -62,8 +57,8 @@ class Topchart extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'         => 'Rapma FM | Edit Data Topchart',
-            'topchart'      => $this->topchartModel->find($id),
+            'title'     => 'Rapma FM | Edit Data Topchart',
+            'topchart'  => $this->topchartModel->find($id),
         ];
 
         $db      = \Config\Database::connect();
@@ -81,7 +76,7 @@ class Topchart extends BaseController
     public function update($id)
     {
         $input = [
-            'versi'   => $this->request->getPost('versi'),
+            'versi'     => $this->request->getPost('versi'),
             'link'      => $this->request->getPost('link'),
         ];
 

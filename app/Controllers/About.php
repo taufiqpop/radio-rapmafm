@@ -15,16 +15,13 @@ class About extends BaseController
     public function index()
     {
         $data = [
-            'title'      => 'Rapma FM | About',
-            'about'      => $this->aboutModel->paginate(5, 'about'),
+            'title' => 'Rapma FM | About',
+            'about' => $this->aboutModel->paginate(1, 'about'),
         ];
 
         $db      = \Config\Database::connect();
         $builder = $db->table('about');
         $builder->select('id, value, created_at, updated_at, deleted_at');
-        $query   = $builder->get();
-
-        $data['about'] = $query->getResultArray();
 
         return view('control/about/index', $data);
     }
@@ -34,12 +31,12 @@ class About extends BaseController
     {
         $input = [
             'deskripsi' => $this->request->getPost('deskripsi'),
-            'link'    => $this->request->getPost('link'),
+            'link'      => $this->request->getPost('link'),
         ];
 
         $data = [
-            'id'    => $id,
-            'value' => json_encode($input),
+            'id'        => $id,
+            'value'     => json_encode($input),
         ];
 
         $this->aboutModel->save($data);

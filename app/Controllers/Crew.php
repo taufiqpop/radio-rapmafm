@@ -26,10 +26,10 @@ class Crew extends BaseController
         $crew->orderBy('id', 'DESC');
 
         $data = [
-            'title'         => 'Rapma FM | Crew',
-            'crew'          => $crew->paginate(10, 'crew'),
-            'pager'         => $crew->pager,
-            'currentPage'   => $currentPage,
+            'title'       => 'Rapma FM | Crew',
+            'crew'        => $crew->paginate(10, 'crew'),
+            'pager'       => $crew->pager,
+            'currentPage' => $currentPage,
         ];
 
         return view('control/anggota/crew/index', $data);
@@ -41,10 +41,6 @@ class Crew extends BaseController
         $data = [
             'title'  => 'Rapma FM | Form Crew',
         ];
-
-        $db      = \Config\Database::connect();
-        $builder = $db->table('crew');
-        $builder->select('id, key, value');
 
         return view('control/anggota/crew/form', $data);
     }
@@ -78,9 +74,8 @@ class Crew extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'         => 'Rapma FM | Edit Data Crew',
-            'crew'          => $this->crewModel->find($id),
-            'validation'    => \Config\Services::validation()
+            'title'     => 'Rapma FM | Edit Data Crew',
+            'crew'      => $this->crewModel->find($id),
         ];
 
         $db      = \Config\Database::connect();

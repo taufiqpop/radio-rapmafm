@@ -15,8 +15,8 @@ class Settings extends BaseController
     public function index()
     {
         $data = [
-            'title'       => 'Rapma FM | Settings',
-            'settings'    => $this->settingsModel->paginate(5, 'settings'),
+            'title'     => 'Rapma FM | Settings',
+            'settings'  => $this->settingsModel->paginate(1, 'settings'),
         ];
 
         return view('control/settings/index', $data);

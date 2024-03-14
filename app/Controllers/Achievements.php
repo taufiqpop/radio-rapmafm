@@ -39,7 +39,7 @@ class Achievements extends BaseController
     public function detail($id)
     {
         $data = [
-            'title' => 'Rapma FM | Detail Achievements',
+            'title'        => 'Rapma FM | Detail Achievements',
             'achievements' => $this->achievementsModel->find($id),
         ];
 
@@ -62,18 +62,11 @@ class Achievements extends BaseController
             'validation' => \Config\Services::validation()
         ];
 
-        $db      = \Config\Database::connect();
-        $builder = $db->table('achievements');
-        $builder->select('id, key, value, tahun');
-        $query   = $builder->get();
-
-        $data['achievements'] = $query->getResultArray();
-
         return view('control/achievements/form', $data);
     }
 
     // Insert Data
-    public function insert($id = '')
+    public function insert()
     {
         // Validasi Input
         if (!$this->validate([
@@ -92,17 +85,17 @@ class Achievements extends BaseController
         }
 
         // Ambil Gambar
-        $gambarAchievements = $this->request->getFile('images');
+        $ambilGambar = $this->request->getFile('images');
 
         // Apakah Tidak Ada Gambar Yang Diupload
-        if ($gambarAchievements->getError() == 4) {
+        if ($ambilGambar->getError() == 4) {
             $namaGambar = 'default.svg';
         } else {
             // Generate Nama File Random
-            $namaGambar = $gambarAchievements->getRandomName();
+            $namaGambar = $ambilGambar->getRandomName();
 
             // Pindahkan Gambar
-            $gambarAchievements->move('img/achievements', $namaGambar);
+            $ambilGambar->move('img/achievements', $namaGambar);
         }
 
         $input = [
@@ -162,17 +155,17 @@ class Achievements extends BaseController
             return redirect()->to('control/achievements/edit')->withInput()->with('validation', $validation);
         }
 
-        $gambarAchievements = $this->request->getFile('images');
+        $ambilGambar = $this->request->getFile('images');
 
         // Cek Gambar, Apakah Tetap Gambar Lama
-        if ($gambarAchievements->getError() == 4) {
+        if ($ambilGambar->getError() == 4) {
             $namaGambar = $this->request->getVar('imgLama');
         } else {
             // Generate Nama File Random
-            $namaGambar = $gambarAchievements->getRandomName();
+            $namaGambar = $ambilGambar->getRandomName();
 
             // Pindahkan Gambar
-            $gambarAchievements->move('img/achievements', $namaGambar);
+            $ambilGambar->move('img/achievements', $namaGambar);
 
             // Hapus File Yang Lama
             unlink('img/achievements/' . $this->request->getVar('imgLama'));

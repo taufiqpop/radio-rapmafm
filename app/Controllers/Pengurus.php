@@ -26,10 +26,10 @@ class Pengurus extends BaseController
         $pengurus->orderBy('id', 'DESC');
 
         $data = [
-            'title'         => 'Rapma FM | Pengurus',
-            'pengurus'      => $pengurus->paginate(10, 'pengurus'),
-            'pager'         => $pengurus->pager,
-            'currentPage'   => $currentPage,
+            'title'       => 'Rapma FM | Pengurus',
+            'pengurus'    => $pengurus->paginate(10, 'pengurus'),
+            'pager'       => $pengurus->pager,
+            'currentPage' => $currentPage,
         ];
 
         return view('control/anggota/pengurus/index', $data);
@@ -39,12 +39,8 @@ class Pengurus extends BaseController
     public function form()
     {
         $data = [
-            'title'      => 'Rapma FM | Form Pengurus',
+            'title' => 'Rapma FM | Form Pengurus',
         ];
-
-        $db      = \Config\Database::connect();
-        $builder = $db->table('pengurus');
-        $builder->select('id, key, value');
 
         return view('control/anggota/pengurus/form', $data);
     }
@@ -80,9 +76,8 @@ class Pengurus extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'         => 'Rapma FM | Edit Data Pengurus',
-            'pengurus'      => $this->pengurusModel->find($id),
-            'validation'    => \Config\Services::validation()
+            'title'    => 'Rapma FM | Edit Data Pengurus',
+            'pengurus' => $this->pengurusModel->find($id),
         ];
 
         $db      = \Config\Database::connect();

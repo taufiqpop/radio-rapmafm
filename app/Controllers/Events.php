@@ -26,10 +26,10 @@ class Events extends BaseController
         $events->orderBy('id', 'DESC');
 
         $data = [
-            'title'         => 'Rapma FM | Events',
-            'events'        => $events->paginate(10, 'events'),
-            'pager'         => $events->pager,
-            'currentPage'   => $currentPage,
+            'title'       => 'Rapma FM | Events',
+            'events'      => $events->paginate(10, 'events'),
+            'pager'       => $events->pager,
+            'currentPage' => $currentPage,
         ];
 
         return view('control/events/index', $data);
@@ -62,13 +62,6 @@ class Events extends BaseController
             'validation' => \Config\Services::validation()
         ];
 
-        $db      = \Config\Database::connect();
-        $builder = $db->table('events');
-        $builder->select('id, key, value');
-        $query   = $builder->get();
-
-        $data['events'] = $query->getResultArray();
-
         return view('control/events/form', $data);
     }
 
@@ -92,17 +85,17 @@ class Events extends BaseController
         }
 
         // Ambil Gambar
-        $gambarEvents = $this->request->getFile('images');
+        $ambilGambar = $this->request->getFile('images');
 
         // Apakah Tidak Ada Gambar Yang Diupload
-        if ($gambarEvents->getError() == 4) {
+        if ($ambilGambar->getError() == 4) {
             $namaGambar = 'default.svg';
         } else {
             // Generate Nama File Random
-            $namaGambar = $gambarEvents->getRandomName();
+            $namaGambar = $ambilGambar->getRandomName();
 
             // Pindahkan Gambar
-            $gambarEvents->move('img/events', $namaGambar);
+            $ambilGambar->move('img/events', $namaGambar);
         }
 
         $input = [
@@ -129,9 +122,9 @@ class Events extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'         => 'Rapma FM | Edit Data Events',
-            'events'        => $this->eventsModel->find($id),
-            'validation'    => \Config\Services::validation()
+            'title'      => 'Rapma FM | Edit Data Events',
+            'events'     => $this->eventsModel->find($id),
+            'validation' => \Config\Services::validation()
         ];
 
         $db      = \Config\Database::connect();
@@ -163,17 +156,17 @@ class Events extends BaseController
             return redirect()->to('control/events/edit')->withInput()->with('validation', $validation);
         }
 
-        $gambarEvents = $this->request->getFile('images');
+        $ambilGambar = $this->request->getFile('images');
 
         // Cek Gambar, Apakah Tetap Gambar Lama
-        if ($gambarEvents->getError() == 4) {
+        if ($ambilGambar->getError() == 4) {
             $namaGambar = $this->request->getVar('imgLama');
         } else {
             // Generate Nama File Random
-            $namaGambar = $gambarEvents->getRandomName();
+            $namaGambar = $ambilGambar->getRandomName();
 
             // Pindahkan Gambar
-            $gambarEvents->move('img/events', $namaGambar);
+            $ambilGambar->move('img/events', $namaGambar);
 
             // Hapus File Yang Lama
             unlink('img/events/' . $this->request->getVar('imgLama'));

@@ -26,10 +26,10 @@ class Pesan extends BaseController
         $pesan->orderBy('id', 'DESC');
 
         $data = [
-            'title'         => 'Rapma FM | Pesan',
-            'pesan'         => $pesan->paginate(5, 'pesan'),
-            'pager'         => $pesan->pager,
-            'currentPage'   => $currentPage,
+            'title'       => 'Rapma FM | Pesan',
+            'pesan'       => $pesan->paginate(10, 'pesan'),
+            'pager'       => $pesan->pager,
+            'currentPage' => $currentPage,
         ];
 
         return view('user/pesan', $data);

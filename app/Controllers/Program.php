@@ -26,10 +26,10 @@ class Program extends BaseController
         $program->orderBy('id', 'DESC');
 
         $data = [
-            'title'         => 'Rapma FM | Program',
-            'program'       => $program->paginate(10, 'program'),
-            'pager'         => $program->pager,
-            'currentPage'   => $currentPage,
+            'title'       => 'Rapma FM | Program',
+            'program'     => $program->paginate(10, 'program'),
+            'pager'       => $program->pager,
+            'currentPage' => $currentPage,
         ];
 
         return view('control/program/index', $data);
@@ -43,18 +43,11 @@ class Program extends BaseController
             'validation' => \Config\Services::validation()
         ];
 
-        $db      = \Config\Database::connect();
-        $builder = $db->table('program');
-        $builder->select('id, key, value');
-        $query   = $builder->get();
-
-        $data['program'] = $query->getResultArray();
-
         return view('control/program/form', $data);
     }
 
     // Insert Data
-    public function insert($id = '')
+    public function insert()
     {
         // Validasi Input
         if (!$this->validate([
@@ -73,17 +66,17 @@ class Program extends BaseController
         }
 
         // Ambil Gambar
-        $gambarProgram = $this->request->getFile('images');
+        $ambilGambar = $this->request->getFile('images');
 
         // Apakah Tidak Ada Gambar Yang Diupload
-        if ($gambarProgram->getError() == 4) {
+        if ($ambilGambar->getError() == 4) {
             $namaGambar = 'default.svg';
         } else {
             // Generate Nama File Random
-            $namaGambar = $gambarProgram->getRandomName();
+            $namaGambar = $ambilGambar->getRandomName();
 
             // Pindahkan Gambar
-            $gambarProgram->move('img/program', $namaGambar);
+            $ambilGambar->move('img/program', $namaGambar);
         }
 
         $input = [
@@ -109,9 +102,9 @@ class Program extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'         => 'Rapma FM | Edit Data Program',
-            'program'       => $this->programModel->find($id),
-            'validation'    => \Config\Services::validation()
+            'title'      => 'Rapma FM | Edit Data Program',
+            'program'    => $this->programModel->find($id),
+            'validation' => \Config\Services::validation()
         ];
 
         $db      = \Config\Database::connect();
@@ -143,17 +136,17 @@ class Program extends BaseController
             return redirect()->to('control/program/edit')->withInput()->with('validation', $validation);
         }
 
-        $gambarProgram = $this->request->getFile('images');
+        $ambilGambar = $this->request->getFile('images');
 
         // Cek Gambar, Apakah Tetap Gambar Lama
-        if ($gambarProgram->getError() == 4) {
+        if ($ambilGambar->getError() == 4) {
             $namaGambar = $this->request->getVar('imgLama');
         } else {
             // Generate Nama File Random
-            $namaGambar = $gambarProgram->getRandomName();
+            $namaGambar = $ambilGambar->getRandomName();
 
             // Pindahkan Gambar
-            $gambarProgram->move('img/program', $namaGambar);
+            $ambilGambar->move('img/program', $namaGambar);
 
             // Hapus File Yang Lama
             unlink('img/program/' . $this->request->getVar('imgLama'));

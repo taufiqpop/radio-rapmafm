@@ -26,10 +26,10 @@ class Alumni extends BaseController
         $alumni->orderBy('tahun', 'DESC');
 
         $data = [
-            'title'         => 'Rapma FM | Alumni',
-            'alumni'        => $alumni->paginate(10, 'alumni'),
-            'pager'         => $alumni->pager,
-            'currentPage'   => $currentPage,
+            'title'       => 'Rapma FM | Alumni',
+            'alumni'      => $alumni->paginate(10, 'alumni'),
+            'pager'       => $alumni->pager,
+            'currentPage' => $currentPage,
         ];
 
         return view('control/anggota/alumni/index', $data);
@@ -41,10 +41,6 @@ class Alumni extends BaseController
         $data = [
             'title' => 'Rapma FM | Form Alumni',
         ];
-
-        $db      = \Config\Database::connect();
-        $builder = $db->table('alumni');
-        $builder->select('id, key, value, tahun');
 
         return view('control/anggota/alumni/form', $data);
     }
@@ -79,9 +75,8 @@ class Alumni extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'         => 'Rapma FM | Edit Data Alumni',
-            'alumni'      => $this->alumniModel->find($id),
-            'validation'    => \Config\Services::validation()
+            'title'     => 'Rapma FM | Edit Data Alumni',
+            'alumni'    => $this->alumniModel->find($id),
         ];
 
         $db      = \Config\Database::connect();

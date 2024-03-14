@@ -79,6 +79,14 @@ $routes->add('/structure/update/(:num)', 'Structure::update/$1');
 $routes->get('/control/structure/member', 'Structure::member');
 $routes->add('/structure/member/update/(:num)', 'Structure::new/$1');
 
+// Inventaris
+$routes->add('/control/inventaris', 'Inventaris::index');
+$routes->get('/control/inventaris/form', 'Inventaris::form');
+$routes->add('/inventaris/insert', 'Inventaris::insert');
+$routes->get('/control/inventaris/edit/(:num)', 'Inventaris::edit/$1');
+$routes->add('/inventaris/update/(:num)', 'Inventaris::update/$1');
+$routes->delete('/control/inventaris/(:num)', 'Inventaris::delete/$1');
+
 // DIVISI KEPENYIARAN //
 // Program
 $routes->add('/control/program', 'Program::index');
