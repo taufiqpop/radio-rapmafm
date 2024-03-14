@@ -6,7 +6,7 @@ class Home extends BaseController
 {
     protected $aboutModel;
     protected $achievementsModel;
-    protected $crewModel;
+    protected $memberModel;
     protected $eventsModel;
     protected $programModel;
     protected $structureModel;
@@ -18,7 +18,7 @@ class Home extends BaseController
     {
         $this->aboutModel        = new \App\Models\AboutModel();
         $this->achievementsModel = new \App\Models\AchievementsModel();
-        $this->crewModel         = new \App\Models\CrewModel();
+        $this->memberModel       = new \App\Models\MemberModel();
         $this->eventsModel       = new \App\Models\EventsModel();
         $this->programModel      = new \App\Models\ProgramModel();
         $this->structureModel    = new \App\Models\StructureModel();
@@ -42,7 +42,7 @@ class Home extends BaseController
             'title'         => 'Rapma FM',
             'about'         => $this->aboutModel->paginate(5, 'about'),
             'achievements'  => $achievements->paginate(100, 'achievements'),
-            'crew'          => $this->crewModel->paginate(1, 'crew'),
+            'member'        => $this->memberModel->paginate(1, 'member'),
             'events'        => $events->paginate(100, 'events'),
             'program'       => $this->programModel->paginate(100, 'program'),
             'structure'     => $this->structureModel->paginate(5, 'structure'),

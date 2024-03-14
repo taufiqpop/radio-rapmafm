@@ -62,7 +62,6 @@ $routes->add('/settings/update/(:num)', 'Settings::update/$1');
 $routes->get('/control/about', 'About::index');
 $routes->add('/about/update/(:num)', 'About::update/$1');
 
-
 // DIVISI UMUM //
 // Achievements
 $routes->add('/control/achievements', 'Achievements::index');
@@ -87,7 +86,6 @@ $routes->get('/control/program/form', 'Program::form');
 $routes->add('/program/insert', 'Program::insert');
 $routes->get('/control/program/edit/(:num)', 'Program::edit/$1');
 $routes->add('/program/update/(:num)', 'Program::update/$1');
-$routes->get('/control/program/detail/(:num)', 'Program::detail/$1');
 $routes->delete('/control/program/(:num)', 'Program::delete/$1');
 
 // Top Chart
@@ -109,6 +107,29 @@ $routes->delete('/control/events/(:num)', 'Events::delete/$1');
 
 
 // DIVISI PERSONALIA //
+// Crew
+$routes->add('/control/crew', 'Crew::index');
+$routes->get('/control/crew/form', 'Crew::form');
+$routes->add('/crew/insert', 'Crew::insert');
+$routes->get('/control/crew/edit/(:num)', 'Crew::edit/$1');
+$routes->add('/crew/update/(:num)', 'Crew::update/$1');
+$routes->delete('/control/crew/(:num)', 'Crew::delete/$1');
+
+// Pengurus
+$routes->add('/control/pengurus', 'Pengurus::index');
+$routes->get('/control/pengurus/form', 'Pengurus::form');
+$routes->add('/pengurus/insert', 'Pengurus::insert');
+$routes->get('/control/pengurus/edit/(:num)', 'Pengurus::edit/$1');
+$routes->add('/pengurus/update/(:num)', 'Pengurus::update/$1');
+$routes->delete('/control/pengurus/(:num)', 'Pengurus::delete/$1');
+
+// Alumni
+$routes->add('/control/alumni', 'Alumni::index');
+$routes->get('/control/alumni/form', 'Alumni::form');
+$routes->add('/alumni/insert', 'Alumni::insert');
+$routes->get('/control/alumni/edit/(:num)', 'Alumni::edit/$1');
+$routes->add('/alumni/update/(:num)', 'Alumni::update/$1');
+$routes->delete('/control/alumni/(:num)', 'Alumni::delete/$1');
 
 /*
  * --------------------------------------------------------------------

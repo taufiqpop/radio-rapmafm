@@ -137,8 +137,8 @@
         <!-- Crew -->
         <div class="row">
           <div class="col section-bottom-button" data-aos="fade-up">
-            <?php foreach ($crew as $crews) : ?>
-              <?php $data = json_decode($crews['value']) ?>
+            <?php foreach ($member as $members) : ?>
+              <?php $data = json_decode($members['value']) ?>
               <img src="<?= base_url(); ?>img/structure/<?= $data->images; ?>" class="img-fluid" alt="<?= $data->divisi; ?>">
             <?php endforeach; ?>
           </div>

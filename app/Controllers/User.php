@@ -38,7 +38,7 @@ class User extends BaseController
     public function profile($id)
     {
         $data = [
-            'title' => 'Rapma FM| My Profile',
+            'title' => 'Rapma FM | My Profile',
             'users' => $this->usersModel->findAll(),
         ];
 

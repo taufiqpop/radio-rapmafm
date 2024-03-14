@@ -313,11 +313,19 @@
     </li>
 
     <!-- HRD -->
-    <!-- Anggota -->
+    <!-- Pengurus -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/anggota">
+        <a class="nav-link" href="<?= base_url(); ?>control/pengurus">
+            <i class="fas fa-restroom"></i>
+            <span>Pengurus</span>
+        </a>
+    </li>
+
+    <!-- Crew -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/crew">
             <i class="fas fa-child"></i>
-            <span>Anggota</span>
+            <span>Crew</span>
         </a>
     </li>
 
