@@ -35,16 +35,16 @@
                         <table class="table table-bordered" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th scope="col" class="cursor-active" rowspan="2">No</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">No</th>
                                     <th scope="col" class="cursor-active" colspan="2">Tanggal</th>
-                                    <th scope="col" class="cursor-active" rowspan="2">Semester</th>
-                                    <th scope="col" class="cursor-active" rowspan="2">Domisili</th>
-                                    <th scope="col" class="cursor-active" rowspan="2">No HP</th>
-                                    <th scope="col" class="cursor-stop" rowspan="2">Action</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Instansi</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Acara</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Kontraprestasi</th>
+                                    <th scope="col" class="cursor-stop" rowspan="2" style="padding-bottom: 35px;">Action</th>
                                 </tr>
                                 <tr>
-                                    <th scope="col" class="cursor-active">Nama Panggilan</th>
-                                    <th scope="col" class="cursor-active">Jurusan</th>
+                                    <th scope="col" class="cursor-active">Tanggal Masuk</th>
+                                    <th scope="col" class="cursor-active">Pelaksanaan</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,8 +55,8 @@
                                         <td><?= $data->tglmasuk; ?></td>
                                         <td><?= $data->pelaksanaan; ?></td>
                                         <td><?= $data->instansi; ?></td>
-                                        <td><?= $data->acara; ?></td>
-                                        <td><?= $data->kontraprestasi; ?></td>
+                                        <td style="max-width: 300px;"><?= $data->acara; ?></td>
+                                        <td style="max-width: 500px;"><?= $data->kontraprestasi; ?></td>
                                         <td>
                                             <a href="<?= base_url(); ?>control/medpart/edit/<?= $mediapartner['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                             <form action="<?= base_url(); ?>control/medpart/<?= $mediapartner['id']; ?>" method="post" class="d-inline">
