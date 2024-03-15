@@ -45,6 +45,14 @@
                         </div>
                     </div>
 
+                    <!-- Status -->
+                    <div class="form-group row">
+                        <label for="status" class="col-sm-3 col-form-label">Status</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="status" value="<?= $data->status; ?>" required>
+                        </div>
+                    </div>
+
                     <!-- Kontraprestasi -->
                     <div class="form-group row">
                         <label for="kontraprestasi" class="col-sm-3 col-form-label">Kontraprestasi</label>

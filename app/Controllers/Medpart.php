@@ -53,6 +53,7 @@ class Medpart extends BaseController
             'pelaksanaan'       => $this->request->getPost('pelaksanaan'),
             'instansi'          => $this->request->getPost('instansi'),
             'acara'             => $this->request->getPost('acara'),
+            'status'            => $this->request->getPost('status'),
             'kontraprestasi'    => $this->request->getPost('kontraprestasi'),
         ];
 
@@ -94,6 +95,7 @@ class Medpart extends BaseController
             'pelaksanaan'       => $this->request->getPost('pelaksanaan'),
             'instansi'          => $this->request->getPost('instansi'),
             'acara'             => $this->request->getPost('acara'),
+            'status'            => $this->request->getPost('status'),
             'kontraprestasi'    => $this->request->getPost('kontraprestasi'),
         ];
 

@@ -39,6 +39,7 @@
                                     <th scope="col" class="cursor-active" colspan="2">Tanggal</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Instansi</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Acara</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Status</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Kontraprestasi</th>
                                     <th scope="col" class="cursor-stop" rowspan="2" style="padding-bottom: 35px;">Action</th>
                                 </tr>
@@ -56,6 +57,7 @@
                                         <td><?= $data->pelaksanaan; ?></td>
                                         <td><?= $data->instansi; ?></td>
                                         <td style="max-width: 300px;"><?= $data->acara; ?></td>
+                                        <td><?= $data->status; ?></td>
                                         <td style="max-width: 500px;"><?= $data->kontraprestasi; ?></td>
                                         <td>
                                             <a href="<?= base_url(); ?>control/medpart/edit/<?= $mediapartner['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
