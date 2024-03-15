@@ -123,6 +123,15 @@ $routes->add('/events/update/(:num)', 'Events::update/$1');
 $routes->get('/control/events/detail/(:num)', 'Events::detail/$1');
 $routes->delete('/control/events/(:num)', 'Events::delete/$1');
 
+// Medpart
+$routes->add('/control/medpart', 'Medpart::index');
+$routes->get('/control/medpart/form', 'Medpart::form');
+$routes->add('/medpart/insert', 'Medpart::insert');
+$routes->get('/control/medpart/edit/(:num)', 'Medpart::edit/$1');
+$routes->add('/medpart/update/(:num)', 'Medpart::update/$1');
+$routes->get('/control/medpart/detail/(:num)', 'Medpart::detail/$1');
+$routes->delete('/control/medpart/(:num)', 'Medpart::delete/$1');
+
 
 // DIVISI PERSONALIA //
 // Crew

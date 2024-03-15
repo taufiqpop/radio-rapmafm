@@ -22,10 +22,6 @@ class Medpart extends Migration
             'value' => [
                 'type'       => 'TEXT',
             ],
-            'tahun' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
             'created_at' => [
                 'type'       => 'DATETIME',
             ],
@@ -37,7 +33,6 @@ class Medpart extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addKey('tahun');
         $this->forge->createTable('medpart');
     }
 
