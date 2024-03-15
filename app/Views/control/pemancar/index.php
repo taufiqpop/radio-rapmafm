@@ -74,6 +74,7 @@
                                         <td><?= $jangkauan['key']; ?></td>
                                         <td>
                                             <a href="<?= base_url(); ?>control/pemancar/detail/<?= $jangkauan['id']; ?>" class="btn btn-info mb-1"><i class="fas fa-info"></i></a>
+                                            <a href="<?= base_url(); ?>control/pemancar/form/<?= $jangkauan['id']; ?>" class="btn btn-primary mb-1"><i class="fas fa-plus"></i></a>
                                             <a href="<?= base_url(); ?>control/pemancar/edit/<?= $jangkauan['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                             <form action="<?= base_url(); ?>control/pemancar/<?= $jangkauan['id']; ?>" method="post" class="d-inline">
                                                 <?= csrf_field(); ?>

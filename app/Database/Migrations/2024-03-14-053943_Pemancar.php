@@ -22,10 +22,6 @@ class Pemancar extends Migration
             'value' => [
                 'type'       => 'TEXT',
             ],
-            'tahun' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
             'created_at' => [
                 'type'       => 'DATETIME',
             ],

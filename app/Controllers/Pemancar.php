@@ -96,8 +96,10 @@ class Pemancar extends BaseController
             ]
         ];
 
+        array_push($input);
+
         $data = [
-            'value'     => json_encode($input),
+            'value' => json_encode($input),
         ];
 
         $this->pemancarModel->update($id, $data);
@@ -134,11 +136,10 @@ class Pemancar extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'value'     => json_encode($input),
         ];
 
-        $this->pemancarModel->insert($data);
+        $this->pemancarModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data Pemancar Berhasil Diubah!');
 
         return redirect('control/pemancar');
