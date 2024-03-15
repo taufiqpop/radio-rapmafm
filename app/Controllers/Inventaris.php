@@ -50,8 +50,8 @@ class Inventaris extends BaseController
     {
         $input = [
             'barang'    => $this->request->getPost('barang'),
-            'jumlah'    => $this->request->getPost('jumlah'),
             'nomor'     => $this->request->getPost('nomor'),
+            'jumlah'    => $this->request->getPost('jumlah'),
         ];
 
         $data = [
@@ -92,6 +92,7 @@ class Inventaris extends BaseController
     {
         $input = [
             'barang'    => $this->request->getPost('barang'),
+            'nomor'     => $this->request->getPost('nomor'),
             'jumlah'    => $this->request->getPost('jumlah'),
         ];
 

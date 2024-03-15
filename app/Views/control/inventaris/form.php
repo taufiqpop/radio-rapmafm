@@ -23,7 +23,7 @@
                 <div class="form-group row">
                     <label for="nomor" class="col-sm-3 col-form-label">Nomor Barang</label>
                     <div class="col-sm-7">
-                        <input type="number" class="form-control" placeholder="1" name="nomor" required>
+                        <input type="number" class="form-control" placeholder="0" name="nomor" required>
                     </div>
                 </div>
 
@@ -31,7 +31,7 @@
                 <div class="form-group row">
                     <label for="jumlah" class="col-sm-3 col-form-label">Jumlah Barang</label>
                     <div class="col-sm-7">
-                        <input type="number" class="form-control" placeholder="1" name="jumlah" required>
+                        <input type="number" class="form-control" placeholder="0" name="jumlah" required>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
                 <div class="form-group row">
                     <label for="kode" class="col-sm-3 col-form-label">Kode Barang</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="A" name="kode" required>
+                        <input type="text" class="form-control" placeholder="ABCDE" name="kode" required>
                     </div>
                 </div>
 
@@ -47,15 +47,15 @@
                 <div class="form-group row">
                     <label for="kondisi" class="col-sm-3 col-form-label">Kondisi Barang</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Kondisi Barang" name="kondisi" required>
+                        <input type="text" class="form-control" placeholder="0 Baik, 0 Rusak" name="kondisi" required>
                     </div>
                 </div>
 
                 <!-- Tahun -->
                 <div class="form-group row">
-                    <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
+                    <label for="tahun" class="col-sm-3 col-form-label">Tahun (2 Digit Belakang)</label>
                     <div class="col-sm-7">
-                        <input type="number" class="form-control" placeholder="20**" name="tahun" required>
+                        <input type="number" class="form-control" placeholder="00" name="tahun" required>
                     </div>
                 </div>
 

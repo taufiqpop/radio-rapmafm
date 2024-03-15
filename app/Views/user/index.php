@@ -13,7 +13,7 @@
             <div class="row">
 
                 <!-- Total Users -->
-                <div class="col-xl-2 col-md-6 mb-4">
+                <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card border-left-primary shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
@@ -32,7 +32,7 @@
                 </div>
 
                 <!-- Total Achievements -->
-                <div class="col-xl-2 col-md-6 mb-4">
+                <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card border-left-info shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
@@ -51,7 +51,7 @@
                 </div>
 
                 <!-- Total Program Siar -->
-                <div class="col-xl-2 col-md-6 mb-4">
+                <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card border-left-success shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
@@ -70,7 +70,7 @@
                 </div>
 
                 <!-- Total Events -->
-                <div class="col-xl-2 col-md-6 mb-4">
+                <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card border-left-warning shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
@@ -89,7 +89,7 @@
                 </div>
 
                 <!-- Total Pesan -->
-                <div class="col-xl-2 col-md-6 mb-4">
+                <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card border-left-danger shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">

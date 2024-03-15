@@ -51,7 +51,7 @@
                                     <?php $data = json_decode($invent['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $invent['tahun']; ?>/<?= $invent['kode']; ?>/INV/<?= $data->nomor; ?></td>
+                                        <td>INV/RAPMA/<?= $invent['kode']; ?>/<?= $data->nomor; ?>/<?= $invent['tahun']; ?></td>
                                         <td><?= $data->barang; ?></td>
                                         <td><?= $data->nomor; ?></td>
                                         <td><?= $data->jumlah; ?></td>
