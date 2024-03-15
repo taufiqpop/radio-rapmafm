@@ -6,6 +6,7 @@
     <div class="row">
         <div class="col-11">
             <h1 class="h3 mb-4 text-gray-800">Structure of Organization</h1>
+            <a href="<?= base_url(); ?>control/about" class="btn btn-success">About</a>
             <a href="<?= base_url(); ?>control/structure/member" class="btn btn-info">Edit Crew</a>
             <br><br>
 

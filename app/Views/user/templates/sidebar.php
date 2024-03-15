@@ -91,14 +91,6 @@
     </li>
 
     <!-- Admisi On Air -->
-    <!-- About -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/about">
-            <i class="fab fa-amilia"></i>
-            <span>About</span>
-        </a>
-    </li>
-
     <!-- Achievements -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/achievements">
@@ -174,14 +166,6 @@
     </li>
 
     <!-- Music Director -->
-    <!-- Top Chart -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/topchart">
-            <i class="fas fa-file-audio"></i>
-            <span>Top Chart</span>
-        </a>
-    </li>
-
     <!-- Bank Lagu -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/lagu">
@@ -199,19 +183,11 @@
         </a>
     </li>
 
-    <!-- ID's -->
+    <!-- ID's | RE | Spot -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/ids">
-            <i class="fas fa-id-card"></i>
-            <span>ID's</span>
-        </a>
-    </li>
-
-    <!-- Radio Expose -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/rexpose">
-            <i class="fas fa-file-audio"></i>
-            <span>Radio Expose (RE)</span>
+        <a class="nav-link" href="<?= base_url(); ?>control/audios">
+            <i class="fas fa-headset"></i>
+            <span>Data Audio</span>
         </a>
     </li>
 
@@ -219,15 +195,7 @@
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/videos">
             <i class="fas fa-video"></i>
-            <span>Videos</span>
-        </a>
-    </li>
-
-    <!-- SPOT -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/spot">
-            <i class="fas fa-film"></i>
-            <span>SPOT</span>
+            <span>Data Video</span>
         </a>
     </li>
 
@@ -272,19 +240,11 @@
         </a>
     </li>
 
-    <!-- MC / Moderator -->
+    <!-- M-Talent -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/mc">
+        <a class="nav-link" href="<?= base_url(); ?>control/mtalent">
             <i class="fas fa-star"></i>
-            <span>MC / Moderator</span>
-        </a>
-    </li>
-
-    <!-- Rapma Band -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/rapband">
-            <i class="fas fa-guitar"></i>
-            <span>Rapma Band</span>
+            <span>M-Talent</span>
         </a>
     </li>
 

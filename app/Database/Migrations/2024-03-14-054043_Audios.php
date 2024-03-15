@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Mc extends Migration
+class Audios extends Migration
 {
     public function up()
     {
@@ -22,7 +22,7 @@ class Mc extends Migration
             'value' => [
                 'type'       => 'TEXT',
             ],
-            'tahun' => [
+            'type' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
@@ -37,12 +37,12 @@ class Mc extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addKey('tahun');
-        $this->forge->createTable('mc');
+        $this->forge->addKey('type');
+        $this->forge->createTable('audios');
     }
 
     public function down()
     {
-        $this->forge->dropTable('mc');
+        $this->forge->dropTable('audios');
     }
 }

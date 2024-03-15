@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Ids extends Migration
+class Mtalent extends Migration
 {
     public function up()
     {
@@ -22,10 +22,6 @@ class Ids extends Migration
             'value' => [
                 'type'       => 'TEXT',
             ],
-            'tahun' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
             'created_at' => [
                 'type'       => 'DATETIME',
             ],
@@ -37,12 +33,11 @@ class Ids extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addKey('tahun');
-        $this->forge->createTable('ids');
+        $this->forge->createTable('mtalent');
     }
 
     public function down()
     {
-        $this->forge->dropTable('ids');
+        $this->forge->dropTable('mtalent');
     }
 }

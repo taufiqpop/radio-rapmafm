@@ -6,7 +6,8 @@
     <div class="row">
         <div class="col-11">
             <h1 class="h3 mb-4 text-gray-800">Program Siar</h1>
-            <a href="<?= base_url(); ?>control/program/form" class="btn btn-primary">Add Program</a>
+            <a href="<?= base_url(); ?>control/program/form" class="btn btn-primary">Add Program Siar</a>
+            <a href="<?= base_url(); ?>control/topchart" class="btn btn-info">Top Chart</a>
             <br><br>
 
             <!-- Search Bar -->
