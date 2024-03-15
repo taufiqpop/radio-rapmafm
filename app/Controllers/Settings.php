@@ -25,8 +25,7 @@ class Settings extends BaseController
     // Update Data
     public function update($id)
     {
-        $this->settingsModel->save([
-            'id'            => $id,
+        $data = [
             'owner'         => $this->request->getVar('owner'),
             'slogan'        => $this->request->getVar('slogan'),
             'nama_mtalent'  => $this->request->getVar('nama_mtalent'),
@@ -46,7 +45,9 @@ class Settings extends BaseController
             'line'          => $this->request->getVar('line'),
             'tiktok'        => $this->request->getVar('tiktok'),
             'streaming'     => $this->request->getVar('streaming'),
-        ]);
+        ];
+
+        $this->settingsModel->update($id, $data);
 
         session()->setFlashdata('pesan', 'Data Settings Berhasil Diubah!');
         return redirect('control/settings');

@@ -99,12 +99,11 @@ class Structure extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'key'       => $this->request->getPost('divisi'),
             'value'     => json_encode($input),
         ];
 
-        $this->structureModel->save($data);
+        $this->structureModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data Structure Berhasil Diubah!');
 
         return redirect('control/structure');
@@ -170,12 +169,11 @@ class Structure extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'key'       => $this->request->getPost('divisi'),
             'value'     => json_encode($input),
         ];
 
-        $this->memberModel->save($data);
+        $this->memberModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data Crew Berhasil Diubah!');
 
         return redirect('control/structure/member');

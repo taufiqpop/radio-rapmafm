@@ -47,7 +47,7 @@ class Topchart extends BaseController
             'value'     => json_encode($input),
         ];
 
-        $this->topchartModel->save($data);
+        $this->topchartModel->insert($data);
         session()->setFlashdata('pesan', 'Data Top Chart Berhasil Ditambahkan!');
 
         return redirect('control/topchart');
@@ -81,12 +81,11 @@ class Topchart extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'key'       => $this->request->getPost('versi'),
             'value'     => json_encode($input),
         ];
 
-        $this->topchartModel->save($data);
+        $this->topchartModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data Top Chart Berhasil Diubah!');
 
         return redirect('control/topchart');

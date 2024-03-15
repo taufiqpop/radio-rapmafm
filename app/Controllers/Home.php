@@ -53,15 +53,16 @@ class Home extends BaseController
         return view('home/index', $data);
     }
 
-    // Save Data Messages
-    public function save()
+    // Insert Data Messages
+    public function insert()
     {
-        $this->pesanModel->save([
+        $data = [
             'name'    => $this->request->getVar('name'),
             'email'   => $this->request->getVar('email'),
             'subject' => $this->request->getVar('subject'),
             'message' => $this->request->getVar('message'),
-        ]);
+        ];
+        $this->pesanModel->insert($data);
 
         session()->setFlashdata('pesan', 'Pesan Anda Telan Dikirim! Terima Kasih CampusBrainers!');
         return redirect('index');

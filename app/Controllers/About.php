@@ -35,11 +35,10 @@ class About extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'value'     => json_encode($input),
         ];
 
-        $this->aboutModel->save($data);
+        $this->aboutModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data About Berhasil Diubah!');
 
         return redirect('control/about');

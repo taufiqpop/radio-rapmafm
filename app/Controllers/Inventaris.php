@@ -62,7 +62,7 @@ class Inventaris extends BaseController
             'tahun'     => $this->request->getPost('tahun'),
         ];
 
-        $this->inventarisModel->save($data);
+        $this->inventarisModel->insert($data);
         session()->setFlashdata('pesan', 'Data Inventaris Berhasil Ditambahkan!');
 
         return redirect('control/inventaris');
@@ -97,7 +97,6 @@ class Inventaris extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'key'       => $this->request->getPost('barang'),
             'value'     => json_encode($input),
             'kode'      => $this->request->getPost('kode'),
@@ -105,7 +104,7 @@ class Inventaris extends BaseController
             'tahun'     => $this->request->getPost('tahun'),
         ];
 
-        $this->inventarisModel->save($data);
+        $this->inventarisModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data Inventaris Berhasil Diubah!');
 
         return redirect('control/inventaris');

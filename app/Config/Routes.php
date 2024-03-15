@@ -33,7 +33,7 @@ $routes->set404Override();
 // Home
 $routes->get('/', 'Home::index');
 $routes->get('/index', 'Home::index');
-$routes->add('/contact/save', 'Home::save');
+$routes->add('/contact/insert', 'Home::insert');
 
 // Admin
 $routes->add('/admin', 'Admin::index', ['filter' => 'role:Admin']);
@@ -86,6 +86,16 @@ $routes->add('/inventaris/insert', 'Inventaris::insert');
 $routes->get('/control/inventaris/edit/(:num)', 'Inventaris::edit/$1');
 $routes->add('/inventaris/update/(:num)', 'Inventaris::update/$1');
 $routes->delete('/control/inventaris/(:num)', 'Inventaris::delete/$1');
+
+// Pemancar
+$routes->add('/control/pemancar', 'Pemancar::index');
+$routes->add('/pemancar/add', 'Pemancar::add');
+$routes->get('/control/pemancar/form/(:num)', 'Pemancar::form/$1');
+$routes->add('/pemancar/insert/(:num)', 'Pemancar::insert/$1');
+$routes->get('/control/pemancar/edit/(:num)', 'Pemancar::edit/$1');
+$routes->add('/pemancar/update/(:num)', 'Pemancar::update/$1');
+$routes->get('/control/pemancar/detail/(:num)', 'Pemancar::detail/$1');
+$routes->delete('/control/pemancar/(:num)', 'Pemancar::delete/$1');
 
 // DIVISI KEPENYIARAN //
 // Program

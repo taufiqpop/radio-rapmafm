@@ -111,7 +111,7 @@ class Achievements extends BaseController
             'tahun'     => $this->request->getPost('tahun'),
         ];
 
-        $this->achievementsModel->save($data);
+        $this->achievementsModel->insert($data);
         session()->setFlashdata('pesan', 'Data Achievements Berhasil Ditambahkan!');
 
         return redirect('control/achievements');
@@ -179,13 +179,12 @@ class Achievements extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'key'       => $this->request->getPost('judul'),
             'value'     => json_encode($input),
             'tahun'     => $this->request->getPost('tahun'),
         ];
 
-        $this->achievementsModel->save($data);
+        $this->achievementsModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data Achievements Berhasil Diubah!');
 
         return redirect('control/achievements');

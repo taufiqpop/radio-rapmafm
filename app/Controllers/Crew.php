@@ -64,7 +64,7 @@ class Crew extends BaseController
             'value'     => json_encode($input),
         ];
 
-        $this->crewModel->save($data);
+        $this->crewModel->insert($data);
         session()->setFlashdata('pesan', 'Data Crew Berhasil Ditambahkan!');
 
         return redirect('control/crew');
@@ -104,12 +104,11 @@ class Crew extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'key'       => $this->request->getPost('crew'),
             'value'     => json_encode($input),
         ];
 
-        $this->crewModel->save($data);
+        $this->crewModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data Crew Berhasil Diubah!');
 
         return redirect('control/crew');

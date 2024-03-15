@@ -112,7 +112,7 @@ class Events extends BaseController
             'value'     => json_encode($input),
         ];
 
-        $this->eventsModel->save($data);
+        $this->eventsModel->insert($data);
         session()->setFlashdata('pesan', 'Data Events Berhasil Ditambahkan!');
 
         return redirect('control/events');
@@ -182,12 +182,11 @@ class Events extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'key'       => $this->request->getPost('nama'),
             'value'     => json_encode($input),
         ];
 
-        $this->eventsModel->save($data);
+        $this->eventsModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data Events Berhasil Diubah!');
 
         return redirect('control/events');

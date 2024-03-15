@@ -65,7 +65,7 @@ class Alumni extends BaseController
             'tahun'     => $this->request->getPost('tahun'),
         ];
 
-        $this->alumniModel->save($data);
+        $this->alumniModel->insert($data);
         session()->setFlashdata('pesan', 'Data Alumni Berhasil Ditambahkan!');
 
         return redirect('control/alumni');
@@ -105,13 +105,12 @@ class Alumni extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'key'       => $this->request->getPost('nama'),
             'value'     => json_encode($input),
             'tahun'     => $this->request->getPost('tahun'),
         ];
 
-        $this->alumniModel->save($data);
+        $this->alumniModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data Alumni Berhasil Diubah!');
 
         return redirect('control/alumni');

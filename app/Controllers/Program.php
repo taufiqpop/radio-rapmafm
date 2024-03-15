@@ -92,7 +92,7 @@ class Program extends BaseController
             'value'     => json_encode($input),
         ];
 
-        $this->programModel->save($data);
+        $this->programModel->insert($data);
         session()->setFlashdata('pesan', 'Data Program Berhasil Ditambahkan!');
 
         return redirect('control/program');
@@ -161,12 +161,11 @@ class Program extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'key'       => $this->request->getPost('program'),
             'value'     => json_encode($input),
         ];
 
-        $this->programModel->save($data);
+        $this->programModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data Program Berhasil Diubah!');
 
         return redirect('control/program');

@@ -113,13 +113,14 @@ class User extends BaseController
             }
         }
 
-        $this->usersModel->save([
-            'id'            => $id,
+        $data = [
             'email'         => $this->request->getVar('email'),
             'username'      => $this->request->getVar('username'),
             'fullname'      => $this->request->getVar('fullname'),
             'user_image'    => $namaImgUser,
-        ]);
+        ];
+
+        $this->usersModel->update($id, $data);
 
         session()->setFlashdata('pesan', 'Data User Berhasil Diubah!');
 

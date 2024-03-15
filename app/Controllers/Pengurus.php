@@ -66,7 +66,7 @@ class Pengurus extends BaseController
             'value'     => json_encode($input),
         ];
 
-        $this->pengurusModel->save($data);
+        $this->pengurusModel->insert($data);
         session()->setFlashdata('pesan', 'Data Pengurus Berhasil Ditambahkan!');
 
         return redirect('control/pengurus');
@@ -108,12 +108,11 @@ class Pengurus extends BaseController
         ];
 
         $data = [
-            'id'        => $id,
             'key'       => $this->request->getPost('pengurus'),
             'value'     => json_encode($input),
         ];
 
-        $this->pengurusModel->save($data);
+        $this->pengurusModel->update($id, $data);
         session()->setFlashdata('pesan', 'Data Pengurus Berhasil Diubah!');
 
         return redirect('control/pengurus');
