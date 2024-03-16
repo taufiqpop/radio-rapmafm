@@ -29,7 +29,7 @@
                 <!-- Button -->
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <a href="<?= base_url(); ?>control/pemutaranserentak" class="btn btn-dark mb-1">Back</a>
+                        <a href="<?= base_url(); ?>control/labelrekaman" class="btn btn-dark mb-1">Back</a>
                         <button type="submit" class="btn btn-primary mb-1">Publish</button>
                     </div>
                 </div>

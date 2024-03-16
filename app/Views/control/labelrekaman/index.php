@@ -1,13 +1,14 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- List Pemutaran Serentak -->
+<!-- List Label Rekaman -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-11">
-            <h1 class="h3 mb-4 text-gray-800">Data Pemutaran Serentak</h1>
+            <h1 class="h3 mb-4 text-gray-800">Data Label Rekaman</h1>
             <?php if (in_groups(['Admin', 'MU', 'MD'])) : ?>
-                <a href="<?= base_url(); ?>control/pemutaranserentak/form" class="btn btn-primary">Add Pemutaran Serentak</a>
+                <a href="<?= base_url(); ?>control/labelrekaman/form" class="btn btn-primary">Add Label Rekaman</a>
+                <a href="<?= base_url(); ?>control/topchart" class="btn btn-info">Top Chart</a>
                 <br><br>
             <?php endif; ?>
 
@@ -38,28 +39,24 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
-                                    <th scope="col" class="cursor-active">Tanggal</th>
                                     <th scope="col" class="cursor-active">Label</th>
-                                    <th scope="col" class="cursor-active">Penyanyi</th>
-                                    <th scope="col" class="cursor-active">Judul Lagu</th>
+                                    <th scope="col" class="cursor-active">Total Lagu</th>
                                     <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
                                         <th scope="col" class="cursor-active">Action</th>
                                     <?php endif; ?>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($pemutaranserentak as $index => $pemutaran) : ?>
-                                    <?php $data = json_decode($pemutaran['value']) ?>
+                                <?php foreach ($labelrekaman as $index => $label) : ?>
+                                    <?php $data = json_decode($label['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->tanggal; ?></td>
                                         <td><?= $data->label; ?></td>
-                                        <td><?= $data->penyanyi; ?></td>
-                                        <td><?= $data->judul; ?></td>
+                                        <td><?= $data->total; ?></td>
                                         <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
                                             <td>
-                                                <a href="<?= base_url(); ?>control/pemutaranserentak/edit/<?= $pemutaran['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/pemutaranserentak/<?= $pemutaran['id']; ?>" method="post" class="d-inline">
+                                                <a href="<?= base_url(); ?>control/labelrekaman/edit/<?= $label['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/labelrekaman/<?= $label['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
@@ -72,7 +69,7 @@
                         </table>
 
                         <!-- Pagers -->
-                        <?= $pager->links('pemutaranserentak', 'data_pagination'); ?>
+                        <?= $pager->links('labelrekaman', 'data_pagination'); ?>
                     </div>
                 </div>
             </div>

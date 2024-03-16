@@ -2,15 +2,15 @@
 <?= $this->section('page-content'); ?>
 
 <!-- Edit Pemutaran Serentak -->
-<?php foreach ($pemutaranserentak as $ads) : ?>
-    <?php $data = json_decode($ads['value']) ?>
+<?php foreach ($pemutaranserentak as $pemutaran) : ?>
+    <?php $data = json_decode($pemutaran['value']) ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
                 <h1 class="h3 mb-4 text-gray-800">Form Edit Data Pemutaran Serentak</h1>
 
                 <!-- Forms -->
-                <form action="<?= base_url(); ?>pemutaranserentak/update/<?= $ads['id']; ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url(); ?>pemutaranserentak/update/<?= $pemutaran['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
                     <!-- Tanggal -->
