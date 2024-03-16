@@ -350,7 +350,7 @@
 
           <!-- Forms -->
           <div class="col-lg-6 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="contact/save" method="post" enctype="multipart/form-data" class="php-email-form">
+            <form action="contact/insert" method="post" enctype="multipart/form-data" class="php-email-form">
 
               <!-- Messages -->
               <?php if (session()->getFlashdata('pesan')) : ?>
