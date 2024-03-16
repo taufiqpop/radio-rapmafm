@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2024 at 06:18 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Mar 16, 2024 at 03:15 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,25 +39,25 @@ CREATE TABLE `auth_groups` (
 
 INSERT INTO `auth_groups` (`id`, `name`, `description`) VALUES
 (1, 'Admin', 'Administrator'),
-(2, 'Crew', 'Crew Rapma FM'),
-(3, 'Produksi', 'Produksi Audio & Video'),
+(2, 'Crew', 'Crew'),
+(3, 'Produksi', 'Produksi'),
 (4, 'Jurnalistik', 'Jurnalistik'),
-(5, 'Music Director', 'MD'),
-(6, 'Admisi On Air', 'Admisi On Air'),
-(7, 'Admisi Off Air', 'Admisi Off Air'),
-(8, 'Teknisi', 'Teknisi On & Off Air'),
+(5, 'MD', 'Music Director'),
+(6, 'AOn', 'Admisi On Air'),
+(7, 'AOff', 'Admisi Off Air'),
+(8, 'Teknisi', 'Teknisi'),
 (9, 'HRD', 'HRD'),
 (10, 'Advokat', 'Advokat'),
-(11, 'Marketing On Air', 'Marketing On Air'),
-(12, 'Marketing Off Air', 'Marketing Off Air'),
-(13, 'Personal Assistant', 'Sekretaris & Bendahara'),
-(14, 'General Manager', 'GM'),
-(15, 'Manager Marketing', 'Manager Marketing'),
-(16, 'Manager Personalia', 'Manager Personalia'),
-(17, 'Manager Umum', 'Manager Umum'),
-(18, 'Manager Kepenyiaran', 'Manager Kepenyiaran'),
-(19, 'Demisioner', 'Demisioner Rapma FM'),
-(20, 'Alumni', 'Alumni Rapma FM');
+(11, 'MOn', 'Marketing On Air'),
+(12, 'MOff', 'Marketing Off Air'),
+(13, 'PA', 'Personal Assistant'),
+(14, 'GM', 'General Manager'),
+(15, 'MM', 'Manager Marketing'),
+(16, 'MP', 'Manager Personalia'),
+(17, 'MU', 'Manager Umum'),
+(18, 'MK', 'Manager Kepenyiaran'),
+(19, 'Demis', 'Demisioner'),
+(20, 'Alumni', 'Alumni');
 
 --
 -- Indexes for dumped tables
