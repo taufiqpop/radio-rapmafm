@@ -38,7 +38,7 @@ CREATE TABLE `auth_groups_users` (
 
 INSERT INTO `auth_groups_users` (`group_id`, `user_id`) VALUES
 (1, 1),
-(2, 28),
+(2, 27),
 (3, 11),
 (3, 12),
 (4, 13),
@@ -48,11 +48,11 @@ INSERT INTO `auth_groups_users` (`group_id`, `user_id`) VALUES
 (6, 19),
 (7, 20),
 (8, 17),
+(9, 21),
 (9, 22),
 (9, 23),
-(9, 24),
-(9, 27),
-(10, 25),
+(9, 26),
+(10, 24),
 (11, 6),
 (11, 7),
 (12, 8),
@@ -61,11 +61,11 @@ INSERT INTO `auth_groups_users` (`group_id`, `user_id`) VALUES
 (13, 4),
 (14, 2),
 (15, 5),
-(16, 26),
+(16, 25),
 (17, 16),
 (18, 10),
-(19, 29),
-(20, 30);
+(19, 28),
+(20, 29);
 
 --
 -- Indexes for dumped tables
