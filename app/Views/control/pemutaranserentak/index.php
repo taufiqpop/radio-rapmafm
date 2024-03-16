@@ -1,13 +1,14 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- List Program -->
+<!-- List Pemutaran Serentak -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-11">
-            <h1 class="h3 mb-4 text-gray-800">Program Siar</h1>
-            <?php if (in_groups(['Admin', 'MU', 'Produksi'])) : ?>
-                <a href="<?= base_url(); ?>control/program/form" class="btn btn-primary">Add Program Siar</a>
+        <div class="col-12">
+            <h1 class="h3 mb-4 text-gray-800">Data Pemutaran Serentak</h1>
+            <?php if (in_groups(['Admin', 'MU', 'MD'])) : ?>
+                <a href="<?= base_url(); ?>control/pemutaranserentak/form" class="btn btn-primary">Add Pemutaran Serentak</a>
+                <a href="<?= base_url(); ?>control/topchart" class="btn btn-info">Top Chart</a>
                 <br><br>
             <?php endif; ?>
 
@@ -38,46 +39,41 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
-                                    <th scope="col" class="cursor-stop">Photo</th>
-                                    <th scope="col" class="cursor-active">Program</th>
-                                    <th scope="col" class="cursor-active">Jenis</th>
-                                    <?php if (in_groups(['Admin'])) : ?>
-                                        <th scope="col" class="cursor-active">Filter</th>
+                                    <th scope="col" class="cursor-active">Tanggal</th>
+                                    <th scope="col" class="cursor-active">Label</th>
+                                    <th scope="col" class="cursor-active">Penyanyi</th>
+                                    <th scope="col" class="cursor-active">Judul Lagu</th>
+                                    <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
+                                        <th scope="col" class="cursor-active">Action</th>
                                     <?php endif; ?>
-                                    <th scope="col" class="cursor-stop">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($program as $index => $siaran) : ?>
-                                    <?php $data = json_decode($siaran['value']) ?>
+                                <?php foreach ($pemutaranserentak as $index => $pemutaran) : ?>
+                                    <?php $data = json_decode($pemutaran['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td>
-                                            <img src="<?= base_url(); ?>img/program/<?= $data->images ?>" class=" thumbnail">
-                                        </td>
-                                        <td><?= $data->program; ?></td>
-                                        <td><?= $data->jenis; ?></td>
-                                        <?php if (in_groups(['Admin'])) : ?>
-                                            <td><?= $data->filter; ?></td>
-                                        <?php endif ?>
-                                        <td>
-                                            <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
-                                            <?php if (in_groups(['Admin', 'MU', 'Produksi'])) : ?>
-                                                <a href="<?= base_url(); ?>control/program/edit/<?= $siaran['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/program/<?= $siaran['id']; ?>" method="post" class="d-inline">
+                                        <td><?= $data->tanggal; ?></td>
+                                        <td><?= $data->label; ?></td>
+                                        <td><?= $data->penyanyi; ?></td>
+                                        <td><?= $data->judul; ?></td>
+                                        <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
+                                            <td>
+                                                <a href="<?= base_url(); ?>control/pemutaranserentak/edit/<?= $pemutaran['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/pemutaranserentak/<?= $pemutaran['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
                                                 </form>
-                                            <?php endif; ?>
-                                        </td>
+                                            </td>
+                                        <?php endif ?>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
 
                         <!-- Pagers -->
-                        <?= $pager->links('program', 'data_pagination'); ?>
+                        <?= $pager->links('pemutaranserentak', 'data_pagination'); ?>
                     </div>
                 </div>
             </div>

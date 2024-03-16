@@ -23,7 +23,7 @@ class SuratKeluar extends BaseController
             $suratkeluar = $this->suratkeluarModel;
         }
 
-        $suratkeluar->orderBy('id', 'DESC');
+        $suratkeluar->orderBy('id', 'ASC');
 
         $data = [
             'title'       => 'Rapma FM | Surat Keluar',

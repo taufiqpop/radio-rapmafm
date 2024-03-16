@@ -206,10 +206,26 @@
                 <span>Bank Lagu</span>
             </a>
         </li>
+
+        <!-- Pemutaran Serentak -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/pemutaranserentak">
+                <i class="fas fa-rss"></i>
+                <span>Pemutaran Serentak</span>
+            </a>
+        </li>
+
+        <!-- Label Rekaman -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/labelrekaman">
+                <i class="fas fa-compact-disc"></i>
+                <span>Label Rekaman</span>
+            </a>
+        </li>
     <?php endif; ?>
 
     <!-- Produksi -->
-    <?php if (in_groups(['Admin', 'GM', 'MK', 'Produksi', 'MD'])) : ?>
+    <?php if (in_groups(['Admin', 'GM', 'MK', 'Produksi'])) : ?>
         <!-- Program Siar -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/program">
