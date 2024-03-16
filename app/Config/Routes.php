@@ -36,127 +36,128 @@ $routes->get('/index', 'Home::index');
 $routes->add('/contact/insert', 'Home::insert');
 
 // Admin
-$routes->add('/admin', 'Admin::index', ['filter' => 'role:Admin']);
-$routes->get('/admin/detail/(:num)', 'Admin::detail/$1', ['filter' => 'role:Admin']);
+$routes->add('/admin', 'Admin::index', ['filter' => 'role:Admin, GM']);
+$routes->get('/admin/detail/(:num)', 'Admin::detail/$1', ['filter' => 'role:Admin, GM']);
 $routes->delete('/user/admin/(:num)', 'Admin::delete/$1', ['filter' => 'role:Admin']);
 
 // User
 $routes->get('/user', 'User::index');
-$routes->get('/profile/(:num)', 'User::profile/$1');
-$routes->get('/user/edit/(:num)', 'User::edit/$1');
-$routes->add('/user/update/(:num)', 'User::update/$1');
+$routes->get('/profile/(:num)', 'User::profile/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff']);
+$routes->get('/user/edit/(:num)', 'User::edit/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff']);
+$routes->add('/user/update/(:num)', 'User::update/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff']);
 
 // Password
-$routes->get('/password/(:num)', 'ChangePassword::index/$1');
-$routes->add('/password/setPassword/(:num)', 'ChangePassword::setPassword/$1');
+$routes->get('/password/(:num)', 'ChangePassword::index/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff']);
+$routes->add('/password/setPassword/(:num)', 'ChangePassword::setPassword/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff']);
 
 // Pesan
-$routes->add('/pesan', 'Pesan::index');
+$routes->add('/pesan', 'Pesan::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Alumni, Demis']);
 
 // Settings
-$routes->get('/control/settings', 'Settings::index');
-$routes->add('/settings/update/(:num)', 'Settings::update/$1');
+$routes->get('/control/settings', 'Settings::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, MD, AOn, Teknisi, MOn, MOff']);
+$routes->add('/settings/update/(:num)', 'Settings::update/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, MD, AOn, Teknisi, MOn, MOff']);
 
 // GMPA //
-// About
-$routes->get('/control/about', 'About::index');
-$routes->add('/about/update/(:num)', 'About::update/$1');
+
 
 // DIVISI UMUM //
+// About
+$routes->get('/control/about', 'About::index', ['filter' => 'role:Admin, GM, MU, AOn']);
+$routes->add('/about/update/(:num)', 'About::update/$1', ['filter' => 'role:Admin, MU, AOn']);
+
 // Achievements
-$routes->add('/control/achievements', 'Achievements::index');
-$routes->get('/control/achievements/form', 'Achievements::form');
-$routes->add('/achievements/insert', 'Achievements::insert');
-$routes->get('/control/achievements/edit/(:num)', 'Achievements::edit/$1');
-$routes->add('/achievements/update/(:num)', 'Achievements::update/$1');
-$routes->get('/control/achievements/detail/(:num)', 'Achievements::detail/$1');
-$routes->delete('/control/achievements/(:num)', 'Achievements::delete/$1');
+$routes->add('/control/achievements', 'Achievements::index', ['filter' => 'role:Admin, GM, MU, AOn']);
+$routes->get('/control/achievements/detail/(:num)', 'Achievements::detail/$1', ['filter' => 'role:Admin, GM, MU, AOn']);
+$routes->get('/control/achievements/form', 'Achievements::form', ['filter' => 'role:Admin, MU, AOn']);
+$routes->get('/control/achievements/edit/(:num)', 'Achievements::edit/$1', ['filter' => 'role:Admin, MU, AOn']);
+$routes->delete('/control/achievements/(:num)', 'Achievements::delete/$1', ['filter' => 'role:Admin, MU, AOn']);
+$routes->add('/achievements/insert', 'Achievements::insert', ['filter' => 'role:Admin, MU, AOn']);
+$routes->add('/achievements/update/(:num)', 'Achievements::update/$1', ['filter' => 'role:Admin, MU, AOn']);
+
+// Events
+$routes->add('/control/events', 'Events::index', ['filter' => 'role:Admin, GM, MU, AOn']);
+$routes->get('/control/events/detail/(:num)', 'Events::detail/$1', ['filter' => 'role:Admin, GM, MU, AOn']);
+$routes->get('/control/events/form', 'Events::form', ['filter' => 'role:Admin, MU, AOn']);
+$routes->get('/control/events/edit/(:num)', 'Events::edit/$1', ['filter' => 'role:Admin, MU, AOn']);
+$routes->delete('/control/events/(:num)', 'Events::delete/$1', ['filter' => 'role:Admin, MU, AOn']);
+$routes->add('/events/insert', 'Events::insert', ['filter' => 'role:Admin, MU, AOn']);
+$routes->add('/events/update/(:num)', 'Events::update/$1', ['filter' => 'role:Admin, MU, AOn']);
 
 // Structure
-$routes->add('/control/structure', 'Structure::index');
-$routes->get('/control/structure/edit/(:num)', 'Structure::edit/$1');
-$routes->add('/structure/update/(:num)', 'Structure::update/$1');
-$routes->get('/control/structure/member', 'Structure::member');
-$routes->add('/structure/member/update/(:num)', 'Structure::new/$1');
+$routes->add('/control/structure', 'Structure::index', ['filter' => 'role:Admin, GM, MU, AOn']);
+$routes->get('/control/structure/edit/(:num)', 'Structure::edit/$1', ['filter' => 'role:Admin, MU, AOn']);
+$routes->get('/control/structure/member', 'Structure::member', ['filter' => 'role:Admin, MU, AOn']);
+$routes->add('/structure/update/(:num)', 'Structure::update/$1', ['filter' => 'role:Admin, MU, AOn']);
+$routes->add('/structure/member/update/(:num)', 'Structure::new/$1', ['filter' => 'role:Admin, MU, AOn']);
 
 // Inventaris
-$routes->add('/control/inventaris', 'Inventaris::index');
-$routes->get('/control/inventaris/form', 'Inventaris::form');
-$routes->add('/inventaris/insert', 'Inventaris::insert');
-$routes->get('/control/inventaris/edit/(:num)', 'Inventaris::edit/$1');
-$routes->add('/inventaris/update/(:num)', 'Inventaris::update/$1');
-$routes->delete('/control/inventaris/(:num)', 'Inventaris::delete/$1');
+$routes->add('/control/inventaris', 'Inventaris::index', ['filter' => 'role:Admin, GM, MU, AOff']);
+$routes->get('/control/inventaris/form', 'Inventaris::form', ['filter' => 'role:Admin, MU, AOff']);
+$routes->get('/control/inventaris/edit/(:num)', 'Inventaris::edit/$1', ['filter' => 'role:Admin, MU, AOff']);
+$routes->delete('/control/inventaris/(:num)', 'Inventaris::delete/$1', ['filter' => 'role:Admin, MU, AOff']);
+$routes->add('/inventaris/insert', 'Inventaris::insert', ['filter' => 'role:Admin, MU, AOff']);
+$routes->add('/inventaris/update/(:num)', 'Inventaris::update/$1', ['filter' => 'role:Admin, MU, AOff']);
 
 // Pemancar
-$routes->add('/control/pemancar', 'Pemancar::index');
-$routes->add('/pemancar/add', 'Pemancar::add');
-$routes->get('/control/pemancar/form/(:num)', 'Pemancar::form/$1');
-$routes->add('/pemancar/insert/(:num)', 'Pemancar::insert/$1');
-$routes->get('/control/pemancar/edit/(:num)', 'Pemancar::edit/$1');
-$routes->add('/pemancar/update/(:num)', 'Pemancar::update/$1');
-$routes->get('/control/pemancar/detail/(:num)', 'Pemancar::detail/$1');
-$routes->delete('/control/pemancar/(:num)', 'Pemancar::delete/$1');
+$routes->add('/control/pemancar', 'Pemancar::index', ['filter' => 'role:Admin, GM, MU, Teknisi']);
+$routes->get('/control/pemancar/detail/(:num)', 'Pemancar::detail/$1', ['filter' => 'role:Admin, GM, MU, Teknisi']);
+$routes->get('/control/pemancar/form/(:num)', 'Pemancar::form/$1', ['filter' => 'role:Admin, MU, Teknisi']);
+$routes->get('/control/pemancar/edit/(:num)', 'Pemancar::edit/$1', ['filter' => 'role:Admin, MU, Teknisi']);
+$routes->delete('/control/pemancar/(:num)', 'Pemancar::delete/$1', ['filter' => 'role:Admin, MU, Teknisi']);
+$routes->add('/pemancar/add', 'Pemancar::add', ['filter' => 'role:Admin, MU, Teknisi']);
+$routes->add('/pemancar/insert/(:num)', 'Pemancar::insert/$1', ['filter' => 'role:Admin, MU, Teknisi']);
+$routes->add('/pemancar/update/(:num)', 'Pemancar::update/$1', ['filter' => 'role:Admin, MU, Teknisi']);
 
 // DIVISI KEPENYIARAN //
 // Program
-$routes->add('/control/program', 'Program::index');
-$routes->get('/control/program/form', 'Program::form');
-$routes->add('/program/insert', 'Program::insert');
-$routes->get('/control/program/edit/(:num)', 'Program::edit/$1');
-$routes->add('/program/update/(:num)', 'Program::update/$1');
-$routes->delete('/control/program/(:num)', 'Program::delete/$1');
+$routes->add('/control/program', 'Program::index', ['filter' => 'role:Admin, GM, MK, Produksi']);
+$routes->get('/control/program/form', 'Program::form', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->get('/control/program/edit/(:num)', 'Program::edit/$1', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->delete('/control/program/(:num)', 'Program::delete/$1', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->add('/program/insert', 'Program::insert', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->add('/program/update/(:num)', 'Program::update/$1', ['filter' => 'role:Admin, MK, Produksi']);
 
 // Top Chart
-$routes->add('/control/topchart', 'Topchart::index');
-$routes->add('/topchart/insert', 'Topchart::insert');
-$routes->get('/control/topchart/edit/(:num)', 'Topchart::edit/$1');
-$routes->add('/topchart/update/(:num)', 'Topchart::update/$1');
-$routes->delete('/control/topchart/(:num)', 'Topchart::delete/$1');
+$routes->add('/control/topchart', 'Topchart::index', ['filter' => 'role:Admin, GM, MK, MD']);
+$routes->get('/control/topchart/edit/(:num)', 'Topchart::edit/$1', ['filter' => 'role:Admin, MK, MD']);
+$routes->delete('/control/topchart/(:num)', 'Topchart::delete/$1', ['filter' => 'role:Admin, MK, MD']);
+$routes->add('/topchart/insert', 'Topchart::insert', ['filter' => 'role:Admin, MK, MD']);
+$routes->add('/topchart/update/(:num)', 'Topchart::update/$1', ['filter' => 'role:Admin, MK, MD']);
 
 // DIVISI MARKETING //
-// Events
-$routes->add('/control/events', 'Events::index');
-$routes->get('/control/events/form', 'Events::form');
-$routes->add('/events/insert', 'Events::insert');
-$routes->get('/control/events/edit/(:num)', 'Events::edit/$1');
-$routes->add('/events/update/(:num)', 'Events::update/$1');
-$routes->get('/control/events/detail/(:num)', 'Events::detail/$1');
-$routes->delete('/control/events/(:num)', 'Events::delete/$1');
-
 // Medpart
-$routes->add('/control/medpart', 'Medpart::index');
-$routes->get('/control/medpart/form', 'Medpart::form');
-$routes->add('/medpart/insert', 'Medpart::insert');
-$routes->get('/control/medpart/edit/(:num)', 'Medpart::edit/$1');
-$routes->add('/medpart/update/(:num)', 'Medpart::update/$1');
-$routes->get('/control/medpart/detail/(:num)', 'Medpart::detail/$1');
-$routes->delete('/control/medpart/(:num)', 'Medpart::delete/$1');
+$routes->add('/control/medpart', 'Medpart::index', ['filter' => 'role:Admin, GM, MM, MOn']);
+$routes->get('/control/medpart/form', 'Medpart::form', ['filter' => 'role:Admin, MM, MOn']);
+$routes->get('/control/medpart/edit/(:num)', 'Medpart::edit/$1', ['filter' => 'role:Admin, MM, MOn']);
+$routes->delete('/control/medpart/(:num)', 'Medpart::delete/$1', ['filter' => 'role:Admin, MM, MOn']);
+$routes->add('/medpart/insert', 'Medpart::insert', ['filter' => 'role:Admin, MM, MOn']);
+$routes->add('/medpart/update/(:num)', 'Medpart::update/$1', ['filter' => 'role:Admin, MM, MOn']);
 
 
 // DIVISI PERSONALIA //
 // Crew
-$routes->add('/control/crew', 'Crew::index');
-$routes->get('/control/crew/form', 'Crew::form');
-$routes->add('/crew/insert', 'Crew::insert');
-$routes->get('/control/crew/edit/(:num)', 'Crew::edit/$1');
-$routes->add('/crew/update/(:num)', 'Crew::update/$1');
-$routes->delete('/control/crew/(:num)', 'Crew::delete/$1');
+$routes->add('/control/crew', 'Crew::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Alumni, Demis, Crew']);
+$routes->get('/control/crew/form', 'Crew::form', ['filter' => 'role:Admin, MP, HRD']);
+$routes->get('/control/crew/edit/(:num)', 'Crew::edit/$1', ['filter' => 'role:Admin, MP, HRD']);
+$routes->delete('/control/crew/(:num)', 'Crew::delete/$1', ['filter' => 'role:Admin, MP, HRD']);
+$routes->add('/crew/insert', 'Crew::insert', ['filter' => 'role:Admin, MP, HRD']);
+$routes->add('/crew/update/(:num)', 'Crew::update/$1', ['filter' => 'role:Admin, MP, HRD']);
 
 // Pengurus
-$routes->add('/control/pengurus', 'Pengurus::index');
-$routes->get('/control/pengurus/form', 'Pengurus::form');
-$routes->add('/pengurus/insert', 'Pengurus::insert');
-$routes->get('/control/pengurus/edit/(:num)', 'Pengurus::edit/$1');
-$routes->add('/pengurus/update/(:num)', 'Pengurus::update/$1');
-$routes->delete('/control/pengurus/(:num)', 'Pengurus::delete/$1');
+$routes->add('/control/pengurus', 'Pengurus::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Alumni, Demis, Crew']);
+$routes->get('/control/pengurus/form', 'Pengurus::form', ['filter' => 'role:Admin, MP, HRD']);
+$routes->get('/control/pengurus/edit/(:num)', 'Pengurus::edit/$1', ['filter' => 'role:Admin, MP, HRD']);
+$routes->delete('/control/pengurus/(:num)', 'Pengurus::delete/$1', ['filter' => 'role:Admin, MP, HRD']);
+$routes->add('/pengurus/insert', 'Pengurus::insert', ['filter' => 'role:Admin, MP, HRD']);
+$routes->add('/pengurus/update/(:num)', 'Pengurus::update/$1', ['filter' => 'role:Admin, MP, HRD']);
 
 // Alumni
-$routes->add('/control/alumni', 'Alumni::index');
-$routes->get('/control/alumni/form', 'Alumni::form');
-$routes->add('/alumni/insert', 'Alumni::insert');
-$routes->get('/control/alumni/edit/(:num)', 'Alumni::edit/$1');
-$routes->add('/alumni/update/(:num)', 'Alumni::update/$1');
-$routes->delete('/control/alumni/(:num)', 'Alumni::delete/$1');
+$routes->add('/control/alumni', 'Alumni::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Alumni, Demis, Crew']);
+$routes->get('/control/alumni/form', 'Alumni::form', ['filter' => 'role:Admin, MP, HRD, Demis, Alumni']);
+$routes->add('/alumni/insert', 'Alumni::insert', ['filter' => 'role:Admin, MP, HRD, Demis, Alumni']);
+$routes->get('/control/alumni/edit/(:num)', 'Alumni::edit/$1', ['filter' => 'role:Admin, MP, HRD, Demis, Alumni']);
+$routes->add('/alumni/update/(:num)', 'Alumni::update/$1', ['filter' => 'role:Admin, MP, HRD, Demis, Alumni']);
+$routes->delete('/control/alumni/(:num)', 'Alumni::delete/$1', ['filter' => 'role:Admin, MP, HRD, Demis']);
 
 /*
  * --------------------------------------------------------------------

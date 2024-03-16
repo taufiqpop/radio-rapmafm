@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="col-auto">
                                     <a href="<?= base_url(); ?>control/program">
-                                        <i class="fas fa-grip-horizontal fa-2x text-success"></i>
+                                        <i class="fas fa-headphones-alt fa-2x text-success"></i>
                                     </a>
                                 </div>
                             </div>

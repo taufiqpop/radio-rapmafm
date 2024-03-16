@@ -15,103 +15,103 @@
                             <img src="<?= base_url('/img/user/' . $user['user_image']); ?>" class="card-img user-details" alt="<?= $user['username']; ?>">
                             <div class="role-profile mt-1 mb-2">
                                 <!-- Admin -->
-                                <?php if ($user['name'] == 'Admin') : ?>
-                                    <span class="badge badge-danger"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Admin') : ?>
+                                    <span class="badge badge-danger"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Crew -->
-                                <?php if ($user['name'] == 'Crew') : ?>
-                                    <span class="badge badge-dark"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Crew') : ?>
+                                    <span class="badge badge-dark"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Produksi -->
-                                <?php if ($user['name'] == 'Produksi') : ?>
-                                    <span class="badge badge-warning"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Produksi') : ?>
+                                    <span class="badge badge-warning"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Jurnalistik -->
-                                <?php if ($user['name'] == 'Jurnalistik') : ?>
-                                    <span class="badge badge-warning"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Jurnalistik') : ?>
+                                    <span class="badge badge-warning"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Music Director -->
-                                <?php if ($user['name'] == 'Music Director') : ?>
-                                    <span class="badge badge-warning"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Music Director') : ?>
+                                    <span class="badge badge-warning"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Admisi On Air -->
-                                <?php if ($user['name'] == 'Admisi On Air') : ?>
-                                    <span class="badge badge-danger"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Admisi On Air') : ?>
+                                    <span class="badge badge-danger"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Admisi Off Air -->
-                                <?php if ($user['name'] == 'Admisi Off Air') : ?>
-                                    <span class="badge badge-danger"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Admisi Off Air') : ?>
+                                    <span class="badge badge-danger"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Teknisi -->
-                                <?php if ($user['name'] == 'Teknisi') : ?>
-                                    <span class="badge badge-danger"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Teknisi') : ?>
+                                    <span class="badge badge-danger"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- HRD -->
-                                <?php if ($user['name'] == 'HRD') : ?>
-                                    <span class="badge badge-info"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'HRD') : ?>
+                                    <span class="badge badge-info"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Advokat -->
-                                <?php if ($user['name'] == 'Advokat') : ?>
-                                    <span class="badge badge-info"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Advokat') : ?>
+                                    <span class="badge badge-info"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Marketing On Air -->
-                                <?php if ($user['name'] == 'Marketing On Air') : ?>
-                                    <span class="badge badge-success"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Marketing On Air') : ?>
+                                    <span class="badge badge-success"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Marketing Off Air -->
-                                <?php if ($user['name'] == 'Marketing Off Air') : ?>
-                                    <span class="badge badge-success"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Marketing Off Air') : ?>
+                                    <span class="badge badge-success"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Personal Assistant -->
-                                <?php if ($user['name'] == 'Personal Assistant') : ?>
-                                    <span class="badge badge-primary"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Personal Assistant') : ?>
+                                    <span class="badge badge-primary"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- General Manager -->
-                                <?php if ($user['name'] == 'General Manager') : ?>
-                                    <span class="badge badge-primary"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'General Manager') : ?>
+                                    <span class="badge badge-primary"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Manager Marketing -->
-                                <?php if ($user['name'] == 'Manager Marketing') : ?>
-                                    <span class="badge badge-success"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Manager Marketing') : ?>
+                                    <span class="badge badge-success"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Manager Personalia -->
-                                <?php if ($user['name'] == 'Manager Personalia') : ?>
-                                    <span class="badge badge-info"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Manager Personalia') : ?>
+                                    <span class="badge badge-info"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Manager Umum -->
-                                <?php if ($user['name'] == 'Manager Umum') : ?>
-                                    <span class="badge badge-danger"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Manager Umum') : ?>
+                                    <span class="badge badge-danger"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Manager Kepenyiaran -->
-                                <?php if ($user['name'] == 'Manager Kepenyiaran') : ?>
-                                    <span class="badge badge-warning"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Manager Kepenyiaran') : ?>
+                                    <span class="badge badge-warning"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Demisioner -->
-                                <?php if ($user['name'] == 'Demisioner') : ?>
-                                    <span class="badge badge-secondary"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Demisioner') : ?>
+                                    <span class="badge badge-secondary"><?= $user['description']; ?></span>
                                 <?php endif; ?>
 
                                 <!-- Alumni -->
-                                <?php if ($user['name'] == 'Alumni') : ?>
-                                    <span class="badge badge-secondary"><?= $user['name']; ?></span>
+                                <?php if ($user['description'] == 'Alumni') : ?>
+                                    <span class="badge badge-secondary"><?= $user['description']; ?></span>
                                 <?php endif; ?>
                             </div>
                         </div>

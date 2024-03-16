@@ -35,13 +35,15 @@
         </li>
     <?php endif; ?>
 
-    <!-- My Profile -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>profile/<?= user()->id; ?>">
-            <i class="fas fa-user"></i>
-            <span>My Profile</span>
-        </a>
-    </li>
+    <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat'])) : ?>
+        <!-- My Profile -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>profile/<?= user()->id; ?>">
+                <i class="fas fa-user"></i>
+                <span>My Profile</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- ==================================================================== -->
 
@@ -50,7 +52,7 @@
         <hr class="sidebar-divider">
         <div class="sidebar-heading">Divisi GMPA</div>
 
-        <!-- GM -->
+        <!-- General Manager -->
         <!-- Timeline GMPA -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/gmpa">
@@ -59,7 +61,7 @@
             </a>
         </li>
 
-        <!-- PA -->
+        <!-- Personal Assistant -->
         <!-- Daftar Surat -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/surat">
@@ -79,7 +81,7 @@
 
     <!-- ==================================================================== -->
 
-    <!-- Umum -->
+    <!-- Divisi Umum -->
     <?php if (in_groups(['Admin', 'GM', 'MU', 'AOn', 'AOff', 'Teknisi'])) : ?>
         <hr class="sidebar-divider">
         <div class="sidebar-heading">Divisi Umum</div>
@@ -96,7 +98,7 @@
         </li>
     <?php endif; ?>
 
-    <!-- AOn -->
+    <!-- Admisi On Air -->
     <?php if (in_groups(['Admin', 'GM', 'MU', 'AOn'])) : ?>
         <!-- Achievements -->
         <li class="nav-item">
@@ -123,7 +125,7 @@
         </li>
     <?php endif; ?>
 
-    <!-- AOff -->
+    <!-- Admisi Off Air -->
     <?php if (in_groups(['Admin', 'GM', 'MU', 'AOff'])) : ?>
         <!-- Data Inventaris -->
         <li class="nav-item">
@@ -147,7 +149,7 @@
 
     <!-- ==================================================================== -->
 
-    <!-- Kepenyiaran -->
+    <!-- Divisi Kepenyiaran -->
     <hr class="sidebar-divider">
     <div class="sidebar-heading">Divisi Kepenyiaran</div>
 
@@ -181,7 +183,7 @@
         </li>
     <?php endif; ?>
 
-    <!-- MD -->
+    <!-- Music Director -->
     <?php if (in_groups(['Admin', 'GM', 'MK', 'MD'])) : ?>
         <!-- Bank Lagu -->
         <li class="nav-item">
@@ -197,7 +199,7 @@
         <!-- Program Siar -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/program">
-                <i class="fas fa-grip-horizontal"></i>
+                <i class="fas fa-headphones-alt"></i>
                 <span>Program Siar</span>
             </a>
         </li>
@@ -205,7 +207,7 @@
         <!-- Data Podcast -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/podcast">
-                <i class="fas fa-microphone"></i>
+                <i class="fas fa-headset"></i>
                 <span>Podcast</span>
             </a>
         </li>
@@ -213,7 +215,7 @@
         <!-- Data Audio -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/audios">
-                <i class="fas fa-headset"></i>
+                <i class="fas fa-microphone"></i>
                 <span>Data Audio</span>
             </a>
         </li>
@@ -353,10 +355,10 @@
                 <span>Pengaturan</span>
             </a>
         </li>
-    <?php endif; ?>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+    <?php endif; ?>
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">

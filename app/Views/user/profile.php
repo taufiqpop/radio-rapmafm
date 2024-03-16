@@ -22,7 +22,7 @@
 
                         <?php foreach ($users as $user) : ?>
                             <div class="role-profile mt-1 mb-2">
-                                <span class="badge badge-danger"><?= $user['name']; ?></span>
+                                <span class="badge badge-danger"><?= $user['description']; ?></span>
                             </div>
                         <?php endforeach; ?>
                     </div>
