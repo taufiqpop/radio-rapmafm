@@ -19,7 +19,7 @@
     </li>
 
     <!-- User Management -->
-    <?php if (in_groups('Admin')) : ?>
+    <?php if (in_groups(['Admin', 'GM'])) : ?>
         <!-- Divider -->
         <hr class="sidebar-divider">
 
@@ -46,84 +46,104 @@
     <!-- ==================================================================== -->
 
     <!-- GMPA -->
-    <hr class="sidebar-divider">
-    <div class="sidebar-heading">Divisi GMPA</div>
+    <?php if (in_groups(['Admin', 'GM', 'PA'])) : ?>
+        <hr class="sidebar-divider">
+        <div class="sidebar-heading">Divisi GMPA</div>
 
-    <!-- General Manager -->
-    <!-- Timeline GMPA -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/gmpa">
-            <i class="fas fa-business-time"></i>
-            <span>Timeline GMPA</span>
-        </a>
-    </li>
+        <!-- GM -->
+        <!-- Timeline GMPA -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/gmpa">
+                <i class="fas fa-business-time"></i>
+                <span>Timeline GMPA</span>
+            </a>
+        </li>
 
-    <!-- Personal Assistant -->
-    <!-- Daftar Surat -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/surat">
-            <i class="fas fa-envelope-open-text"></i>
-            <span>Daftar Surat</span>
-        </a>
-    </li>
+        <!-- PA -->
+        <!-- Daftar Surat -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/surat">
+                <i class="fas fa-envelope-open-text"></i>
+                <span>Daftar Surat</span>
+            </a>
+        </li>
 
-    <!-- Data Keuangan -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/keuangan">
-            <i class="	fas fa-dollar-sign"></i>
-            <span>Data Keuangan</span>
-        </a>
-    </li>
+        <!-- Data Keuangan -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/keuangan">
+                <i class="	fas fa-dollar-sign"></i>
+                <span>Data Keuangan</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- ==================================================================== -->
 
     <!-- Umum -->
-    <hr class="sidebar-divider">
-    <div class="sidebar-heading">Divisi Umum</div>
+    <?php if (in_groups(['Admin', 'GM', 'MU', 'AOn', 'AOff', 'Teknisi'])) : ?>
+        <hr class="sidebar-divider">
+        <div class="sidebar-heading">Divisi Umum</div>
+    <?php endif; ?>
 
     <!-- Manager -->
-    <!-- Timeline Divisi Umum -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/umum">
-            <i class="fas fa-business-time"></i>
-            <span>Timeline Divum</span>
-        </a>
-    </li>
+    <?php if (in_groups(['Admin', 'GM', 'MU', 'AOn', 'AOff', 'Teknisi'])) : ?>
+        <!-- Timeline Divisi Umum -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/umum">
+                <i class="fas fa-business-time"></i>
+                <span>Timeline Divum</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
-    <!-- Admisi On Air -->
-    <!-- Achievements -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/achievements">
-            <i class="fas fa-trophy"></i>
-            <span>Achievements</span>
-        </a>
-    </li>
+    <!-- AOn -->
+    <?php if (in_groups(['Admin', 'GM', 'MU', 'AOn'])) : ?>
+        <!-- Achievements -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/achievements">
+                <i class="fas fa-trophy"></i>
+                <span>Achievements</span>
+            </a>
+        </li>
 
-    <!-- Structure of Organization -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/structure">
-            <i class="fas fa-address-card"></i>
-            <span>Struktur Organisasi</span>
-        </a>
-    </li>
+        <!-- Events -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/events">
+                <i class="fas fa-calendar-week"></i>
+                <span>Events</span>
+            </a>
+        </li>
 
-    <!-- Admisi Off Air -->
-    <!-- Data Inventaris -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/inventaris">
-            <i class="fas fa-database"></i>
-            <span>Data Inventaris</span>
-        </a>
-    </li>
+        <!-- Structure of Organization -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/structure">
+                <i class="fas fa-address-card"></i>
+                <span>Struktur Organisasi</span>
+            </a>
+        </li>
+    <?php endif; ?>
+
+    <!-- AOff -->
+    <?php if (in_groups(['Admin', 'GM', 'MU', 'AOff'])) : ?>
+        <!-- Data Inventaris -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/inventaris">
+                <i class="fas fa-database"></i>
+                <span>Data Inventaris</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- Teknisi -->
-    <!-- Pemancar -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/pemancar">
-            <i class="fas fa-broadcast-tower"></i>
-            <span>Pemancar</span>
-        </a>
-    </li>
+    <?php if (in_groups(['Admin', 'GM', 'MU', 'Teknisi'])) : ?>
+        <!-- Pemancar -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/pemancar">
+                <i class="fas fa-broadcast-tower"></i>
+                <span>Pemancar</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- ==================================================================== -->
 
@@ -131,15 +151,17 @@
     <hr class="sidebar-divider">
     <div class="sidebar-heading">Divisi Kepenyiaran</div>
 
-    <!-- Timeline Divisi Kepenyiaran -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/kepenyiaran">
-            <i class="fas fa-business-time"></i>
-            <span>Timeline Kepenyiaran</span>
-        </a>
-    </li>
-
     <!-- Manager -->
+    <?php if (in_groups(['Admin', 'GM', 'MK', 'Produksi', 'Jurnalistik', 'MD'])) : ?>
+        <!-- Timeline Divisi Kepenyiaran -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/kepenyiaran">
+                <i class="fas fa-business-time"></i>
+                <span>Timeline Kepenyiaran</span>
+            </a>
+        </li>
+    <?php endif; ?>
+
     <!-- Jadwal Siar -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/jadwalsiar">
@@ -148,105 +170,111 @@
         </a>
     </li>
 
-    <!-- Program Siar -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/program">
-            <i class="fas fa-grip-horizontal"></i>
-            <span>Program Siar</span>
-        </a>
-    </li>
-
     <!-- Jurnalistik -->
-    <!-- Rapma News -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/news">
-            <i class="fas fa-newspaper"></i>
-            <span>Rapma News</span>
-        </a>
-    </li>
+    <?php if (in_groups(['Admin', 'GM', 'MK', 'Jurnalistik'])) : ?>
+        <!-- Rapma News -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/news">
+                <i class="fas fa-newspaper"></i>
+                <span>Rapma News</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
-    <!-- Music Director -->
-    <!-- Bank Lagu -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/lagu">
-            <i class="fas fa-music"></i>
-            <span>Bank Lagu</span>
-        </a>
-    </li>
+    <!-- MD -->
+    <?php if (in_groups(['Admin', 'GM', 'MK', 'MD'])) : ?>
+        <!-- Bank Lagu -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/lagu">
+                <i class="fas fa-music"></i>
+                <span>Bank Lagu</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- Produksi -->
-    <!-- Data Podcast -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/podcast">
-            <i class="fas fa-microphone"></i>
-            <span>Podcast</span>
-        </a>
-    </li>
+    <?php if (in_groups(['Admin', 'GM', 'MK', 'Produksi'])) : ?>
+        <!-- Program Siar -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/program">
+                <i class="fas fa-grip-horizontal"></i>
+                <span>Program Siar</span>
+            </a>
+        </li>
 
-    <!-- ID's | RE | Spot -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/audios">
-            <i class="fas fa-headset"></i>
-            <span>Data Audio</span>
-        </a>
-    </li>
+        <!-- Data Podcast -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/podcast">
+                <i class="fas fa-microphone"></i>
+                <span>Podcast</span>
+            </a>
+        </li>
 
-    <!-- Data Videos -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/videos">
-            <i class="fas fa-video"></i>
-            <span>Data Video</span>
-        </a>
-    </li>
+        <!-- Data Audio -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/audios">
+                <i class="fas fa-headset"></i>
+                <span>Data Audio</span>
+            </a>
+        </li>
+
+        <!-- Data Videos -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/videos">
+                <i class="fas fa-video"></i>
+                <span>Data Video</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- ==================================================================== -->
 
     <!-- Marketing -->
-    <hr class="sidebar-divider">
-    <div class="sidebar-heading">Divisi Marketing</div>
+    <?php if (in_groups(['Admin', 'GM', 'MM', 'MOn', 'MOff'])) : ?>
+        <hr class="sidebar-divider">
+        <div class="sidebar-heading">Divisi Marketing</div>
+    <?php endif; ?>
 
     <!-- Manager -->
-    <!-- Timeline Divisi Marketing -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/marketing">
-            <i class="fas fa-business-time"></i>
-            <span>Timeline Marketing</span>
-        </a>
-    </li>
+    <?php if (in_groups(['Admin', 'GM', 'MM', 'MOn', 'MOff'])) : ?>
+        <!-- Timeline Divisi Marketing -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/marketing">
+                <i class="fas fa-business-time"></i>
+                <span>Timeline Marketing</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
-    <!-- Marketing On Air -->
-    <!-- Media Partner -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/medpart">
-            <i class="fas fa-bullhorn"></i>
-            <span>Media Partner</span>
-        </a>
-    </li>
+    <!-- MOn -->
+    <?php if (in_groups(['Admin', 'GM', 'MM', 'MOn'])) : ?>
+        <!-- Media Partner -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/medpart">
+                <i class="fas fa-bullhorn"></i>
+                <span>Media Partner</span>
+            </a>
+        </li>
 
-    <!-- Iklan -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/iklan">
-            <i class="fab fa-adversal"></i>
-            <span>Iklan</span>
-        </a>
-    </li>
+        <!-- Iklan -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/iklan">
+                <i class="fab fa-adversal"></i>
+                <span>Iklan</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
-    <!-- Marketing Off Air -->
-    <!-- Events -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/events">
-            <i class="fas fa-calendar-week"></i>
-            <span>Events</span>
-        </a>
-    </li>
-
-    <!-- M-Talent -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/mtalent">
-            <i class="fas fa-star"></i>
-            <span>M-Talent</span>
-        </a>
-    </li>
+    <!-- MOff -->
+    <?php if (in_groups(['Admin', 'GM', 'MM', 'MOff'])) : ?>
+        <!-- M-Talent -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/mtalent">
+                <i class="fas fa-star"></i>
+                <span>M-Talent</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- ==================================================================== -->
 
@@ -255,22 +283,26 @@
     <div class="sidebar-heading">Divisi Personalia</div>
 
     <!-- Manager -->
-    <!-- Timeline Divisi Personalia -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/personalia">
-            <i class="fas fa-business-time"></i>
-            <span>Timeline Personalia</span>
-        </a>
-    </li>
+    <?php if (in_groups(['Admin', 'GM', 'MP', 'HRD', 'Advokat'])) : ?>
+        <!-- Timeline Divisi Personalia -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/personalia">
+                <i class="fas fa-business-time"></i>
+                <span>Timeline Personalia</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- Advokat -->
-    <!-- Rules -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/rules">
-            <i class="fas fa-file-alt"></i>
-            <span>Rules</span>
-        </a>
-    </li>
+    <?php if (in_groups(['Admin', 'GM', 'MP', 'Advokat'])) : ?>
+        <!-- Rules -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/rules">
+                <i class="fas fa-file-alt"></i>
+                <span>Rules</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- HRD -->
     <!-- Pengurus -->
@@ -300,24 +332,28 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
-    <!-- Page Management -->
-    <div class="sidebar-heading">Others</div>
+    <!-- Others -->
+    <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat', 'Demis', 'Alumni'])) : ?>
+        <div class="sidebar-heading">Others</div>
 
-    <!-- Pesan -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>pesan">
-            <i class="fas fa-comment"></i>
-            <span>Pesan</span>
-        </a>
-    </li>
+        <!-- Pesan -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>pesan">
+                <i class="fas fa-comment"></i>
+                <span>Pesan</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- Settings -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/settings">
-            <i class="fas fa-cog"></i>
-            <span>Pengaturan</span>
-        </a>
-    </li>
+    <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'Teknisi', 'MD', 'MOn', 'MOff'])) : ?>
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/settings">
+                <i class="fas fa-cog"></i>
+                <span>Pengaturan</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
