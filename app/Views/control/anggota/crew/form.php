@@ -59,6 +59,17 @@
                     </div>
                 </div>
 
+                <!-- Status -->
+                <div class="form-group row">
+                    <label for="status" class="col-sm-3 col-form-label">Status</label>
+                    <div class="col-sm-7">
+                        <select name="status">
+                            <option value="Aktif">Aktif</option>
+                            <option value="Tidak Aktif">Tidak Aktif</option>
+                        </select>
+                    </div>
+                </div>
+
                 <!-- Instagram -->
                 <div class="form-group row">
                     <label for="instagram" class="col-sm-3 col-form-label">Instagram</label>

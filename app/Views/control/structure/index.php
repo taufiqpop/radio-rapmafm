@@ -6,9 +6,11 @@
     <div class="row">
         <div class="col-11">
             <h1 class="h3 mb-4 text-gray-800">Structure of Organization</h1>
-            <a href="<?= base_url(); ?>control/about" class="btn btn-success">About</a>
-            <a href="<?= base_url(); ?>control/structure/member" class="btn btn-info">Edit Crew</a>
-            <br><br>
+            <?php if (in_groups(['Admin', 'MU', 'AOn'])) : ?>
+                <a href="<?= base_url(); ?>control/about" class="btn btn-success">About</a>
+                <a href="<?= base_url(); ?>control/structure/member" class="btn btn-info">Edit Crew</a>
+                <br><br>
+            <?php endif; ?>
 
             <!-- Search Bar -->
             <form action="" method="get">
@@ -41,7 +43,9 @@
                                     <th scope="col" class="cursor-active">Divisi</th>
                                     <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-active">Status</th>
-                                    <th scope="col" class="cursor-stop">Action</th>
+                                    <?php if (in_groups(['Admin', 'MU', 'AOn'])) : ?>
+                                        <th scope="col" class="cursor-stop">Action</th>
+                                    <?php endif; ?>
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,9 +59,11 @@
                                         <td><?= $data->divisi; ?></td>
                                         <td><?= $data->tahun; ?></td>
                                         <td><?= $data->status; ?></td>
-                                        <td>
-                                            <a href="<?= base_url(); ?>control/structure/edit/<?= $struktur['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                        </td>
+                                        <?php if (in_groups(['Admin', 'MU', 'AOn'])) : ?>
+                                            <td>
+                                                <a href="<?= base_url(); ?>control/structure/edit/<?= $struktur['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                            </td>
+                                        <?php endif; ?>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

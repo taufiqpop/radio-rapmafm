@@ -25,7 +25,7 @@
                                         <tr>
                                             <td>
                                                 <label for="owner">Owner Website</label>
-                                                <input type="text" class="form-control" name="owner" value="<?= $setting['owner']; ?>" required>
+                                                <input type="text" class="form-control" name="owner" value="<?= $setting['owner']; ?>" required autofocus>
                                             </td>
                                             <td>
                                                 <label for="no_mtalent">Slogan</label>

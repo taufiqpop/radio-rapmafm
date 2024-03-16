@@ -6,8 +6,10 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Media Partner</h1>
-            <a href="<?= base_url(); ?>control/medpart/form" class="btn btn-primary">Add Media Partner</a>
-            <br><br>
+            <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                <a href="<?= base_url(); ?>control/medpart/form" class="btn btn-primary">Add Media Partner</a>
+                <br><br>
+            <?php endif; ?>
 
             <!-- Search Bar -->
             <form action="" method="get">
@@ -41,7 +43,9 @@
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Acara</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Status</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Kontraprestasi</th>
-                                    <th scope="col" class="cursor-stop" rowspan="2" style="padding-bottom: 35px;">Action</th>
+                                    <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                                        <th scope="col" class="cursor-stop" rowspan="2" style="padding-bottom: 35px;">Action</th>
+                                    <?php endif ?>
                                 </tr>
                                 <tr>
                                     <th scope="col" class="cursor-active">Tanggal Masuk</th>
@@ -59,14 +63,16 @@
                                         <td style="max-width: 300px;"><?= $data->acara; ?></td>
                                         <td><?= $data->status; ?></td>
                                         <td style="max-width: 500px;"><?= $data->kontraprestasi; ?></td>
-                                        <td>
-                                            <a href="<?= base_url(); ?>control/medpart/edit/<?= $mediapartner['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                            <form action="<?= base_url(); ?>control/medpart/<?= $mediapartner['id']; ?>" method="post" class="d-inline">
-                                                <?= csrf_field(); ?>
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
-                                            </form>
-                                        </td>
+                                        <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                                            <td>
+                                                <a href="<?= base_url(); ?>control/medpart/edit/<?= $mediapartner['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/medpart/<?= $mediapartner['id']; ?>" method="post" class="d-inline">
+                                                    <?= csrf_field(); ?>
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
+                                                </form>
+                                            </td>
+                                        <?php endif ?>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

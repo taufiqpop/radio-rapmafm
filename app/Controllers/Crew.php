@@ -55,6 +55,7 @@ class Crew extends BaseController
             'semester'  => $this->request->getPost('semester'),
             'domisili'  => $this->request->getPost('domisili'),
             'nohp'      => $this->request->getPost('nohp'),
+            'status'    => $this->request->getPost('status'),
             'instagram' => $this->request->getPost('instagram'),
             'twitter'   => $this->request->getPost('twitter'),
         ];
@@ -99,6 +100,7 @@ class Crew extends BaseController
             'semester'  => $this->request->getPost('semester'),
             'domisili'  => $this->request->getPost('domisili'),
             'nohp'      => $this->request->getPost('nohp'),
+            'status'    => $this->request->getPost('status'),
             'instagram' => $this->request->getPost('instagram'),
             'twitter'   => $this->request->getPost('twitter'),
         ];

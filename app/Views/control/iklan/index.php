@@ -1,13 +1,13 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- List Inventaris -->
+<!-- List Iklan -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1 class="h3 mb-4 text-gray-800">Data Inventaris</h1>
-            <?php if (in_groups(['Admin', 'MU', 'AOff'])) : ?>
-                <a href="<?= base_url(); ?>control/inventaris/form" class="btn btn-primary">Add Inventaris</a>
+            <h1 class="h3 mb-4 text-gray-800">Data Iklan</h1>
+            <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                <a href="<?= base_url(); ?>control/iklan/form" class="btn btn-primary">Add Iklan</a>
                 <br><br>
             <?php endif; ?>
 
@@ -38,47 +38,43 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
-                                    <th scope="col" class="cursor-active">ID Barang</th>
-                                    <th scope="col" class="cursor-active">Nama Barang</th>
-                                    <th scope="col" class="cursor-active">Nomor</th>
-                                    <th scope="col" class="cursor-active">Jumlah</th>
-                                    <th scope="col" class="cursor-active">Kode Ruangan</th>
-                                    <th scope="col" class="cursor-active">Kondisi</th>
-                                    <th scope="col" class="cursor-active">Tahun</th>
-                                    <?php if (in_groups(['Admin', 'MU', 'AOff'])) : ?>
-                                        <th scope="col" class="cursor-stop">Action</th>
-                                    <?php endif; ?>
+                                    <th scope="col" class="cursor-active">Nama Penembus</th>
+                                    <th scope="col" class="cursor-active">Client</th>
+                                    <th scope="col" class="cursor-active">Tanggal MOU</th>
+                                    <th scope="col" class="cursor-active">Paket Iklan</th>
+                                    <th scope="col" class="cursor-active">Harga</th>
+                                    <th scope="col" class="cursor-active">Status</th>
+                                    <th scope="col" class="cursor-active">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($inventaris as $index => $invent) : ?>
-                                    <?php $data = json_decode($invent['value']) ?>
+                                <?php foreach ($iklan as $index => $ads) : ?>
+                                    <?php $data = json_decode($ads['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td>INV/RAPMA/<?= $invent['kode']; ?>/<?= $data->nomor; ?>/<?= $invent['tahun']; ?></td>
-                                        <td><?= $data->barang; ?></td>
-                                        <td><?= $data->nomor; ?></td>
-                                        <td><?= $data->jumlah; ?></td>
-                                        <td><?= $invent['kode']; ?></td>
-                                        <td><?= $invent['kondisi']; ?></td>
-                                        <td>20<?= $invent['tahun']; ?></td>
-                                        <?php if (in_groups(['Admin', 'MU', 'AOff'])) : ?>
+                                        <td><?= $data->nama; ?></td>
+                                        <td><?= $data->client; ?></td>
+                                        <td><?= $data->tglmou; ?></td>
+                                        <td style="max-width: 300px;"><?= $data->paket; ?></td>
+                                        <td><?= $data->harga; ?></td>
+                                        <td><?= $data->status; ?></td>
+                                        <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
                                             <td>
-                                                <a href="<?= base_url(); ?>control/inventaris/edit/<?= $invent['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/inventaris/<?= $invent['id']; ?>" method="post" class="d-inline">
+                                                <a href="<?= base_url(); ?>control/iklan/edit/<?= $ads['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/iklan/<?= $ads['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
                                                 </form>
                                             </td>
-                                        <?php endif; ?>
+                                        <?php endif ?>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
 
                         <!-- Pagers -->
-                        <?= $pager->links('inventaris', 'data_pagination'); ?>
+                        <?= $pager->links('iklan', 'data_pagination'); ?>
                     </div>
                 </div>
             </div>

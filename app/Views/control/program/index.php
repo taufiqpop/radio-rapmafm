@@ -6,9 +6,15 @@
     <div class="row">
         <div class="col-11">
             <h1 class="h3 mb-4 text-gray-800">Program Siar</h1>
-            <a href="<?= base_url(); ?>control/program/form" class="btn btn-primary">Add Program Siar</a>
-            <a href="<?= base_url(); ?>control/topchart" class="btn btn-info">Top Chart</a>
-            <br><br>
+            <?php if (in_groups(['Admin', 'MU', 'Produksi'])) : ?>
+                <a href="<?= base_url(); ?>control/program/form" class="btn btn-primary">Add Program Siar</a>
+                <br><br>
+            <?php endif; ?>
+
+            <?php if (in_groups(['Admin', 'MU', 'MD'])) : ?>
+                <a href="<?= base_url(); ?>control/topchart" class="btn btn-info">Top Chart</a>
+                <br><br>
+            <?php endif; ?>
 
             <!-- Search Bar -->
             <form action="" method="get">
@@ -40,7 +46,9 @@
                                     <th scope="col" class="cursor-stop">Photo</th>
                                     <th scope="col" class="cursor-active">Program</th>
                                     <th scope="col" class="cursor-active">Jenis</th>
-                                    <th scope="col" class="cursor-active">Filter</th>
+                                    <?php if (in_groups(['Admin'])) : ?>
+                                        <th scope="col" class="cursor-active">Filter</th>
+                                    <?php endif; ?>
                                     <th scope="col" class="cursor-stop">Action</th>
                                 </tr>
                             </thead>
@@ -54,15 +62,19 @@
                                         </td>
                                         <td><?= $data->program; ?></td>
                                         <td><?= $data->jenis; ?></td>
-                                        <td><?= $data->filter; ?></td>
+                                        <?php if (in_groups(['Admin'])) : ?>
+                                            <td><?= $data->filter; ?></td>
+                                        <?php endif ?>
                                         <td>
-                                            <a href="<?= base_url(); ?>control/program/edit/<?= $siaran['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
-                                            <form action="<?= base_url(); ?>control/program/<?= $siaran['id']; ?>" method="post" class="d-inline">
-                                                <?= csrf_field(); ?>
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
-                                            </form>
+                                            <?php if (in_groups(['Admin', 'MU', 'Produksi'])) : ?>
+                                                <a href="<?= base_url(); ?>control/program/edit/<?= $siaran['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/program/<?= $siaran['id']; ?>" method="post" class="d-inline">
+                                                    <?= csrf_field(); ?>
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
+                                                </form>
+                                            <?php endif; ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

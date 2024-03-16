@@ -41,13 +41,15 @@
                                         <tr>
                                             <td colspan="3">
                                                 <a href="<?= base_url(); ?>control/pemancar" class="btn btn-dark mb-1"><i class="fas fa-arrow-left"></i></a>
-                                                <a href="<?= base_url(); ?>control/pemancar/form/<?= $jangkauan['id']; ?>" class="btn btn-primary mb-1"><i class="fas fa-plus"></i></a>
-                                                <a href="<?= base_url(); ?>control/pemancar/edit/<?= $jangkauan['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/pemancar/<?= $jangkauan['id']; ?>" method="post" class="d-inline">
-                                                    <?= csrf_field(); ?>
-                                                    <input type="hidden" name="_method" value="DELETE">
-                                                    <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
-                                                </form>
+                                                <?php if (in_groups(['Admin', 'MU', 'Teknisi'])) : ?>
+                                                    <a href="<?= base_url(); ?>control/pemancar/form/<?= $jangkauan['id']; ?>" class="btn btn-primary mb-1"><i class="fas fa-plus"></i></a>
+                                                    <a href="<?= base_url(); ?>control/pemancar/edit/<?= $jangkauan['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                    <form action="<?= base_url(); ?>control/pemancar/<?= $jangkauan['id']; ?>" method="post" class="d-inline">
+                                                        <?= csrf_field(); ?>
+                                                        <input type="hidden" name="_method" value="DELETE">
+                                                        <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
+                                                    </form>
+                                                <?php endif ?>
                                             </td>
                                         </tr>
                                     </tbody>

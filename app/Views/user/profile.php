@@ -46,10 +46,13 @@
                                 <li class="list-group-item">Email : <?= user()->email; ?></li>
 
                                 <!-- Action -->
-                                <li class="list-group-item">
-                                    <a href="<?= base_url('user/edit/' . user()->id); ?>" class="btn btn-info mb-1">Edit Profile</a>
-                                    <a href="<?= base_url('password/' . user()->id); ?>" class="btn btn-danger mb-1">Change Password</a>
-                                </li>
+                                <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat'])) : ?>
+
+                                    <li class="list-group-item">
+                                        <a href="<?= base_url('user/edit/' . user()->id); ?>" class="btn btn-info mb-1">Edit Profile</a>
+                                        <a href="<?= base_url('password/' . user()->id); ?>" class="btn btn-danger mb-1">Change Password</a>
+                                    </li>
+                                <?php endif; ?>
                             </ul>
                         </div>
                     </div>

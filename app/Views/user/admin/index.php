@@ -51,7 +51,9 @@
                                         <td><?= $user['username']; ?></td>
                                         <td>
                                             <a href="<?= base_url(); ?>admin/detail/<?= $user['id']; ?>" class="btn btn-info mb-1"><i class="fas fa-info"></i></a>
-                                            <a href="<?= base_url(); ?>user/edit/<?= $user['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                            <?php if (in_groups(['Admin'])) : ?>
+                                                <a href="<?= base_url(); ?>user/edit/<?= $user['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                            <?php endif; ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

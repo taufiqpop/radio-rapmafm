@@ -41,8 +41,8 @@ $routes->get('/admin/detail/(:num)', 'Admin::detail/$1', ['filter' => 'role:Admi
 $routes->delete('/user/admin/(:num)', 'Admin::delete/$1', ['filter' => 'role:Admin']);
 
 // User
-$routes->get('/user', 'User::index');
-$routes->get('/profile/(:num)', 'User::profile/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff']);
+$routes->get('/user', 'User::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Alumni, Demis, Crew']);
+$routes->get('/profile/(:num)', 'User::profile/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Alumni, Demis, Crew']);
 $routes->get('/user/edit/(:num)', 'User::edit/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff']);
 $routes->add('/user/update/(:num)', 'User::update/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff']);
 
@@ -108,7 +108,7 @@ $routes->add('/pemancar/update/(:num)', 'Pemancar::update/$1', ['filter' => 'rol
 
 // DIVISI KEPENYIARAN //
 // Program
-$routes->add('/control/program', 'Program::index', ['filter' => 'role:Admin, GM, MK, Produksi']);
+$routes->add('/control/program', 'Program::index', ['filter' => 'role:Admin, GM, MK, Produksi, MD']);
 $routes->get('/control/program/form', 'Program::form', ['filter' => 'role:Admin, MK, Produksi']);
 $routes->get('/control/program/edit/(:num)', 'Program::edit/$1', ['filter' => 'role:Admin, MK, Produksi']);
 $routes->delete('/control/program/(:num)', 'Program::delete/$1', ['filter' => 'role:Admin, MK, Produksi']);

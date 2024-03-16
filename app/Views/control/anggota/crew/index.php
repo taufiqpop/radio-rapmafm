@@ -6,7 +6,9 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Crew Rapma FM</h1>
-            <a href="<?= base_url(); ?>control/crew/form" class="btn btn-primary">Add Crew</a>
+            <?php if (in_groups(['Admin', 'GM', 'MP', 'HRD'])) : ?>
+                <a href="<?= base_url(); ?>control/crew/form" class="btn btn-primary">Add Crew</a>
+            <?php endif; ?>
             <a href="<?= base_url(); ?>control/pengurus" class="btn btn-dark">Data Pengurus</a>
             <a href="<?= base_url(); ?>control/alumni" class="btn btn-dark">Data Alumni</a>
             <br><br>
@@ -44,6 +46,7 @@
                                     <th scope="col" class="cursor-active">Semester</th>
                                     <th scope="col" class="cursor-active">Domisili</th>
                                     <th scope="col" class="cursor-active">No HP</th>
+                                    <th scope="col" class="cursor-active">Status</th>
                                     <th scope="col" class="cursor-stop">Action</th>
                                 </tr>
                             </thead>
@@ -58,15 +61,18 @@
                                         <td><?= $data->semester; ?></td>
                                         <td><?= $data->domisili; ?></td>
                                         <td><?= $data->nohp; ?></td>
+                                        <td><?= $data->status; ?></td>
                                         <td>
                                             <a href="https://www.instagram.com/<?= $data->instagram; ?>" target="_blank" class="btn btn-primary mb-1"><i class="fab fa-instagram"></i></a>
                                             <a href="https://www.x.com/<?= $data->twitter; ?>" target="_blank" class="btn btn-info mb-1"><i class="fab fa-twitter"></i></a>
-                                            <a href="<?= base_url(); ?>control/crew/edit/<?= $organizer['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                            <form action="<?= base_url(); ?>control/crew/<?= $organizer['id']; ?>" method="post" class="d-inline">
-                                                <?= csrf_field(); ?>
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
-                                            </form>
+                                            <?php if (in_groups(['Admin', 'GM', 'MP', 'HRD'])) : ?>
+                                                <a href="<?= base_url(); ?>control/crew/edit/<?= $organizer['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/crew/<?= $organizer['id']; ?>" method="post" class="d-inline">
+                                                    <?= csrf_field(); ?>
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
+                                                </form>
+                                            <?php endif; ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

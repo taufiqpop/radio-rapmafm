@@ -6,7 +6,9 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Alumni Rapma FM</h1>
-            <a href="<?= base_url(); ?>control/alumni/form" class="btn btn-primary">Add Alumni</a>
+            <?php if (in_groups(['Admin', 'GM', 'MP', 'HRD', 'Demis', 'Alumni'])) : ?>
+                <a href="<?= base_url(); ?>control/alumni/form" class="btn btn-primary">Add Alumni</a>
+            <?php endif; ?>
             <a href="<?= base_url(); ?>control/pengurus" class="btn btn-dark">Data Pengurus</a>
             <a href="<?= base_url(); ?>control/crew" class="btn btn-dark">Data Crew</a>
             <br><br>
@@ -64,12 +66,17 @@
                                         <td><?= $data->nohp; ?></td>
                                         <td>
                                             <a href="https://www.instagram.com/<?= $data->instagram; ?>" target="_blank" class="btn btn-primary mb-1"><i class="fab fa-instagram"></i></a>
-                                            <a href="<?= base_url(); ?>control/alumni/edit/<?= $organizer['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                            <form action="<?= base_url(); ?>control/alumni/<?= $organizer['id']; ?>" method="post" class="d-inline">
-                                                <?= csrf_field(); ?>
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
-                                            </form>
+                                            <?php if (in_groups(['Admin', 'GM', 'MP', 'HRD', 'Demis', 'Alumni'])) : ?>
+                                                <a href="<?= base_url(); ?>control/alumni/edit/<?= $organizer['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                            <?php endif; ?>
+                                            <?php if (in_groups(['Admin', 'GM', 'MP', 'HRD'])) : ?>
+                                                <form action="<?= base_url(); ?>control/alumni/<?= $organizer['id']; ?>" method="post" class="d-inline">
+                                                    <?= csrf_field(); ?>
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
+                                                </form>
+                                            <?php endif; ?>
+
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

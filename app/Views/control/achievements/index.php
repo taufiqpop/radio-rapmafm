@@ -6,8 +6,10 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Daftar Achievements</h1>
-            <a href="<?= base_url(); ?>control/achievements/form" class="btn btn-primary">Add Achievements</a>
-            <br><br>
+            <?php if (in_groups(['Admin', 'MU', 'AOn'])) : ?>
+                <a href="<?= base_url(); ?>control/achievements/form" class="btn btn-primary">Add Achievements</a>
+                <br><br>
+            <?php endif; ?>
 
             <!-- Search Bar -->
             <form action="" method="get">
@@ -53,13 +55,16 @@
                                         <td><?= $data->judul ?></td>
                                         <td style="max-width: 500px;"><?= $achievement['tahun'] ?></td>
                                         <td>
-                                            <a href="<?= base_url(); ?>control/achievements/edit/<?= $achievement['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
-                                            <form action="<?= base_url(); ?>control/achievements/<?= $achievement['id']; ?>" method="post" class="d-inline">
-                                                <?= csrf_field(); ?>
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
-                                            </form>
+                                            <?php if (in_groups(['Admin', 'MU', 'AOn'])) : ?>
+
+                                                <a href="<?= base_url(); ?>control/achievements/edit/<?= $achievement['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/achievements/<?= $achievement['id']; ?>" method="post" class="d-inline">
+                                                    <?= csrf_field(); ?>
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
+                                                </form>
+                                            <?php endif; ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
