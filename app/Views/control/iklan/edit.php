@@ -2,15 +2,15 @@
 <?= $this->section('page-content'); ?>
 
 <!-- Edit Iklan -->
-<?php foreach ($iklan as $mediapartner) : ?>
-    <?php $data = json_decode($mediapartner['value']) ?>
+<?php foreach ($iklan as $ads) : ?>
+    <?php $data = json_decode($ads['value']) ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
                 <h1 class="h3 mb-4 text-gray-800">Form Edit Data Iklan</h1>
 
                 <!-- Forms -->
-                <form action="<?= base_url(); ?>iklan/update/<?= $mediapartner['id']; ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url(); ?>iklan/update/<?= $ads['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
                     <!-- Nama Penembus -->
@@ -49,7 +49,11 @@
                     <div class="form-group row">
                         <label for="status" class="col-sm-3 col-form-label">Status</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="status" value="<?= $data->status; ?>" required>
+                            <select name="status">
+                                <option value="<?= $data->status; ?>" selected></option>
+                                <option value="Tembus">Tembus</option>
+                                <option value="Tidak Tembus">Tidak Tembus</option>
+                            </select>
                         </div>
                     </div>
 

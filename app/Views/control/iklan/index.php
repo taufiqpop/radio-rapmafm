@@ -44,7 +44,9 @@
                                     <th scope="col" class="cursor-active">Paket Iklan</th>
                                     <th scope="col" class="cursor-active">Harga</th>
                                     <th scope="col" class="cursor-active">Status</th>
-                                    <th scope="col" class="cursor-active">Action</th>
+                                    <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                                        <th scope="col" class="cursor-active">Action</th>
+                                    <?php endif; ?>
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,7 +57,7 @@
                                         <td><?= $data->nama; ?></td>
                                         <td><?= $data->client; ?></td>
                                         <td><?= $data->tglmou; ?></td>
-                                        <td style="max-width: 300px;"><?= $data->paket; ?></td>
+                                        <td style="max-width: 500px;"><?= $data->paket; ?></td>
                                         <td><?= $data->harga; ?></td>
                                         <td><?= $data->status; ?></td>
                                         <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>

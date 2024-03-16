@@ -63,7 +63,7 @@ class Iklan extends BaseController
         ];
 
         $this->iklanModel->insert($data);
-        session()->setFlashdata('pesan', 'Data Media Partner Berhasil Ditambahkan!');
+        session()->setFlashdata('pesan', 'Data Iklan Berhasil Ditambahkan!');
 
         return redirect('control/iklan');
     }
@@ -72,7 +72,7 @@ class Iklan extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'     => 'Rapma FM | Edit Data Media Partner',
+            'title'     => 'Rapma FM | Edit Data Iklan',
             'iklan'   => $this->iklanModel->find($id),
         ];
 
@@ -105,7 +105,7 @@ class Iklan extends BaseController
         ];
 
         $this->iklanModel->update($id, $data);
-        session()->setFlashdata('pesan', 'Data Media Partner Berhasil Diubah!');
+        session()->setFlashdata('pesan', 'Data Iklan Berhasil Diubah!');
 
         return redirect('control/iklan');
     }
@@ -114,7 +114,7 @@ class Iklan extends BaseController
     public function delete($id)
     {
         $this->iklanModel->delete($id);
-        session()->setFlashdata('pesan', 'Data Media Partner Berhasil Dihapus!');
+        session()->setFlashdata('pesan', 'Data Iklan Berhasil Dihapus!');
 
         return redirect('control/iklan');
     }

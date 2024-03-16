@@ -139,6 +139,14 @@ $routes->delete('/control/iklan/(:num)', 'Iklan::delete/$1', ['filter' => 'role:
 $routes->add('/iklan/insert', 'Iklan::insert', ['filter' => 'role:Admin, MM, MOn']);
 $routes->add('/iklan/update/(:num)', 'Iklan::update/$1', ['filter' => 'role:Admin, MM, MOn']);
 
+// MTalent
+$routes->add('/control/mtalent', 'MTalent::index', ['filter' => 'role:Admin, GM, MM, MOff']);
+$routes->get('/control/mtalent/form', 'MTalent::form', ['filter' => 'role:Admin, MM, MOff']);
+$routes->get('/control/mtalent/edit/(:num)', 'MTalent::edit/$1', ['filter' => 'role:Admin, MM, MOff']);
+$routes->delete('/control/mtalent/(:num)', 'MTalent::delete/$1', ['filter' => 'role:Admin, MM, MOff']);
+$routes->add('/mtalent/insert', 'MTalent::insert', ['filter' => 'role:Admin, MM, MOff']);
+$routes->add('/mtalent/update/(:num)', 'MTalent::update/$1', ['filter' => 'role:Admin, MM, MOff']);
+
 
 // DIVISI PERSONALIA //
 // Crew

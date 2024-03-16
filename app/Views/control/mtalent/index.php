@@ -1,13 +1,13 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- List Media Partner -->
+<!-- List M-Talent -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1 class="h3 mb-4 text-gray-800">Data Media Partner</h1>
+            <h1 class="h3 mb-4 text-gray-800">Data M-Talent</h1>
             <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
-                <a href="<?= base_url(); ?>control/medpart/form" class="btn btn-primary">Add Media Partner</a>
+                <a href="<?= base_url(); ?>control/mtalent/form" class="btn btn-primary">Add M-Talent</a>
                 <br><br>
             <?php endif; ?>
 
@@ -38,37 +38,41 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">No</th>
-                                    <th scope="col" class="cursor-active" colspan="2">Tanggal</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Tanggal</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Jenis</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Instansi</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Acara</th>
-                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Jenis</th>
-                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Status</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Talent</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Tempat</th>
+                                    <th scope="col" class="cursor-active" colspan="2">Fee</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Kontraprestasi</th>
                                     <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
                                         <th scope="col" class="cursor-stop" rowspan="2" style="padding-bottom: 35px;">Action</th>
                                     <?php endif ?>
                                 </tr>
                                 <tr>
-                                    <th scope="col" class="cursor-active">Tanggal Masuk</th>
-                                    <th scope="col" class="cursor-active">Pelaksanaan</th>
+                                    <th scope="col" class="cursor-active">Talent</th>
+                                    <th scope="col" class="cursor-active">Rapma FM</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($medpart as $index => $mediapartner) : ?>
-                                    <?php $data = json_decode($mediapartner['value']) ?>
+                                <?php foreach ($mtalent as $index => $talent) : ?>
+                                    <?php $data = json_decode($talent['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->tglmasuk; ?></td>
-                                        <td><?= $data->pelaksanaan; ?></td>
+                                        <td><?= $data->tanggal; ?></td>
+                                        <td><?= $data->jenis; ?></td>
                                         <td><?= $data->instansi; ?></td>
                                         <td><?= $data->acara; ?></td>
-                                        <td><?= $data->jenis; ?></td>
-                                        <td><?= $data->status; ?></td>
+                                        <td><?= $data->talent; ?></td>
+                                        <td><?= $data->tempat; ?></td>
+                                        <td><?= $data->feetalent; ?></td>
+                                        <td><?= $data->feerapma; ?></td>
                                         <td style="max-width: 300px;"><?= $data->kontraprestasi; ?></td>
                                         <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
                                             <td>
-                                                <a href="<?= base_url(); ?>control/medpart/edit/<?= $mediapartner['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/medpart/<?= $mediapartner['id']; ?>" method="post" class="d-inline">
+                                                <a href="<?= base_url(); ?>control/mtalent/edit/<?= $talent['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/mtalent/<?= $talent['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
@@ -81,7 +85,7 @@
                         </table>
 
                         <!-- Pagers -->
-                        <?= $pager->links('medpart', 'data_pagination'); ?>
+                        <?= $pager->links('mtalent', 'data_pagination'); ?>
                     </div>
                 </div>
             </div>

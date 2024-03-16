@@ -1,31 +1,31 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- Edit Media Partner -->
-<?php foreach ($medpart as $mediapartner) : ?>
-    <?php $data = json_decode($mediapartner['value']) ?>
+<!-- Edit M-Talent -->
+<?php foreach ($mtalent as $talent) : ?>
+    <?php $data = json_decode($talent['value']) ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
-                <h1 class="h3 mb-4 text-gray-800">Form Edit Data Media Partner</h1>
+                <h1 class="h3 mb-4 text-gray-800">Form Edit Data M-Talent</h1>
 
                 <!-- Forms -->
-                <form action="<?= base_url(); ?>medpart/update/<?= $mediapartner['id']; ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url(); ?>mtalent/update/<?= $talent['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
-                    <!-- Tanggal Masuk -->
+                    <!-- Tanggal -->
                     <div class="form-group row">
-                        <label for="tglmasuk" class="col-sm-3 col-form-label">Tanggal Masuk</label>
+                        <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="tglmasuk" value="<?= $data->tglmasuk; ?>" required autofocus>
+                            <input type="text" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required autofocus>
                         </div>
                     </div>
 
-                    <!-- Pelaksanaan -->
+                    <!-- Jenis -->
                     <div class="form-group row">
-                        <label for="pelaksanaan" class="col-sm-3 col-form-label">Pelaksanaan</label>
+                        <label for="jenis" class="col-sm-3 col-form-label">Jenis</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="pelaksanaan" value="<?= $data->pelaksanaan; ?>" required>
+                            <input type="text" class="form-control" name="jenis" value="<?= $data->jenis; ?>" required>
                         </div>
                     </div>
 
@@ -45,33 +45,41 @@
                         </div>
                     </div>
 
-                    <!-- Jenis -->
+                    <!-- Talent -->
                     <div class="form-group row">
-                        <label for="jenis" class="col-sm-3 col-form-label">Jenis</label>
+                        <label for="talent" class="col-sm-3 col-form-label">Talent</label>
                         <div class="col-sm-7">
-                            <select name="jenis">
-                                <option value="<?= $data->jenis; ?>" selected></option>
-                                <option value="Internal">Internal</option>
-                                <option value="Eksternal">Eksternal</option>
-                            </select>
+                            <input type="text" class="form-control" name="talent" value="<?= $data->talent; ?>" required>
                         </div>
                     </div>
 
-                    <!-- Status -->
+                    <!-- Tempat -->
                     <div class="form-group row">
-                        <label for="status" class="col-sm-3 col-form-label">Status</label>
+                        <label for="tempat" class="col-sm-3 col-form-label">Tempat</label>
                         <div class="col-sm-7">
-                            <select name="status">
-                                <option value="<?= $data->status; ?>" selected></option>
-                                <option value="Terlaksana">Terlaksana</option>
-                                <option value="Cancel">Cancel</option>
-                            </select>
+                            <input type="text" class="form-control" name="tempat" value="<?= $data->tempat; ?>" required>
+                        </div>
+                    </div>
+
+                    <!-- Fee Talent -->
+                    <div class="form-group row">
+                        <label for="feetalent" class="col-sm-3 col-form-label">Fee Talent (Tanpa Rp.)</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="feetalent" value="<?= $data->feetalent; ?>" required>
+                        </div>
+                    </div>
+
+                    <!-- Fee Rapma FM -->
+                    <div class="form-group row">
+                        <label for="feerapma" class="col-sm-3 col-form-label">Fee Rapma FM (Tanpa Rp.)</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="feerapma" value="<?= $data->feerapma; ?>" required>
                         </div>
                     </div>
 
                     <!-- Kontraprestasi -->
                     <div class="form-group row">
-                        <label for="kontraprestasi" class="col-sm-3 col-form-label">Kontraprestasi</label>
+                        <label for="paket" class="col-sm-3 col-form-label">Kontraprestasi</label>
                         <div class="col-sm-7">
                             <textarea class="tinymce" name="kontraprestasi"><?= $data->kontraprestasi; ?></textarea>
                         </div>
@@ -80,7 +88,7 @@
                     <!-- Button -->
                     <div class="form-group row">
                         <div class="col-sm-7">
-                            <a href="<?= base_url(); ?>control/medpart" class="btn btn-dark mb-1">Back</a>
+                            <a href="<?= base_url(); ?>control/mtalent" class="btn btn-dark mb-1">Back</a>
                             <button type="submit" class="btn btn-primary mb-1">Confirm Changes</button>
                         </div>
                     </div>

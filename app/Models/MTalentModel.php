@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class IklanModel extends Model
+class MTalentModel extends Model
 {
-    protected $table            = 'iklan';
+    protected $table            = 'mtalent';
     protected $primaryKey       = 'id';
     protected $returnType       = 'array';
     protected $allowedFields    = ['key', 'value', 'created_at', 'updated_at', 'deleted_at'];
@@ -14,11 +14,11 @@ class IklanModel extends Model
 
     public function search($keyword)
     {
-        return $this->table('iklan')->like('value', $keyword);
+        return $this->table('mtalent')->like('value', $keyword);
     }
 
-    public function jumlahIklan()
+    public function jumlahMTalent()
     {
-        return $this->table('iklan')->get()->getNumRows();
+        return $this->table('mtalent')->get()->getNumRows();
     }
 }
