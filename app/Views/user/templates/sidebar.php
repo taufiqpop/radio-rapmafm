@@ -325,6 +325,16 @@
         </li>
     <?php endif; ?>
 
+    <?php if (in_groups(['Admin', 'GM', 'MP', 'HRD'])) : ?>
+        <!-- Workshop Broadcast -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/workshopbroadcast">
+                <i class="fas fa-chart-line"></i>
+                <span>Workshop Broadcast</span>
+            </a>
+        </li>
+    <?php endif; ?>
+
     <!-- Pengurus -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/pengurus">

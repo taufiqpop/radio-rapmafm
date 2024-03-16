@@ -1,16 +1,16 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- Edit MagangInternal -->
-<?php foreach ($maganginternal as $magang) : ?>
-    <?php $data = json_decode($magang['value']) ?>
+<!-- Edit Workshop Broadcast -->
+<?php foreach ($workshopbroadcast as $ads) : ?>
+    <?php $data = json_decode($ads['value']) ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
-                <h1 class="h3 mb-4 text-gray-800">Form Edit Data MagangInternal</h1>
+                <h1 class="h3 mb-4 text-gray-800">Form Edit Data Workshop Broadcast</h1>
 
                 <!-- Forms -->
-                <form action="<?= base_url(); ?>maganginternal/update/<?= $magang['id']; ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url(); ?>workshopbroadcast/update/<?= $ads['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
                     <!-- Tanggal -->

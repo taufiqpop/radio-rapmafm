@@ -165,6 +165,14 @@ $routes->delete('/control/maganginternal/(:num)', 'MagangInternal::delete/$1', [
 $routes->add('/maganginternal/insert', 'MagangInternal::insert', ['filter' => 'role:Admin, MP, HRD']);
 $routes->add('/maganginternal/update/(:num)', 'MagangInternal::update/$1', ['filter' => 'role:Admin, MP, HRD']);
 
+// Workshop Broadcast
+$routes->add('/control/workshopbroadcast', 'WorkshopBroadcast::index', ['filter' => 'role:Admin, GM, MP, HRD']);
+$routes->get('/control/workshopbroadcast/form', 'WorkshopBroadcast::form', ['filter' => 'role:Admin, MP, HRD']);
+$routes->get('/control/workshopbroadcast/edit/(:num)', 'WorkshopBroadcast::edit/$1', ['filter' => 'role:Admin, MP, HRD']);
+$routes->delete('/control/workshopbroadcast/(:num)', 'WorkshopBroadcast::delete/$1', ['filter' => 'role:Admin, MP, HRD']);
+$routes->add('/workshopbroadcast/insert', 'WorkshopBroadcast::insert', ['filter' => 'role:Admin, MP, HRD']);
+$routes->add('/workshopbroadcast/update/(:num)', 'WorkshopBroadcast::update/$1', ['filter' => 'role:Admin, MP, HRD']);
+
 // Crew
 $routes->add('/control/crew', 'Crew::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Alumni, Demis, Crew']);
 $routes->get('/control/crew/form', 'Crew::form', ['filter' => 'role:Admin, MP, HRD']);
