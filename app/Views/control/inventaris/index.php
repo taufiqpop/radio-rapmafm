@@ -42,6 +42,7 @@
                                     <th scope="col" class="cursor-active">Nama Barang</th>
                                     <th scope="col" class="cursor-active">Kode Ruangan</th>
                                     <th scope="col" class="cursor-active">Nomor</th>
+                                    <th scope="col" class="cursor-active">Tanggal</th>
                                     <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-active">Jumlah</th>
                                     <th scope="col" class="cursor-active">Kondisi</th>
@@ -59,6 +60,7 @@
                                         <td><?= $data->barang; ?></td>
                                         <td><?= $invent['kode']; ?></td>
                                         <td><?= $data->nomor; ?></td>
+                                        <td><?= $data->tanggal; ?></td>
                                         <td>20<?= $invent['tahun']; ?></td>
                                         <td><?= $data->jumlah; ?></td>
                                         <td><?= $data->kondisi ?></td>

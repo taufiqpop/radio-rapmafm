@@ -53,6 +53,14 @@
                         </div>
                     </div>
 
+                    <!-- Tanggal -->
+                    <div class="form-group row">
+                        <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="tanggal" value="<?= $data->tanggal ?>" required>
+                        </div>
+                    </div>
+
                     <!-- Tahun -->
                     <div class="form-group row">
                         <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
