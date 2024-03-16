@@ -79,6 +79,14 @@ $routes->add('/suratkeluar/update/(:num)', 'SuratKeluar::update/$1', ['filter' =
 $routes->get('/control/about', 'About::index', ['filter' => 'role:Admin, GM, MU, AOn']);
 $routes->add('/about/update/(:num)', 'About::update/$1', ['filter' => 'role:Admin, MU, AOn']);
 
+// Umum
+$routes->add('/control/umum', 'Umum::index', ['filter' => 'role:Admin, GM, MU, AOn, AOff, Teknisi']);
+$routes->get('/control/umum/form', 'Umum::form', ['filter' => 'role:Admin, MU, AOn']);
+$routes->get('/control/umum/edit/(:num)', 'Umum::edit/$1', ['filter' => 'role:Admin, MU']);
+$routes->delete('/control/umum/(:num)', 'Umum::delete/$1', ['filter' => 'role:Admin, MU']);
+$routes->add('/umum/insert', 'Umum::insert', ['filter' => 'role:Admin, MU']);
+$routes->add('/umum/update/(:num)', 'Umum::update/$1', ['filter' => 'role:Admin, MU']);
+
 // Achievements
 $routes->add('/control/achievements', 'Achievements::index', ['filter' => 'role:Admin, GM, MU, AOn']);
 $routes->get('/control/achievements/form', 'Achievements::form', ['filter' => 'role:Admin, MU, AOn']);
