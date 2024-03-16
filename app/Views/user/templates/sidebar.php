@@ -60,11 +60,19 @@
         </li>
 
         <!-- Personal Assistant -->
-        <!-- Daftar Surat -->
+        <!-- Surat Masuk -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= base_url(); ?>control/surat">
+            <a class="nav-link" href="<?= base_url(); ?>control/suratmasuk">
+                <i class="fas fa-envelope"></i>
+                <span>Surat Masuk</span>
+            </a>
+        </li>
+
+        <!-- Surat Keluar -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/suratkeluar">
                 <i class="fas fa-envelope-open-text"></i>
-                <span>Daftar Surat</span>
+                <span>Surat Keluar</span>
             </a>
         </li>
 

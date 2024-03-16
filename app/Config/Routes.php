@@ -58,7 +58,21 @@ $routes->get('/control/settings', 'Settings::index', ['filter' => 'role:Admin, G
 $routes->add('/settings/update/(:num)', 'Settings::update/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, MD, AOn, Teknisi, MOn, MOff']);
 
 // GMPA //
+// Surat Masuk
+$routes->add('/control/suratmasuk', 'SuratMasuk::index', ['filter' => 'role:Admin, GM, PA']);
+$routes->get('/control/suratmasuk/form', 'SuratMasuk::form', ['filter' => 'role:Admin, PA']);
+$routes->get('/control/suratmasuk/edit/(:num)', 'SuratMasuk::edit/$1', ['filter' => 'role:Admin, PA']);
+$routes->delete('/control/suratmasuk/(:num)', 'SuratMasuk::delete/$1', ['filter' => 'role:Admin, PA']);
+$routes->add('/suratmasuk/insert', 'SuratMasuk::insert', ['filter' => 'role:Admin, PA']);
+$routes->add('/suratmasuk/update/(:num)', 'SuratMasuk::update/$1', ['filter' => 'role:Admin, PA']);
 
+// Surat Keluar
+$routes->add('/control/suratkeluar', 'SuratKeluar::index', ['filter' => 'role:Admin, GM, PA']);
+$routes->get('/control/suratkeluar/form', 'SuratKeluar::form', ['filter' => 'role:Admin, PA']);
+$routes->get('/control/suratkeluar/edit/(:num)', 'SuratKeluar::edit/$1', ['filter' => 'role:Admin, PA']);
+$routes->delete('/control/suratkeluar/(:num)', 'SuratKeluar::delete/$1', ['filter' => 'role:Admin, PA']);
+$routes->add('/suratkeluar/insert', 'SuratKeluar::insert', ['filter' => 'role:Admin, PA']);
+$routes->add('/suratkeluar/update/(:num)', 'SuratKeluar::update/$1', ['filter' => 'role:Admin, PA']);
 
 // DIVISI UMUM //
 // About
