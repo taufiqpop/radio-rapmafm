@@ -265,6 +265,14 @@
                 <span>Iklan</span>
             </a>
         </li>
+
+        <!-- Denda Adlibs & Spot -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/dendadlibs">
+                <i class="fab fa-amazon-pay"></i>
+                <span>Denda Adlibs & Spot</span>
+            </a>
+        </li>
     <?php endif; ?>
 
     <!-- MOff -->

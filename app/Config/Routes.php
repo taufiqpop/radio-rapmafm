@@ -139,6 +139,14 @@ $routes->delete('/control/iklan/(:num)', 'Iklan::delete/$1', ['filter' => 'role:
 $routes->add('/iklan/insert', 'Iklan::insert', ['filter' => 'role:Admin, MM, MOn']);
 $routes->add('/iklan/update/(:num)', 'Iklan::update/$1', ['filter' => 'role:Admin, MM, MOn']);
 
+// Dendadlibs
+$routes->add('/control/dendadlibs', 'Dendadlibs::index', ['filter' => 'role:Admin, GM, MM, MOn']);
+$routes->get('/control/dendadlibs/form', 'Dendadlibs::form', ['filter' => 'role:Admin, MM, MOn']);
+$routes->get('/control/dendadlibs/edit/(:num)', 'Dendadlibs::edit/$1', ['filter' => 'role:Admin, MM, MOn']);
+$routes->delete('/control/dendadlibs/(:num)', 'Dendadlibs::delete/$1', ['filter' => 'role:Admin, MM, MOn']);
+$routes->add('/dendadlibs/insert', 'Dendadlibs::insert', ['filter' => 'role:Admin, MM, MOn']);
+$routes->add('/dendadlibs/update/(:num)', 'Dendadlibs::update/$1', ['filter' => 'role:Admin, MM, MOn']);
+
 // MTalent
 $routes->add('/control/mtalent', 'MTalent::index', ['filter' => 'role:Admin, GM, MM, MOff']);
 $routes->get('/control/mtalent/form', 'MTalent::form', ['filter' => 'role:Admin, MM, MOff']);

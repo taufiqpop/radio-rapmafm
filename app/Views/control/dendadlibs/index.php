@@ -1,13 +1,13 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- List M-Talent -->
+<!-- List Denda Adlibs & Spot -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1 class="h3 mb-4 text-gray-800">Data M-Talent</h1>
+            <h1 class="h3 mb-4 text-gray-800">Data Denda Adlibs & Spot</h1>
             <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
-                <a href="<?= base_url(); ?>control/mtalent/form" class="btn btn-primary">Add M-Talent</a>
+                <a href="<?= base_url(); ?>control/dendadlibs/form" class="btn btn-primary">Add Denda</a>
                 <br><br>
             <?php endif; ?>
 
@@ -38,41 +38,35 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">No</th>
-                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Tanggal</th>
-                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Jenis</th>
-                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Instansi</th>
-                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Acara</th>
-                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Talent</th>
-                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Tempat</th>
-                                    <th scope="col" class="cursor-active" colspan="2">Fee</th>
-                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Kontraprestasi</th>
-                                    <?php if (in_groups(['Admin', 'MM', 'MOff'])) : ?>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Nama</th>
+                                    <th scope="col" class="cursor-active" colspan="3">Nama Adlibs & Spot</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Total</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Keterangan</th>
+                                    <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
                                         <th scope="col" class="cursor-stop" rowspan="2" style="padding-bottom: 35px;">Action</th>
                                     <?php endif ?>
                                 </tr>
                                 <tr>
-                                    <th scope="col" class="cursor-active">Talent</th>
-                                    <th scope="col" class="cursor-active">Rapma FM</th>
+                                    <th scope="col" class="cursor-active">Acara</th>
+                                    <th scope="col" class="cursor-active">Program</th>
+                                    <th scope="col" class="cursor-active">Tanggal</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($mtalent as $index => $talent) : ?>
-                                    <?php $data = json_decode($talent['value']) ?>
+                                <?php foreach ($dendadlibs as $index => $denda) : ?>
+                                    <?php $data = json_decode($denda['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->tanggal; ?></td>
-                                        <td><?= $data->jenis; ?></td>
-                                        <td><?= $data->instansi; ?></td>
+                                        <td><?= $data->nama; ?></td>
                                         <td><?= $data->acara; ?></td>
-                                        <td><?= $data->talent; ?></td>
-                                        <td><?= $data->tempat; ?></td>
-                                        <td><?= $data->feetalent; ?></td>
-                                        <td><?= $data->feerapma; ?></td>
-                                        <td style="max-width: 300px;"><?= $data->kontraprestasi; ?></td>
-                                        <?php if (in_groups(['Admin', 'MM', 'MOff'])) : ?>
+                                        <td><?= $data->program; ?></td>
+                                        <td><?= $data->tanggal; ?></td>
+                                        <td><?= $data->total; ?></td>
+                                        <td><?= $data->keterangan; ?></td>
+                                        <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
                                             <td>
-                                                <a href="<?= base_url(); ?>control/mtalent/edit/<?= $talent['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/mtalent/<?= $talent['id']; ?>" method="post" class="d-inline">
+                                                <a href="<?= base_url(); ?>control/dendadlibs/edit/<?= $denda['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/dendadlibs/<?= $denda['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
@@ -85,7 +79,7 @@
                         </table>
 
                         <!-- Pagers -->
-                        <?= $pager->links('mtalent', 'data_pagination'); ?>
+                        <?= $pager->links('dendadlibs', 'data_pagination'); ?>
                     </div>
                 </div>
             </div>
