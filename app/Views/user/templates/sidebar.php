@@ -140,6 +140,14 @@
                 <span>Data Inventaris</span>
             </a>
         </li>
+
+        <!-- Data Peminjaman -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/peminjaman">
+                <i class="fas fa-people-carry"></i>
+                <span>Data Peminjaman</span>
+            </a>
+        </li>
     <?php endif; ?>
 
     <!-- Teknisi -->

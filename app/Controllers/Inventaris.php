@@ -52,13 +52,13 @@ class Inventaris extends BaseController
             'barang'    => $this->request->getPost('barang'),
             'nomor'     => $this->request->getPost('nomor'),
             'jumlah'    => $this->request->getPost('jumlah'),
+            'kondisi'   => $this->request->getPost('kondisi'),
         ];
 
         $data = [
             'key'       => $this->request->getPost('barang'),
             'value'     => json_encode($input),
             'kode'      => $this->request->getPost('kode'),
-            'kondisi'   => $this->request->getPost('kondisi'),
             'tahun'     => $this->request->getPost('tahun'),
         ];
 
@@ -78,7 +78,7 @@ class Inventaris extends BaseController
 
         $db      = \Config\Database::connect();
         $builder = $db->table('inventaris');
-        $builder->select('id, key, value, kode, kondisi, tahun, created_at, updated_at, deleted_at');
+        $builder->select('id, key, value, kode, tahun, created_at, updated_at, deleted_at');
         $builder->where('id', $id);
         $query   = $builder->get();
 
@@ -94,13 +94,13 @@ class Inventaris extends BaseController
             'barang'    => $this->request->getPost('barang'),
             'nomor'     => $this->request->getPost('nomor'),
             'jumlah'    => $this->request->getPost('jumlah'),
+            'kondisi'   => $this->request->getPost('kondisi'),
         ];
 
         $data = [
             'key'       => $this->request->getPost('barang'),
             'value'     => json_encode($input),
             'kode'      => $this->request->getPost('kode'),
-            'kondisi'   => $this->request->getPost('kondisi'),
             'tahun'     => $this->request->getPost('tahun'),
         ];
 

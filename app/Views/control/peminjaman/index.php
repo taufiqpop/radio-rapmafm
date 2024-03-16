@@ -1,13 +1,13 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- List Inventaris -->
+<!-- List Peminjaman -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1 class="h3 mb-4 text-gray-800">Data Inventaris</h1>
+            <h1 class="h3 mb-4 text-gray-800">Data Peminjaman</h1>
             <?php if (in_groups(['Admin', 'MU', 'AOff'])) : ?>
-                <a href="<?= base_url(); ?>control/inventaris/form" class="btn btn-primary">Add Inventaris</a>
+                <a href="<?= base_url(); ?>control/peminjaman/form" class="btn btn-primary">Add Peminjaman</a>
                 <br><br>
             <?php endif; ?>
 
@@ -38,47 +38,45 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
-                                    <th scope="col" class="cursor-active">ID Barang</th>
-                                    <th scope="col" class="cursor-active">Nama Barang</th>
-                                    <th scope="col" class="cursor-active">Kode Ruangan</th>
-                                    <th scope="col" class="cursor-active">Nomor</th>
-                                    <th scope="col" class="cursor-active">Tahun</th>
-                                    <th scope="col" class="cursor-active">Jumlah</th>
-                                    <th scope="col" class="cursor-active">Kondisi</th>
+                                    <th scope="col" class="cursor-active">Peminjam</th>
+                                    <th scope="col" class="cursor-active">Tanggal Dipinjam</th>
+                                    <th scope="col" class="cursor-active">Tanggal Kembali</th>
+                                    <th scope="col" class="cursor-active">Barang</th>
+                                    <th scope="col" class="cursor-active">Pendapatan</th>
+                                    <th scope="col" class="cursor-active">Keterangan</th>
                                     <?php if (in_groups(['Admin', 'MU', 'AOff'])) : ?>
-                                        <th scope="col" class="cursor-stop">Action</th>
+                                        <th scope="col" class="cursor-active">Action</th>
                                     <?php endif; ?>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($inventaris as $index => $invent) : ?>
-                                    <?php $data = json_decode($invent['value']) ?>
+                                <?php foreach ($peminjaman as $index => $borrow) : ?>
+                                    <?php $data = json_decode($borrow['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td>INV/RAPMA/<?= $invent['kode']; ?>/<?= $data->nomor; ?>/<?= $invent['tahun']; ?></td>
+                                        <td><?= $data->peminjam; ?></td>
+                                        <td><?= $data->tanggalpinjam; ?></td>
+                                        <td><?= $data->tanggalkembali; ?></td>
                                         <td><?= $data->barang; ?></td>
-                                        <td><?= $invent['kode']; ?></td>
-                                        <td><?= $data->nomor; ?></td>
-                                        <td>20<?= $invent['tahun']; ?></td>
-                                        <td><?= $data->jumlah; ?></td>
-                                        <td><?= $data->kondisi ?></td>
+                                        <td>Rp. <?= $data->pendapatan; ?></td>
+                                        <td><?= $data->keterangan; ?></td>
                                         <?php if (in_groups(['Admin', 'MU', 'AOff'])) : ?>
                                             <td>
-                                                <a href="<?= base_url(); ?>control/inventaris/edit/<?= $invent['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/inventaris/<?= $invent['id']; ?>" method="post" class="d-inline">
+                                                <a href="<?= base_url(); ?>control/peminjaman/edit/<?= $borrow['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/peminjaman/<?= $borrow['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
                                                 </form>
                                             </td>
-                                        <?php endif; ?>
+                                        <?php endif ?>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
 
                         <!-- Pagers -->
-                        <?= $pager->links('inventaris', 'data_pagination'); ?>
+                        <?= $pager->links('peminjaman', 'data_pagination'); ?>
                     </div>
                 </div>
             </div>

@@ -61,7 +61,7 @@
                                         <td><?= $data->acara; ?></td>
                                         <td><?= $data->program; ?></td>
                                         <td><?= $data->tanggal; ?></td>
-                                        <td><?= $data->total; ?></td>
+                                        <td>Rp. <?= $data->total; ?></td>
                                         <td><?= $data->keterangan; ?></td>
                                         <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
                                             <td>

@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Inventaris extends Migration
+class Peminjaman extends Migration
 {
     public function up()
     {
@@ -22,14 +22,6 @@ class Inventaris extends Migration
             'value' => [
                 'type'       => 'TEXT',
             ],
-            'kode' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
-            'tahun' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
             'created_at' => [
                 'type'       => 'DATETIME',
             ],
@@ -41,13 +33,11 @@ class Inventaris extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addKey('kode');
-        $this->forge->addKey('tahun');
-        $this->forge->createTable('inventaris');
+        $this->forge->createTable('peminjaman');
     }
 
     public function down()
     {
-        $this->forge->dropTable('inventaris');
+        $this->forge->dropTable('peminjaman');
     }
 }

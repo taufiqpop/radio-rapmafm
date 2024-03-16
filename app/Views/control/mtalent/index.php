@@ -60,14 +60,14 @@
                                     <?php $data = json_decode($talent['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->tanggal; ?></td>
+                                        <td style="max-width: 150px;"><?= $data->tanggal; ?></td>
                                         <td><?= $data->jenis; ?></td>
                                         <td><?= $data->instansi; ?></td>
-                                        <td><?= $data->acara; ?></td>
+                                        <td style="max-width: 150px;"><?= $data->acara; ?></td>
                                         <td><?= $data->talent; ?></td>
-                                        <td><?= $data->tempat; ?></td>
-                                        <td><?= $data->feetalent; ?></td>
-                                        <td><?= $data->feerapma; ?></td>
+                                        <td style="max-width: 150px;"><?= $data->tempat; ?></td>
+                                        <td>Rp. <?= $data->feetalent; ?></td>
+                                        <td>Rp. <?= $data->feerapma; ?></td>
                                         <td style="max-width: 300px;"><?= $data->kontraprestasi; ?></td>
                                         <?php if (in_groups(['Admin', 'MM', 'MOff'])) : ?>
                                             <td>

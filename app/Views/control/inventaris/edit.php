@@ -49,7 +49,7 @@
                     <div class="form-group row">
                         <label for="kondisi" class="col-sm-3 col-form-label">Kondisi Barang</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="kondisi" value="<?= $invent['kondisi']; ?>" required>
+                            <input type="text" class="form-control" name="kondisi" value="<?= $data->kondisi ?>" required>
                         </div>
                     </div>
 

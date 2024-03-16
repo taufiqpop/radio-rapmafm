@@ -110,6 +110,14 @@ $routes->delete('/control/inventaris/(:num)', 'Inventaris::delete/$1', ['filter'
 $routes->add('/inventaris/insert', 'Inventaris::insert', ['filter' => 'role:Admin, MU, AOff']);
 $routes->add('/inventaris/update/(:num)', 'Inventaris::update/$1', ['filter' => 'role:Admin, MU, AOff']);
 
+// Peminjaman
+$routes->add('/control/peminjaman', 'Peminjaman::index', ['filter' => 'role:Admin, GM, MU, AOff']);
+$routes->get('/control/peminjaman/form', 'Peminjaman::form', ['filter' => 'role:Admin, MU, AOff']);
+$routes->get('/control/peminjaman/edit/(:num)', 'Peminjaman::edit/$1', ['filter' => 'role:Admin, MU, AOff']);
+$routes->delete('/control/peminjaman/(:num)', 'Peminjaman::delete/$1', ['filter' => 'role:Admin, MU, AOff']);
+$routes->add('/peminjaman/insert', 'Peminjaman::insert', ['filter' => 'role:Admin, MU, AOff']);
+$routes->add('/peminjaman/update/(:num)', 'Peminjaman::update/$1', ['filter' => 'role:Admin, MU, AOff']);
+
 // Pemancar
 $routes->add('/control/pemancar', 'Pemancar::index', ['filter' => 'role:Admin, GM, MU, Teknisi']);
 $routes->get('/control/pemancar/detail/(:num)', 'Pemancar::detail/$1', ['filter' => 'role:Admin, GM, MU, Teknisi']);
