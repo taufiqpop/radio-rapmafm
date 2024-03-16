@@ -139,7 +139,7 @@ $routes->delete('/control/iklan/(:num)', 'Iklan::delete/$1', ['filter' => 'role:
 $routes->add('/iklan/insert', 'Iklan::insert', ['filter' => 'role:Admin, MM, MOn']);
 $routes->add('/iklan/update/(:num)', 'Iklan::update/$1', ['filter' => 'role:Admin, MM, MOn']);
 
-// Dendadlibs
+// Denda Adlibs & Spot
 $routes->add('/control/dendadlibs', 'Dendadlibs::index', ['filter' => 'role:Admin, GM, MM, MOn']);
 $routes->get('/control/dendadlibs/form', 'Dendadlibs::form', ['filter' => 'role:Admin, MM, MOn']);
 $routes->get('/control/dendadlibs/edit/(:num)', 'Dendadlibs::edit/$1', ['filter' => 'role:Admin, MM, MOn']);
@@ -157,6 +157,14 @@ $routes->add('/mtalent/update/(:num)', 'MTalent::update/$1', ['filter' => 'role:
 
 
 // DIVISI PERSONALIA //
+// Magang Internal
+$routes->add('/control/maganginternal', 'MagangInternal::index', ['filter' => 'role:Admin, GM, MP, HRD']);
+$routes->get('/control/maganginternal/form', 'MagangInternal::form', ['filter' => 'role:Admin, MP, HRD']);
+$routes->get('/control/maganginternal/edit/(:num)', 'MagangInternal::edit/$1', ['filter' => 'role:Admin, MP, HRD']);
+$routes->delete('/control/maganginternal/(:num)', 'MagangInternal::delete/$1', ['filter' => 'role:Admin, MP, HRD']);
+$routes->add('/maganginternal/insert', 'MagangInternal::insert', ['filter' => 'role:Admin, MP, HRD']);
+$routes->add('/maganginternal/update/(:num)', 'MagangInternal::update/$1', ['filter' => 'role:Admin, MP, HRD']);
+
 // Crew
 $routes->add('/control/crew', 'Crew::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Alumni, Demis, Crew']);
 $routes->get('/control/crew/form', 'Crew::form', ['filter' => 'role:Admin, MP, HRD']);

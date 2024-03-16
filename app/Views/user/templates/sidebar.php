@@ -315,6 +315,16 @@
     <?php endif; ?>
 
     <!-- HRD -->
+    <?php if (in_groups(['Admin', 'GM', 'MP', 'HRD'])) : ?>
+        <!-- Magang Internal -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/maganginternal">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>Magang Internal</span>
+            </a>
+        </li>
+    <?php endif; ?>
+
     <!-- Pengurus -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>control/pengurus">
