@@ -138,12 +138,12 @@ $routes->add('/program/insert', 'Program::insert', ['filter' => 'role:Admin, MK,
 $routes->add('/program/update/(:num)', 'Program::update/$1', ['filter' => 'role:Admin, MK, Produksi']);
 
 // Bank Lagu
-$routes->add('/control/banklagu', 'BankLagu::index', ['filter' => 'role:Admin, GM, MK, MD']);
-$routes->add('/control/banklagu/form', 'BankLagu::form', ['filter' => 'role:Admin, GM, MK, MD']);
-$routes->get('/control/banklagu/edit/(:num)', 'BankLagu::edit/$1', ['filter' => 'role:Admin, MK, MD']);
-$routes->delete('/control/banklagu/(:num)', 'BankLagu::delete/$1', ['filter' => 'role:Admin, MK, MD']);
-$routes->add('/banklagu/insert', 'BankLagu::insert', ['filter' => 'role:Admin, MK, MD']);
-$routes->add('/banklagu/update/(:num)', 'BankLagu::update/$1', ['filter' => 'role:Admin, MK, MD']);
+$routes->add('/control/lagu', 'lagu::index', ['filter' => 'role:Admin, GM, MK, MD']);
+$routes->add('/control/lagu/form', 'lagu::form', ['filter' => 'role:Admin, GM, MK, MD']);
+$routes->get('/control/lagu/edit/(:num)', 'lagu::edit/$1', ['filter' => 'role:Admin, MK, MD']);
+$routes->delete('/control/lagu/(:num)', 'lagu::delete/$1', ['filter' => 'role:Admin, MK, MD']);
+$routes->add('/lagu/insert', 'lagu::insert', ['filter' => 'role:Admin, MK, MD']);
+$routes->add('/lagu/update/(:num)', 'lagu::update/$1', ['filter' => 'role:Admin, MK, MD']);
 
 // Top Chart
 $routes->add('/control/topchart', 'Topchart::index', ['filter' => 'role:Admin, GM, MK, MD']);
