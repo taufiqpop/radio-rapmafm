@@ -100,7 +100,6 @@ class Achievements extends BaseController
 
         $input = [
             'judul'     => $this->request->getPost('judul'),
-            'deskripsi' => $this->request->getPost('deskripsi'),
             'link'      => $this->request->getPost('link'),
             'images'    => $namaGambar,
         ];
@@ -173,7 +172,6 @@ class Achievements extends BaseController
 
         $input = [
             'judul'     => $this->request->getPost('judul'),
-            'deskripsi' => $this->request->getPost('deskripsi'),
             'link'      => $this->request->getPost('link'),
             'images'    => $namaGambar,
         ];

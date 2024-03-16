@@ -55,7 +55,6 @@
                                         <td><?= $data->jenis; ?></td>
                                         <td><?= $data->tahun; ?></td>
                                         <td>
-                                            <a href="<?= base_url(); ?>control/events/detail/<?= $event['id']; ?>" class="btn btn-info mb-1"><i class="fas fa-info"></i></a>
                                             <a href="<?= base_url(); ?>control/events/edit/<?= $event['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
                                             <form action="<?= base_url(); ?>control/events/<?= $event['id']; ?>" method="post" class="d-inline">

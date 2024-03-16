@@ -100,7 +100,6 @@ class Events extends BaseController
 
         $input = [
             'nama'      => $this->request->getPost('nama'),
-            'deskripsi' => $this->request->getPost('deskripsi'),
             'jenis'     => $this->request->getPost('jenis'),
             'tahun'     => $this->request->getPost('tahun'),
             'link'      => $this->request->getPost('link'),
@@ -174,7 +173,6 @@ class Events extends BaseController
 
         $input = [
             'nama'      => $this->request->getPost('nama'),
-            'deskripsi' => $this->request->getPost('deskripsi'),
             'jenis'     => $this->request->getPost('jenis'),
             'tahun'     => $this->request->getPost('tahun'),
             'link'      => $this->request->getPost('link'),

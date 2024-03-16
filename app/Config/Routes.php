@@ -67,7 +67,6 @@ $routes->add('/about/update/(:num)', 'About::update/$1', ['filter' => 'role:Admi
 
 // Achievements
 $routes->add('/control/achievements', 'Achievements::index', ['filter' => 'role:Admin, GM, MU, AOn']);
-$routes->get('/control/achievements/detail/(:num)', 'Achievements::detail/$1', ['filter' => 'role:Admin, GM, MU, AOn']);
 $routes->get('/control/achievements/form', 'Achievements::form', ['filter' => 'role:Admin, MU, AOn']);
 $routes->get('/control/achievements/edit/(:num)', 'Achievements::edit/$1', ['filter' => 'role:Admin, MU, AOn']);
 $routes->delete('/control/achievements/(:num)', 'Achievements::delete/$1', ['filter' => 'role:Admin, MU, AOn']);
@@ -76,7 +75,6 @@ $routes->add('/achievements/update/(:num)', 'Achievements::update/$1', ['filter'
 
 // Events
 $routes->add('/control/events', 'Events::index', ['filter' => 'role:Admin, GM, MU, AOn']);
-$routes->get('/control/events/detail/(:num)', 'Events::detail/$1', ['filter' => 'role:Admin, GM, MU, AOn']);
 $routes->get('/control/events/form', 'Events::form', ['filter' => 'role:Admin, MU, AOn']);
 $routes->get('/control/events/edit/(:num)', 'Events::edit/$1', ['filter' => 'role:Admin, MU, AOn']);
 $routes->delete('/control/events/(:num)', 'Events::delete/$1', ['filter' => 'role:Admin, MU, AOn']);
@@ -132,6 +130,14 @@ $routes->get('/control/medpart/edit/(:num)', 'Medpart::edit/$1', ['filter' => 'r
 $routes->delete('/control/medpart/(:num)', 'Medpart::delete/$1', ['filter' => 'role:Admin, MM, MOn']);
 $routes->add('/medpart/insert', 'Medpart::insert', ['filter' => 'role:Admin, MM, MOn']);
 $routes->add('/medpart/update/(:num)', 'Medpart::update/$1', ['filter' => 'role:Admin, MM, MOn']);
+
+// Iklan
+$routes->add('/control/iklan', 'Iklan::index', ['filter' => 'role:Admin, GM, MM, MOn']);
+$routes->get('/control/iklan/form', 'Iklan::form', ['filter' => 'role:Admin, MM, MOn']);
+$routes->get('/control/iklan/edit/(:num)', 'Iklan::edit/$1', ['filter' => 'role:Admin, MM, MOn']);
+$routes->delete('/control/iklan/(:num)', 'Iklan::delete/$1', ['filter' => 'role:Admin, MM, MOn']);
+$routes->add('/iklan/insert', 'Iklan::insert', ['filter' => 'role:Admin, MM, MOn']);
+$routes->add('/iklan/update/(:num)', 'Iklan::update/$1', ['filter' => 'role:Admin, MM, MOn']);
 
 
 // DIVISI PERSONALIA //

@@ -19,14 +19,6 @@
                     </div>
                 </div>
 
-                <!-- Deskripsi -->
-                <div class="form-group row">
-                    <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
-                    <div class="col-sm-10">
-                        <textarea class="tinymce" placeholder="write here.." name="content"></textarea>
-                    </div>
-                </div>
-
                 <!-- Link -->
                 <div class="form-group row">
                     <label for="link" class="col-sm-2 col-form-label">Link</label>
