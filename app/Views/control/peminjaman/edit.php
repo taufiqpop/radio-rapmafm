@@ -21,18 +21,26 @@
                         </div>
                     </div>
 
-                    <!-- Tanggal Dipinjam -->
+                    <!-- Hari & Tanggal Dipinjam -->
                     <div class="form-group row">
-                        <label for="tanggalpinjam" class="col-sm-3 col-form-label">Tanggal Dipinjam</label>
-                        <div class="col-sm-7">
+                        <label for="haripinjam" class="col-sm-3 col-form-label">Hari Dipinjam</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="haripinjam" value="<?= $data->haripinjam; ?>" required>
+                        </div>
+                        <label for="tanggalpinjam" class="col-form-label">Tanggal</label>
+                        <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggalpinjam" value="<?= $data->tanggalpinjam; ?>" required>
                         </div>
                     </div>
 
-                    <!-- Tanggal Kembali -->
+                    <!-- Hari & Tanggal Kembali -->
                     <div class="form-group row">
-                        <label for="tanggalkembali" class="col-sm-3 col-form-label">Tanggal Kembali</label>
-                        <div class="col-sm-7">
+                        <label for="harikembali" class="col-sm-3 col-form-label">Hari Kembali</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="harikembali" value="<?= $data->harikembali; ?>" required>
+                        </div>
+                        <label for="tanggalkembali" class="col-form-label">Tanggal</label>
+                        <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggalkembali" value="<?= $data->tanggalkembali; ?>" required>
                         </div>
                     </div>

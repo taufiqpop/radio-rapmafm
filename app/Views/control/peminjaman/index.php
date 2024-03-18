@@ -55,8 +55,8 @@
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td><?= $data->peminjam; ?></td>
-                                        <td><?= $data->tanggalpinjam; ?></td>
-                                        <td><?= $data->tanggalkembali; ?></td>
+                                        <td><?= $data->haripinjam; ?>, <?= $data->tanggalpinjam; ?></td>
+                                        <td><?= $data->harikembali; ?>, <?= $data->tanggalkembali; ?></td>
                                         <td><?= $data->barang; ?></td>
                                         <td>Rp. <?= $data->pendapatan; ?></td>
                                         <td><?= $data->keterangan; ?></td>

@@ -15,22 +15,30 @@
                 <div class="form-group row">
                     <label for="peminjam" class="col-sm-3 col-form-label">Peminjam</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Peminjam" name="peminjam" required autofocus>
+                        <input type="text" class="form-control" name="peminjam" placeholder="Peminjam" required autofocus>
                     </div>
                 </div>
 
-                <!-- Tanggal Dipinjam -->
+                <!-- Hari & Tanggal Dipinjam -->
                 <div class="form-group row">
-                    <label for="tanggalpinjam" class="col-sm-3 col-form-label">Tanggal Dipinjam</label>
-                    <div class="col-sm-7">
+                    <label for="haripinjam" class="col-sm-3 col-form-label">Hari Dipinjam</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="Senin" name="haripinjam" required>
+                    </div>
+                    <label for="tanggalpinjam" class="col-form-label">Tanggal</label>
+                    <div class="col-sm-3">
                         <input type="date" class="form-control" name="tanggalpinjam" required>
                     </div>
                 </div>
 
-                <!-- Tanggal Kembali -->
+                <!-- Hari & Tanggal Kembali -->
                 <div class="form-group row">
-                    <label for="tanggalkembali" class="col-sm-3 col-form-label">Tanggal Kembali</label>
-                    <div class="col-sm-7">
+                    <label for="harikembali" class="col-sm-3 col-form-label">Hari Kembali</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="-" name="harikembali" required>
+                    </div>
+                    <label for="tanggalkembali" class="col-form-label">Tanggal</label>
+                    <div class="col-sm-3">
                         <input type="text" class="form-control" placeholder="-" name="tanggalkembali" required>
                     </div>
                 </div>
