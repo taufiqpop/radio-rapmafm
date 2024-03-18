@@ -54,6 +54,7 @@ class Inventaris extends BaseController
             'jumlah'    => $this->request->getPost('jumlah'),
             'kondisi'   => $this->request->getPost('kondisi'),
             'tanggal'   => $this->request->getPost('tanggal'),
+            'hari'      => $this->request->getPost('hari'),
         ];
 
         $data = [
@@ -97,6 +98,7 @@ class Inventaris extends BaseController
             'jumlah'    => $this->request->getPost('jumlah'),
             'kondisi'   => $this->request->getPost('kondisi'),
             'tanggal'   => $this->request->getPost('tanggal'),
+            'hari'      => $this->request->getPost('hari'),
         ];
 
         $data = [

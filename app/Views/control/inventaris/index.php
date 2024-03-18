@@ -60,7 +60,7 @@
                                         <td><?= $data->barang; ?></td>
                                         <td><?= $invent['kode']; ?></td>
                                         <td><?= $data->nomor; ?></td>
-                                        <td><?= $data->tanggal; ?></td>
+                                        <td><?= $data->hari; ?>, <?= $data->tanggal; ?></td>
                                         <td>20<?= $invent['tahun']; ?></td>
                                         <td><?= $data->jumlah; ?></td>
                                         <td><?= $data->kondisi ?></td>
