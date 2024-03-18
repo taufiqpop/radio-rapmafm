@@ -1,16 +1,16 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- Edit Umum -->
-<?php foreach ($umum as $divum) : ?>
-    <?php $data = json_decode($divum['value']) ?>
+<!-- Edit Divisi Marketing -->
+<?php foreach ($marketing as $market) : ?>
+    <?php $data = json_decode($market['value']) ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
-                <h1 class="h3 mb-4 text-gray-800">Form Edit Data Divisi Umum</h1>
+                <h1 class="h3 mb-4 text-gray-800">Form Edit Data Divisi Marketing</h1>
 
                 <!-- Forms -->
-                <form action="<?= base_url(); ?>umum/update/<?= $divum['id']; ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url(); ?>marketing/update/<?= $market['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
                     <!-- Tanggal -->
@@ -68,7 +68,7 @@
                     <!-- Button -->
                     <div class="form-group row">
                         <div class="col-sm-7">
-                            <a href="<?= base_url(); ?>control/umum" class="btn btn-dark mb-1">Back</a>
+                            <a href="<?= base_url(); ?>control/marketing" class="btn btn-dark mb-1">Back</a>
                             <button type="submit" class="btn btn-primary mb-1">Confirm Changes</button>
                         </div>
                     </div>

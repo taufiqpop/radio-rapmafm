@@ -1,16 +1,16 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- Edit Umum -->
-<?php foreach ($umum as $divum) : ?>
-    <?php $data = json_decode($divum['value']) ?>
+<!-- Edit GMPA -->
+<?php foreach ($gmpa as $gm) : ?>
+    <?php $data = json_decode($gm['value']) ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
-                <h1 class="h3 mb-4 text-gray-800">Form Edit Data Divisi Umum</h1>
+                <h1 class="h3 mb-4 text-gray-800">Form Edit Data GMPA</h1>
 
                 <!-- Forms -->
-                <form action="<?= base_url(); ?>umum/update/<?= $divum['id']; ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url(); ?>gmpa/update/<?= $gm['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
                     <!-- Tanggal -->
@@ -68,7 +68,7 @@
                     <!-- Button -->
                     <div class="form-group row">
                         <div class="col-sm-7">
-                            <a href="<?= base_url(); ?>control/umum" class="btn btn-dark mb-1">Back</a>
+                            <a href="<?= base_url(); ?>control/gmpa" class="btn btn-dark mb-1">Back</a>
                             <button type="submit" class="btn btn-primary mb-1">Confirm Changes</button>
                         </div>
                     </div>

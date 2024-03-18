@@ -2,47 +2,47 @@
 
 namespace App\Controllers;
 
-class Umum extends BaseController
+class Kepenyiaran extends BaseController
 {
-    protected $umumModel;
+    protected $kepenyiaranModel;
 
     public function __construct()
     {
-        $this->umumModel = new \App\Models\UmumModel();
+        $this->kepenyiaranModel = new \App\Models\KepenyiaranModel();
     }
 
-    // List Umum
+    // List Kepenyiaran
     public function index()
     {
-        $currentPage = $this->request->getVar('page_umum') ? $this->request->getVar('page_umum') : 1;
+        $currentPage = $this->request->getVar('page_kepenyiaran') ? $this->request->getVar('page_kepenyiaran') : 1;
 
         $keyword = $this->request->getVar('keyword');
         if ($keyword) {
-            $umum = $this->umumModel->search($keyword);
+            $kepenyiaran = $this->kepenyiaranModel->search($keyword);
         } else {
-            $umum = $this->umumModel;
+            $kepenyiaran = $this->kepenyiaranModel;
         }
 
-        $umum->orderBy('id', 'DESC');
+        $kepenyiaran->orderBy('id', 'DESC');
 
         $data = [
-            'title'       => 'Rapma FM | Timeline Divisi Umum',
-            'umum'        => $umum->paginate(10, 'umum'),
-            'pager'       => $umum->pager,
+            'title'       => 'Rapma FM | Timeline Divisi Kepenyiaran',
+            'kepenyiaran' => $kepenyiaran->paginate(10, 'kepenyiaran'),
+            'pager'       => $kepenyiaran->pager,
             'currentPage' => $currentPage,
         ];
 
-        return view('control/umum/index', $data);
+        return view('control/kepenyiaran/index', $data);
     }
 
     // Create Data
     public function form()
     {
         $data = [
-            'title'  => 'Rapma FM | Form Timeline Divisi Umum',
+            'title'  => 'Rapma FM | Form Timeline Divisi Kepenyiaran',
         ];
 
-        return view('control/umum/form', $data);
+        return view('control/kepenyiaran/form', $data);
     }
 
     // Insert Data
@@ -62,29 +62,29 @@ class Umum extends BaseController
             'value'     => json_encode($input),
         ];
 
-        $this->umumModel->insert($data);
-        session()->setFlashdata('pesan', 'Data Timeline Divisi Umum Berhasil Ditambahkan!');
+        $this->kepenyiaranModel->insert($data);
+        session()->setFlashdata('pesan', 'Data Timeline Divisi Kepenyiaran Berhasil Ditambahkan!');
 
-        return redirect('control/umum');
+        return redirect('control/kepenyiaran');
     }
 
     // Edit Data
     public function edit($id)
     {
         $data = [
-            'title'     => 'Rapma FM | Edit Timeline Divisi Umum',
-            'umum'      => $this->umumModel->find($id),
+            'title'        => 'Rapma FM | Edit Timeline Divisi Kepenyiaran',
+            'kepenyiaran'  => $this->kepenyiaranModel->find($id),
         ];
 
         $db      = \Config\Database::connect();
-        $builder = $db->table('umum');
+        $builder = $db->table('kepenyiaran');
         $builder->select('id, key, value, created_at, updated_at, deleted_at');
         $builder->where('id', $id);
         $query   = $builder->get();
 
-        $data['umum'] = $query->getResultArray();
+        $data['kepenyiaran'] = $query->getResultArray();
 
-        return view('control/umum/edit', $data);
+        return view('control/kepenyiaran/edit', $data);
     }
 
     // Update Data
@@ -104,18 +104,18 @@ class Umum extends BaseController
             'value'     => json_encode($input),
         ];
 
-        $this->umumModel->update($id, $data);
-        session()->setFlashdata('pesan', 'Data Timeline Divisi Umum Berhasil Diubah!');
+        $this->kepenyiaranModel->update($id, $data);
+        session()->setFlashdata('pesan', 'Data Timeline Divisi Kepenyiaran Berhasil Diubah!');
 
-        return redirect('control/umum');
+        return redirect('control/kepenyiaran');
     }
 
     // Delete Data
     public function delete($id)
     {
-        $this->umumModel->delete($id);
-        session()->setFlashdata('pesan', 'Data Timeline Divisi Umum Berhasil Dihapus!');
+        $this->kepenyiaranModel->delete($id);
+        session()->setFlashdata('pesan', 'Data Timeline Divisi Kepenyiaran Berhasil Dihapus!');
 
-        return redirect('control/umum');
+        return redirect('control/kepenyiaran');
     }
 }

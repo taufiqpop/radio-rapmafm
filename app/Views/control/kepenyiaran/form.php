@@ -1,14 +1,14 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- Form Umum -->
+<!-- Form Divisi Kepenyiaran -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-8">
-            <h1 class="h3 mb-4 text-gray-800">Form Add Data Divisi Umum</h1>
+            <h1 class="h3 mb-4 text-gray-800">Form Add Data Divisi Kepenyiaran</h1>
 
             <!-- Forms -->
-            <form action="<?= base_url(); ?>umum/insert" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url(); ?>kepenyiaran/insert" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
 
                 <!-- Tanggal -->
@@ -65,7 +65,7 @@
                 <!-- Button -->
                 <div class="form-group row">
                     <div class="col-sm-7">
-                        <a href="<?= base_url(); ?>control/umum" class="btn btn-dark mb-1">Back</a>
+                        <a href="<?= base_url(); ?>control/kepenyiaran" class="btn btn-dark mb-1">Back</a>
                         <button type="submit" class="btn btn-primary mb-1">Publish</button>
                     </div>
                 </div>

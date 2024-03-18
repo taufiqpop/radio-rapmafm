@@ -1,13 +1,13 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- List Timeline Divisi Umum -->
+<!-- List Timeline Divisi Kepenyiaran -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1 class="h3 mb-4 text-gray-800">Data Timeline Divisi Umum</h1>
-            <?php if (in_groups(['Admin', 'MU'])) : ?>
-                <a href="<?= base_url(); ?>control/umum/form" class="btn btn-primary">Add Timeline</a>
+            <h1 class="h3 mb-4 text-gray-800">Timeline Divisi Kepenyiaran</h1>
+            <?php if (in_groups(['Admin', 'MK'])) : ?>
+                <a href="<?= base_url(); ?>control/kepenyiaran/form" class="btn btn-primary">Add Timeline</a>
                 <br><br>
             <?php endif; ?>
 
@@ -44,14 +44,14 @@
                                     <th scope="col" class="cursor-active">Pelaksanaan</th>
                                     <th scope="col" class="cursor-active">Kendala</th>
                                     <th scope="col" class="cursor-active">Status</th>
-                                    <?php if (in_groups(['Admin', 'MU'])) : ?>
+                                    <?php if (in_groups(['Admin', 'MK'])) : ?>
                                         <th scope="col" class="cursor-active">Action</th>
                                     <?php endif; ?>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($umum as $index => $divum) : ?>
-                                    <?php $data = json_decode($divum['value']) ?>
+                                <?php foreach ($kepenyiaran as $index => $kepen) : ?>
+                                    <?php $data = json_decode($kepen['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td><?= $data->tanggal; ?></td>
@@ -60,10 +60,10 @@
                                         <td><?= $data->pelaksanaan; ?></td>
                                         <td><?= $data->kendala; ?></td>
                                         <td><?= $data->status; ?></td>
-                                        <?php if (in_groups(['Admin', 'MU'])) : ?>
+                                        <?php if (in_groups(['Admin', 'MK'])) : ?>
                                             <td>
-                                                <a href="<?= base_url(); ?>control/umum/edit/<?= $divum['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/umum/<?= $divum['id']; ?>" method="post" class="d-inline">
+                                                <a href="<?= base_url(); ?>control/kepenyiaran/edit/<?= $kepen['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/kepenyiaran/<?= $kepen['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
@@ -76,7 +76,7 @@
                         </table>
 
                         <!-- Pagers -->
-                        <?= $pager->links('umum', 'data_pagination'); ?>
+                        <?= $pager->links('kepenyiaran', 'data_pagination'); ?>
                     </div>
                 </div>
             </div>

@@ -58,6 +58,14 @@ $routes->get('/control/settings', 'Settings::index', ['filter' => 'role:Admin, G
 $routes->add('/settings/update/(:num)', 'Settings::update/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, MD, AOn, Teknisi, MOn, MOff']);
 
 // GMPA //
+// Timeline GMPA
+$routes->add('/control/gmpa', 'GMPA::index', ['filter' => 'role:Admin, GM, PA']);
+$routes->get('/control/gmpa/form', 'GMPA::form', ['filter' => 'role:Admin, GM']);
+$routes->get('/control/gmpa/edit/(:num)', 'GMPA::edit/$1', ['filter' => 'role:Admin, GM']);
+$routes->delete('/control/gmpa/(:num)', 'GMPA::delete/$1', ['filter' => 'role:Admin, GM']);
+$routes->add('/gmpa/insert', 'GMPA::insert', ['filter' => 'role:Admin, GM']);
+$routes->add('/gmpa/update/(:num)', 'GMPA::update/$1', ['filter' => 'role:Admin, GM']);
+
 // Surat Masuk
 $routes->add('/control/suratmasuk', 'SuratMasuk::index', ['filter' => 'role:Admin, GM, PA']);
 $routes->get('/control/suratmasuk/form', 'SuratMasuk::form', ['filter' => 'role:Admin, PA']);
@@ -79,7 +87,7 @@ $routes->add('/suratkeluar/update/(:num)', 'SuratKeluar::update/$1', ['filter' =
 $routes->get('/control/about', 'About::index', ['filter' => 'role:Admin, GM, MU, AOn']);
 $routes->add('/about/update/(:num)', 'About::update/$1', ['filter' => 'role:Admin, MU, AOn']);
 
-// Umum
+// Timeline Divisi Umum
 $routes->add('/control/umum', 'Umum::index', ['filter' => 'role:Admin, GM, MU, AOn, AOff, Teknisi']);
 $routes->get('/control/umum/form', 'Umum::form', ['filter' => 'role:Admin, MU, AOn']);
 $routes->get('/control/umum/edit/(:num)', 'Umum::edit/$1', ['filter' => 'role:Admin, MU']);
@@ -137,6 +145,14 @@ $routes->add('/pemancar/insert/(:num)', 'Pemancar::insert/$1', ['filter' => 'rol
 $routes->add('/pemancar/update/(:num)', 'Pemancar::update/$1', ['filter' => 'role:Admin, MU, Teknisi']);
 
 // DIVISI KEPENYIARAN //
+// Timeline Divisi Kepenyiaran
+$routes->add('/control/kepenyiaran', 'Kepenyiaran::index', ['filter' => 'role:Admin, GM, MK, Produksi, Jurnalistik, MD']);
+$routes->get('/control/kepenyiaran/form', 'Kepenyiaran::form', ['filter' => 'role:Admin, MK']);
+$routes->get('/control/kepenyiaran/edit/(:num)', 'Kepenyiaran::edit/$1', ['filter' => 'role:Admin, MK']);
+$routes->delete('/control/kepenyiaran/(:num)', 'Kepenyiaran::delete/$1', ['filter' => 'role:Admin, MK']);
+$routes->add('/kepenyiaran/insert', 'Kepenyiaran::insert', ['filter' => 'role:Admin, MK']);
+$routes->add('/kepenyiaran/update/(:num)', 'Kepenyiaran::update/$1', ['filter' => 'role:Admin, MK']);
+
 // Program
 $routes->add('/control/program', 'Program::index', ['filter' => 'role:Admin, GM, MK, Produksi']);
 $routes->get('/control/program/form', 'Program::form', ['filter' => 'role:Admin, MK, Produksi']);
@@ -177,6 +193,14 @@ $routes->add('/pemutaranserentak/insert', 'PemutaranSerentak::insert', ['filter'
 $routes->add('/pemutaranserentak/update/(:num)', 'PemutaranSerentak::update/$1', ['filter' => 'role:Admin, MK, MD']);
 
 // DIVISI MARKETING //
+// Timeline Divisi Marketing
+$routes->add('/control/marketing', 'Marketing::index', ['filter' => 'role:Admin, GM, MM, MOn, MOff']);
+$routes->get('/control/marketing/form', 'Marketing::form', ['filter' => 'role:Admin, MM']);
+$routes->get('/control/marketing/edit/(:num)', 'Marketing::edit/$1', ['filter' => 'role:Admin, MM']);
+$routes->delete('/control/marketing/(:num)', 'Marketing::delete/$1', ['filter' => 'role:Admin, MM']);
+$routes->add('/marketing/insert', 'Marketing::insert', ['filter' => 'role:Admin, MM']);
+$routes->add('/marketing/update/(:num)', 'Marketing::update/$1', ['filter' => 'role:Admin, MM']);
+
 // Medpart
 $routes->add('/control/medpart', 'Medpart::index', ['filter' => 'role:Admin, GM, MM, MOn']);
 $routes->get('/control/medpart/form', 'Medpart::form', ['filter' => 'role:Admin, MM, MOn']);
@@ -211,6 +235,14 @@ $routes->add('/mtalent/update/(:num)', 'MTalent::update/$1', ['filter' => 'role:
 
 
 // DIVISI PERSONALIA //
+// Timeline Divisi Personalia
+$routes->add('/control/personalia', 'Personalia::index', ['filter' => 'role:Admin, GM, MP, HRD, Advokat']);
+$routes->get('/control/personalia/form', 'Personalia::form', ['filter' => 'role:Admin, MP']);
+$routes->get('/control/personalia/edit/(:num)', 'Personalia::edit/$1', ['filter' => 'role:Admin, MP']);
+$routes->delete('/control/personalia/(:num)', 'Personalia::delete/$1', ['filter' => 'role:Admin, MP']);
+$routes->add('/personalia/insert', 'Personalia::insert', ['filter' => 'role:Admin, MP']);
+$routes->add('/personalia/update/(:num)', 'Personalia::update/$1', ['filter' => 'role:Admin, MP']);
+
 // Magang Internal
 $routes->add('/control/maganginternal', 'MagangInternal::index', ['filter' => 'role:Admin, GM, MP, HRD']);
 $routes->get('/control/maganginternal/form', 'MagangInternal::form', ['filter' => 'role:Admin, MP, HRD']);

@@ -2,47 +2,47 @@
 
 namespace App\Controllers;
 
-class Umum extends BaseController
+class GMPA extends BaseController
 {
-    protected $umumModel;
+    protected $gmpaModel;
 
     public function __construct()
     {
-        $this->umumModel = new \App\Models\UmumModel();
+        $this->gmpaModel = new \App\Models\GMPAModel();
     }
 
-    // List Umum
+    // List GMPA
     public function index()
     {
-        $currentPage = $this->request->getVar('page_umum') ? $this->request->getVar('page_umum') : 1;
+        $currentPage = $this->request->getVar('page_gmpa') ? $this->request->getVar('page_gmpa') : 1;
 
         $keyword = $this->request->getVar('keyword');
         if ($keyword) {
-            $umum = $this->umumModel->search($keyword);
+            $gmpa = $this->gmpaModel->search($keyword);
         } else {
-            $umum = $this->umumModel;
+            $gmpa = $this->gmpaModel;
         }
 
-        $umum->orderBy('id', 'DESC');
+        $gmpa->orderBy('id', 'DESC');
 
         $data = [
-            'title'       => 'Rapma FM | Timeline Divisi Umum',
-            'umum'        => $umum->paginate(10, 'umum'),
-            'pager'       => $umum->pager,
+            'title'       => 'Rapma FM | Timeline Divisi GMPA',
+            'gmpa'        => $gmpa->paginate(10, 'gmpa'),
+            'pager'       => $gmpa->pager,
             'currentPage' => $currentPage,
         ];
 
-        return view('control/umum/index', $data);
+        return view('control/gmpa/index', $data);
     }
 
     // Create Data
     public function form()
     {
         $data = [
-            'title'  => 'Rapma FM | Form Timeline Divisi Umum',
+            'title'  => 'Rapma FM | Form Timeline Divisi GMPA',
         ];
 
-        return view('control/umum/form', $data);
+        return view('control/gmpa/form', $data);
     }
 
     // Insert Data
@@ -62,29 +62,29 @@ class Umum extends BaseController
             'value'     => json_encode($input),
         ];
 
-        $this->umumModel->insert($data);
-        session()->setFlashdata('pesan', 'Data Timeline Divisi Umum Berhasil Ditambahkan!');
+        $this->gmpaModel->insert($data);
+        session()->setFlashdata('pesan', 'Data Timeline Divisi GMPA Berhasil Ditambahkan!');
 
-        return redirect('control/umum');
+        return redirect('control/gmpa');
     }
 
     // Edit Data
     public function edit($id)
     {
         $data = [
-            'title'     => 'Rapma FM | Edit Timeline Divisi Umum',
-            'umum'      => $this->umumModel->find($id),
+            'title'     => 'Rapma FM | Edit Timeline Divisi GMPA',
+            'gmpa'      => $this->gmpaModel->find($id),
         ];
 
         $db      = \Config\Database::connect();
-        $builder = $db->table('umum');
+        $builder = $db->table('gmpa');
         $builder->select('id, key, value, created_at, updated_at, deleted_at');
         $builder->where('id', $id);
         $query   = $builder->get();
 
-        $data['umum'] = $query->getResultArray();
+        $data['gmpa'] = $query->getResultArray();
 
-        return view('control/umum/edit', $data);
+        return view('control/gmpa/edit', $data);
     }
 
     // Update Data
@@ -104,18 +104,18 @@ class Umum extends BaseController
             'value'     => json_encode($input),
         ];
 
-        $this->umumModel->update($id, $data);
-        session()->setFlashdata('pesan', 'Data Timeline Divisi Umum Berhasil Diubah!');
+        $this->gmpaModel->update($id, $data);
+        session()->setFlashdata('pesan', 'Data Timeline Divisi GMPA Berhasil Diubah!');
 
-        return redirect('control/umum');
+        return redirect('control/gmpa');
     }
 
     // Delete Data
     public function delete($id)
     {
-        $this->umumModel->delete($id);
-        session()->setFlashdata('pesan', 'Data Timeline Divisi Umum Berhasil Dihapus!');
+        $this->gmpaModel->delete($id);
+        session()->setFlashdata('pesan', 'Data Timeline Divisi GMPA Berhasil Dihapus!');
 
-        return redirect('control/umum');
+        return redirect('control/gmpa');
     }
 }
