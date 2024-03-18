@@ -17,7 +17,7 @@
                     <div class="form-group row">
                         <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required autofocus>
+                            <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required autofocus>
                         </div>
                     </div>
 

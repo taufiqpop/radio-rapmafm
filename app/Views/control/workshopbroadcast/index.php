@@ -37,16 +37,22 @@
                         <table class="table table-bordered" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th scope="col" class="cursor-active">No</th>
-                                    <th scope="col" class="cursor-active">Tanggal</th>
-                                    <th scope="col" class="cursor-active">Waktu</th>
-                                    <th scope="col" class="cursor-active">Materi</th>
-                                    <th scope="col" class="cursor-active">Pemateri</th>
-                                    <th scope="col" class="cursor-active">Tempat</th>
-                                    <th scope="col" class="cursor-active">Status</th>
-                                    <?php if (in_groups(['Admin', 'MP', 'HRD'])) : ?>
-                                        <th scope="col" class="cursor-active">Action</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">No</th>
+                                    <th scope="col" class="cursor-active" colspan="2">Tanggal</th>
+                                    <th scope="col" class="cursor-active" colspan="2">Waktu</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Materi</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Pemateri</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Tempat</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Status</th>
+                                    <?php if (in_groups(['Admin', 'MP'])) : ?>
+                                        <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Action</th>
                                     <?php endif; ?>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="cursor-active">Dari</th>
+                                    <th scope="col" class="cursor-active">Sampai</th>
+                                    <th scope="col" class="cursor-active">Mulai</th>
+                                    <th scope="col" class="cursor-active">Selesai</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,11 +60,13 @@
                                     <?php $data = json_decode($ads['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->tanggal; ?></td>
-                                        <td><?= $data->waktu; ?></td>
-                                        <td style="max-width: 300px;"><?= $data->materi; ?></td>
-                                        <td><?= $data->pemateri; ?></td>
-                                        <td><?= $data->tempat; ?></td>
+                                        <td><?= $data->harimulai; ?>,<br><?= $data->dari; ?></td>
+                                        <td><?= $data->hariselesai; ?>,<br><?= $data->sampai; ?></td>
+                                        <td><?= $data->mulai; ?></td>
+                                        <td><?= $data->selesai; ?></td>
+                                        <td style="max-width: 200px;"><?= $data->materi; ?></td>
+                                        <td style="max-width: 200px;"><?= $data->pemateri; ?></td>
+                                        <td style="max-width: 100px;"><?= $data->tempat; ?></td>
                                         <td><?= $data->status; ?></td>
                                         <?php if (in_groups(['Admin', 'MP', 'HRD'])) : ?>
                                             <td>

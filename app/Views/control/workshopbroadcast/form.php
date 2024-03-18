@@ -11,11 +11,39 @@
             <form action="<?= base_url(); ?>workshopbroadcast/insert" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
 
+                <!-- Hari -->
+                <div class="form-group row">
+                    <label for="harimulai" class="col-sm-3 col-form-label">Hari</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="Senin" name="harimulai" required autofocus>
+                    </div>
+                    <label for="hariselesai" class="col-form-label">-</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="Jum'at" name="hariselesai" required>
+                    </div>
+                </div>
+
                 <!-- Tanggal -->
                 <div class="form-group row">
-                    <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="01 Januari 2000" name="tanggal" required autofocus>
+                    <label for="dari" class="col-sm-3 col-form-label">Tanggal</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" name="dari" required>
+                    </div>
+                    <label for="sampai" class="col-form-label">-</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" name="sampai" required>
+                    </div>
+                </div>
+
+                <!-- Waktu -->
+                <div class="form-group row">
+                    <label for="mulai" class="col-sm-3 col-form-label">Waktu</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="00:00" name="mulai" required>
+                    </div>
+                    <label for="selesai" class="col-form-label">-</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="23:59" name="selesai" required>
                     </div>
                 </div>
 
@@ -27,14 +55,6 @@
                             <option value="Terlaksana">Terlaksana</option>
                             <option value="Tidak Terlaksana">Tidak Terlaksana</option>
                         </select>
-                    </div>
-                </div>
-
-                <!-- Waktu -->
-                <div class="form-group row">
-                    <label for="waktu" class="col-sm-3 col-form-label">Waktu</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="00:00 - 23:59  WIB" name="waktu" required>
                     </div>
                 </div>
 

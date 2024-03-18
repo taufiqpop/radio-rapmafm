@@ -25,7 +25,7 @@
                     <div class="form-group row">
                         <label for="tanggalpinjam" class="col-sm-3 col-form-label">Tanggal Dipinjam</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="tanggalpinjam" value="<?= $data->tanggalpinjam; ?>" required>
+                            <input type="date" class="form-control" name="tanggalpinjam" value="<?= $data->tanggalpinjam; ?>" required>
                         </div>
                     </div>
 
@@ -33,7 +33,7 @@
                     <div class="form-group row">
                         <label for="tanggalkembali" class="col-sm-3 col-form-label">Tanggal Kembali</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="tanggalkembali" value="<?= $data->tanggalkembali; ?>" required>
+                            <input type="date" class="form-control" name="tanggalkembali" value="<?= $data->tanggalkembali; ?>" required>
                         </div>
                     </div>
 

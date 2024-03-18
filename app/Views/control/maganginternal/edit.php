@@ -13,11 +13,39 @@
                 <form action="<?= base_url(); ?>maganginternal/update/<?= $magang['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
+                    <!-- Hari -->
+                    <div class="form-group row">
+                        <label for="harimulai" class="col-sm-3 col-form-label">Hari</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="harimulai" value="<?= $data->harimulai; ?>" required autofocus>
+                        </div>
+                        <label for="hariselesai" class="col-form-label">-</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="hariselesai" value="<?= $data->hariselesai; ?>" required>
+                        </div>
+                    </div>
+
                     <!-- Tanggal -->
                     <div class="form-group row">
-                        <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required autofocus>
+                        <label for="dari" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-3">
+                            <input type="date" class="form-control" name="dari" value="<?= $data->dari; ?>" required>
+                        </div>
+                        <label for="sampai" class="col-form-label">-</label>
+                        <div class="col-sm-3">
+                            <input type="date" class="form-control" name="sampai" value="<?= $data->sampai; ?>" required>
+                        </div>
+                    </div>
+
+                    <!-- Waktu -->
+                    <div class="form-group row">
+                        <label for="mulai" class="col-sm-3 col-form-label">Waktu</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="mulai" value="<?= $data->mulai; ?>" required>
+                        </div>
+                        <label for="selesai" class="col-form-label">-</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="selesai" value="<?= $data->selesai; ?>" required>
                         </div>
                     </div>
 
@@ -30,14 +58,6 @@
                                 <option value="Terlaksana">Terlaksana</option>
                                 <option value="Tidak Terlaksana">Tidak Terlaksana</option>
                             </select>
-                        </div>
-                    </div>
-
-                    <!-- Waktu -->
-                    <div class="form-group row">
-                        <label for="waktu" class="col-sm-3 col-form-label">Waktu</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="waktu" value="<?= $data->waktu; ?>" required>
                         </div>
                     </div>
 

@@ -23,7 +23,7 @@
                 <div class="form-group row">
                     <label for="tanggalpinjam" class="col-sm-3 col-form-label">Tanggal Dipinjam</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="01 Januari 2000" name="tanggalpinjam" required>
+                        <input type="date" class="form-control" name="tanggalpinjam" required>
                     </div>
                 </div>
 
@@ -31,7 +31,7 @@
                 <div class="form-group row">
                     <label for="tanggalkembali" class="col-sm-3 col-form-label">Tanggal Kembali</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="01 Januari 2000" name="tanggalkembali" required>
+                        <input type="text" class="form-control" placeholder="-" name="tanggalkembali" required>
                     </div>
                 </div>
 
@@ -55,7 +55,7 @@
                 <div class="form-group row">
                     <label for="keterangan" class="col-sm-3 col-form-label">Keterangan</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Aman | Rusak | Ganti Rugi" name="keterangan" required>
+                        <input type="text" class="form-control" placeholder="-" name="keterangan" required>
                     </div>
                 </div>
 

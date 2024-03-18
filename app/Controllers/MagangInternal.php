@@ -49,16 +49,20 @@ class MagangInternal extends BaseController
     public function insert()
     {
         $input = [
-            'tanggal'  => $this->request->getPost('tanggal'),
-            'waktu'    => $this->request->getPost('waktu'),
-            'materi'   => $this->request->getPost('materi'),
-            'pemateri' => $this->request->getPost('pemateri'),
-            'tempat'   => $this->request->getPost('tempat'),
-            'status'   => $this->request->getPost('status'),
+            'dari'          => $this->request->getPost('dari'),
+            'sampai'        => $this->request->getPost('sampai'),
+            'harimulai'     => $this->request->getPost('harimulai'),
+            'hariselesai'   => $this->request->getPost('hariselesai'),
+            'mulai'         => $this->request->getPost('mulai'),
+            'selesai'       => $this->request->getPost('selesai'),
+            'materi'        => $this->request->getPost('materi'),
+            'pemateri'      => $this->request->getPost('pemateri'),
+            'tempat'        => $this->request->getPost('tempat'),
+            'status'        => $this->request->getPost('status'),
         ];
 
         $data = [
-            'key'      => $this->request->getPost('tanggal'),
+            'key'      => $this->request->getPost('dari'),
             'value'    => json_encode($input),
         ];
 
@@ -91,16 +95,20 @@ class MagangInternal extends BaseController
     public function update($id)
     {
         $input = [
-            'tanggal'  => $this->request->getPost('tanggal'),
-            'waktu'    => $this->request->getPost('waktu'),
-            'materi'   => $this->request->getPost('materi'),
-            'pemateri' => $this->request->getPost('pemateri'),
-            'tempat'   => $this->request->getPost('tempat'),
-            'status'   => $this->request->getPost('status'),
+            'dari'          => $this->request->getPost('dari'),
+            'sampai'        => $this->request->getPost('sampai'),
+            'harimulai'     => $this->request->getPost('harimulai'),
+            'hariselesai'   => $this->request->getPost('hariselesai'),
+            'mulai'         => $this->request->getPost('mulai'),
+            'selesai'       => $this->request->getPost('selesai'),
+            'materi'        => $this->request->getPost('materi'),
+            'pemateri'      => $this->request->getPost('pemateri'),
+            'tempat'        => $this->request->getPost('tempat'),
+            'status'        => $this->request->getPost('status'),
         ];
 
         $data = [
-            'key'      => $this->request->getPost('nama'),
+            'key'      => $this->request->getPost('dari'),
             'value'    => json_encode($input),
         ];
 
