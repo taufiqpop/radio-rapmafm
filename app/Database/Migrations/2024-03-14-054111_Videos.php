@@ -22,7 +22,7 @@ class Videos extends Migration
             'value' => [
                 'type'       => 'TEXT',
             ],
-            'tahun' => [
+            'type' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',
             ],
@@ -37,7 +37,7 @@ class Videos extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addKey('tahun');
+        $this->forge->addKey('type');
         $this->forge->createTable('videos');
     }
 
