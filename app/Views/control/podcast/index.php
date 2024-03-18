@@ -1,13 +1,13 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- List Achievements -->
+<!-- List Podcast -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-11">
-            <h1 class="h3 mb-4 text-gray-800">Daftar Achievements</h1>
-            <?php if (in_groups(['Admin', 'MU', 'AOn'])) : ?>
-                <a href="<?= base_url(); ?>control/achievements/form" class="btn btn-primary">Add Achievements</a>
+        <div class="col-12">
+            <h1 class="h3 mb-4 text-gray-800">Daftar Podcast</h1>
+            <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
+                <a href="<?= base_url(); ?>control/podcast/form" class="btn btn-primary">Add Podcast</a>
                 <br><br>
             <?php endif; ?>
 
@@ -40,26 +40,33 @@
                                     <th scope="col" class="cursor-active">No</th>
                                     <th scope="col" class="cursor-stop">Photo</th>
                                     <th scope="col" class="cursor-active">Judul</th>
+                                    <th scope="col" class="cursor-active">Program</th>
+                                    <th scope="col" class="cursor-active">Tanggal Rilis</th>
                                     <th scope="col" class="cursor-active">Tahun</th>
+                                    <th scope="col" class="cursor-active">Talent</th>
+                                    <th scope="col" class="cursor-active">Narasumber</th>
                                     <th scope="col" class="cursor-stop">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($achievements as $index => $achievement) : ?>
-                                    <?php $data = json_decode($achievement['value']) ?>
+                                <?php foreach ($podcast as $index => $podcasts) : ?>
+                                    <?php $data = json_decode($podcasts['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td>
-                                            <img src="<?= base_url(); ?>img/achievements/<?= $data->images ?>" class=" thumbnail">
+                                            <img src="<?= base_url(); ?>img/podcast/<?= $data->images ?>" class=" thumbnail">
                                         </td>
                                         <td><?= $data->judul ?></td>
-                                        <td><?= $achievement['tahun'] ?></td>
+                                        <td><?= $podcasts['program'] ?></td>
+                                        <td><?= $data->hari ?>, <?= $data->tanggal; ?></td>
+                                        <td><?= $podcasts['tahun'] ?></td>
+                                        <td><?= $data->talent ?></td>
+                                        <td><?= $data->narasumber ?></td>
                                         <td>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
-                                            <?php if (in_groups(['Admin', 'MU', 'AOn'])) : ?>
-
-                                                <a href="<?= base_url(); ?>control/achievements/edit/<?= $achievement['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/achievements/<?= $achievement['id']; ?>" method="post" class="d-inline">
+                                            <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
+                                                <a href="<?= base_url(); ?>control/podcast/edit/<?= $podcasts['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/podcast/<?= $podcasts['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
@@ -72,7 +79,7 @@
                         </table>
 
                         <!-- Pagers -->
-                        <?= $pager->links('achievements', 'data_pagination'); ?>
+                        <?= $pager->links('podcast', 'data_pagination'); ?>
                     </div>
                 </div>
             </div>

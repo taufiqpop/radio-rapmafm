@@ -2,48 +2,48 @@
 
 namespace App\Controllers;
 
-class Achievements extends BaseController
+class Podcast extends BaseController
 {
-    protected $achievementsModel;
+    protected $podcastModel;
 
     public function __construct()
     {
-        $this->achievementsModel = new \App\Models\AchievementsModel();
+        $this->podcastModel = new \App\Models\PodcastModel();
     }
 
-    // List Achievements
+    // List Podcast
     public function index()
     {
-        $currentPage = $this->request->getVar('page_achievements') ? $this->request->getVar('page_achievements') : 1;
+        $currentPage = $this->request->getVar('page_podcast') ? $this->request->getVar('page_podcast') : 1;
 
         $keyword = $this->request->getVar('keyword');
         if ($keyword) {
-            $achievements = $this->achievementsModel->search($keyword);
+            $podcast = $this->podcastModel->search($keyword);
         } else {
-            $achievements = $this->achievementsModel;
+            $podcast = $this->podcastModel;
         }
 
-        $achievements->orderBy('tahun', 'DESC');
+        $podcast->orderBy('tahun', 'DESC');
 
         $data = [
-            'title'         => 'Rapma FM | Achievements',
-            'achievements'  => $achievements->paginate(5, 'achievements'),
-            'pager'         => $achievements->pager,
+            'title'         => 'Rapma FM | Podcast',
+            'podcast'       => $podcast->paginate(10, 'podcast'),
+            'pager'         => $podcast->pager,
             'currentPage'   => $currentPage,
         ];
 
-        return view('control/achievements/index', $data);
+        return view('control/podcast/index', $data);
     }
 
     // Create Data
     public function form()
     {
         $data = [
-            'title'      => 'Rapma FM | Form Achievements',
+            'title'      => 'Rapma FM | Form Podcast',
             'validation' => \Config\Services::validation()
         ];
 
-        return view('control/achievements/form', $data);
+        return view('control/podcast/form', $data);
     }
 
     // Insert Data
@@ -62,7 +62,7 @@ class Achievements extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('control/achievements/form')->withInput()->with('validation', $validation);
+            return redirect()->to('control/podcast/form')->withInput()->with('validation', $validation);
         }
 
         // Ambil Gambar
@@ -76,45 +76,50 @@ class Achievements extends BaseController
             $namaGambar = $ambilGambar->getRandomName();
 
             // Pindahkan Gambar
-            $ambilGambar->move('img/achievements', $namaGambar);
+            $ambilGambar->move('img/podcast', $namaGambar);
         }
 
         $input = [
-            'judul'     => $this->request->getPost('judul'),
-            'link'      => $this->request->getPost('link'),
-            'images'    => $namaGambar,
+            'judul'         => $this->request->getPost('judul'),
+            'hari'          => $this->request->getPost('hari'),
+            'tanggal'       => $this->request->getPost('tanggal'),
+            'talent'        => $this->request->getPost('talent'),
+            'narasumber'    => $this->request->getPost('narasumber'),
+            'link'          => $this->request->getPost('link'),
+            'images'        => $namaGambar,
         ];
 
         $data = [
             'key'       => $this->request->getPost('judul'),
             'value'     => json_encode($input),
             'tahun'     => $this->request->getPost('tahun'),
+            'program'   => $this->request->getPost('program'),
         ];
 
-        $this->achievementsModel->insert($data);
-        session()->setFlashdata('pesan', 'Data Achievements Berhasil Ditambahkan!');
+        $this->podcastModel->insert($data);
+        session()->setFlashdata('pesan', 'Data Podcast Berhasil Ditambahkan!');
 
-        return redirect('control/achievements');
+        return redirect('control/podcast');
     }
 
     // Edit Data
     public function edit($id)
     {
         $data = [
-            'title'         => 'Rapma FM | Edit Data Achievements',
-            'achievements'  => $this->achievementsModel->find($id),
+            'title'         => 'Rapma FM | Edit Data Podcast',
+            'podcast'       => $this->podcastModel->find($id),
             'validation'    => \Config\Services::validation()
         ];
 
         $db      = \Config\Database::connect();
-        $builder = $db->table('achievements');
-        $builder->select('id, key, value, tahun, created_at, updated_at, deleted_at');
+        $builder = $db->table('podcast');
+        $builder->select('id, key, value, tahun, program, created_at, updated_at, deleted_at');
         $builder->where('id', $id);
         $query   = $builder->get();
 
-        $data['achievements'] = $query->getResultArray();
+        $data['podcast'] = $query->getResultArray();
 
-        return view('control/achievements/edit', $data);
+        return view('control/podcast/edit', $data);
     }
 
     // Update Data
@@ -132,7 +137,7 @@ class Achievements extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('control/achievements/edit')->withInput()->with('validation', $validation);
+            return redirect()->to('control/podcast/edit')->withInput()->with('validation', $validation);
         }
 
         $ambilGambar = $this->request->getFile('images');
@@ -145,43 +150,48 @@ class Achievements extends BaseController
             $namaGambar = $ambilGambar->getRandomName();
 
             // Pindahkan Gambar
-            $ambilGambar->move('img/achievements', $namaGambar);
+            $ambilGambar->move('img/podcast', $namaGambar);
 
             // Hapus File Yang Lama
-            unlink('img/achievements/' . $this->request->getVar('imgLama'));
+            unlink('img/podcast/' . $this->request->getVar('imgLama'));
         }
 
         $input = [
-            'judul'     => $this->request->getPost('judul'),
-            'link'      => $this->request->getPost('link'),
-            'images'    => $namaGambar,
+            'judul'         => $this->request->getPost('judul'),
+            'hari'          => $this->request->getPost('hari'),
+            'tanggal'       => $this->request->getPost('tanggal'),
+            'talent'        => $this->request->getPost('talent'),
+            'narasumber'    => $this->request->getPost('narasumber'),
+            'link'          => $this->request->getPost('link'),
+            'images'        => $namaGambar,
         ];
 
         $data = [
             'key'       => $this->request->getPost('judul'),
             'value'     => json_encode($input),
             'tahun'     => $this->request->getPost('tahun'),
+            'program'   => $this->request->getPost('program'),
         ];
 
-        $this->achievementsModel->update($id, $data);
-        session()->setFlashdata('pesan', 'Data Achievements Berhasil Diubah!');
+        $this->podcastModel->update($id, $data);
+        session()->setFlashdata('pesan', 'Data Podcast Berhasil Diubah!');
 
-        return redirect('control/achievements');
+        return redirect('control/podcast');
     }
 
     // Delete Data
     public function delete($id)
     {
         // Cari Gambar Berdasarkan ID
-        $achievements = $this->achievementsModel->find($id);
-        $achievementsJSON = json_decode($achievements['value']);
+        $podcast = $this->podcastModel->find($id);
+        $podcastJSON = json_decode($podcast['value']);
 
         // Hapus Gambar Permanen
-        unlink('img/achievements/' . $achievementsJSON->images);
+        unlink('img/podcast/' . $podcastJSON->images);
 
-        $this->achievementsModel->delete($id);
-        session()->setFlashdata('pesan', 'Data Achievements Berhasil Dihapus!');
+        $this->podcastModel->delete($id);
+        session()->setFlashdata('pesan', 'Data Podcast Berhasil Dihapus!');
 
-        return redirect('control/achievements');
+        return redirect('control/podcast');
     }
 }
