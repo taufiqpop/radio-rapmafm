@@ -52,7 +52,7 @@
                                     <?php $data = json_decode($surat['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->tanggal; ?></td>
+                                        <td><?= $data->hari; ?>, <?= $data->tanggal; ?></td>
                                         <td><?= $data->nosurat; ?></td>
                                         <td><?= $data->instansi; ?></td>
                                         <td><?= $data->perihal; ?></td>

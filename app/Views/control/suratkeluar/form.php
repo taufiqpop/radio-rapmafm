@@ -11,11 +11,19 @@
             <form action="<?= base_url(); ?>suratkeluar/insert" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
 
+                <!-- Hari -->
+                <div class="form-group row">
+                    <label for="hari" class="col-sm-3 col-form-label">Hari</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" name="hari" placeholder="Senin" required autofocus>
+                    </div>
+                </div>
+
                 <!-- Tanggal -->
                 <div class="form-group row">
                     <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
                     <div class="col-sm-7">
-                        <input type="date" class="form-control" name="tanggal" required autofocus>
+                        <input type="date" class="form-control" name="tanggal" required>
                     </div>
                 </div>
 

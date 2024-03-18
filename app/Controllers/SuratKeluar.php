@@ -50,6 +50,7 @@ class SuratKeluar extends BaseController
     {
         $input = [
             'tanggal'     => $this->request->getPost('tanggal'),
+            'hari'        => $this->request->getPost('hari'),
             'nosurat'     => $this->request->getPost('nosurat'),
             'penerima'    => $this->request->getPost('penerima'),
             'perihal'     => $this->request->getPost('perihal'),
@@ -90,6 +91,7 @@ class SuratKeluar extends BaseController
     {
         $input = [
             'tanggal'     => $this->request->getPost('tanggal'),
+            'hari'        => $this->request->getPost('hari'),
             'nosurat'     => $this->request->getPost('nosurat'),
             'penerima'    => $this->request->getPost('penerima'),
             'perihal'     => $this->request->getPost('perihal'),

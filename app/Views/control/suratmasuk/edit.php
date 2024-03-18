@@ -13,11 +13,19 @@
                 <form action="<?= base_url(); ?>suratmasuk/update/<?= $surat['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
+                    <!-- Hari -->
+                    <div class="form-group row">
+                        <label for="hari" class="col-sm-3 col-form-label">Hari</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="hari" value="<?= $data->hari; ?>" required autofocus>
+                        </div>
+                    </div>
+
                     <!-- Tanggal -->
                     <div class="form-group row">
                         <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
                         <div class="col-sm-7">
-                            <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required autofocus>
+                            <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required>
                         </div>
                     </div>
 
