@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-11">
             <h1 class="h3 mb-4 text-gray-800">Data Label Rekaman</h1>
-            <?php if (in_groups(['Admin', 'MU', 'MD'])) : ?>
+            <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
                 <a href="<?= base_url(); ?>control/labelrekaman/form" class="btn btn-primary">Add Label Rekaman</a>
                 <a href="<?= base_url(); ?>control/topchart" class="btn btn-info">Top Chart</a>
                 <br><br>

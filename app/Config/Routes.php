@@ -153,14 +153,6 @@ $routes->delete('/control/kepenyiaran/(:num)', 'Kepenyiaran::delete/$1', ['filte
 $routes->add('/kepenyiaran/insert', 'Kepenyiaran::insert', ['filter' => 'role:Admin, MK']);
 $routes->add('/kepenyiaran/update/(:num)', 'Kepenyiaran::update/$1', ['filter' => 'role:Admin, MK']);
 
-// Program
-$routes->add('/control/program', 'Program::index', ['filter' => 'role:Admin, GM, MK, Produksi']);
-$routes->get('/control/program/form', 'Program::form', ['filter' => 'role:Admin, MK, Produksi']);
-$routes->get('/control/program/edit/(:num)', 'Program::edit/$1', ['filter' => 'role:Admin, MK, Produksi']);
-$routes->delete('/control/program/(:num)', 'Program::delete/$1', ['filter' => 'role:Admin, MK, Produksi']);
-$routes->add('/program/insert', 'Program::insert', ['filter' => 'role:Admin, MK, Produksi']);
-$routes->add('/program/update/(:num)', 'Program::update/$1', ['filter' => 'role:Admin, MK, Produksi']);
-
 // Bank Lagu
 $routes->add('/control/lagu', 'lagu::index', ['filter' => 'role:Admin, GM, MK, MD']);
 $routes->add('/control/lagu/form', 'lagu::form', ['filter' => 'role:Admin, GM, MK, MD']);
@@ -191,6 +183,38 @@ $routes->get('/control/pemutaranserentak/edit/(:num)', 'PemutaranSerentak::edit/
 $routes->delete('/control/pemutaranserentak/(:num)', 'PemutaranSerentak::delete/$1', ['filter' => 'role:Admin, MK, MD']);
 $routes->add('/pemutaranserentak/insert', 'PemutaranSerentak::insert', ['filter' => 'role:Admin, MK, MD']);
 $routes->add('/pemutaranserentak/update/(:num)', 'PemutaranSerentak::update/$1', ['filter' => 'role:Admin, MK, MD']);
+
+// Program
+$routes->add('/control/program', 'Program::index', ['filter' => 'role:Admin, GM, MK, Produksi']);
+$routes->get('/control/program/form', 'Program::form', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->get('/control/program/edit/(:num)', 'Program::edit/$1', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->delete('/control/program/(:num)', 'Program::delete/$1', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->add('/program/insert', 'Program::insert', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->add('/program/update/(:num)', 'Program::update/$1', ['filter' => 'role:Admin, MK, Produksi']);
+
+// Podcast
+$routes->add('/control/podcast', 'Podcast::index', ['filter' => 'role:Admin, GM, MK, Produksi']);
+$routes->get('/control/podcast/form', 'Podcast::form', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->get('/control/podcast/edit/(:num)', 'Podcast::edit/$1', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->delete('/control/podcast/(:num)', 'Podcast::delete/$1', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->add('/podcast/insert', 'Podcast::insert', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->add('/podcast/update/(:num)', 'Podcast::update/$1', ['filter' => 'role:Admin, MK, Produksi']);
+
+// Audios
+$routes->add('/control/audios', 'Audios::index', ['filter' => 'role:Admin, GM, MK, Produksi']);
+$routes->get('/control/audios/form', 'Audios::form', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->get('/control/audios/edit/(:num)', 'Audios::edit/$1', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->delete('/control/audios/(:num)', 'Audios::delete/$1', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->add('/audios/insert', 'Audios::insert', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->add('/audios/update/(:num)', 'Audios::update/$1', ['filter' => 'role:Admin, MK, Produksi']);
+
+// Videos
+$routes->add('/control/videos', 'Videos::index', ['filter' => 'role:Admin, GM, MK, Produksi']);
+$routes->get('/control/videos/form', 'Videos::form', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->get('/control/videos/edit/(:num)', 'Videos::edit/$1', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->delete('/control/videos/(:num)', 'Videos::delete/$1', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->add('/videos/insert', 'Videos::insert', ['filter' => 'role:Admin, MK, Produksi']);
+$routes->add('/videos/update/(:num)', 'Videos::update/$1', ['filter' => 'role:Admin, MK, Produksi']);
 
 // DIVISI MARKETING //
 // Timeline Divisi Marketing

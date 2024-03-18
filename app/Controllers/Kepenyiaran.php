@@ -52,7 +52,8 @@ class Kepenyiaran extends BaseController
             'tanggal'      => $this->request->getPost('tanggal'),
             'subdivisi'    => $this->request->getPost('subdivisi'),
             'proker'       => $this->request->getPost('proker'),
-            'pelaksanaan'  => $this->request->getPost('pelaksanaan'),
+            'dari'         => $this->request->getPost('dari'),
+            'sampai'       => $this->request->getPost('sampai'),
             'kendala'      => $this->request->getPost('kendala'),
             'status'       => $this->request->getPost('status'),
         ];
@@ -94,7 +95,8 @@ class Kepenyiaran extends BaseController
             'tanggal'      => $this->request->getPost('tanggal'),
             'subdivisi'    => $this->request->getPost('subdivisi'),
             'proker'       => $this->request->getPost('proker'),
-            'pelaksanaan'  => $this->request->getPost('pelaksanaan'),
+            'dari'         => $this->request->getPost('dari'),
+            'sampai'       => $this->request->getPost('sampai'),
             'kendala'      => $this->request->getPost('kendala'),
             'status'       => $this->request->getPost('status'),
         ];

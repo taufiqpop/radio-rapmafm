@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-11">
             <h1 class="h3 mb-4 text-gray-800">Program Siar</h1>
-            <?php if (in_groups(['Admin', 'MU', 'Produksi'])) : ?>
+            <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
                 <a href="<?= base_url(); ?>control/program/form" class="btn btn-primary">Add Program Siar</a>
                 <br><br>
             <?php endif; ?>
@@ -62,7 +62,7 @@
                                         <?php endif ?>
                                         <td>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
-                                            <?php if (in_groups(['Admin', 'MU', 'Produksi'])) : ?>
+                                            <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
                                                 <a href="<?= base_url(); ?>control/program/edit/<?= $siaran['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/program/<?= $siaran['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>

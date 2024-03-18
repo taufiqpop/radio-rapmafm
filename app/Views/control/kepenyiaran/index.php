@@ -37,16 +37,20 @@
                         <table class="table table-bordered" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th scope="col" class="cursor-active">No</th>
-                                    <th scope="col" class="cursor-active">Tanggal</th>
-                                    <th scope="col" class="cursor-active">Subdivisi</th>
-                                    <th scope="col" class="cursor-active">Proker</th>
-                                    <th scope="col" class="cursor-active">Pelaksanaan</th>
-                                    <th scope="col" class="cursor-active">Kendala</th>
-                                    <th scope="col" class="cursor-active">Status</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">No</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Tanggal</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Subdivisi</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Proker</th>
+                                    <th scope="col" class="cursor-active" colspan="2">Pelaksanaan</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Kendala</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Status</th>
                                     <?php if (in_groups(['Admin', 'MK'])) : ?>
-                                        <th scope="col" class="cursor-active">Action</th>
+                                        <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Action</th>
                                     <?php endif; ?>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="cursor-active">Dari</th>
+                                    <th scope="col" class="cursor-active">Sampai</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -57,7 +61,8 @@
                                         <td><?= $data->tanggal; ?></td>
                                         <td><?= $data->subdivisi; ?></td>
                                         <td><?= $data->proker; ?></td>
-                                        <td><?= $data->pelaksanaan; ?></td>
+                                        <td><?= $data->dari; ?></td>
+                                        <td><?= $data->sampai; ?></td>
                                         <td><?= $data->kendala; ?></td>
                                         <td><?= $data->status; ?></td>
                                         <?php if (in_groups(['Admin', 'MK'])) : ?>

@@ -17,31 +17,35 @@
                     <div class="form-group row">
                         <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required autofocus>
+                            <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required autofocus>
                         </div>
                     </div>
 
-                    <!-- Subdivisi -->
+                    <!-- Sub Divisi -->
                     <div class="form-group row">
-                        <label for="subdivisi" class="col-sm-3 col-form-label">Subdivisi</label>
+                        <label for="subdivisi" class="col-sm-3 col-form-label">Sub Divisi</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="subdivisi" value="<?= $data->subdivisi; ?>" required>
                         </div>
                     </div>
 
-                    <!-- Proker -->
+                    <!-- Program Kerja -->
                     <div class="form-group row">
-                        <label for="proker" class="col-sm-3 col-form-label">Proker</label>
+                        <label for="proker" class="col-sm-3 col-form-label">Program Kerja</label>
                         <div class="col-sm-7">
                             <input type="text" class="form-control" name="proker" value="<?= $data->proker; ?>" required>
                         </div>
                     </div>
 
-                    <!-- Pelaksanaan -->
+                    <!-- Tanggal Pelaksanaan -->
                     <div class="form-group row">
-                        <label for="pelaksanaan" class="col-sm-3 col-form-label">Pelaksanaan</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="pelaksanaan" value="<?= $data->pelaksanaan; ?>" required>
+                        <label for="dari" class="col-sm-3 col-form-label">Tanggal Pelaksanaan</label>
+                        <div class="col-sm-3">
+                            <input type="date" class="form-control" name="dari" value="<?= $data->dari; ?>" required>
+                        </div>
+                        <label for="sampai" class="col-form-label">-</label>
+                        <div class="col-sm-3">
+                            <input type="date" class="form-control" name="sampai" value="<?= $data->sampai; ?>" required>
                         </div>
                     </div>
 

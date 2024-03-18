@@ -233,9 +233,7 @@
                 <span>Program Siar</span>
             </a>
         </li>
-    <?php endif; ?>
 
-    <?php if (in_groups(['Admin', 'GM', 'MK', 'Produksi'])) : ?>
         <!-- Data Podcast -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/podcast">
