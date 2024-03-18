@@ -38,8 +38,8 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">No</th>
-                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Tanggal</th>
-                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Subdivisi</th>
+                                    <th scope="col" class="cursor-active" colspan="2">Tanggal</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Sub Divisi</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Proker</th>
                                     <th scope="col" class="cursor-active" colspan="2">Pelaksanaan</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Kendala</th>
@@ -51,24 +51,27 @@
                                 <tr>
                                     <th scope="col" class="cursor-active">Dari</th>
                                     <th scope="col" class="cursor-active">Sampai</th>
+                                    <th scope="col" class="cursor-active">Mulai</th>
+                                    <th scope="col" class="cursor-active">Selesai</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($gmpa as $index => $kepen) : ?>
-                                    <?php $data = json_decode($kepen['value']) ?>
+                                <?php foreach ($gmpa as $index => $timeline) : ?>
+                                    <?php $data = json_decode($timeline['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->tanggal; ?></td>
+                                        <td><?= $data->darihari; ?>,<br><?= $data->daritgl; ?></td>
+                                        <td><?= $data->sampaihari; ?>,<br><?= $data->sampaitgl; ?></td>
                                         <td><?= $data->subdivisi; ?></td>
                                         <td><?= $data->proker; ?></td>
-                                        <td><?= $data->dari; ?></td>
-                                        <td><?= $data->sampai; ?></td>
+                                        <td><?= $data->mulaihari; ?>,<br><?= $data->mulaitgl; ?></td>
+                                        <td><?= $data->selesaihari; ?>,<br><?= $data->selesaitgl; ?></td>
                                         <td><?= $data->kendala; ?></td>
                                         <td><?= $data->status; ?></td>
                                         <?php if (in_groups(['Admin', 'GM'])) : ?>
                                             <td>
-                                                <a href="<?= base_url(); ?>control/gmpa/edit/<?= $kepen['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/gmpa/<?= $kepen['id']; ?>" method="post" class="d-inline">
+                                                <a href="<?= base_url(); ?>control/gmpa/edit/<?= $timeline['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/gmpa/<?= $timeline['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>

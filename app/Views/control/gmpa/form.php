@@ -11,11 +11,27 @@
             <form action="<?= base_url(); ?>gmpa/insert" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
 
-                <!-- Tanggal -->
+                <!-- Hari Perencanaan -->
                 <div class="form-group row">
-                    <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
-                    <div class="col-sm-7">
-                        <input type="date" class="form-control" name="tanggal" required autofocus>
+                    <label for="darihari" class="col-sm-3 col-form-label">Hari Perencanaan</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="Senin" name="darihari" required autofocus>
+                    </div>
+                    <label for="sampaihari" class="col-form-label">-</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="Jum'at" name="sampaihari" required>
+                    </div>
+                </div>
+
+                <!-- Tanggal Perencanaan -->
+                <div class="form-group row">
+                    <label for="daritgl" class="col-sm-3 col-form-label">Tanggal Perencanaan</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" name="daritgl" required>
+                    </div>
+                    <label for="sampaitgl" class="col-form-label">-</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" name="sampaitgl" required>
                     </div>
                 </div>
 
@@ -35,15 +51,27 @@
                     </div>
                 </div>
 
+                <!-- Hari Pelaksanaan -->
+                <div class="form-group row">
+                    <label for="mulaihari" class="col-sm-3 col-form-label">Hari Pelaksanaan</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="Senin" name="mulaihari" required>
+                    </div>
+                    <label for="selesaihari" class="col-form-label">-</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="Jum'at" name="selesaihari" required>
+                    </div>
+                </div>
+
                 <!-- Tanggal Pelaksanaan -->
                 <div class="form-group row">
-                    <label for="dari" class="col-sm-3 col-form-label">Tanggal Pelaksanaan</label>
+                    <label for="mulaitgl" class="col-sm-3 col-form-label">Tanggal Pelaksanaan</label>
                     <div class="col-sm-3">
-                        <input type="date" class="form-control" name="dari" required>
+                        <input type="date" class="form-control" name="mulaitgl" required>
                     </div>
-                    <label for="sampai" class="col-form-label">-</label>
+                    <label for="selesaitgl" class="col-form-label">-</label>
                     <div class="col-sm-3">
-                        <input type="date" class="form-control" name="sampai" required>
+                        <input type="date" class="form-control" name="selesaitgl" required>
                     </div>
                 </div>
 

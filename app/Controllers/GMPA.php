@@ -49,17 +49,22 @@ class GMPA extends BaseController
     public function insert()
     {
         $input = [
-            'tanggal'      => $this->request->getPost('tanggal'),
+            'daritgl'      => $this->request->getPost('daritgl'),
+            'sampaitgl'    => $this->request->getPost('sampaitgl'),
+            'darihari'     => $this->request->getPost('darihari'),
+            'sampaihari'   => $this->request->getPost('sampaihari'),
             'subdivisi'    => $this->request->getPost('subdivisi'),
             'proker'       => $this->request->getPost('proker'),
-            'dari'         => $this->request->getPost('dari'),
-            'sampai'       => $this->request->getPost('sampai'),
+            'mulaitgl'     => $this->request->getPost('mulaitgl'),
+            'selesaitgl'   => $this->request->getPost('selesaitgl'),
+            'mulaihari'    => $this->request->getPost('mulaihari'),
+            'selesaihari'  => $this->request->getPost('selesaihari'),
             'kendala'      => $this->request->getPost('kendala'),
             'status'       => $this->request->getPost('status'),
         ];
 
         $data = [
-            'key'       => $this->request->getPost('tanggal'),
+            'key'       => $this->request->getPost('daritgl'),
             'value'     => json_encode($input),
         ];
 
@@ -92,17 +97,22 @@ class GMPA extends BaseController
     public function update($id)
     {
         $input = [
-            'tanggal'      => $this->request->getPost('tanggal'),
+            'daritgl'      => $this->request->getPost('daritgl'),
+            'sampaitgl'    => $this->request->getPost('sampaitgl'),
+            'darihari'     => $this->request->getPost('darihari'),
+            'sampaihari'   => $this->request->getPost('sampaihari'),
             'subdivisi'    => $this->request->getPost('subdivisi'),
             'proker'       => $this->request->getPost('proker'),
-            'dari'         => $this->request->getPost('dari'),
-            'sampai'       => $this->request->getPost('sampai'),
+            'mulaitgl'     => $this->request->getPost('mulaitgl'),
+            'selesaitgl'   => $this->request->getPost('selesaitgl'),
+            'mulaihari'    => $this->request->getPost('mulaihari'),
+            'selesaihari'  => $this->request->getPost('selesaihari'),
             'kendala'      => $this->request->getPost('kendala'),
             'status'       => $this->request->getPost('status'),
         ];
 
         $data = [
-            'key'       => $this->request->getPost('tanggal'),
+            'key'       => $this->request->getPost('daritgl'),
             'value'     => json_encode($input),
         ];
 

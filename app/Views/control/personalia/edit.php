@@ -2,22 +2,38 @@
 <?= $this->section('page-content'); ?>
 
 <!-- Edit Divisi Personalia -->
-<?php foreach ($personalia as $kepen) : ?>
-    <?php $data = json_decode($kepen['value']) ?>
+<?php foreach ($personalia as $timeline) : ?>
+    <?php $data = json_decode($timeline['value']) ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
                 <h1 class="h3 mb-4 text-gray-800">Form Edit Data Divisi Personalia</h1>
 
                 <!-- Forms -->
-                <form action="<?= base_url(); ?>personalia/update/<?= $kepen['id']; ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= base_url(); ?>personalia/update/<?= $timeline['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
-                    <!-- Tanggal -->
+                    <!-- Hari Perencanaan -->
                     <div class="form-group row">
-                        <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
-                        <div class="col-sm-7">
-                            <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required autofocus>
+                        <label for="darihari" class="col-sm-3 col-form-label">Hari Perencanaan</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="darihari" required value="<?= $data->darihari; ?>" autofocus>
+                        </div>
+                        <label for="sampaihari" class="col-form-label">-</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="sampaihari" value="<?= $data->sampaihari; ?>" required>
+                        </div>
+                    </div>
+
+                    <!-- Tanggal Perencanaan -->
+                    <div class="form-group row">
+                        <label for="daritgl" class="col-sm-3 col-form-label">Tanggal Perencanaan</label>
+                        <div class="col-sm-3">
+                            <input type="date" class="form-control" name="daritgl" value="<?= $data->daritgl; ?>" required>
+                        </div>
+                        <label for="sampaitgl" class="col-form-label">-</label>
+                        <div class="col-sm-3">
+                            <input type="date" class="form-control" name="sampaitgl" value="<?= $data->sampaitgl; ?>" required>
                         </div>
                     </div>
 
@@ -37,15 +53,27 @@
                         </div>
                     </div>
 
+                    <!-- Hari Pelaksanaan -->
+                    <div class="form-group row">
+                        <label for="mulaihari" class="col-sm-3 col-form-label">Hari Pelaksanaan</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="mulaihari" value="<?= $data->mulaihari; ?>" required>
+                        </div>
+                        <label for="selesaihari" class="col-form-label">-</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="selesaihari" value="<?= $data->selesaihari; ?>" required>
+                        </div>
+                    </div>
+
                     <!-- Tanggal Pelaksanaan -->
                     <div class="form-group row">
-                        <label for="dari" class="col-sm-3 col-form-label">Tanggal Pelaksanaan</label>
+                        <label for="mulaitgl" class="col-sm-3 col-form-label">Tanggal Pelaksanaan</label>
                         <div class="col-sm-3">
-                            <input type="date" class="form-control" name="dari" value="<?= $data->dari; ?>" required>
+                            <input type="date" class="form-control" name="mulaitgl" value="<?= $data->mulaitgl; ?>" required>
                         </div>
-                        <label for="sampai" class="col-form-label">-</label>
+                        <label for="selesaitgl" class="col-form-label">-</label>
                         <div class="col-sm-3">
-                            <input type="date" class="form-control" name="sampai" value="<?= $data->sampai; ?>" required>
+                            <input type="date" class="form-control" name="selesaitgl" value="<?= $data->selesaitgl; ?>" required>
                         </div>
                     </div>
 
