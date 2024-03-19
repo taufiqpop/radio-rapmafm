@@ -51,7 +51,7 @@
         <header id="header" stats="false">
             <div class="d-flex flex-column">
                 <div class="profile">
-                    <img src="<?= base_url(); ?>img/home/RapmaFM Header.png" class="img-fluid rounded-circle">
+                    <img src="<?= base_url(); ?>img/home/RapmaFM.png" class="img-fluid rounded-circle">
                     <h1 class="text-light"><a href="<?= base_url(); ?>" title="Rapma FM"><?= $setting['owner']; ?></a></h1>
                 </div>
 

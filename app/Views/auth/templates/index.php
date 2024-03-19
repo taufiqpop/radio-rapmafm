@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>RSUI YAKSSI | Account</title>
+    <title>Rapma FM | Account</title>
 
     <!-- Favicon -->
     <link rel="icon" href="<?= base_url(); ?>logo.ico">
