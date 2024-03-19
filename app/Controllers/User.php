@@ -65,11 +65,11 @@ class User extends BaseController
 
         // Divisi Kepenyiaran
         $this->kepenyiaranModel     = new \App\Models\KepenyiaranModel();
-        $this->audiosModel          = new \App\Models\AudiosModel();
-        $this->programModel         = new \App\Models\ProgramModel();
         $this->labelrekamanModel    = new \App\Models\LabelRekamanModel();
         $this->laguModel            = new \App\Models\LaguModel();
         $this->pemutaranserentakModel = new \App\Models\PemutaranSerentakModel();
+        $this->programModel         = new \App\Models\ProgramModel();
+        $this->audiosModel          = new \App\Models\AudiosModel();
         $this->podcastModel         = new \App\Models\PodcastModel();
         $this->videosModel          = new \App\Models\VideosModel();
 
@@ -106,8 +106,8 @@ class User extends BaseController
 
 
             // Divisi Umum
-            'jmlAchievements'       => $this->achievementsModel->jumlahAchievements(),
             'jmlUmum'               => $this->umumModel->jumlahUmum(),
+            'jmlAchievements'       => $this->achievementsModel->jumlahAchievements(),
             'jmlEvents'             => $this->eventsModel->jumlahEvents(),
             'jmlInventaris'         => $this->inventarisModel->jumlahInventaris(),
             'jmlPeminjaman'         => $this->peminjamanModel->jumlahPeminjaman(),
@@ -120,7 +120,7 @@ class User extends BaseController
             'jmlLagu'               => $this->laguModel->jumlahLagu(),
             'jmlPemutaranSerentak'  => $this->pemutaranserentakModel->jumlahPemutaranSerentak(),
             'jmlPodcast'            => $this->podcastModel->jumlahPodcast(),
-            'jmlVidoes'             => $this->videosModel->jumlahVidoes(),
+            'jmlVideos'             => $this->videosModel->jumlahVideos(),
 
             // Divisi Marketing
             'jmlMarketing'          => $this->marketingModel->jumlahMarketing(),

@@ -36,6 +36,10 @@
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     My Profile
                 </a>
+                <a class="dropdown-item" href="https://app.crisp.chat/" target="_blank">
+                    <i class="fa fa-bell fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Live Chat
+                </a>
                 <a class="dropdown-item" href="<?= base_url(); ?>pesan">
                     <i class="fas fa-envelope fa-sm fa-fw mr-2 text-gray-400"></i>
                     Pesan
