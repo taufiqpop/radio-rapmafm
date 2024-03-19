@@ -6,6 +6,13 @@
     <div class="row">
         <div class="container-fluid">
 
+            <!-- Message -->
+            <?php if (session()->getFlashdata('pesan')) : ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->getFlashdata('pesan') ?>
+                </div>
+            <?php endif; ?>
+
             <?php if (in_groups(['Admin', 'GM', 'PA'])) : ?>
                 <!-- Dashboard GMPA -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
