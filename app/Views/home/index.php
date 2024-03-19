@@ -26,13 +26,15 @@
             <center>
               <div class="mt-3" style="color: yellow;">
                 <span>
-                  <h6>
-                    <?= $data->program; ?> |
-                    <?= $data->penyiar1; ?>
-                    <?php if ($data->penyiar2 != '-') : ?>
-                      X <?= $data->penyiar2; ?>
-                    <?php endif; ?>
-                  </h6>
+                  <marquee behavior="" direction="left" scrolldelay="0">
+                    <h5>
+                      <?= $data->program; ?> |
+                      <?= $data->penyiar1; ?>
+                      <?php if ($data->penyiar2 != '-') : ?>
+                        X <?= $data->penyiar2; ?>
+                      <?php endif; ?>
+                    </h5>
+                  </marquee>
                 </span>
               </div>
             <?php endforeach; ?>
