@@ -199,18 +199,18 @@
                         </div>
                     </div>
 
-                    <!-- Total Label Rekaman -->
+                    <!-- Rapma News -->
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-info shadow h-100 py-2">
+                        <div class="card border-left-warning shadow h-100 py-2">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Label Rekaman</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlLabelRekaman; ?></div>
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Rapma News</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlNews; ?></div>
                                     </div>
                                     <div class="col-auto">
-                                        <a href="<?= base_url(); ?>control/labelrekaman">
-                                            <i class="fas fa-compact-disc fa-2x text-info"></i>
+                                        <a href="<?= base_url(); ?>control/program">
+                                            <i class="fas fa-newspaper fa-2x text-warning"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -249,6 +249,25 @@
                                     <div class="col-auto">
                                         <a href="<?= base_url(); ?>control/pemutaranserentak">
                                             <i class="fas fa-rss fa-2x text-info"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Label Rekaman -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Label Rekaman</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlLabelRekaman; ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="<?= base_url(); ?>control/labelrekaman">
+                                            <i class="fas fa-compact-disc fa-2x text-info"></i>
                                         </a>
                                     </div>
                                 </div>
