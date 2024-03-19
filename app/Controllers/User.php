@@ -22,13 +22,14 @@ class User extends BaseController
 
     // Divisi Kepenyiaran
     protected $kepenyiaranModel;
-    protected $audiosModel;
-    protected $programModel;
     protected $labelrekamanModel;
     protected $laguModel;
     protected $pemutaranserentakModel;
+    protected $programModel;
+    protected $audiosModel;
     protected $podcastModel;
     protected $videosModel;
+    protected $newsModel;
 
     // Divisi Marketing
     protected $marketingModel;
@@ -72,6 +73,7 @@ class User extends BaseController
         $this->audiosModel          = new \App\Models\AudiosModel();
         $this->podcastModel         = new \App\Models\PodcastModel();
         $this->videosModel          = new \App\Models\VideosModel();
+        $this->newsModel            = new \App\Models\NewsModel();
 
         // Divisi Marketing
         $this->marketingModel       = new \App\Models\MarketingModel();
@@ -121,6 +123,7 @@ class User extends BaseController
             'jmlPemutaranSerentak'  => $this->pemutaranserentakModel->jumlahPemutaranSerentak(),
             'jmlPodcast'            => $this->podcastModel->jumlahPodcast(),
             'jmlVideos'             => $this->videosModel->jumlahVideos(),
+            'jmlNews'               => $this->newsModel->jumlahNews(),
 
             // Divisi Marketing
             'jmlMarketing'          => $this->marketingModel->jumlahMarketing(),
