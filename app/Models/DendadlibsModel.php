@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class DendadlibsModel extends Model
+class DendaAdlibsModel extends Model
 {
     protected $table            = 'dendadlibs';
     protected $primaryKey       = 'id';
@@ -17,7 +17,7 @@ class DendadlibsModel extends Model
         return $this->table('dendadlibs')->like('value', $keyword);
     }
 
-    public function jumlahDendadlibs()
+    public function jumlahDendaAdlibs()
     {
         return $this->table('dendadlibs')->get()->getNumRows();
     }

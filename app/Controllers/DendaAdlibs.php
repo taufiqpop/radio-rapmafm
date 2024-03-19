@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-class Dendadlibs extends BaseController
+class DendaAdlibs extends BaseController
 {
     protected $dendadlibsModel;
 
     public function __construct()
     {
-        $this->dendadlibsModel = new \App\Models\DendadlibsModel();
+        $this->dendadlibsModel = new \App\Models\DendaAdlibsModel();
     }
 
     // List Dendadlibs

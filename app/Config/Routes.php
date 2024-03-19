@@ -252,12 +252,12 @@ $routes->add('/iklan/insert', 'Iklan::insert', ['filter' => 'role:Admin, MM, MOn
 $routes->add('/iklan/update/(:num)', 'Iklan::update/$1', ['filter' => 'role:Admin, MM, MOn']);
 
 // Denda Adlibs & Spot
-$routes->add('/control/dendadlibs', 'Dendadlibs::index', ['filter' => 'role:Admin, GM, MM, MOn']);
-$routes->get('/control/dendadlibs/form', 'Dendadlibs::form', ['filter' => 'role:Admin, MM, MOn']);
-$routes->get('/control/dendadlibs/edit/(:num)', 'Dendadlibs::edit/$1', ['filter' => 'role:Admin, MM, MOn']);
-$routes->delete('/control/dendadlibs/(:num)', 'Dendadlibs::delete/$1', ['filter' => 'role:Admin, MM, MOn']);
-$routes->add('/dendadlibs/insert', 'Dendadlibs::insert', ['filter' => 'role:Admin, MM, MOn']);
-$routes->add('/dendadlibs/update/(:num)', 'Dendadlibs::update/$1', ['filter' => 'role:Admin, MM, MOn']);
+$routes->add('/control/dendadlibs', 'DendaAdlibs::index', ['filter' => 'role:Admin, GM, MM, MOn']);
+$routes->get('/control/dendadlibs/form', 'DendaAdlibs::form', ['filter' => 'role:Admin, MM, MOn']);
+$routes->get('/control/dendadlibs/edit/(:num)', 'DendaAdlibs::edit/$1', ['filter' => 'role:Admin, MM, MOn']);
+$routes->delete('/control/dendadlibs/(:num)', 'DendaAdlibs::delete/$1', ['filter' => 'role:Admin, MM, MOn']);
+$routes->add('/dendadlibs/insert', 'DendaAdlibs::insert', ['filter' => 'role:Admin, MM, MOn']);
+$routes->add('/dendadlibs/update/(:num)', 'DendaAdlibs::update/$1', ['filter' => 'role:Admin, MM, MOn']);
 
 // MTalent
 $routes->add('/control/mtalent', 'MTalent::index', ['filter' => 'role:Admin, GM, MM, MOff']);
