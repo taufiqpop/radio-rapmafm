@@ -75,14 +75,6 @@
                 <span>Surat Keluar</span>
             </a>
         </li>
-
-        <!-- Data Keuangan -->
-        <li class="nav-item">
-            <a class="nav-link" href="<?= base_url(); ?>control/keuangan">
-                <i class="	fas fa-dollar-sign"></i>
-                <span>Data Keuangan</span>
-            </a>
-        </li>
     <?php endif; ?>
 
     <!-- ==================================================================== -->
@@ -329,17 +321,6 @@
             <a class="nav-link" href="<?= base_url(); ?>control/personalia">
                 <i class="fas fa-business-time"></i>
                 <span>Timeline Personalia</span>
-            </a>
-        </li>
-    <?php endif; ?>
-
-    <!-- Advokat -->
-    <?php if (in_groups(['Admin', 'GM', 'MP', 'Advokat'])) : ?>
-        <!-- Rules -->
-        <li class="nav-item">
-            <a class="nav-link" href="<?= base_url(); ?>control/rules">
-                <i class="fas fa-file-alt"></i>
-                <span>Rules</span>
             </a>
         </li>
     <?php endif; ?>
