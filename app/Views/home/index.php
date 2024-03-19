@@ -20,47 +20,65 @@
       <div class="d-flex flex-column">
         <div class="profile">
 
-          <!-- Clock -->
-          <div class="mt-3" style="color: green;">
-            <span>
-              <strong>
-                <?php
-                // Time Zone
-                date_default_timezone_set('Asia/Jakarta');
-                $hariIni = new DateTime();
-                echo $hariIni->format('l, d F Y')
-                ?>
-                (<span id="jam"></span>
-                <?= $hariIni->format('A') ?>)
-              </strong>
-            </span>
-          </div>
+          <!-- Penyiar -->
+          <?php foreach ($penyiar as $siar) : ?>
+            <?php $data = json_decode($siar['value']) ?>
+            <center>
+              <div class="mt-3" style="color: cyan;">
+                <span>
+                  <h4>
+                    <?= $data->program; ?> |
+                    <?= $data->penyiar1; ?>
+                    <?php if ($data->penyiar2 != '-') : ?>
+                      X <?= $data->penyiar2; ?>
+                    <?php endif; ?>
+                  </h4>
+                </span>
+              </div>
+            <?php endforeach; ?>
+            </center>
 
-          <!-- Sosmed Button -->
-          <div class="social-links mt-3 text-center">
-            <a href="<?= $setting['twitter']; ?>" target="_blank" title="Twitter">
-              <i class="bx bxl-twitter"></i></a>
-            <a href="<?= $setting['facebook']; ?>" target="_blank" title="Facebook">
-              <i class="bx bxl-facebook"></i></a>
-            <a href="<?= $setting['instagram']; ?>" target="_blank" title="Instagram">
-              <i class="bx bxl-instagram"></i></a>
-            <a href="<?= $setting['youtube']; ?>" target="_blank" title="Youtube">
-              <i class="bx bxl-youtube"></i></a>
-            <a href="<?= $setting['spotify']; ?>" target="_blank" title="Spotify">
-              <i class="bx bxl-spotify"></i></a>
-            <a href="<?= $setting['whatsapp']; ?>" target="_blank" title="Whatsapp">
-              <i class="bx bxl-whatsapp"></i></a>
-            <a href="<?= $setting['blogger']; ?>" target="_blank" title="Blog">
-              <i class="bx bxl-blogger"></i></a>
-            <br>
-            <a href="<?= $setting['line']; ?>" target="_blank" class="line" title="Line">
-              <i><img src="<?= base_url(); ?>img/home/Line.svg" height="20px" weight="20px"></i></a>
-            <a href="<?= $setting['tiktok']; ?>" target="_blank" class="tiktok" title="TikTok">
-              <i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);">
-                  <path fill="#fff" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02c.08 1.53.63 3.09 1.75 4.17c1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97c-.57-.26-1.1-.59-1.62-.93c-.01 2.92.01 5.84-.02 8.75c-.08 1.4-.54 2.79-1.35 3.94c-1.31 1.92-3.58 3.17-5.91 3.21c-1.43.08-2.86-.31-4.08-1.03c-2.02-1.19-3.44-3.37-3.65-5.71c-.02-.5-.03-1-.01-1.49c.18-1.9 1.12-3.72 2.58-4.96c1.66-1.44 3.98-2.13 6.15-1.72c.02 1.48-.04 2.96-.04 4.44c-.99-.32-2.15-.23-3.02.37c-.63.41-1.11 1.04-1.36 1.75c-.21.51-.15 1.07-.14 1.61c.24 1.64 1.82 3.02 3.5 2.87c1.12-.01 2.19-.66 2.77-1.61c.19-.33.4-.67.41-1.06c.1-1.79.06-3.57.07-5.36c.01-4.03-.01-8.05.02-12.07z" />
-                  <rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" />
-                </svg></i></a>
-          </div>
+            <!-- Clock -->
+            <div class="mt-3" style="color: green;">
+              <span>
+                <strong>
+                  <?php
+                  // Time Zone
+                  date_default_timezone_set('Asia/Jakarta');
+                  $hariIni = new DateTime();
+                  echo $hariIni->format('l, d F Y')
+                  ?>
+                  (<span id="jam"></span>
+                  <?= $hariIni->format('A') ?>)
+                </strong>
+              </span>
+            </div>
+
+            <!-- Sosmed Button -->
+            <div class="social-links mt-3 text-center">
+              <a href="<?= $setting['twitter']; ?>" target="_blank" title="Twitter">
+                <i class="bx bxl-twitter"></i></a>
+              <a href="<?= $setting['facebook']; ?>" target="_blank" title="Facebook">
+                <i class="bx bxl-facebook"></i></a>
+              <a href="<?= $setting['instagram']; ?>" target="_blank" title="Instagram">
+                <i class="bx bxl-instagram"></i></a>
+              <a href="<?= $setting['youtube']; ?>" target="_blank" title="Youtube">
+                <i class="bx bxl-youtube"></i></a>
+              <a href="<?= $setting['spotify']; ?>" target="_blank" title="Spotify">
+                <i class="bx bxl-spotify"></i></a>
+              <a href="<?= $setting['whatsapp']; ?>" target="_blank" title="Whatsapp">
+                <i class="bx bxl-whatsapp"></i></a>
+              <a href="<?= $setting['blogger']; ?>" target="_blank" title="Blog">
+                <i class="bx bxl-blogger"></i></a>
+              <br>
+              <a href="<?= $setting['line']; ?>" target="_blank" class="line" title="Line">
+                <i><img src="<?= base_url(); ?>img/home/Line.svg" height="20px" weight="20px"></i></a>
+              <a href="<?= $setting['tiktok']; ?>" target="_blank" class="tiktok" title="TikTok">
+                <i><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);">
+                    <path fill="#fff" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02c.08 1.53.63 3.09 1.75 4.17c1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97c-.57-.26-1.1-.59-1.62-.93c-.01 2.92.01 5.84-.02 8.75c-.08 1.4-.54 2.79-1.35 3.94c-1.31 1.92-3.58 3.17-5.91 3.21c-1.43.08-2.86-.31-4.08-1.03c-2.02-1.19-3.44-3.37-3.65-5.71c-.02-.5-.03-1-.01-1.49c.18-1.9 1.12-3.72 2.58-4.96c1.66-1.44 3.98-2.13 6.15-1.72c.02 1.48-.04 2.96-.04 4.44c-.99-.32-2.15-.23-3.02.37c-.63.41-1.11 1.04-1.36 1.75c-.21.51-.15 1.07-.14 1.61c.24 1.64 1.82 3.02 3.5 2.87c1.12-.01 2.19-.66 2.77-1.61c.19-.33.4-.67.41-1.06c.1-1.79.06-3.57.07-5.36c.01-4.03-.01-8.05.02-12.07z" />
+                    <rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" />
+                  </svg></i></a>
+            </div>
         </div>
       </div>
     </div>

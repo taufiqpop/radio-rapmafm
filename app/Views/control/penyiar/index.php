@@ -8,6 +8,7 @@
         <div class="row">
             <div class="col-6">
                 <h1 class="h3 mb-4 text-gray-800">Data Penyiar Rapma FM</h1>
+                <a href="<?= base_url(); ?>control/jadwalsiar" class="btn btn-dark">Back</a>
                 <a href="<?= base_url(); ?>control/penyiar/edit/<?= $siaran['id']; ?>" class="btn btn-primary">Ganti Penyiar</a>
                 <br><br>
 
