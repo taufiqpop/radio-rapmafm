@@ -12,7 +12,8 @@
                         <b>Jadwal Siar</b>
                     </h1>
                     <h4 class="h4 mb-4 text-gray-800">Tanggal : (<?= $data->tglmulai; ?>) - (<?= $data->tglselesai; ?>)</h4>
-                    <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                    <a href="<?= base_url(); ?>control/penyiar" class="btn btn-info">Penyiar</a>
+                    <?php if (in_groups(['Admin', 'MK'])) : ?>
                         <a href="<?= base_url(); ?>control/jadwalsiar/edit/<?= $jadwal['id']; ?>" class="btn btn-primary">Edit Jadwal Siar</a>
                         <br><br>
                     <?php endif; ?>

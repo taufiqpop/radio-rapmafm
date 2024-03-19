@@ -12,6 +12,7 @@ class Home extends BaseController
     protected $structureModel;
     protected $topchartModel;
     protected $pesanModel;
+    protected $penyiarModel;
     protected $settingsModel;
 
     public function __construct()
@@ -24,6 +25,7 @@ class Home extends BaseController
         $this->structureModel    = new \App\Models\StructureModel();
         $this->topchartModel     = new \App\Models\TopChartModel();
         $this->pesanModel        = new \App\Models\PesanModel();
+        $this->penyiarModel      = new \App\Models\PenyiarModel();
         $this->settingsModel     = new \App\Models\SettingsModel();
     }
 
@@ -47,6 +49,7 @@ class Home extends BaseController
             'program'       => $this->programModel->paginate(100, 'program'),
             'structure'     => $this->structureModel->paginate(5, 'structure'),
             'topchart'      => $this->topchartModel->paginate(5, 'topchart'),
+            'penyiar'       => $this->penyiarModel->paginate(1, 'penyiar'),
             'settings'      => $this->settingsModel->paginate(5, 'settings'),
         ];
 

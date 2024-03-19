@@ -158,6 +158,11 @@ $routes->add('/control/jadwalsiar', 'JadwalSiar::index', ['filter' => 'role:Admi
 $routes->get('/control/jadwalsiar/edit/(:num)', 'JadwalSiar::edit/$1', ['filter' => 'role:Admin, MK']);
 $routes->add('/jadwalsiar/update/(:num)', 'JadwalSiar::update/$1', ['filter' => 'role:Admin, MK']);
 
+// Penyiar
+$routes->add('/control/penyiar', 'Penyiar::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
+$routes->get('/control/penyiar/edit/(:num)', 'Penyiar::edit/$1', ['filter' => 'role:Admin, MK']);
+$routes->add('/penyiar/update/(:num)', 'Penyiar::update/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
+
 // Bank Lagu
 $routes->add('/control/lagu', 'Lagu::index', ['filter' => 'role:Admin, GM, MK, MD']);
 $routes->add('/control/lagu/form', 'Lagu::form', ['filter' => 'role:Admin, GM, MK, MD']);
