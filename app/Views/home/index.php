@@ -24,35 +24,37 @@
           <?php foreach ($penyiar as $siar) : ?>
             <?php $data = json_decode($siar['value']) ?>
             <center>
-              <div class="mt-3" style="color: cyan;">
+              <div class="mt-3" style="color: yellow;">
                 <span>
-                  <h4>
+                  <h6>
                     <?= $data->program; ?> |
                     <?= $data->penyiar1; ?>
                     <?php if ($data->penyiar2 != '-') : ?>
                       X <?= $data->penyiar2; ?>
                     <?php endif; ?>
-                  </h4>
+                  </h6>
                 </span>
               </div>
             <?php endforeach; ?>
             </center>
 
             <!-- Clock -->
-            <div class="mt-3" style="color: green;">
-              <span>
-                <strong>
-                  <?php
-                  // Time Zone
-                  date_default_timezone_set('Asia/Jakarta');
-                  $hariIni = new DateTime();
-                  echo $hariIni->format('l, d F Y')
-                  ?>
-                  (<span id="jam"></span>
-                  <?= $hariIni->format('A') ?>)
-                </strong>
-              </span>
-            </div>
+            <center>
+              <div class="mt-3" style="color: green;">
+                <span>
+                  <strong>
+                    <?php
+                    // Time Zone
+                    date_default_timezone_set('Asia/Jakarta');
+                    $hariIni = new DateTime();
+                    echo $hariIni->format('l, d F Y')
+                    ?>
+                    (<span id="jam"></span>
+                    <?= $hariIni->format('A') ?>)
+                  </strong>
+                </span>
+              </div>
+            </center>
 
             <!-- Sosmed Button -->
             <div class="social-links mt-3 text-center">
