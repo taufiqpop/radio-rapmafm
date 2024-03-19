@@ -153,13 +153,18 @@ $routes->delete('/control/kepenyiaran/(:num)', 'Kepenyiaran::delete/$1', ['filte
 $routes->add('/kepenyiaran/insert', 'Kepenyiaran::insert', ['filter' => 'role:Admin, MK']);
 $routes->add('/kepenyiaran/update/(:num)', 'Kepenyiaran::update/$1', ['filter' => 'role:Admin, MK']);
 
+// Jadwal Siar
+$routes->add('/control/jadwalsiar', 'JadwalSiar::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
+$routes->get('/control/jadwalsiar/edit/(:num)', 'JadwalSiar::edit/$1', ['filter' => 'role:Admin, MK']);
+$routes->add('/jadwalsiar/update/(:num)', 'JadwalSiar::update/$1', ['filter' => 'role:Admin, MK']);
+
 // Bank Lagu
-$routes->add('/control/lagu', 'lagu::index', ['filter' => 'role:Admin, GM, MK, MD']);
-$routes->add('/control/lagu/form', 'lagu::form', ['filter' => 'role:Admin, GM, MK, MD']);
-$routes->get('/control/lagu/edit/(:num)', 'lagu::edit/$1', ['filter' => 'role:Admin, MK, MD']);
-$routes->delete('/control/lagu/(:num)', 'lagu::delete/$1', ['filter' => 'role:Admin, MK, MD']);
-$routes->add('/lagu/insert', 'lagu::insert', ['filter' => 'role:Admin, MK, MD']);
-$routes->add('/lagu/update/(:num)', 'lagu::update/$1', ['filter' => 'role:Admin, MK, MD']);
+$routes->add('/control/lagu', 'Lagu::index', ['filter' => 'role:Admin, GM, MK, MD']);
+$routes->add('/control/lagu/form', 'Lagu::form', ['filter' => 'role:Admin, GM, MK, MD']);
+$routes->get('/control/lagu/edit/(:num)', 'Lagu::edit/$1', ['filter' => 'role:Admin, MK, MD']);
+$routes->delete('/control/lagu/(:num)', 'Lagu::delete/$1', ['filter' => 'role:Admin, MK, MD']);
+$routes->add('/lagu/insert', 'Lagu::insert', ['filter' => 'role:Admin, MK, MD']);
+$routes->add('/lagu/update/(:num)', 'Lagu::update/$1', ['filter' => 'role:Admin, MK, MD']);
 
 // Top Chart
 $routes->add('/control/topchart', 'Topchart::index', ['filter' => 'role:Admin, GM, MK, MD']);
@@ -168,7 +173,7 @@ $routes->delete('/control/topchart/(:num)', 'Topchart::delete/$1', ['filter' => 
 $routes->add('/topchart/insert', 'Topchart::insert', ['filter' => 'role:Admin, MK, MD']);
 $routes->add('/topchart/update/(:num)', 'Topchart::update/$1', ['filter' => 'role:Admin, MK, MD']);
 
-// Pemutaran Serentak
+// Label Rekaman
 $routes->add('/control/labelrekaman', 'LabelRekaman::index', ['filter' => 'role:Admin, GM, MK, MD']);
 $routes->add('/control/labelrekaman/form', 'LabelRekaman::form', ['filter' => 'role:Admin, GM, MK, MD']);
 $routes->get('/control/labelrekaman/edit/(:num)', 'LabelRekaman::edit/$1', ['filter' => 'role:Admin, MK, MD']);
@@ -176,7 +181,7 @@ $routes->delete('/control/labelrekaman/(:num)', 'LabelRekaman::delete/$1', ['fil
 $routes->add('/labelrekaman/insert', 'LabelRekaman::insert', ['filter' => 'role:Admin, MK, MD']);
 $routes->add('/labelrekaman/update/(:num)', 'LabelRekaman::update/$1', ['filter' => 'role:Admin, MK, MD']);
 
-// Label Rekaman
+// Pemutaran Serentak
 $routes->add('/control/pemutaranserentak', 'PemutaranSerentak::index', ['filter' => 'role:Admin, GM, MK, MD']);
 $routes->add('/control/pemutaranserentak/form', 'PemutaranSerentak::form', ['filter' => 'role:Admin, GM, MK, MD']);
 $routes->get('/control/pemutaranserentak/edit/(:num)', 'PemutaranSerentak::edit/$1', ['filter' => 'role:Admin, MK, MD']);

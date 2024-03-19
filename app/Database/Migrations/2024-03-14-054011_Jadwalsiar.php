@@ -22,14 +22,6 @@ class Jadwalsiar extends Migration
             'value' => [
                 'type'       => 'TEXT',
             ],
-            'hari' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
-            'program' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
             'created_at' => [
                 'type'       => 'DATETIME',
             ],
@@ -41,8 +33,6 @@ class Jadwalsiar extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addKey('hari');
-        $this->forge->addKey('program');
         $this->forge->createTable('jadwalsiar');
     }
 
