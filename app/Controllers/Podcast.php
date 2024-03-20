@@ -85,13 +85,13 @@ class Podcast extends BaseController
             'tanggal'       => $this->request->getPost('tanggal'),
             'talent'        => $this->request->getPost('talent'),
             'narasumber'    => $this->request->getPost('narasumber'),
-            'link'          => $this->request->getPost('link'),
             'images'        => $namaGambar,
         ];
 
         $data = [
             'key'       => $this->request->getPost('judul'),
             'value'     => json_encode($input),
+            'embed'     => $this->request->getPost('embed'),
             'tahun'     => $this->request->getPost('tahun'),
             'program'   => $this->request->getPost('program'),
         ];
@@ -113,7 +113,7 @@ class Podcast extends BaseController
 
         $db      = \Config\Database::connect();
         $builder = $db->table('podcast');
-        $builder->select('id, key, value, tahun, program, created_at, updated_at, deleted_at');
+        $builder->select('id, key, value, tahun, program, embed, created_at, updated_at, deleted_at');
         $builder->where('id', $id);
         $query   = $builder->get();
 
@@ -162,13 +162,13 @@ class Podcast extends BaseController
             'tanggal'       => $this->request->getPost('tanggal'),
             'talent'        => $this->request->getPost('talent'),
             'narasumber'    => $this->request->getPost('narasumber'),
-            'link'          => $this->request->getPost('link'),
             'images'        => $namaGambar,
         ];
 
         $data = [
             'key'       => $this->request->getPost('judul'),
             'value'     => json_encode($input),
+            'embed'     => $this->request->getPost('embed'),
             'tahun'     => $this->request->getPost('tahun'),
             'program'   => $this->request->getPost('program'),
         ];

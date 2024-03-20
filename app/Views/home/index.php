@@ -283,59 +283,6 @@
       </div>
     </section>
 
-    <!-- Rapma News -->
-    <!-- <section id="news" class="portfolio section-bg">
-      <div class="container">
-        <div class="section-title">
-          <h2 style="text-align: center;">Rapma News</h2>
-        </div>
-        <div class="row" data-aos="fade-in">
-          <div class="col-lg-6 d-flex align-items-stretch">
-            <div class="row">
-              <a href="http://rapmafm.ukm.ums.ac.id/2021/10/keseruan-rapmafest-8-nostalgic-future.html" target="_blank">
-                <h4 style="text-align: center; color: black">KESERUAN RAPMAFEST #8<br>"NOSTALGIC FUTURE TO CREATE MIRACLE"</h4>
-              </a><img src="<?= base_url(); ?>img/Blog4.png">
-              <p style="text-align: justify;">RAPMAFEST #8 yang bertajuk "NOSTALGIC FUTURE TO CREATE MIRACLE", RAPMAFEST #8 ini memiliki
-                serangkaian acara, yaitu perlombaan Voice Over, Lomba Siar, Webinar, sampai Virtual Concert. Di puncak acara
-                RAPMAFEST #8 yang<a href="http://rapmafm.ukm.ums.ac.id/2021/10/keseruan-rapmafest-8-nostalgic-future.html" title="Selengkapnya" style="color:#008C52" target="_blank"> ...read more</a></p>
-            </div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-stretch">
-            <div class="row">
-              <a href="http://rapmafm.ukm.ums.ac.id/2021/04/rapmaday7-act-beyond-imagination.html" target="_blank">
-                <h4 style="text-align: center; color: black">RAPMADAY#7 <br>“ACT BEYOND IMAGINATION”</h4>
-              </a><img src="<?= base_url(); ?>img/Blog3.png">
-              <p style="text-align: justify;">Kali ini kita akan menyapa CampusBrainers dengan event tahunan kita.
-                Tau dong apa Namanya, Yap Rapmaday. Nah acara tahunan kita kali ini berbeda dari tahun-tahun sebelumnya.
-                Rapmaday kali ini disiarkan langsung dari<a href="http://rapmafm.ukm.ums.ac.id/2021/04/rapmaday7-act-beyond-imagination.html" title="Selengkapnya" style="color:#008C52" target="_blank"> ...read more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="row" data-aos="fade-in">
-          <div class="col-lg-6 d-flex align-items-stretch">
-            <div class="row">
-              <a href="http://rapmafm.ukm.ums.ac.id/2021/03/menyambung-silaturahmi-dengan.html" target="_blank">
-                <h4 style="text-align: center; color: black">Menyambung silaturahmi dengan Sarasehan Rapma FM 2021</h4>
-              </a><img src="<?= base_url(); ?>img/Blog2.png">
-              <p style="text-align: justify;">Sarasehan Rapma FM tahun 2021 mengangkat tema Adventure
-                CampusBrainers, makannya ada tenda di foto panggung diatas hihi. Waaah seru dong? iyaa
-                CampusBrainers Sarase<a href="http://rapmafm.ukm.ums.ac.id/2021/03/menyambung-silaturahmi-dengan.html" title="Selengkapnya" style="color:#008C52" target="_blank"> ...read more</a></p>
-            </div>
-          </div>
-          <div class="col-lg-6 d-flex align-items-stretch">
-            <div class="row">
-              <a href="http://rapmafm.ukm.ums.ac.id/2021/02/kunjungan-tanpa-pertemuan-rapma-fm-ke.html" target="_blank">
-                <h4 style="text-align: center; color: black">Kunjungan tanpa pertemuan Rapma FM ke Geronimo FM</h4>
-              </a><img src="<?= base_url(); ?>img/Blog1.png">
-              <p style="text-align: justify;">CampusBrainers !! Kami bakalan berbagi cerita tentang keseruan virtual study broadcast di Geronimo FM.
-                Karena kondisi pandemi kaya sekarang, mengharuskan cuma ada beberapa orang aja dari Rapma FM yang berangkat langsung ke
-                <a href="http://rapmafm.ukm.ums.ac.id/2021/02/kunjungan-tanpa-pertemuan-rapma-fm-ke.html" title="Selengkapnya" style="color:#008C52" target="_blank"> ...read more</a>
-              </p>
-            </div>
-          </div>
-        </div>
-    </section> -->
-
     <!-- Contact -->
     <section id="contact" class="contact">
       <div class="container">

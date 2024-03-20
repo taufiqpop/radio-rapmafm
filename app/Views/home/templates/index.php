@@ -66,6 +66,8 @@
                                 <span>Program</span></a></li>
                         <li><a href="<?= base_url(); ?>index#chart" class="nav-link scrollto"><i class="bx bx-music" title="Top Chart"></i>
                                 <span>Top Chart</span></a></li>
+                        <li><a href="<?= base_url(); ?>podcasts" class="nav-link scrollto"><i class="bx bx-headphone" title="Top Chart"></i>
+                                <span>Podcast</span></a></li>
                         <li><a href="<?= base_url(); ?>index#event" class="nav-link scrollto"><i class="bx bx-calendar-event" title="Events"></i>
                                 <span>Events</span></a></li>
                         <li><a href="<?= base_url(); ?>index#achievement" class="nav-link scrollto"><i class="bx bx-trophy" title="Achievements"></i>

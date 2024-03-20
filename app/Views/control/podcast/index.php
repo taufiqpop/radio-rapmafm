@@ -12,7 +12,7 @@
             <?php endif; ?>
 
             <!-- Search Bar -->
-            <form action="" method="get">
+            <form action="" method="post">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Search" name="keyword" autofocus>
                     <div class="input-group-append">
@@ -63,7 +63,7 @@
                                         <td><?= $data->talent ?></td>
                                         <td><?= $data->narasumber ?></td>
                                         <td>
-                                            <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
+                                            <a href="https://open.spotify.com/episode/<?= $podcasts['embed']; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
                                             <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
                                                 <a href="<?= base_url(); ?>control/podcast/edit/<?= $podcasts['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/podcast/<?= $podcasts['id']; ?>" method="post" class="d-inline">

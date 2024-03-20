@@ -33,6 +33,7 @@ $routes->set404Override();
 // Home
 $routes->get('/', 'Home::index');
 $routes->get('/index', 'Home::index');
+$routes->add('/podcasts', 'Home::podcasts');
 $routes->add('/contact/insert', 'Home::insert');
 
 // Admin

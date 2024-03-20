@@ -12,6 +12,7 @@ class Home extends BaseController
     protected $structureModel;
     protected $topchartModel;
     protected $pesanModel;
+    protected $podcastModel;
     protected $penyiarModel;
     protected $settingsModel;
 
@@ -25,13 +26,13 @@ class Home extends BaseController
         $this->structureModel    = new \App\Models\StructureModel();
         $this->topchartModel     = new \App\Models\TopChartModel();
         $this->pesanModel        = new \App\Models\PesanModel();
+        $this->podcastModel      = new \App\Models\PodcastModel();
         $this->penyiarModel      = new \App\Models\PenyiarModel();
         $this->settingsModel     = new \App\Models\SettingsModel();
     }
 
     public function index()
     {
-
         // Events
         $events = $this->eventsModel;
         $events->orderBy('id', 'DESC');
@@ -69,5 +70,30 @@ class Home extends BaseController
 
         session()->setFlashdata('pesan', 'Pesan Anda Telan Dikirim! Terima Kasih CampusBrainers!');
         return redirect('index');
+    }
+
+    // Podcast
+    public function podcasts()
+    {
+        $currentPage = $this->request->getVar('page_podcast') ? $this->request->getVar('page_podcast') : 1;
+
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $podcast = $this->podcastModel->search($keyword);
+        } else {
+            $podcast = $this->podcastModel;
+        }
+
+        $podcast->orderBy('tahun', 'DESC');
+
+        $data = [
+            'title'         => 'Rapma FM | Podcast',
+            'podcast'       => $podcast->paginate(4, 'podcast'),
+            'pagerPodcast'  => $podcast->pager,
+            'currentPage'   => $currentPage,
+            'settings'      => $this->settingsModel->paginate(5, 'settings'),
+        ];
+
+        return view('home/podcasts', $data);
     }
 }

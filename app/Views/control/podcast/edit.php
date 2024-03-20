@@ -29,6 +29,7 @@
                             <select name="program">
                                 <option value="<?= $podcasts['program']; ?>" selected></option>
                                 <option value="RAPMATALKS">RAPMATALKS</option>
+                                <option value="DRAMA RADIO">DRAMA RADIO</option>
                                 <option value="BASOSAPI">BASOSAPI</option>
                                 <option value="11N1">11N1</option>
                                 <option value="RAPMANESIA">RAPMANESIA</option>
@@ -43,6 +44,7 @@
                                 <option value="MERINDING">MERINDING</option>
                                 <option value="K-ARENA">K-ARENA</option>
                                 <option value="SPORTACULAR">SPORTACULAR</option>
+                                <option value="TOP 15">TOP 15</option>
                                 <option value="SUDUT KAMPUS">SUDUT KAMPUS</option>
                                 <option value="NO SATNIGHT">NO SATNIGHT</option>
                                 <option value="CLASSIC NIGHT">CLASSIC NIGHT</option>
@@ -66,11 +68,11 @@
                         </div>
                     </div>
 
-                    <!-- Link -->
+                    <!-- Link Embed -->
                     <div class="form-group row">
-                        <label for="link" class="col-sm-2 col-form-label">Link</label>
+                        <label for="embed" class="col-sm-2 col-form-label">Link Embed</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="link" value="<?= $data->link ?>" required>
+                            <input type="text" class="form-control" name="embed" value="<?= $podcasts['embed'] ?>" required>
                         </div>
                     </div>
 
