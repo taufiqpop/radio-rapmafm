@@ -39,7 +39,7 @@
         <div class="col-11">
 
             <!-- Search Bar -->
-            <form action="" method="get">
+            <form action="" method="post">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Search" name="keyword" autofocus>
                     <div class="input-group-append">
