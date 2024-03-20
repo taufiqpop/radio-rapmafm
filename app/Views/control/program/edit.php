@@ -17,7 +17,7 @@
                     <!-- Nama Program -->
                     <div class="form-group row">
                         <label for="program" class="col-sm-2 col-form-label">Nama Program</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="program" value="<?= $data->program ?>" autofocus required>
                         </div>
                     </div>
@@ -26,7 +26,12 @@
                     <div class="form-group row">
                         <label for="jenis" class="col-sm-2 col-form-label">Jenis Program</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="jenis" value="<?= $data->jenis ?>" required>
+                            <select name="jenis">
+                                <option value="<?= $data->jenis; ?>" selected></option>
+                                <option value="Regular Program">Regular Program</option>
+                                <option value="Special Program">Special Program</option>
+                                <option value="Podcast">Podcast</option>
+                            </select>
                         </div>
                     </div>
 
@@ -34,7 +39,12 @@
                     <div class="form-group row">
                         <label for="filter" class="col-sm-2 col-form-label">Filter</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="filter" value="<?= $data->filter ?>" required>
+                            <select name="filter">
+                                <option value="<?= $data->filter; ?>" selected></option>
+                                <option value="filter-app">Regular</option>
+                                <option value="filter-card">Special</option>
+                                <option value="filter-book">Podcast</option>
+                            </select>
                         </div>
                     </div>
 

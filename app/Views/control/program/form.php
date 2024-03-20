@@ -14,7 +14,7 @@
                 <!-- Nama Program -->
                 <div class="form-group row">
                     <label for="program" class="col-sm-2 col-form-label">Nama Program</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Nama Program" name="program" required autofocus>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                 <div class="form-group row">
                     <label for="link" class="col-sm-2 col-form-label">Link</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="Link" name="link" required>
+                        <input type="text" class="form-control" placeholder="https://" name="link" required>
                     </div>
                 </div>
 
@@ -57,13 +57,13 @@
                     <div class="col-sm-2">
                         <img src="<?= base_url(); ?>img/default.svg" class="img-thumbnail img-preview">
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-4">
                         <div class="custom-file">
                             <input type="file" class="custom-file-input <?= ($validation->hasError('images')) ? 'is invalid' : ''; ?>" id="imgRapma" name="images" onchange="previewImgRapma()">
                             <div class="invalid-feedback">
                                 <?= $validation->getError('images'); ?>
                             </div>
-                            <label class="custom-file-label" for="images">Choose Image</label>
+                            <label class="custom-file-label" for="images">Choose Artwork</label>
                         </div>
                     </div>
                 </div>

@@ -13,7 +13,7 @@
                 <!-- Versi -->
                 <div class="form-group row">
                     <label for="versi" class="col-sm-2 col-form-label">Versi</label>
-                    <div class="col-sm-5">
+                    <div class="col-sm-3">
                         <input type="text" class="form-control" placeholder="Versi" name="versi" required>
                     </div>
                 </div>

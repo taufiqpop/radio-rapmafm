@@ -16,7 +16,7 @@
                     <!-- Versi -->
                     <div class="form-group row">
                         <label for="versi" class="col-sm-2 col-form-label">Versi</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-3">
                             <input type="text" class="form-control" name="versi" value="<?= $data->versi ?>" autofocus required>
                         </div>
                     </div>

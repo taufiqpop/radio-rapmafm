@@ -14,7 +14,7 @@
                 <!-- Label -->
                 <div class="form-group row">
                     <label for="label" class="col-sm-3 col-form-label">Label</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Label" name="label" required>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                 <!-- Total Lagu -->
                 <div class="form-group row">
                     <label for="total" class="col-sm-3 col-form-label">Total Lagu</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-4">
                         <input type="text" class="form-control" placeholder="00" name="total" required>
                     </div>
                 </div>

@@ -14,7 +14,7 @@
                 <!-- Judul Lagu -->
                 <div class="form-group row">
                     <label for="judul" class="col-sm-3 col-form-label">Judul Lagu</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-6">
                         <input type="text" class="form-control" placeholder="Judul Lagu" name="judul" required autofocus>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                 <!-- Artist -->
                 <div class="form-group row">
                     <label for="artist" class="col-sm-3 col-form-label">Artist</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-6">
                         <input type="text" class="form-control" placeholder="Artist" name="artist" required>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                 <!-- Album -->
                 <div class="form-group row">
                     <label for="album" class="col-sm-3 col-form-label">Album</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Album" name="album" required>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                 <!-- Genre -->
                 <div class="form-group row">
                     <label for="genre" class="col-sm-3 col-form-label">Genre</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Jazz | Pop | Blues | Dll" name="genre" required>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                 <!-- Type -->
                 <div class="form-group row">
                     <label for="tipe" class="col-sm-3 col-form-label">Type</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-3">
                         <input type="text" class="form-control" placeholder="Upbeat | Slow | Dll" name="tipe" required>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 <!-- Lokasi -->
                 <div class="form-group row">
                     <label for="lokasi" class="col-sm-3 col-form-label">Lokasi</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Indonesia" name="lokasi" required>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <!-- Tahun -->
                 <div class="form-group row">
                     <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-2">
                         <input type="number" class="form-control" placeholder="2000" name="tahun" required>
                     </div>
                 </div>

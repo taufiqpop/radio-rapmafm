@@ -216,7 +216,7 @@
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlNews; ?></div>
                                     </div>
                                     <div class="col-auto">
-                                        <a href="<?= base_url(); ?>control/program">
+                                        <a href="<?= base_url(); ?>control/news">
                                             <i class="fas fa-newspaper fa-2x text-warning"></i>
                                         </a>
                                     </div>

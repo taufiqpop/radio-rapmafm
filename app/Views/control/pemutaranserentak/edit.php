@@ -16,7 +16,7 @@
                     <!-- Tanggal -->
                     <div class="form-group row">
                         <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required autofocus>
                         </div>
                     </div>
@@ -24,7 +24,7 @@
                     <!-- Label -->
                     <div class="form-group row">
                         <label for="label" class="col-sm-3 col-form-label">Label</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="label" value="<?= $data->label; ?>" required>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                     <!-- Penyanyi -->
                     <div class="form-group row">
                         <label for="penyanyi" class="col-sm-3 col-form-label">Penyanyi</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-6">
                             <input type="text" class="form-control" name="penyanyi" value="<?= $data->penyanyi; ?>" required>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                     <!-- Judul Lagu -->
                     <div class="form-group row">
                         <label for="judul" class="col-sm-3 col-form-label">Judul Lagu</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-6">
                             <input type="text" class="form-control" name="judul" value="<?= $data->judul; ?>" required>
                         </div>
                     </div>
