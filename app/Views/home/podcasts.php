@@ -29,8 +29,8 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <br>
             <?= $pagerPodcast->links('podcast', 'data_pagination'); ?>
     </section>
 </main>
+
 <?= $this->endSection(); ?>
