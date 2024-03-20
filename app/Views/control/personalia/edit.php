@@ -41,7 +41,12 @@
                     <div class="form-group row">
                         <label for="subdivisi" class="col-sm-3 col-form-label">Sub Divisi</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="subdivisi" value="<?= $data->subdivisi; ?>" required>
+                            <select name="subdivisi">
+                                <option value="<?= $data->subdivisi; ?>" selected></option>
+                                <option value="Manager Personalia">Manager Personalia</option>
+                                <option value="HRD">HRD</option>
+                                <option value="Advokat">Advokat</option>
+                            </select>
                         </div>
                     </div>
 
@@ -92,6 +97,7 @@
                             <select name="status">
                                 <option value="<?= $data->status; ?>" selected></option>
                                 <option value="Terlaksana">Terlaksana</option>
+                                <option value="Belum Terlaksana">Belum Terlaksana</option>
                                 <option value="Tidak Terlaksana">Tidak Terlaksana</option>
                             </select>
                         </div>

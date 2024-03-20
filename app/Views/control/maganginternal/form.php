@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-8">
-            <h1 class="h3 mb-4 text-gray-800">Form Add Data MagangInternal</h1>
+            <h1 class="h3 mb-4 text-gray-800">Form Add Data Magang Internal</h1>
 
             <!-- Forms -->
             <form action="<?= base_url(); ?>maganginternal/insert" method="post" enctype="multipart/form-data">
@@ -52,6 +52,7 @@
                     <label for="status" class="col-sm-3 col-form-label">Status</label>
                     <div class="col-sm-7">
                         <select name="status">
+                            <option value="Belum Terlaksana">Belum Terlaksana</option>
                             <option value="Terlaksana">Terlaksana</option>
                             <option value="Tidak Terlaksana">Tidak Terlaksana</option>
                         </select>
@@ -61,7 +62,7 @@
                 <!-- Lokasi -->
                 <div class="form-group row">
                     <label for="tempat" class="col-sm-3 col-form-label">Lokasi</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Lokasi" name="tempat" required>
                     </div>
                 </div>

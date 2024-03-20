@@ -16,7 +16,7 @@
                     <div class="form-group row">
                         <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" placeholder="01 Januari 2000" name="tanggal" required>
+                            <input type="date" class="form-control" name="tanggal" required>
                         </div>
                     </div>
 

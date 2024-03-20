@@ -16,7 +16,7 @@
                     <!-- Nama Pengurus -->
                     <div class="form-group row">
                         <label for="nama" class="col-sm-3 col-form-label">Nama Pengurus</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-6">
                             <input type="text" class="form-control" name="nama" value="<?= $data->nama ?>" autofocus required>
                         </div>
                     </div>
@@ -24,7 +24,7 @@
                     <!-- Nickname -->
                     <div class="form-group row">
                         <label for="nickname" class="col-sm-3 col-form-label">Nickname</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-4">
                             <input type="text" class="form-control" name="nickname" value="<?= $data->nickname; ?>" required>
                         </div>
                     </div>
@@ -33,14 +33,21 @@
                     <div class="form-group row">
                         <label for="divisi" class="col-sm-3 col-form-label">Divisi</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="divisi" value="<?= $data->divisi; ?>" required>
+                            <select name="divisi">
+                                <option value="<?= $data->divisi; ?>" selected></option>
+                                <option value="GMPA">GMPA</option>
+                                <option value="Divisi Umum">Divisi Umum</option>
+                                <option value="Divisi Kepenyiaran">Divisi Kepenyiaran</option>
+                                <option value="Divisi Marketing">Divisi Marketing</option>
+                                <option value="Divisi Personalia">Divisi Personalia</option>
+                            </select>
                         </div>
                     </div>
 
                     <!-- Sub Divisi -->
                     <div class="form-group row">
                         <label for="subdivisi" class="col-sm-3 col-form-label">Sub Divisi</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-4">
                             <input type="text" class="form-control" name="subdivisi" value="<?= $data->subdivisi; ?>" required>
                         </div>
                     </div>
@@ -48,7 +55,7 @@
                     <!-- Jurusan -->
                     <div class="form-group row">
                         <label for="jurusan" class="col-sm-3 col-form-label">Jurusan</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-4">
                             <input type="text" class="form-control" name="jurusan" value="<?= $data->jurusan; ?>" required>
                         </div>
                     </div>
@@ -56,15 +63,23 @@
                     <!-- Semester -->
                     <div class="form-group row">
                         <label for="semester" class="col-sm-3 col-form-label">Semester</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-2">
                             <input type="number" class="form-control" name="semester" value="<?= $data->semester; ?>" required>
+                        </div>
+                    </div>
+
+                    <!-- Domisili -->
+                    <div class="form-group row">
+                        <label for="domisili" class="col-sm-3 col-form-label">Domisili</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="domisili" value="<?= $data->domisili; ?>" required>
                         </div>
                     </div>
 
                     <!-- No HP -->
                     <div class="form-group row">
                         <label for="nohp" class="col-sm-3 col-form-label">No HP</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="nohp" value="<?= $data->nohp; ?>" required>
                         </div>
                     </div>
@@ -73,14 +88,18 @@
                     <div class="form-group row">
                         <label for="status" class="col-sm-3 col-form-label">Status</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="status" value="<?= $data->status; ?>" required>
+                            <select name="status">
+                                <option value="<?= $data->status; ?>" selected></option>
+                                <option value="Aktif">Aktif</option>
+                                <option value="Tidak Aktif">Tidak Aktif</option>
+                            </select>
                         </div>
                     </div>
 
                     <!-- Instagram -->
                     <div class="form-group row">
                         <label for="instagram" class="col-sm-3 col-form-label">Instagram</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-4">
                             <input type="text" class="form-control" name="instagram" value="<?= $data->instagram; ?>" required>
                         </div>
                     </div>
@@ -88,7 +107,7 @@
                     <!-- Twitter -->
                     <div class="form-group row">
                         <label for="twitter" class="col-sm-3 col-form-label">twitter</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-4">
                             <input type="text" class="form-control" name="twitter" value="<?= $data->twitter; ?>" required>
                         </div>
                     </div>

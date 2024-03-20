@@ -14,7 +14,7 @@
                 <!-- Peminjam -->
                 <div class="form-group row">
                     <label for="peminjam" class="col-sm-3 col-form-label">Peminjam</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" name="peminjam" placeholder="Peminjam" required autofocus>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                 <!-- Barang -->
                 <div class="form-group row">
                     <label for="barang" class="col-sm-3 col-form-label">Barang</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Nama Barang" name="barang" required>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 <!-- Pendapatan -->
                 <div class="form-group row">
                     <label for="pendapatan" class="col-sm-3 col-form-label">Pendapatan (Tanpa Rp.)</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-4">
                         <input type="text" class="form-control" placeholder="50.000" name="pendapatan" required>
                     </div>
                 </div>

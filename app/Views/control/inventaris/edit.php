@@ -16,7 +16,7 @@
                     <!-- Nama Barang -->
                     <div class="form-group row">
                         <label for="barang" class="col-sm-3 col-form-label">Nama Barang</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="barang" value="<?= $data->barang ?>" autofocus required>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                     <!-- Kondisi Barang -->
                     <div class="form-group row">
                         <label for="kondisi" class="col-sm-3 col-form-label">Kondisi Barang</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="kondisi" value="<?= $data->kondisi ?>" required>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                     <!-- Hari -->
                     <div class="form-group row">
                         <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-3">
                             <input type="text" class="form-control" name="hari" value="<?= $data->hari ?>" required>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                     <!-- Tanggal -->
                     <div class="form-group row">
                         <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
-                        <div class="col-sm-5">
+                        <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal ?>" required>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                     <!-- Tahun -->
                     <div class="form-group row">
                         <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <input type="number" class="form-control" name="tahun" value="<?= $invent['tahun']; ?>" required>
                         </div>
                     </div>

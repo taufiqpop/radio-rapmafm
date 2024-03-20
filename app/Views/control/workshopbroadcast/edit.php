@@ -56,15 +56,16 @@
                             <select name="status">
                                 <option value="<?= $data->status; ?>" selected></option>
                                 <option value="Terlaksana">Terlaksana</option>
+                                <option value="Belum Terlaksana">Belum Terlaksana</option>
                                 <option value="Tidak Terlaksana">Tidak Terlaksana</option>
                             </select>
                         </div>
                     </div>
 
-                    <!-- Tempat -->
+                    <!-- Lokasi -->
                     <div class="form-group row">
-                        <label for="tempat" class="col-sm-3 col-form-label">Tempat</label>
-                        <div class="col-sm-7">
+                        <label for="tempat" class="col-sm-3 col-form-label">Lokasi</label>
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="tempat" value="<?= $data->tempat; ?>" required>
                         </div>
                     </div>

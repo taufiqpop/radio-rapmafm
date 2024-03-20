@@ -24,7 +24,7 @@
                     <!-- Divisi -->
                     <div class="form-group row">
                         <label for="divisi" class="col-sm-2 col-form-label">Divisi</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="divisi" value="<?= $data->divisi ?>" autofocus required>
                         </div>
                     </div>
@@ -32,8 +32,8 @@
                     <!-- Tahun -->
                     <div class="form-group row">
                         <label for="tahun" class="col-sm-2 col-form-label">Tahun</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="tahun" value="<?= $data->tahun; ?>" required>
+                        <div class="col-sm-3">
+                            <input type="number" class="form-control" name="tahun" value="<?= $data->tahun; ?>" required>
                         </div>
                     </div>
 

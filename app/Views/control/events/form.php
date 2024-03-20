@@ -13,16 +13,16 @@
 
                 <!-- Nama Events -->
                 <div class="form-group row">
-                    <label for="nama" class="col-sm-2 col-form-label">Nama Events</label>
-                    <div class="col-sm-10">
+                    <label for="nama" class="col-sm-3 col-form-label">Nama Events</label>
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Nama Events" name="nama" required autofocus>
                     </div>
                 </div>
 
                 <!-- Jenis Events -->
                 <div class="form-group row">
-                    <label for="jenis" class="col-sm-2 col-form-label">Jenis Events</label>
-                    <div class="col-sm-10">
+                    <label for="jenis" class="col-sm-3 col-form-label">Jenis Events</label>
+                    <div class="col-sm-7">
                         <select name="jenis">
                             <option value="RAPMAFEST">RAPMAFEST</option>
                             <option value="RAPMADAY">RAPMADAY</option>
@@ -33,27 +33,27 @@
 
                 <!-- Tahun -->
                 <div class="form-group row">
-                    <label for="tahun" class="col-sm-2 col-form-label">Tahun</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="Tahun" name="tahun" required>
+                    <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
+                    <div class="col-sm-3">
+                        <input type="number" class="form-control" placeholder="2021" name="tahun" required>
                     </div>
                 </div>
 
                 <!-- Link -->
                 <div class="form-group row">
-                    <label for="link" class="col-sm-2 col-form-label">Link</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="Link" name="link" required>
+                    <label for="link" class="col-sm-3 col-form-label">Link</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" placeholder="https://" name="link" required>
                     </div>
                 </div>
 
                 <!-- Images -->
                 <div class="form-group row">
-                    <label for="images" class="col-sm-2 col-form-label">Images</label>
+                    <label for="images" class="col-sm-3 col-form-label">Images</label>
                     <div class="col-sm-2">
                         <img src="<?= base_url(); ?>img/default.svg" class="img-thumbnail img-preview">
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-4">
                         <div class="custom-file">
                             <input type="file" class="custom-file-input <?= ($validation->hasError('images')) ? 'is invalid' : ''; ?>" id="imgRapma" name="images" onchange="previewImgRapma()">
                             <div class="invalid-feedback">

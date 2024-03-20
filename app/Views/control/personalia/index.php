@@ -60,12 +60,20 @@
                                     <?php $data = json_decode($timeline['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->darihari; ?>,<br><?= $data->daritgl; ?></td>
-                                        <td><?= $data->sampaihari; ?>,<br><?= $data->sampaitgl; ?></td>
+                                        <td><?= $data->darihari; ?><br>(<?= $data->daritgl; ?>)</td>
+                                        <td><?= $data->sampaihari; ?><br>(<?= $data->sampaitgl; ?>)</td>
                                         <td><?= $data->subdivisi; ?></td>
                                         <td><?= $data->proker; ?></td>
-                                        <td><?= $data->mulaihari; ?>,<br><?= $data->mulaitgl; ?></td>
-                                        <td><?= $data->selesaihari; ?>,<br><?= $data->selesaitgl; ?></td>
+                                        <td><?= $data->mulaihari; ?>
+                                            <?php if ($data->mulaihari != '-') : ?>
+                                                <br>(<?= $data->mulaitgl; ?>)
+                                            <?php endif; ?>
+                                        </td>
+                                        <td><?= $data->selesaihari; ?>
+                                            <?php if ($data->selesaihari != '-') : ?>
+                                                <br>(<?= $data->selesaitgl; ?>)
+                                            <?php endif; ?>
+                                        </td>
                                         <td><?= $data->kendala; ?></td>
                                         <td><?= $data->status; ?></td>
                                         <?php if (in_groups(['Admin', 'MP'])) : ?>

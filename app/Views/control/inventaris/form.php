@@ -14,7 +14,7 @@
                 <!-- Nama Barang -->
                 <div class="form-group row">
                     <label for="barang" class="col-sm-3 col-form-label">Nama Barang</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Nama Barang" name="barang" required autofocus>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                 <!-- Kondisi Barang -->
                 <div class="form-group row">
                     <label for="kondisi" class="col-sm-3 col-form-label">Kondisi Barang</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="0 Baik, 0 Rusak" name="kondisi" required>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 <!-- Hari -->
                 <div class="form-group row">
                     <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-3">
                         <input type="text" class="form-control" placeholder="Senin" name="hari" required>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <!-- Tanggal -->
                 <div class="form-group row">
                     <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
-                    <div class="col-sm-5">
+                    <div class="col-sm-3">
                         <input type="date" class="form-control" name="tanggal" required>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                 <!-- Tahun -->
                 <div class="form-group row">
                     <label for="tahun" class="col-sm-3 col-form-label">Tahun (2 Digit Belakang)</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <input type="number" class="form-control" placeholder="00" name="tahun" required>
                     </div>
                 </div>

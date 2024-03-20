@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
-                <h1 class="h3 mb-4 text-gray-800">Form Edit Data Divisi Umum</h1>
+                <h1 class="h3 mb-4 text-gray-800">Form Edit Data Timeline Divisi Umum</h1>
 
                 <!-- Forms -->
                 <form action="<?= base_url(); ?>umum/update/<?= $timeline['id']; ?>" method="post" enctype="multipart/form-data">
@@ -41,7 +41,13 @@
                     <div class="form-group row">
                         <label for="subdivisi" class="col-sm-3 col-form-label">Sub Divisi</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="subdivisi" value="<?= $data->subdivisi; ?>" required>
+                            <select name="subdivisi">
+                                <option value="<?= $data->subdivisi; ?>" selected></option>
+                                <option value="Manager Umum">Manager Umum</option>
+                                <option value="Admisi On Air">Admisi On Air</option>
+                                <option value="Admisi Off Air">Admisi Off Air</option>
+                                <option value="Teknisi">Teknisi</option>
+                            </select>
                         </div>
                     </div>
 

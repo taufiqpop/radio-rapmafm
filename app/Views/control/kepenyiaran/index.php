@@ -60,8 +60,8 @@
                                     <?php $data = json_decode($timeline['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->darihari; ?>,<br><?= $data->daritgl; ?></td>
-                                        <td><?= $data->sampaihari; ?>,<br><?= $data->sampaitgl; ?></td>
+                                        <td><?= $data->darihari; ?><br>(<?= $data->daritgl; ?>)</td>
+                                        <td><?= $data->sampaihari; ?><br>(<?= $data->sampaitgl; ?>)</td>
                                         <td><?= $data->subdivisi; ?></td>
                                         <td><?= $data->proker; ?></td>
                                         <td><?= $data->mulaihari; ?>

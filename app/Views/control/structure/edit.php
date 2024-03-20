@@ -17,7 +17,7 @@
                     <!-- Divisi -->
                     <div class="form-group row">
                         <label for="divisi" class="col-sm-2 col-form-label">Divisi</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="divisi" value="<?= $data->divisi ?>" autofocus required>
                         </div>
                     </div>
@@ -25,16 +25,20 @@
                     <!-- Tahun -->
                     <div class="form-group row">
                         <label for="tahun" class="col-sm-2 col-form-label">Tahun</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="tahun" value="<?= $data->tahun; ?>" required>
+                        <div class="col-sm-3">
+                            <input type="number" class="form-control" name="tahun" value="<?= $data->tahun; ?>" required>
                         </div>
                     </div>
 
                     <!-- Status -->
                     <div class="form-group row">
                         <label for="status" class="col-sm-2 col-form-label">Status</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="status" value="<?= $data->status; ?>" required>
+                        <div class="col-sm-7">
+                            <select name="status">
+                                <option value="<?= $data->status; ?>" selected></option>
+                                <option value="">Not Active</option>
+                                <option value="active">Active</option>
+                            </select>
                         </div>
                     </div>
 

@@ -52,17 +52,18 @@
                     <label for="status" class="col-sm-3 col-form-label">Status</label>
                     <div class="col-sm-7">
                         <select name="status">
+                            <option value="Belum Terlaksana">Belum Terlaksana</option>
                             <option value="Terlaksana">Terlaksana</option>
                             <option value="Tidak Terlaksana">Tidak Terlaksana</option>
                         </select>
                     </div>
                 </div>
 
-                <!-- Tempat -->
+                <!-- Lokasi -->
                 <div class="form-group row">
-                    <label for="tempat" class="col-sm-3 col-form-label">Tempat</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Tempat" name="tempat" required>
+                    <label for="tempat" class="col-sm-3 col-form-label">Lokasi</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" placeholder="Lokasi" name="tempat" required>
                     </div>
                 </div>
 

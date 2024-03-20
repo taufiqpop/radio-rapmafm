@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-8">
-            <h1 class="h3 mb-4 text-gray-800">Form Add Data Divisi Umum</h1>
+            <h1 class="h3 mb-4 text-gray-800">Form Add Data Timeline Divisi Umum</h1>
 
             <!-- Forms -->
             <form action="<?= base_url(); ?>umum/insert" method="post" enctype="multipart/form-data">
@@ -39,7 +39,12 @@
                 <div class="form-group row">
                     <label for="subdivisi" class="col-sm-3 col-form-label">Sub Divisi</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Sub Divisi" name="subdivisi" required>
+                        <select name="subdivisi">
+                            <option value="Manager Umum">Manager Umum</option>
+                            <option value="Admisi On Air">Admisi On Air</option>
+                            <option value="Admisi Off Air">Admisi Off Air</option>
+                            <option value="Teknisi">Teknisi</option>
+                        </select>
                     </div>
                 </div>
 
@@ -55,11 +60,11 @@
                 <div class="form-group row">
                     <label for="mulaihari" class="col-sm-3 col-form-label">Hari Pelaksanaan</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="Senin" name="mulaihari" required>
+                        <input type="text" class="form-control" placeholder="-" name="mulaihari" required>
                     </div>
                     <label for="selesaihari" class="col-form-label">-</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="Jum'at" name="selesaihari" required>
+                        <input type="text" class="form-control" placeholder="-" name="selesaihari" required>
                     </div>
                 </div>
 
@@ -67,11 +72,11 @@
                 <div class="form-group row">
                     <label for="mulaitgl" class="col-sm-3 col-form-label">Tanggal Pelaksanaan</label>
                     <div class="col-sm-3">
-                        <input type="date" class="form-control" name="mulaitgl" required>
+                        <input type="text" class="form-control" name="mulaitgl" placeholder="-" required>
                     </div>
                     <label for="selesaitgl" class="col-form-label">-</label>
                     <div class="col-sm-3">
-                        <input type="date" class="form-control" name="selesaitgl" required>
+                        <input type="text" class="form-control" name="selesaitgl" placeholder="-" required>
                     </div>
                 </div>
 
@@ -88,6 +93,7 @@
                     <label for="status" class="col-sm-3 col-form-label">Status</label>
                     <div class="col-sm-7">
                         <select name="status">
+                            <option value="Belum Terlaksana">Belum Terlaksana</option>
                             <option value="Terlaksana">Terlaksana</option>
                             <option value="Tidak Terlaksana">Tidak Terlaksana</option>
                         </select>

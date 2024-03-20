@@ -16,40 +16,45 @@
 
                     <!-- Nama Events -->
                     <div class="form-group row">
-                        <label for="nama" class="col-sm-2 col-form-label">Nama Events</label>
-                        <div class="col-sm-10">
+                        <label for="nama" class="col-sm-3 col-form-label">Nama Events</label>
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="nama" value="<?= $data->nama ?>" autofocus required>
                         </div>
                     </div>
 
                     <!-- Jenis -->
                     <div class="form-group row">
-                        <label for="jenis" class="col-sm-2 col-form-label">Jenis</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="jenis" value="<?= $data->jenis; ?>" required>
+                        <label for="jenis" class="col-sm-3 col-form-label">Jenis</label>
+                        <div class="col-sm-7">
+                            <select name="jenis">
+                                <option value="<?= $data->jenis; ?>" selected></option>
+                                <option value="RAPMAFEST">RAPMAFEST</option>
+                                <option value="RAPMADAY">RAPMADAY</option>
+                                <option value="OPEN RECRUITMENT">OPEN RECRUITMENT</option>
+                            </select>
                         </div>
                     </div>
 
                     <!-- Tahun -->
                     <div class="form-group row">
-                        <label for="tahun" class="col-sm-2 col-form-label">Tahun</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="tahun" value="<?= $data->tahun; ?>" required>
+                        <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
+                        <div class="col-sm-3">
+                            <input type="number" class="form-control" name="tahun" value="<?= $data->tahun; ?>" required>
                         </div>
                     </div>
 
                     <!-- Link -->
                     <div class="form-group row">
-                        <label for="link" class="col-sm-2 col-form-label">Link</label>
-                        <div class="col-sm-10">
+                        <label for="link" class="col-sm-3 col-form-label">Link</label>
+                        <div class="col-sm-7">
                             <input type="text" class="form-control" name="link" value="<?= $data->link; ?>" required>
                         </div>
                     </div>
 
                     <!-- Images -->
                     <div class="form-group row">
-                        <label for="images" class="col-sm-2 col-form-label">Images</label>
-                        <div class="col-sm-4">
+                        <label for="images" class="col-sm-3 col-form-label">Images</label>
+                        <div class="col-sm-3">
                             <img src="<?= base_url(); ?>img/events/<?= $data->images ?>" class="img-thumbnail img-preview">
                         </div>
                         <div class="col-sm-6">

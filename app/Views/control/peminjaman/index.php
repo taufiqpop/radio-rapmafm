@@ -56,9 +56,13 @@
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td><?= $data->peminjam; ?></td>
                                         <td><?= $data->haripinjam; ?>, <?= $data->tanggalpinjam; ?></td>
-                                        <td><?= $data->harikembali; ?>, <?= $data->tanggalkembali; ?></td>
+                                        <td>
+                                            <?= $data->harikembali; ?><?php if ($data->harikembali != '-') : ?>, <?= $data->tanggalkembali; ?><?php endif; ?>
+                                        </td>
                                         <td><?= $data->barang; ?></td>
-                                        <td>Rp. <?= $data->pendapatan; ?></td>
+                                        <td>
+                                            <?php if ($data->pendapatan != '-') : ?>Rp. <?php endif; ?><?= $data->pendapatan; ?>
+                                        </td>
                                         <td><?= $data->keterangan; ?></td>
                                         <?php if (in_groups(['Admin', 'MU', 'AOff'])) : ?>
                                             <td>
