@@ -26,7 +26,7 @@
             <center>
               <div class="mt-3" style="color: yellow;">
                 <span>
-                  <marquee behavior="" direction="left" scrolldelay="0">
+                  <marquee behavior="scroll" direction="left" scrolldelay="50" truespeed>
                     <h5>
                       <?= $data->program; ?> |
                       <?= $data->penyiar1; ?>
@@ -51,6 +51,7 @@
                     $hariIni = new DateTime();
                     echo $hariIni->format('l, d F Y')
                     ?>
+                    <br>
                     (<span id="jam"></span>
                     <?= $hariIni->format('A') ?>)
                   </strong>
