@@ -14,31 +14,31 @@
                 <!-- Hari -->
                 <div class="form-group row">
                     <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" name="hari" placeholder="Senin" required autofocus>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="hari" placeholder="Senin - Minggu" required autofocus>
                     </div>
                 </div>
 
                 <!-- Tanggal -->
                 <div class="form-group row">
                     <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-3">
                         <input type="date" class="form-control" name="tanggal" required>
                     </div>
                 </div>
 
-                <!-- No Surat -->
+                <!-- Nomor Surat -->
                 <div class="form-group row">
-                    <label for="nosurat" class="col-sm-3 col-form-label">No Surat</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="001/A/GM/RAPMAFM/I/2021" name="nosurat" required>
+                    <label for="nosurat" class="col-sm-3 col-form-label">Nomor Surat</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" placeholder="001/" name="nosurat" required>
                     </div>
                 </div>
 
                 <!-- Nama Penerima -->
                 <div class="form-group row">
                     <label for="penerima" class="col-sm-3 col-form-label">Nama Penerima</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Nama Penerima" name="penerima" required>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                 <!-- Perihal Surat -->
                 <div class="form-group row">
                     <label for="perihal" class="col-sm-3 col-form-label">Perihal Surat</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-6">
                         <input type="text" class="form-control" placeholder="Perihal Surat" name="perihal" required>
                     </div>
                 </div>

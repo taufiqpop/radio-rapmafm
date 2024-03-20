@@ -16,7 +16,7 @@
                     <!-- Hari -->
                     <div class="form-group row">
                         <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-3">
                             <input type="text" class="form-control" name="hari" value="<?= $data->hari; ?>" required autofocus>
                         </div>
                     </div>
@@ -24,15 +24,15 @@
                     <!-- Tanggal -->
                     <div class="form-group row">
                         <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required autofocus>
                         </div>
                     </div>
 
-                    <!-- No Surat -->
+                    <!-- Nomor Surat -->
                     <div class="form-group row">
-                        <label for="nosurat" class="col-sm-3 col-form-label">No Surat</label>
-                        <div class="col-sm-7">
+                        <label for="nosurat" class="col-sm-3 col-form-label">Nomor Surat</label>
+                        <div class="col-sm-4">
                             <input type="text" class="form-control" name="nosurat" value="<?= $data->nosurat; ?>" required>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                     <!-- Nama Penerima -->
                     <div class="form-group row">
                         <label for="penerima" class="col-sm-3 col-form-label">Nama Penerima</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-5">
                             <input type="text" class="form-control" name="penerima" value="<?= $data->penerima; ?>" required>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                     <!-- Perihal Surat -->
                     <div class="form-group row">
                         <label for="perihal" class="col-sm-3 col-form-label">Perihal Surat</label>
-                        <div class="col-sm-7">
+                        <div class="col-sm-6">
                             <input type="text" class="form-control" name="perihal" value="<?= $data->perihal; ?>" required>
                         </div>
                     </div>
