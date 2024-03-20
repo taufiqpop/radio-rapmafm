@@ -28,7 +28,7 @@
                 <span>
                   <marquee behavior="scroll" direction="left" scrolldelay="50" truespeed>
                     <h5>
-                      <?= $data->program; ?> |
+                      <?= $data->program; ?> ||
                       <?= $data->penyiar1; ?>
                       <?php if ($data->penyiar2 != '-') : ?>
                         X <?= $data->penyiar2; ?>
