@@ -396,7 +396,7 @@
                                     </div>
                                     <div class="col-auto">
                                         <a href="<?= base_url(); ?>control/dendadlibs">
-                                            <i class="fas fa-amazon-pay fa-2x text-info"></i>
+                                            <i class="fab fa-amazon-pay fa-2x text-info"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -415,7 +415,7 @@
                                     </div>
                                     <div class="col-auto">
                                         <a href="<?= base_url(); ?>control/iklan">
-                                            <i class="fas fa-adversal fa-2x text-info"></i>
+                                            <i class="fab fa-adversal fa-2x text-info"></i>
                                         </a>
                                     </div>
                                 </div>

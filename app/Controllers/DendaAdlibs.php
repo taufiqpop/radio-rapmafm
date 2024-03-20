@@ -53,6 +53,7 @@ class DendaAdlibs extends BaseController
             'acara'         => $this->request->getPost('acara'),
             'program'       => $this->request->getPost('program'),
             'tanggal'       => $this->request->getPost('tanggal'),
+            'hari'          => $this->request->getPost('hari'),
             'total'         => $this->request->getPost('total'),
             'keterangan'    => $this->request->getPost('keterangan'),
         ];
@@ -95,6 +96,7 @@ class DendaAdlibs extends BaseController
             'acara'         => $this->request->getPost('acara'),
             'program'       => $this->request->getPost('program'),
             'tanggal'       => $this->request->getPost('tanggal'),
+            'hari'          => $this->request->getPost('hari'),
             'total'         => $this->request->getPost('total'),
             'keterangan'    => $this->request->getPost('keterangan'),
         ];

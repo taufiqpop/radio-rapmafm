@@ -14,7 +14,7 @@
                 <!-- Nama -->
                 <div class="form-group row">
                     <label for="nama" class="col-sm-3 col-form-label">Nama</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Nama" name="nama" required autofocus>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                 <!-- Acara -->
                 <div class="form-group row">
                     <label for="acara" class="col-sm-3 col-form-label">Acara</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Acara" name="acara" required>
                     </div>
                 </div>
@@ -31,22 +31,49 @@
                 <div class="form-group row">
                     <label for="program" class="col-sm-3 col-form-label">Program Siar</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Program Siar" name="program" required>
+                        <select name="program">
+                            <option value="BASOSAPI">BASOSAPI</option>
+                            <option value="11N1">11N1</option>
+                            <option value="RAPMANESIA">RAPMANESIA</option>
+                            <option value="THE GOOD VIBES">THE GOOD VIBES</option>
+                            <option value="KHASANAH PETANG">KHASANAH PETANG</option>
+                            <option value="MUSIC BOX">MUSIC BOX</option>
+                            <option value="AFTERDAY">AFTERDAY</option>
+                            <option value="MOVIE SCREEN">MOVIE SCREEN</option>
+                            <option value="KING & QUEEN">KING & QUEEN</option>
+                            <option value="INDIEZONE">INDIEZONE</option>
+                            <option value="TEKSAS">TEKSAS</option>
+                            <option value="MERINDING">MERINDING</option>
+                            <option value="K-ARENA">K-ARENA</option>
+                            <option value="SPORTACULAR">SPORTACULAR</option>
+                            <option value="SUDUT KAMPUS">SUDUT KAMPUS</option>
+                            <option value="NO SATNIGHT">NO SATNIGHT</option>
+                            <option value="CLASSIC NIGHT">CLASSIC NIGHT</option>
+                            <option value="RAPMATALKS">RAPMATALKS</option>
+                        </select>
                     </div>
                 </div>
 
                 <!-- Tanggal -->
                 <div class="form-group row">
                     <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-3">
                         <input type="date" class="form-control" name="tanggal" required>
+                    </div>
+                </div>
+
+                <!-- Hari -->
+                <div class="form-group row">
+                    <label for="hari" class="col-sm-3 col-form-label">Hari</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="hari" placeholder="Senin - Sabtu" required>
                     </div>
                 </div>
 
                 <!-- Total -->
                 <div class="form-group row">
                     <label for="total" class="col-sm-3 col-form-label">Total (Tanpa Rp.)</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-4">
                         <input type="text" class="form-control" placeholder="4.000" name="total" required>
                     </div>
                 </div>
@@ -56,8 +83,8 @@
                     <label for="keterangan" class="col-sm-3 col-form-label">Keterangan</label>
                     <div class="col-sm-7">
                         <select name="keterangan">
-                            <option value="LUNAS">LUNAS</option>
                             <option value="BELUM LUNAS">BELUM LUNAS</option>
+                            <option value="LUNAS">LUNAS</option>
                         </select>
                     </div>
                 </div>

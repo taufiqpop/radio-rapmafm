@@ -38,7 +38,8 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">No</th>
-                                    <th scope="col" class="cursor-active" colspan="2">Tanggal</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Tanggal Masuk</th>
+                                    <th scope="col" class="cursor-active" colspan="2">Pelaksanaan</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Instansi</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Acara</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Jenis</th>
@@ -49,8 +50,8 @@
                                     <?php endif ?>
                                 </tr>
                                 <tr>
-                                    <th scope="col" class="cursor-active">Tanggal Masuk</th>
-                                    <th scope="col" class="cursor-active">Pelaksanaan</th>
+                                    <th scope="col" class="cursor-active">Mulai</th>
+                                    <th scope="col" class="cursor-active">Selesai</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -58,8 +59,9 @@
                                     <?php $data = json_decode($mediapartner['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->tglmasuk; ?></td>
-                                        <td><?= $data->pelaksanaan; ?></td>
+                                        <td><?= $data->hari; ?>, <?= $data->tglmasuk; ?></td>
+                                        <td><?= $data->harimulai; ?>, <?= $data->tglmulai; ?></td>
+                                        <td><?= $data->hariselesai; ?>, <?= $data->tglselesai; ?></td>
                                         <td><?= $data->instansi; ?></td>
                                         <td><?= $data->acara; ?></td>
                                         <td><?= $data->jenis; ?></td>

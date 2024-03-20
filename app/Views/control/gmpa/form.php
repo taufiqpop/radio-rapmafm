@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-8">
-            <h1 class="h3 mb-4 text-gray-800">Form Add Data Divisi GMPA</h1>
+            <h1 class="h3 mb-4 text-gray-800">Form Add Data Timeline Divisi GMPA</h1>
 
             <!-- Forms -->
             <form action="<?= base_url(); ?>gmpa/insert" method="post" enctype="multipart/form-data">

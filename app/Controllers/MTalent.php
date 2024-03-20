@@ -49,7 +49,10 @@ class MTalent extends BaseController
     public function insert()
     {
         $input = [
-            'tanggal'           => $this->request->getPost('tanggal'),
+            'tglmulai'          => $this->request->getPost('tglmulai'),
+            'harimulai'         => $this->request->getPost('harimulai'),
+            'tglselesai'        => $this->request->getPost('tglselesai'),
+            'hariselesai'       => $this->request->getPost('hariselesai'),
             'jenis'             => $this->request->getPost('jenis'),
             'instansi'          => $this->request->getPost('instansi'),
             'acara'             => $this->request->getPost('acara'),
@@ -61,7 +64,7 @@ class MTalent extends BaseController
         ];
 
         $data = [
-            'key'       => $this->request->getPost('tanggal'),
+            'key'       => $this->request->getPost('tglmulai'),
             'value'     => json_encode($input),
         ];
 
@@ -94,7 +97,10 @@ class MTalent extends BaseController
     public function update($id)
     {
         $input = [
-            'tanggal'           => $this->request->getPost('tanggal'),
+            'tglmulai'          => $this->request->getPost('tglmulai'),
+            'harimulai'         => $this->request->getPost('harimulai'),
+            'tglselesai'        => $this->request->getPost('tglselesai'),
+            'hariselesai'       => $this->request->getPost('hariselesai'),
             'jenis'             => $this->request->getPost('jenis'),
             'instansi'          => $this->request->getPost('instansi'),
             'acara'             => $this->request->getPost('acara'),
@@ -106,7 +112,7 @@ class MTalent extends BaseController
         ];
 
         $data = [
-            'key'       => $this->request->getPost('nama'),
+            'key'       => $this->request->getPost('tglmulai'),
             'value'     => json_encode($input),
         ];
 

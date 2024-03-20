@@ -26,7 +26,7 @@ class Medpart extends BaseController
         $medpart->orderBy('id', 'DESC');
 
         $data = [
-            'title'       => 'Rapma FM | Medpart',
+            'title'       => 'Rapma FM | Media Partner',
             'medpart'     => $medpart->paginate(10, 'medpart'),
             'pager'       => $medpart->pager,
             'currentPage' => $currentPage,
@@ -39,7 +39,7 @@ class Medpart extends BaseController
     public function form()
     {
         $data = [
-            'title'  => 'Rapma FM | Form Medpart',
+            'title'  => 'Rapma FM | Form Media Partner',
         ];
 
         return view('control/medpart/form', $data);
@@ -50,7 +50,11 @@ class Medpart extends BaseController
     {
         $input = [
             'tglmasuk'          => $this->request->getPost('tglmasuk'),
-            'pelaksanaan'       => $this->request->getPost('pelaksanaan'),
+            'hari'              => $this->request->getPost('hari'),
+            'harimulai'         => $this->request->getPost('harimulai'),
+            'hariselesai'       => $this->request->getPost('hariselesai'),
+            'tglmulai'          => $this->request->getPost('tglmulai'),
+            'tglselesai'        => $this->request->getPost('tglselesai'),
             'instansi'          => $this->request->getPost('instansi'),
             'acara'             => $this->request->getPost('acara'),
             'status'            => $this->request->getPost('status'),
@@ -93,7 +97,11 @@ class Medpart extends BaseController
     {
         $input = [
             'tglmasuk'          => $this->request->getPost('tglmasuk'),
-            'pelaksanaan'       => $this->request->getPost('pelaksanaan'),
+            'hari'              => $this->request->getPost('hari'),
+            'harimulai'         => $this->request->getPost('harimulai'),
+            'hariselesai'       => $this->request->getPost('hariselesai'),
+            'tglmulai'          => $this->request->getPost('tglmulai'),
+            'tglselesai'        => $this->request->getPost('tglselesai'),
             'instansi'          => $this->request->getPost('instansi'),
             'acara'             => $this->request->getPost('acara'),
             'status'            => $this->request->getPost('status'),

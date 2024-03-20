@@ -14,7 +14,7 @@
                 <!-- Nama Penembus -->
                 <div class="form-group row">
                     <label for="nama" class="col-sm-3 col-form-label">Nama Penembus</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Nama Penembus" name="nama" required autofocus>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                 <!-- Client -->
                 <div class="form-group row">
                     <label for="client" class="col-sm-3 col-form-label">Client</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="Client" name="client" required>
                     </div>
                 </div>
@@ -30,16 +30,24 @@
                 <!-- Tanggal MOU -->
                 <div class="form-group row">
                     <label for="tglmou" class="col-sm-3 col-form-label">Tanggal MOU</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="01 Januari 2000" name="tglmou" required>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" name="tglmou" required>
+                    </div>
+                </div>
+
+                <!-- Hari -->
+                <div class="form-group row">
+                    <label for="hari" class="col-sm-3 col-form-label">Hari</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="hari" placeholder="Senin - Minggu" required>
                     </div>
                 </div>
 
                 <!-- Harga -->
                 <div class="form-group row">
                     <label for="harga" class="col-sm-3 col-form-label">Harga (Tanpa Rp.)</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="50.000.000" name="harga" required>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" placeholder="5.000.000" name="harga" required>
                     </div>
                 </div>
 
@@ -48,6 +56,7 @@
                     <label for="status" class="col-sm-3 col-form-label">Status</label>
                     <div class="col-sm-7">
                         <select name="status">
+                            <option value="Belum Tembus">Belum Tembus</option>
                             <option value="Tembus">Tembus</option>
                             <option value="Tidak Tembus">Tidak Tembus</option>
                         </select>

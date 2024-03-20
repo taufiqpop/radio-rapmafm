@@ -56,7 +56,7 @@
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td><?= $data->nama; ?></td>
                                         <td><?= $data->client; ?></td>
-                                        <td><?= $data->tglmou; ?></td>
+                                        <td><?= $data->hari; ?>, <?= $data->tglmou; ?></td>
                                         <td style="max-width: 500px;"><?= $data->paket; ?></td>
                                         <td>Rp. <?= $data->harga; ?></td>
                                         <td><?= $data->status; ?></td>

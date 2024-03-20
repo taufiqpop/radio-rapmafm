@@ -14,32 +14,56 @@
                 <!-- Tanggal Masuk -->
                 <div class="form-group row">
                     <label for="tglmasuk" class="col-sm-3 col-form-label">Tanggal Masuk</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="01 Januari 2000" name="tglmasuk" required autofocus>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" name="tglmasuk" required autofocus>
                     </div>
                 </div>
 
-                <!-- Pelaksanaan -->
+                <!-- Hari Masuk -->
                 <div class="form-group row">
-                    <label for="pelaksanaan" class="col-sm-3 col-form-label">Pelaksanaan</label>
+                    <label for="hari" class="col-sm-3 col-form-label">Hari Masuk</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="01 Januari 2000 - 01 Januari 2010" name="pelaksanaan" required>
+                        <input type="text" class="form-control" name="hari" placeholder="Senin - Minggu" required>
                     </div>
                 </div>
 
-                <!-- Instansi -->
+                <!-- Nama Instansi -->
                 <div class="form-group row">
-                    <label for="instansi" class="col-sm-3 col-form-label">Instansi</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="Instansi" name="instansi" required>
+                    <label for="instansi" class="col-sm-3 col-form-label">Nama Instansi</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" placeholder="Nama Instansi" name="instansi" required>
                     </div>
                 </div>
 
                 <!-- Acara -->
                 <div class="form-group row">
                     <label for="acara" class="col-sm-3 col-form-label">Acara</label>
-                    <div class="col-sm-7">
+                    <div class="col-sm-6">
                         <input type="text" class="form-control" placeholder="Acara" name="acara" required>
+                    </div>
+                </div>
+
+                <!-- Hari & Tanggal Mulai -->
+                <div class="form-group row">
+                    <label for="harimulai" class="col-sm-3 col-form-label">Hari Mulai</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="harimulai" placeholder="-" required>
+                    </div>
+                    <label for="tglmulai" class="col-form-label">Tanggal</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" name="tglmulai" required>
+                    </div>
+                </div>
+
+                <!-- Hari & Tanggal Selesai -->
+                <div class="form-group row">
+                    <label for="hariselesai" class="col-sm-3 col-form-label">Hari Selesai</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="hariselesai" placeholder="-" required>
+                    </div>
+                    <label for="tglselesai" class="col-form-label">Tanggal</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" name="tglselesai" required>
                     </div>
                 </div>
 
@@ -59,6 +83,7 @@
                     <label for="status" class="col-sm-3 col-form-label">Status</label>
                     <div class="col-sm-7">
                         <select name="status">
+                            <option value="Belum Terlaksana">Belum Terlaksana</option>
                             <option value="Terlaksana">Terlaksana</option>
                             <option value="Cancel">Cancel</option>
                         </select>
