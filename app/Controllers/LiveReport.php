@@ -54,7 +54,8 @@ class LiveReport extends BaseController
             'tanggal'   => $this->request->getPost('tanggal'),
             'jam'       => $this->request->getPost('jam'),
             'lokasi'    => $this->request->getPost('lokasi'),
-            'kendala'   => $this->request->getPost('kendala'),
+            'perihal'   => $this->request->getPost('perihal'),
+            'program'   => $this->request->getPost('program'),
             'status'    => $this->request->getPost('status'),
         ];
 
@@ -97,7 +98,8 @@ class LiveReport extends BaseController
             'tanggal'   => $this->request->getPost('tanggal'),
             'jam'       => $this->request->getPost('jam'),
             'lokasi'    => $this->request->getPost('lokasi'),
-            'kendala'   => $this->request->getPost('kendala'),
+            'perihal'   => $this->request->getPost('perihal'),
+            'program'   => $this->request->getPost('program'),
             'status'    => $this->request->getPost('status'),
         ];
 

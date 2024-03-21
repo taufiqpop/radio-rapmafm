@@ -38,11 +38,12 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
+                                    <th scope="col" class="cursor-active">Program</th>
                                     <th scope="col" class="cursor-active">Nama</th>
                                     <th scope="col" class="cursor-active">Tanggal</th>
                                     <th scope="col" class="cursor-active">Pukul</th>
                                     <th scope="col" class="cursor-active">Lokasi</th>
-                                    <th scope="col" class="cursor-active">Kendala</th>
+                                    <th scope="col" class="cursor-active">Perihal</th>
                                     <th scope="col" class="cursor-active">Status</th>
                                     <?php if (in_groups(['Admin', 'Jurnalistik'])) : ?>
                                         <th scope="col" class="cursor-active">Action</th>
@@ -54,11 +55,12 @@
                                     <?php $data = json_decode($live['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
+                                        <td><?= $data->program; ?></td>
                                         <td><?= $data->nama; ?></td>
                                         <td><?= $data->hari; ?>, <?= $data->tanggal; ?></td>
                                         <td><?= $data->jam; ?></td>
                                         <td><?= $data->lokasi; ?></td>
-                                        <td><?= $data->kendala; ?></td>
+                                        <td style="max-width: 250px;"><?= $data->perihal; ?></td>
                                         <td><?= $data->status; ?></td>
                                         <?php if (in_groups(['Admin', 'Jurnalistik'])) : ?>
                                             <td>

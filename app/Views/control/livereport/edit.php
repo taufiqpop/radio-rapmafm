@@ -21,17 +21,13 @@
                         </div>
                     </div>
 
-                    <!-- Hari -->
+                    <!-- Tanggal -->
                     <div class="form-group row">
                         <label for="hari" class="col-sm-3 col-form-label">Hari</label>
                         <div class="col-sm-3">
                             <input type="text" class="form-control" name="hari" value="<?= $data->hari; ?>" required>
                         </div>
-                    </div>
-
-                    <!-- Tanggal -->
-                    <div class="form-group row">
-                        <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
+                        <label for="tanggal" class="col-form-label">Tanggal</label>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required>
                         </div>
@@ -40,8 +36,36 @@
                     <!-- Jam -->
                     <div class="form-group row">
                         <label for="jam" class="col-sm-3 col-form-label">Jam</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <input type="text" class="form-control" name="jam" value="<?= $data->jam; ?>" required>
+                        </div>
+                    </div>
+
+                    <!-- Program Siar -->
+                    <div class="form-group row">
+                        <label for="program" class="col-sm-3 col-form-label">Program Siar</label>
+                        <div class="col-sm-7">
+                            <select name="program">
+                                <option value="<?= $data->program; ?>" selected></option>
+                                <option value="BASOSAPI">BASOSAPI</option>
+                                <option value="11N1">11N1</option>
+                                <option value="RAPMANESIA">RAPMANESIA</option>
+                                <option value="THE GOOD VIBES">THE GOOD VIBES</option>
+                                <option value="KHASANAH PETANG">KHASANAH PETANG</option>
+                                <option value="MUSIC BOX">MUSIC BOX</option>
+                                <option value="AFTERDAY">AFTERDAY</option>
+                                <option value="MOVIE SCREEN">MOVIE SCREEN</option>
+                                <option value="KING & QUEEN">KING & QUEEN</option>
+                                <option value="INDIEZONE">INDIEZONE</option>
+                                <option value="TEKSAS">TEKSAS</option>
+                                <option value="MERINDING">MERINDING</option>
+                                <option value="K-ARENA">K-ARENA</option>
+                                <option value="SPORTACULAR">SPORTACULAR</option>
+                                <option value="TOP 15">TOP 15</option>
+                                <option value="SUDUT KAMPUS">SUDUT KAMPUS</option>
+                                <option value="NO SATNIGHT">NO SATNIGHT</option>
+                                <option value="CLASSIC NIGHT">CLASSIC NIGHT</option>
+                            </select>
                         </div>
                     </div>
 
@@ -53,11 +77,11 @@
                         </div>
                     </div>
 
-                    <!-- Kendala -->
+                    <!-- Perihal -->
                     <div class="form-group row">
-                        <label for="kendala" class="col-sm-3 col-form-label">Kendala</label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" name="kendala" value="<?= $data->kendala; ?>" required>
+                        <label for="perihal" class="col-sm-3 col-form-label">Perihal</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="perihal" value="<?= $data->perihal; ?>" required>
                         </div>
                     </div>
 
@@ -66,10 +90,10 @@
                         <label for="status" class="col-sm-3 col-form-label">Status</label>
                         <div class="col-sm-7">
                             <select name="status">
-                                <option value="<?= $data->status; ?>" selected>Terlaksana</option>
-                                <option value="Terlaksana">Terlaksana</option>
-                                <option value="Belum Terlaksana">Belum Terlaksana</option>
-                                <option value="Tidak Terlaksana">Tidak Terlaksana</option>
+                                <option value="<?= $data->status; ?>"></option>
+                                <option value="&#8212;">Belum Terlaksana</option>
+                                <option value="&#9989;">Terlaksana</option>
+                                <option value="&times;">Tidak Terlaksana</option>
                             </select>
                         </div>
                     </div>
