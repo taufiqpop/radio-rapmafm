@@ -295,6 +295,22 @@ $routes->delete('/control/personalia/(:num)', 'Personalia::delete/$1', ['filter'
 $routes->add('/personalia/insert', 'Personalia::insert', ['filter' => 'role:Admin, MP']);
 $routes->add('/personalia/update/(:num)', 'Personalia::update/$1', ['filter' => 'role:Admin, MP']);
 
+// Surat SP
+$routes->add('/control/suratsp', 'SuratSP::index', ['filter' => 'role:Admin, GM, MP, Advokat']);
+$routes->get('/control/suratsp/form', 'SuratSP::form', ['filter' => 'role:Admin, Advokat']);
+$routes->get('/control/suratsp/edit/(:num)', 'SuratSP::edit/$1', ['filter' => 'role:Admin, Advokat']);
+$routes->delete('/control/suratsp/(:num)', 'SuratSP::delete/$1', ['filter' => 'role:Admin, Advokat']);
+$routes->add('/suratsp/insert', 'SuratSP::insert', ['filter' => 'role:Admin, Advokat']);
+$routes->add('/suratsp/update/(:num)', 'SuratSP::update/$1', ['filter' => 'role:Admin, Advokat']);
+
+// Capeng
+$routes->add('/control/capeng', 'Capeng::index', ['filter' => 'role:Admin, GM, MP, Advokat']);
+$routes->get('/control/capeng/form', 'Capeng::form', ['filter' => 'role:Admin, Advokat']);
+$routes->get('/control/capeng/edit/(:num)', 'Capeng::edit/$1', ['filter' => 'role:Admin, Advokat']);
+$routes->delete('/control/capeng/(:num)', 'Capeng::delete/$1', ['filter' => 'role:Admin, Advokat']);
+$routes->add('/capeng/insert', 'Capeng::insert', ['filter' => 'role:Admin, Advokat']);
+$routes->add('/capeng/update/(:num)', 'Capeng::update/$1', ['filter' => 'role:Admin, Advokat']);
+
 // Magang Internal
 $routes->add('/control/maganginternal', 'MagangInternal::index', ['filter' => 'role:Admin, GM, MP, HRD']);
 $routes->get('/control/maganginternal/form', 'MagangInternal::form', ['filter' => 'role:Admin, HRD']);

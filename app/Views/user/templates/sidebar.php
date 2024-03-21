@@ -333,6 +333,25 @@
         </li>
     <?php endif; ?>
 
+    <!-- Advokat -->
+    <?php if (in_groups(['Admin', 'GM', 'MP', 'Advokat'])) : ?>
+        <!-- Surat SP -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/suratsp">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Surat SP</span>
+            </a>
+        </li>
+
+        <!-- Kontrak Capeng -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/capeng">
+                <i class="	fas fa-file-signature"></i>
+                <span>Kontrak Capeng</span>
+            </a>
+        </li>
+    <?php endif; ?>
+
     <!-- HRD -->
     <?php if (in_groups(['Admin', 'GM', 'MP', 'HRD'])) : ?>
         <!-- Magang Internal -->
