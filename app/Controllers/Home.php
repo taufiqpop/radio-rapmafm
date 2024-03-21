@@ -88,10 +88,10 @@ class Home extends BaseController
 
         $data = [
             'title'         => 'Rapma FM | Podcast',
-            'podcast'       => $podcast->paginate(4, 'podcast'),
+            'podcast'       => $podcast->paginate(9, 'podcast'),
             'pagerPodcast'  => $podcast->pager,
             'currentPage'   => $currentPage,
-            'settings'      => $this->settingsModel->paginate(5, 'settings'),
+            'settings'      => $this->settingsModel->paginate(1, 'settings'),
         ];
 
         return view('home/podcasts', $data);

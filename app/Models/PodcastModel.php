@@ -9,7 +9,7 @@ class PodcastModel extends Model
     protected $table            = 'podcast';
     protected $primaryKey       = 'id';
     protected $returnType       = 'array';
-    protected $allowedFields    = ['key', 'value', 'tahun', 'program', 'embed', 'created_at', 'updated_at', 'deleted_at'];
+    protected $allowedFields    = ['key', 'value', 'tahun', 'program', 'created_at', 'updated_at', 'deleted_at'];
     protected $useTimestamps    = true;
 
     public function search($keyword)

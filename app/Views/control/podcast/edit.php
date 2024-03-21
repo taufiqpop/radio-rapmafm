@@ -12,13 +12,12 @@
                 <!-- Forms -->
                 <form action="<?= base_url(); ?>podcast/update/<?= $podcasts['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
-                    <input type="hidden" name="imgLama" value="<?= $data->images ?>">
 
                     <!-- Judul Podcast -->
                     <div class="form-group row">
                         <label for="judul" class="col-sm-2 col-form-label">Judul Podcast</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="judul" value="<?= $data->judul ?>" required autofocus>
+                            <input type="text" class="form-control" name="judul" value="<?= $data->judul; ?>" required autofocus>
                         </div>
                     </div>
 
@@ -52,43 +51,33 @@
                         </div>
                     </div>
 
-                    <!-- Nama Talent -->
+                    <!-- Link -->
                     <div class="form-group row">
-                        <label for="talent" class="col-sm-2 col-form-label">Nama Talent</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" name="talent" value="<?= $data->talent ?>" required>
-                        </div>
-                    </div>
-
-                    <!-- Narasumber -->
-                    <div class="form-group row">
-                        <label for="narasumber" class="col-sm-2 col-form-label">Narasumber</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" name="narasumber" value="<?= $data->narasumber ?>" required>
-                        </div>
-                    </div>
-
-                    <!-- Link Embed -->
-                    <div class="form-group row">
-                        <label for="embed" class="col-sm-2 col-form-label">Link Embed</label>
+                        <label for="link" class="col-sm-2 col-form-label">Link</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="embed" value="<?= $podcasts['embed'] ?>" required>
+                            <input type="text" class="form-control" name="link" value="<?= $data->link; ?>" required>
                         </div>
                     </div>
 
-                    <!-- Hari -->
+                    <!-- Bulan -->
                     <div class="form-group row">
-                        <label for="hari" class="col-sm-2 col-form-label">Hari</label>
+                        <label for="bulan" class="col-sm-2 col-form-label">Bulan</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="hari" value="<?= $data->hari ?>" required>
-                        </div>
-                    </div>
-
-                    <!-- Tanggal -->
-                    <div class="form-group row">
-                        <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>
-                        <div class="col-sm-3">
-                            <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal ?>" required>
+                            <select name="bulan">
+                                <option value="<?= $data->bulan; ?>" selected></option>
+                                <option value="Januari">Januari</option>
+                                <option value="Februari">Februari</option>
+                                <option value="Maret">Maret</option>
+                                <option value="April">April</option>
+                                <option value="Mei">Mei</option>
+                                <option value="Juni">Juni</option>
+                                <option value="Juli">Juli</option>
+                                <option value="Agustus">Agustus</option>
+                                <option value="September">September</option>
+                                <option value="Oktober">Oktober</option>
+                                <option value="November">November</option>
+                                <option value="Desember">Desember</option>
+                            </select>
                         </div>
                     </div>
 
@@ -100,20 +89,19 @@
                         </div>
                     </div>
 
-                    <!-- Images -->
+                    <!-- Nama Talent -->
                     <div class="form-group row">
-                        <label for="images" class="col-sm-2 col-form-label">Images</label>
-                        <div class="col-sm-4">
-                            <img src="<?= base_url(); ?>img/podcast/<?= $data->images ?>" class="img-thumbnail img-preview">
+                        <label for="talent" class="col-sm-2 col-form-label">Nama Talent</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="talent" value="<?= $data->talent; ?>" required>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input <?= ($validation->hasError('images')) ? 'is invalid' : ''; ?>" id="imgRapma" name="images" onchange="previewImgRapma()">
-                                <div class="invalid-feedback">
-                                    <?= $validation->getError('images'); ?>
-                                </div>
-                                <label class="custom-file-label" for="images"><?= $data->images ?></label>
-                            </div>
+                    </div>
+
+                    <!-- Narasumber -->
+                    <div class="form-group row">
+                        <label for="narasumber" class="col-sm-2 col-form-label">Narasumber</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="narasumber" value="<?= $data->narasumber; ?>" required>
                         </div>
                     </div>
 

@@ -38,11 +38,9 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
-                                    <th scope="col" class="cursor-stop">Photo</th>
-                                    <th scope="col" class="cursor-active">Judul</th>
                                     <th scope="col" class="cursor-active">Program</th>
+                                    <th scope="col" class="cursor-active">Judul</th>
                                     <th scope="col" class="cursor-active">Tanggal Rilis</th>
-                                    <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-active">Talent</th>
                                     <th scope="col" class="cursor-active">Narasumber</th>
                                     <th scope="col" class="cursor-stop">Action</th>
@@ -53,17 +51,13 @@
                                     <?php $data = json_decode($podcasts['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td>
-                                            <img src="<?= base_url(); ?>img/podcast/<?= $data->images ?>" class=" thumbnail">
-                                        </td>
+                                        <td>[<?= $podcasts['program'] ?>]</td>
                                         <td><?= $data->judul ?></td>
-                                        <td><?= $podcasts['program'] ?></td>
-                                        <td><?= $data->hari ?>, <?= $data->tanggal; ?></td>
-                                        <td><?= $podcasts['tahun'] ?></td>
+                                        <td><?= $data->bulan; ?> <?= $podcasts['tahun'] ?></td>
                                         <td><?= $data->talent ?></td>
                                         <td><?= $data->narasumber ?></td>
                                         <td>
-                                            <a href="https://open.spotify.com/episode/<?= $podcasts['embed']; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
+                                            <a href="https://open.spotify.com/episode/<?= $data->link ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
                                             <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
                                                 <a href="<?= base_url(); ?>control/podcast/edit/<?= $podcasts['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/podcast/<?= $podcasts['id']; ?>" method="post" class="d-inline">

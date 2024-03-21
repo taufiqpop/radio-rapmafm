@@ -40,7 +40,6 @@ class Podcast extends BaseController
     {
         $data = [
             'title'      => 'Rapma FM | Form Podcast',
-            'validation' => \Config\Services::validation()
         ];
 
         return view('control/podcast/form', $data);
@@ -49,49 +48,17 @@ class Podcast extends BaseController
     // Insert Data
     public function insert()
     {
-        // Validasi Input
-        if (!$this->validate([
-            'images' => [
-                'rules'  => 'uploaded[images]|max_size[images,10240]|is_image[images]|mime_in[images,image/jpg,image/jpeg,image/png,image/svg]',
-                'errors' => [
-                    'uploaded' => 'Pilih Gambar Terlebih Dahulu',
-                    'max_size' => 'Ukuran Gambar Terlalu Besar',
-                    'is_image' => 'Yang Anda Pilih Bukan Gambar',
-                    'mime_in'  => 'Yang Anda Pilih Bukan Gambar'
-                ]
-            ]
-        ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('control/podcast/form')->withInput()->with('validation', $validation);
-        }
-
-        // Ambil Gambar
-        $ambilGambar = $this->request->getFile('images');
-
-        // Apakah Tidak Ada Gambar Yang Diupload
-        if ($ambilGambar->getError() == 4) {
-            $namaGambar = 'default.svg';
-        } else {
-            // Generate Nama File Random
-            $namaGambar = $ambilGambar->getRandomName();
-
-            // Pindahkan Gambar
-            $ambilGambar->move('img/podcast', $namaGambar);
-        }
-
         $input = [
             'judul'         => $this->request->getPost('judul'),
-            'hari'          => $this->request->getPost('hari'),
-            'tanggal'       => $this->request->getPost('tanggal'),
+            'bulan'         => $this->request->getPost('bulan'),
+            'link'          => $this->request->getPost('link'),
             'talent'        => $this->request->getPost('talent'),
             'narasumber'    => $this->request->getPost('narasumber'),
-            'images'        => $namaGambar,
         ];
 
         $data = [
             'key'       => $this->request->getPost('judul'),
             'value'     => json_encode($input),
-            'embed'     => $this->request->getPost('embed'),
             'tahun'     => $this->request->getPost('tahun'),
             'program'   => $this->request->getPost('program'),
         ];
@@ -108,12 +75,11 @@ class Podcast extends BaseController
         $data = [
             'title'         => 'Rapma FM | Edit Data Podcast',
             'podcast'       => $this->podcastModel->find($id),
-            'validation'    => \Config\Services::validation()
         ];
 
         $db      = \Config\Database::connect();
         $builder = $db->table('podcast');
-        $builder->select('id, key, value, tahun, program, embed, created_at, updated_at, deleted_at');
+        $builder->select('id, key, value, tahun, program, created_at, updated_at, deleted_at');
         $builder->where('id', $id);
         $query   = $builder->get();
 
@@ -125,50 +91,17 @@ class Podcast extends BaseController
     // Update Data
     public function update($id)
     {
-        // Validasi Input
-        if (!$this->validate([
-            'images' => [
-                'rules' => 'max_size[images,10240]|is_image[images]|mime_in[images,image/jpg,image/jpeg,image/png,image/svg]',
-                'errors' => [
-                    'max_size' => 'Ukuran Gambar Terlalu Besar',
-                    'is_image' => 'Yang Anda Pilih Bukan Gambar',
-                    'mime_in'  => 'Yang Anda Pilih Bukan Gambar'
-                ]
-            ]
-        ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('control/podcast/edit')->withInput()->with('validation', $validation);
-        }
-
-        $ambilGambar = $this->request->getFile('images');
-
-        // Cek Gambar, Apakah Tetap Gambar Lama
-        if ($ambilGambar->getError() == 4) {
-            $namaGambar = $this->request->getVar('imgLama');
-        } else {
-            // Generate Nama File Random
-            $namaGambar = $ambilGambar->getRandomName();
-
-            // Pindahkan Gambar
-            $ambilGambar->move('img/podcast', $namaGambar);
-
-            // Hapus File Yang Lama
-            unlink('img/podcast/' . $this->request->getVar('imgLama'));
-        }
-
         $input = [
             'judul'         => $this->request->getPost('judul'),
-            'hari'          => $this->request->getPost('hari'),
-            'tanggal'       => $this->request->getPost('tanggal'),
+            'bulan'         => $this->request->getPost('bulan'),
+            'link'          => $this->request->getPost('link'),
             'talent'        => $this->request->getPost('talent'),
             'narasumber'    => $this->request->getPost('narasumber'),
-            'images'        => $namaGambar,
         ];
 
         $data = [
             'key'       => $this->request->getPost('judul'),
             'value'     => json_encode($input),
-            'embed'     => $this->request->getPost('embed'),
             'tahun'     => $this->request->getPost('tahun'),
             'program'   => $this->request->getPost('program'),
         ];
@@ -182,13 +115,6 @@ class Podcast extends BaseController
     // Delete Data
     public function delete($id)
     {
-        // Cari Gambar Berdasarkan ID
-        $podcast = $this->podcastModel->find($id);
-        $podcastJSON = json_decode($podcast['value']);
-
-        // Hapus Gambar Permanen
-        unlink('img/podcast/' . $podcastJSON->images);
-
         $this->podcastModel->delete($id);
         session()->setFlashdata('pesan', 'Data Podcast Berhasil Dihapus!');
 

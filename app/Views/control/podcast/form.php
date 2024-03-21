@@ -48,6 +48,43 @@
                     </div>
                 </div>
 
+                <!-- Link -->
+                <div class="form-group row">
+                    <label for="link" class="col-sm-2 col-form-label">Link</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" placeholder="Tanpa : https://open.spotify.com/" name="link" required>
+                    </div>
+                </div>
+
+                <!-- Bulan -->
+                <div class="form-group row">
+                    <label for="bulan" class="col-sm-2 col-form-label">Bulan</label>
+                    <div class="col-sm-2">
+                        <select name="bulan">
+                            <option value="Januari">Januari</option>
+                            <option value="Februari">Februari</option>
+                            <option value="Maret">Maret</option>
+                            <option value="April">April</option>
+                            <option value="Mei">Mei</option>
+                            <option value="Juni">Juni</option>
+                            <option value="Juli">Juli</option>
+                            <option value="Agustus">Agustus</option>
+                            <option value="September">September</option>
+                            <option value="Oktober">Oktober</option>
+                            <option value="November">November</option>
+                            <option value="Desember">Desember</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Tahun -->
+                <div class="form-group row">
+                    <label for="tahun" class="col-sm-2 col-form-label">Tahun</label>
+                    <div class="col-sm-2">
+                        <input type="number" class="form-control" placeholder="2021" name="tahun" required>
+                    </div>
+                </div>
+
                 <!-- Nama Talent -->
                 <div class="form-group row">
                     <label for="talent" class="col-sm-2 col-form-label">Nama Talent</label>
@@ -61,55 +98,6 @@
                     <label for="narasumber" class="col-sm-2 col-form-label">Narasumber</label>
                     <div class="col-sm-5">
                         <input type="text" class="form-control" placeholder="-" name="narasumber" required>
-                    </div>
-                </div>
-
-                <!-- Link Embed -->
-                <div class="form-group row">
-                    <label for="embed" class="col-sm-2 col-form-label">Link Embed</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="https://open.spotify.com/" name="embed" required>
-                    </div>
-                </div>
-
-                <!-- Hari -->
-                <div class="form-group row">
-                    <label for="hari" class="col-sm-2 col-form-label">Hari</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="Senin - Minggu" name="hari" required>
-                    </div>
-                </div>
-
-                <!-- Tanggal -->
-                <div class="form-group row">
-                    <label for="tanggal" class="col-sm-2 col-form-label">Tanggal</label>
-                    <div class="col-sm-3">
-                        <input type="date" class="form-control" name="tanggal" required>
-                    </div>
-                </div>
-
-                <!-- Tahun -->
-                <div class="form-group row">
-                    <label for="tahun" class="col-sm-2 col-form-label">Tahun</label>
-                    <div class="col-sm-2">
-                        <input type="number" class="form-control" placeholder="2021" name="tahun" required>
-                    </div>
-                </div>
-
-                <!-- Images -->
-                <div class="form-group row">
-                    <label for="images" class="col-sm-2 col-form-label">Artwork</label>
-                    <div class="col-sm-2">
-                        <img src="<?= base_url(); ?>img/default.svg" class="img-thumbnail img-preview">
-                    </div>
-                    <div class="col-sm-5">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input <?= ($validation->hasError('images')) ? 'is invalid' : ''; ?>" id="imgRapma" name="images" onchange="previewImgRapma()">
-                            <div class="invalid-feedback">
-                                <?= $validation->getError('images'); ?>
-                            </div>
-                            <label class="custom-file-label" for="images">Choose Artwork</label>
-                        </div>
                     </div>
                 </div>
 
