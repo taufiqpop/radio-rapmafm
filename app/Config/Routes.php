@@ -196,6 +196,22 @@ $routes->delete('/control/livereport/(:num)', 'LiveReport::delete/$1', ['filter'
 $routes->add('/livereport/insert', 'LiveReport::insert', ['filter' => 'role:Admin, Jurnalistik']);
 $routes->add('/livereport/update/(:num)', 'LiveReport::update/$1', ['filter' => 'role:Admin, Jurnalistik']);
 
+// Blog
+$routes->add('/control/blog', 'Blog::index', ['filter' => 'role:Admin, GM, MK, Jurnalistik']);
+$routes->add('/control/blog/form', 'Blog::form', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->get('/control/blog/edit/(:num)', 'Blog::edit/$1', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->delete('/control/blog/(:num)', 'Blog::delete/$1', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->add('/blog/insert', 'Blog::insert', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->add('/blog/update/(:num)', 'Blog::update/$1', ['filter' => 'role:Admin, Jurnalistik']);
+
+// Infografis
+$routes->add('/control/infografis', 'Infografis::index', ['filter' => 'role:Admin, GM, MK, Jurnalistik']);
+$routes->add('/control/infografis/form', 'Infografis::form', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->get('/control/infografis/edit/(:num)', 'Infografis::edit/$1', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->delete('/control/infografis/(:num)', 'Infografis::delete/$1', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->add('/infografis/insert', 'Infografis::insert', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->add('/infografis/update/(:num)', 'Infografis::update/$1', ['filter' => 'role:Admin, Jurnalistik']);
+
 // Rapma News
 $routes->add('/control/news', 'News::index', ['filter' => 'role:Admin, GM, MK, Jurnalistik']);
 $routes->add('/control/news/form', 'News::form', ['filter' => 'role:Admin, Jurnalistik']);
@@ -205,12 +221,12 @@ $routes->add('/news/insert', 'News::insert', ['filter' => 'role:Admin, Jurnalist
 $routes->add('/news/update/(:num)', 'News::update/$1', ['filter' => 'role:Admin, Jurnalistik']);
 
 // Newsflash
-$routes->add('/control/newsflash', 'Newsflash::index', ['filter' => 'role:Admin, GM, MK, Jurnalistik']);
-$routes->add('/control/newsflash/form', 'Newsflash::form', ['filter' => 'role:Admin, Jurnalistik']);
-$routes->get('/control/newsflash/edit/(:num)', 'Newsflash::edit/$1', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->add('/control/newsflash', 'Newsflash::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
+$routes->add('/control/newsflash/form', 'Newsflash::form', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
+$routes->get('/control/newsflash/edit/(:num)', 'Newsflash::edit/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
 $routes->delete('/control/newsflash/(:num)', 'Newsflash::delete/$1', ['filter' => 'role:Admin, Jurnalistik']);
-$routes->add('/newsflash/insert', 'Newsflash::insert', ['filter' => 'role:Admin, Jurnalistik']);
-$routes->add('/newsflash/update/(:num)', 'Newsflash::update/$1', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->add('/newsflash/insert', 'Newsflash::insert', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
+$routes->add('/newsflash/update/(:num)', 'Newsflash::update/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
 
 // Bank Lagu
 $routes->add('/control/lagu', 'Lagu::index', ['filter' => 'role:Admin, GM, MK, MD']);

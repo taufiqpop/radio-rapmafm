@@ -80,8 +80,10 @@
     <!-- ==================================================================== -->
 
     <!-- Divisi Umum -->
-    <hr class="sidebar-divider">
-    <div class="sidebar-heading">Divisi Umum</div>
+    <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat', 'Crew'])) : ?>
+        <hr class="sidebar-divider">
+        <div class="sidebar-heading">Divisi Umum</div>
+    <?php endif; ?>
 
     <!-- Manager -->
     <?php if (in_groups(['Admin', 'GM', 'MU', 'AOn', 'AOff', 'Teknisi'])) : ?>
@@ -130,13 +132,15 @@
     <?php endif; ?>
 
     <!-- Admisi Off Air -->
-    <!-- Jadwal Piket -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/jadwalpiket">
-            <i class="fas fa-calendar-check"></i>
-            <span>Jadwal Piket</span>
-        </a>
-    </li>
+    <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat', 'Crew'])) : ?>
+        <!-- Jadwal Piket -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/jadwalpiket">
+                <i class="fas fa-calendar-check"></i>
+                <span>Jadwal Piket</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <?php if (in_groups(['Admin', 'GM', 'MU', 'AOff'])) : ?>
         <!-- Data Inventaris -->
@@ -178,8 +182,10 @@
     <!-- ==================================================================== -->
 
     <!-- Divisi Kepenyiaran -->
-    <hr class="sidebar-divider">
-    <div class="sidebar-heading">Divisi Kepenyiaran</div>
+    <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat', 'Crew'])) : ?>
+        <hr class="sidebar-divider">
+        <div class="sidebar-heading">Divisi Kepenyiaran</div>
+    <?php endif; ?>
 
     <!-- Manager -->
     <?php if (in_groups(['Admin', 'GM', 'MK', 'Produksi', 'Jurnalistik', 'MD'])) : ?>
@@ -192,16 +198,26 @@
         </li>
     <?php endif; ?>
 
-    <!-- Jadwal Siar -->
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url(); ?>control/jadwalsiar">
-            <i class="fas fa-calendar-alt"></i>
-            <span>Jadwal Siar</span>
-        </a>
-    </li>
+    <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat', 'Crew'])) : ?>
+        <!-- Jadwal Siar -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/jadwalsiar">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Jadwal Siar</span>
+            </a>
+        </li>
+    <?php endif; ?>
 
     <!-- Jurnalistik -->
     <?php if (in_groups(['Admin', 'GM', 'MK', 'Jurnalistik'])) : ?>
+        <!-- Artikel Blog -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/blog">
+                <i class="fab fa-blogger-b"></i>
+                <span>Artikel Blog</span>
+            </a>
+        </li>
+
         <!-- Rapma News -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/news">
@@ -215,6 +231,24 @@
             <a class="nav-link" href="<?= base_url(); ?>control/livereport">
                 <i class="fas fa-camera"></i>
                 <span>Live Report</span>
+            </a>
+        </li>
+
+        <!-- Infografis -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/infografis">
+                <i class="fas fa-file-image"></i>
+                <span>Infografis</span>
+            </a>
+        </li>
+    <?php endif; ?>
+
+    <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat', 'Crew'])) : ?>
+        <!-- Newsflash -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/newsflash">
+                <i class="fas fa-bolt"></i>
+                <span>Newsflash</span>
             </a>
         </li>
     <?php endif; ?>

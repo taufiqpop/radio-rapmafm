@@ -1,13 +1,13 @@
 <?= $this->extend('user/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- List News -->
+<!-- List Newsflash -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1 class="h3 mb-4 text-gray-800">Daftar News</h1>
-            <?php if (in_groups(['Admin', 'Jurnalistik'])) : ?>
-                <a href="<?= base_url(); ?>control/news/form" class="btn btn-primary">Add News</a>
+            <h1 class="h3 mb-4 text-gray-800">Daftar Newsflash</h1>
+            <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat', 'Crew'])) : ?>
+                <a href="<?= base_url(); ?>control/newsflash/form" class="btn btn-primary">Add Newsflash</a>
                 <br><br>
             <?php endif; ?>
 
@@ -40,27 +40,27 @@
                                     <th scope="col" class="cursor-active">No</th>
                                     <th scope="col" class="cursor-active">Judul</th>
                                     <th scope="col" class="cursor-active">Tanggal</th>
-                                    <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-active">Penulis</th>
+                                    <th scope="col" class="cursor-active">Kendala</th>
                                     <th scope="col" class="cursor-active">Keterangan</th>
                                     <th scope="col" class="cursor-stop">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($news as $index => $berita) : ?>
+                                <?php foreach ($newsflash as $index => $berita) : ?>
                                     <?php $data = json_decode($berita['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td style="max-width: 200px;"><?= $data->judul ?></td>
                                         <td><?= $data->hari; ?>, <?= $data->tanggal ?></td>
-                                        <td><?= $berita['tahun']; ?></td>
                                         <td><?= $data->penulis ?></td>
+                                        <td><?= $data->kendala ?></td>
                                         <td><?= $data->keterangan ?></td>
                                         <td>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
+                                            <a href="<?= base_url(); ?>control/newsflash/edit/<?= $berita['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                             <?php if (in_groups(['Admin', 'Jurnalistik'])) : ?>
-                                                <a href="<?= base_url(); ?>control/news/edit/<?= $berita['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/news/<?= $berita['id']; ?>" method="post" class="d-inline">
+                                                <form action="<?= base_url(); ?>control/newsflash/<?= $berita['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
@@ -73,7 +73,7 @@
                         </table>
 
                         <!-- Pagers -->
-                        <?= $pager->links('news', 'data_pagination'); ?>
+                        <?= $pager->links('newsflash', 'data_pagination'); ?>
                     </div>
                 </div>
             </div>
