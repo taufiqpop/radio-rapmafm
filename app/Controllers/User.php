@@ -17,8 +17,10 @@ class User extends BaseController
     protected $umumModel;
     protected $achievementsModel;
     protected $eventsModel;
+    protected $kontenModel;
     protected $inventarisModel;
     protected $peminjamanModel;
+    protected $kerjabaktiModel;
 
     // Divisi Kepenyiaran
     protected $kepenyiaranModel;
@@ -31,6 +33,9 @@ class User extends BaseController
     protected $videosModel;
     protected $newsModel;
     protected $livereportModel;
+    protected $newsflashModel;
+    protected $infografisModel;
+    protected $blogModel;
 
     // Divisi Marketing
     protected $marketingModel;
@@ -64,8 +69,10 @@ class User extends BaseController
         $this->umumModel            = new \App\Models\UmumModel();
         $this->achievementsModel    = new \App\Models\AchievementsModel();
         $this->eventsModel          = new \App\Models\EventsModel();
+        $this->kontenModel = new \App\Models\KontenModel();
         $this->inventarisModel      = new \App\Models\InventarisModel();
         $this->peminjamanModel      = new \App\Models\PeminjamanModel();
+        $this->kerjabaktiModel      = new \App\Models\KerjaBaktiModel();
 
         // Divisi Kepenyiaran
         $this->kepenyiaranModel     = new \App\Models\KepenyiaranModel();
@@ -78,6 +85,9 @@ class User extends BaseController
         $this->videosModel          = new \App\Models\VideosModel();
         $this->newsModel            = new \App\Models\NewsModel();
         $this->livereportModel      = new \App\Models\LiveReportModel();
+        $this->newsflashModel       = new \App\Models\NewsflashModel();
+        $this->infografisModel      = new \App\Models\InfografisModel();
+        $this->blogModel            = new \App\Models\BlogModel();
 
         // Divisi Marketing
         $this->marketingModel       = new \App\Models\MarketingModel();
@@ -117,8 +127,10 @@ class User extends BaseController
             'jmlUmum'               => $this->umumModel->jumlahUmum(),
             'jmlAchievements'       => $this->achievementsModel->jumlahAchievements(),
             'jmlEvents'             => $this->eventsModel->jumlahEvents(),
+            'jmlKonten'             => $this->kontenModel->jumlahKonten(),
             'jmlInventaris'         => $this->inventarisModel->jumlahInventaris(),
             'jmlPeminjaman'         => $this->peminjamanModel->jumlahPeminjaman(),
+            'jmlKerjaBakti'         => $this->kerjabaktiModel->jumlahKerjaBakti(),
 
             // Divisi Kepenyiaran
             'jmlKepenyiaran'        => $this->kepenyiaranModel->jumlahKepenyiaran(),
@@ -131,6 +143,9 @@ class User extends BaseController
             'jmlVideos'             => $this->videosModel->jumlahVideos(),
             'jmlNews'               => $this->newsModel->jumlahNews(),
             'jmlLiveReport'         => $this->livereportModel->jumlahLiveReport(),
+            'jmlNewsflash'          => $this->newsflashModel->jumlahNewsflash(),
+            'jmlInfografis'         => $this->infografisModel->jumlahInfografis(),
+            'jmlBlog'               => $this->blogModel->jumlahBlog(),
 
             // Divisi Marketing
             'jmlMarketing'          => $this->marketingModel->jumlahMarketing(),
