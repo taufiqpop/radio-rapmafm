@@ -30,6 +30,7 @@ class User extends BaseController
     protected $podcastModel;
     protected $videosModel;
     protected $newsModel;
+    protected $livereportModel;
 
     // Divisi Marketing
     protected $marketingModel;
@@ -45,6 +46,8 @@ class User extends BaseController
     protected $pengurusModel;
     protected $maganginternalModel;
     protected $workshopbroadcastModel;
+    protected $capengModel;
+    protected $suratspModel;
 
     public function __construct()
     {
@@ -74,6 +77,7 @@ class User extends BaseController
         $this->podcastModel         = new \App\Models\PodcastModel();
         $this->videosModel          = new \App\Models\VideosModel();
         $this->newsModel            = new \App\Models\NewsModel();
+        $this->livereportModel      = new \App\Models\LiveReportModel();
 
         // Divisi Marketing
         $this->marketingModel       = new \App\Models\MarketingModel();
@@ -89,6 +93,8 @@ class User extends BaseController
         $this->pengurusModel        = new \App\Models\PengurusModel();
         $this->maganginternalModel  = new \App\Models\MagangInternalModel();
         $this->workshopbroadcastModel = new \App\Models\WorkshopBroadcastModel();
+        $this->capengModel          = new \App\Models\CapengModel();
+        $this->suratspModel         = new \App\Models\SuratSPModel();
     }
 
     // Dashboard
@@ -124,6 +130,7 @@ class User extends BaseController
             'jmlPodcast'            => $this->podcastModel->jumlahPodcast(),
             'jmlVideos'             => $this->videosModel->jumlahVideos(),
             'jmlNews'               => $this->newsModel->jumlahNews(),
+            'jmlLiveReport'         => $this->livereportModel->jumlahLiveReport(),
 
             // Divisi Marketing
             'jmlMarketing'          => $this->marketingModel->jumlahMarketing(),
@@ -139,6 +146,8 @@ class User extends BaseController
             'jmlPengurus'           => $this->pengurusModel->jumlahPengurus(),
             'jmlMagangInternal'     => $this->maganginternalModel->jumlahMagangInternal(),
             'jmlWorkshopBroadcast'  => $this->workshopbroadcastModel->jumlahWorkshopBroadcast(),
+            'jmlCapeng'             => $this->capengModel->jumlahCapeng(),
+            'jmlSuratSP'            => $this->suratspModel->jumlahSuratSP(),
 
         ];
 

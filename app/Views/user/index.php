@@ -17,6 +17,9 @@
                 <!-- Dashboard GMPA -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Dashboard GMPA</h1>
+                    <?php if (in_groups(['Admin', 'GM', 'PA'])) : ?>
+                        <a href="https://app.crisp.chat/" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" target="_blank"><i class="fas fa-bell fa-sm text-white-50"></i> Live Chat</a>
+                    <?php endif; ?>
                 </div>
                 <div class="row">
                     <!-- Total Timeline GMPA -->
@@ -82,6 +85,9 @@
                 <!-- Dashboard Divisi Umum -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800"> Dashboard Divisi Umum</h1>
+                    <?php if (in_groups(['MU', 'AOn', 'AOff', 'Teknisi'])) : ?>
+                        <a href="https://app.crisp.chat/" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" target="_blank"><i class="fas fa-bell fa-sm text-white-50"></i> Live Chat</a>
+                    <?php endif; ?>
                 </div>
                 <div class="row">
                     <!-- Total Timeline Divisi Umum -->
@@ -185,6 +191,9 @@
                 <!-- Dashboard Divisi Kepenyiaran -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800"> Dashboard Divisi Kepenyiaran</h1>
+                    <?php if (in_groups(['MK', 'MD', 'Jurnalistik', 'Produksi'])) : ?>
+                        <a href="https://app.crisp.chat/" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" target="_blank"><i class="fas fa-bell fa-sm text-white-50"></i> Live Chat</a>
+                    <?php endif; ?>
                 </div>
                 <div class="row">
                     <!-- Total Timeline Divisi Kepenyiaran -->
@@ -199,25 +208,6 @@
                                     <div class="col-auto">
                                         <a href="<?= base_url(); ?>control/kepenyiaran">
                                             <i class="fas fa-business-time fa-2x text-primary"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Rapma News -->
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-warning shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Rapma News</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlNews; ?></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="<?= base_url(); ?>control/news">
-                                            <i class="fas fa-newspaper fa-2x text-warning"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -282,6 +272,44 @@
                         </div>
                     </div>
 
+                    <!-- Rapma News -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-danger shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Rapma News</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlNews; ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="<?= base_url(); ?>control/news">
+                                            <i class="fas fa-newspaper fa-2x text-danger"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Report -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-danger shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Live Report</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlLiveReport; ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="<?= base_url(); ?>control/livereport">
+                                            <i class="fas fa-camera fa-2x text-danger"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Total Program -->
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card border-left-success shadow h-100 py-2">
@@ -301,25 +329,6 @@
                         </div>
                     </div>
 
-                    <!-- Total Audios -->
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-success shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Audios</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlAudios; ?></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="<?= base_url(); ?>control/audios">
-                                            <i class="fas fa-microphone fa-2x text-success"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Total Podcast -->
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card border-left-success shadow h-100 py-2">
@@ -332,6 +341,25 @@
                                     <div class="col-auto">
                                         <a href="<?= base_url(); ?>control/podcast">
                                             <i class="fas fa-headset fa-2x text-success"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Audios -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Audios</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlAudios; ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="<?= base_url(); ?>control/audios">
+                                            <i class="fas fa-microphone fa-2x text-success"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -364,6 +392,9 @@
                 <!-- Dashboard Divisi Marketing -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800"> Dashboard Divisi Marketing</h1>
+                    <?php if (in_groups(['MM', 'MOn', 'MOff'])) : ?>
+                        <a href="https://app.crisp.chat/" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" target="_blank"><i class="fas fa-bell fa-sm text-white-50"></i> Live Chat</a>
+                    <?php endif; ?>
                 </div>
                 <div class="row">
                     <!-- Total Timeline Divisi Marketing -->
@@ -467,6 +498,9 @@
                 <!-- Dashboard Divisi Personalia -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800"> Dashboard Divisi Personalia</h1>
+                    <?php if (in_groups(['MP', 'HRD', 'Advokat'])) : ?>
+                        <a href="https://app.crisp.chat/" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" target="_blank"><i class="fas fa-bell fa-sm text-white-50"></i> Live Chat</a>
+                    <?php endif; ?>
                 </div>
                 <div class="row">
                     <!-- Total Timeline Divisi Personalia -->
@@ -538,6 +572,44 @@
                                     <div class="col-auto">
                                         <a href="<?= base_url(); ?>control/pengurus">
                                             <i class="fas fa-restroom fa-2x text-success"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Surat SP -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-danger shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Surat SP</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlSuratSP; ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="<?= base_url(); ?>control/suratsp">
+                                            <i class="fas fa-exclamation-triangle fa-2x text-danger"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Kontrak Capeng -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-danger shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Kontrak Capeng</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlCapeng; ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="<?= base_url(); ?>control/capeng">
+                                            <i class="fas fa-file-signature fa-2x text-danger"></i>
                                         </a>
                                     </div>
                                 </div>
