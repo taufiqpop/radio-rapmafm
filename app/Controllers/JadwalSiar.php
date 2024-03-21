@@ -16,7 +16,7 @@ class JadwalSiar extends BaseController
     {
         $data = [
             'title'       => 'Rapma FM | Jadwal Siar',
-            'jadwalsiar'  => $this->jadwalsiarModel->paginate(100, 'jadwalsiar'),
+            'jadwalsiar'  => $this->jadwalsiarModel->paginate(1, 'jadwalsiar'),
         ];
 
         return view('control/jadwalsiar/index', $data);
