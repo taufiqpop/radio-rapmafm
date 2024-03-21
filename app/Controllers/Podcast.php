@@ -50,7 +50,8 @@ class Podcast extends BaseController
     {
         $input = [
             'judul'         => $this->request->getPost('judul'),
-            'bulan'         => $this->request->getPost('bulan'),
+            'hari'          => $this->request->getPost('hari'),
+            'tanggal'       => $this->request->getPost('tanggal'),
             'link'          => $this->request->getPost('link'),
             'talent'        => $this->request->getPost('talent'),
             'narasumber'    => $this->request->getPost('narasumber'),
@@ -93,7 +94,8 @@ class Podcast extends BaseController
     {
         $input = [
             'judul'         => $this->request->getPost('judul'),
-            'bulan'         => $this->request->getPost('bulan'),
+            'hari'          => $this->request->getPost('hari'),
+            'tanggal'       => $this->request->getPost('tanggal'),
             'link'          => $this->request->getPost('link'),
             'talent'        => $this->request->getPost('talent'),
             'narasumber'    => $this->request->getPost('narasumber'),

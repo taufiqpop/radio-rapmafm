@@ -41,6 +41,7 @@
                                     <th scope="col" class="cursor-active">Program</th>
                                     <th scope="col" class="cursor-active">Judul</th>
                                     <th scope="col" class="cursor-active">Tanggal Rilis</th>
+                                    <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-active">Talent</th>
                                     <th scope="col" class="cursor-active">Narasumber</th>
                                     <th scope="col" class="cursor-stop">Action</th>
@@ -51,9 +52,10 @@
                                     <?php $data = json_decode($podcasts['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td>[<?= $podcasts['program'] ?>]</td>
+                                        <td>[<?= $podcasts['program']; ?>]</td>
                                         <td style="max-width: 250px;"><?= $data->judul ?></td>
-                                        <td><?= $data->bulan; ?> <?= $podcasts['tahun'] ?></td>
+                                        <td><?= $data->hari; ?>, <?= $data->tanggal; ?></td>
+                                        <td><?= $podcasts['tahun']; ?></td>
                                         <td><?= $data->talent ?></td>
                                         <td><?= $data->narasumber ?></td>
                                         <td>

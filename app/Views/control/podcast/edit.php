@@ -59,25 +59,15 @@
                         </div>
                     </div>
 
-                    <!-- Bulan -->
+                    <!-- Tanggal -->
                     <div class="form-group row">
-                        <label for="bulan" class="col-sm-2 col-form-label">Bulan</label>
+                        <label for="hari" class="col-sm-2 col-form-label">Hari</label>
                         <div class="col-sm-3">
-                            <select name="bulan">
-                                <option value="<?= $data->bulan; ?>" selected></option>
-                                <option value="Januari">Januari</option>
-                                <option value="Februari">Februari</option>
-                                <option value="Maret">Maret</option>
-                                <option value="April">April</option>
-                                <option value="Mei">Mei</option>
-                                <option value="Juni">Juni</option>
-                                <option value="Juli">Juli</option>
-                                <option value="Agustus">Agustus</option>
-                                <option value="September">September</option>
-                                <option value="Oktober">Oktober</option>
-                                <option value="November">November</option>
-                                <option value="Desember">Desember</option>
-                            </select>
+                            <input type="text" class="form-control" name="hari" value="<?= $data->hari; ?>" required>
+                        </div>
+                        <label for="tanggal" class="col-form-label">Tanggal</label>
+                        <div class="col-sm-2">
+                            <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required>
                         </div>
                     </div>
 
