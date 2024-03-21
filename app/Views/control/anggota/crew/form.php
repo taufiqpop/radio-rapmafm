@@ -43,6 +43,14 @@
                     </div>
                 </div>
 
+                <!-- NIM -->
+                <div class="form-group row">
+                    <label for="nim" class="col-sm-3 col-form-label">NIM</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="L200******" name="nim" required>
+                    </div>
+                </div>
+
                 <!-- Domisili -->
                 <div class="form-group row">
                     <label for="domisili" class="col-sm-3 col-form-label">Domisili</label>

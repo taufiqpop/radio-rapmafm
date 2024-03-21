@@ -40,12 +40,13 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
+                                    <th scope="col" class="cursor-active">NIA</th>
                                     <th scope="col" class="cursor-active">Nama Lengkap</th>
-                                    <th scope="col" class="cursor-active">Nama Panggilan</th>
+                                    <th scope="col" class="cursor-active">Nickname</th>
                                     <th scope="col" class="cursor-active">Divisi</th>
-                                    <th scope="col" class="cursor-active">Sub Divisi</th>
                                     <th scope="col" class="cursor-active">Jurusan</th>
                                     <th scope="col" class="cursor-active">Semester</th>
+                                    <th scope="col" class="cursor-active">NIM</th>
                                     <th scope="col" class="cursor-active">Domisili</th>
                                     <th scope="col" class="cursor-active">No HP</th>
                                     <th scope="col" class="cursor-active">Status</th>
@@ -57,12 +58,13 @@
                                     <?php $data = json_decode($organizer['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
+                                        <td><?= $data->nia; ?></td>
                                         <td><?= $data->nama; ?></td>
                                         <td><?= $data->nickname; ?></td>
-                                        <td><?= $data->divisi; ?></td>
-                                        <td><?= $data->subdivisi; ?></td>
+                                        <td><?= $data->divisi; ?><br>(<?= $data->subdivisi; ?>)</td>
                                         <td><?= $data->jurusan; ?></td>
                                         <td><?= $data->semester; ?></td>
+                                        <td><?= $data->nim; ?></td>
                                         <td><?= $data->domisili; ?></td>
                                         <td><?= $data->nohp; ?></td>
                                         <td><?= $data->status; ?></td>
@@ -70,7 +72,7 @@
                                             <a href="https://www.instagram.com/<?= $data->instagram; ?>" target="_blank" class="btn btn-primary mb-1"><i class="fab fa-instagram"></i></a>
                                             <a href="https://www.x.com/<?= $data->twitter; ?>" target="_blank" class="btn btn-info mb-1"><i class="fab fa-twitter"></i></a>
                                             <?php if (in_groups(['Admin', 'GM', 'HRD'])) : ?>
-
+                                                <br>
                                                 <a href="<?= base_url(); ?>control/pengurus/edit/<?= $organizer['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/pengurus/<?= $organizer['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>

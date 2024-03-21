@@ -65,6 +65,22 @@
                     </div>
                 </div>
 
+                <!-- NIM -->
+                <div class="form-group row">
+                    <label for="nim" class="col-sm-3 col-form-label">NIM</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="L200******" name="nim" required>
+                    </div>
+                </div>
+
+                <!-- NIA -->
+                <div class="form-group row">
+                    <label for="nia" class="col-sm-3 col-form-label">NIA</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="000.00.000" name="nia" required>
+                    </div>
+                </div>
+
                 <!-- Domisili -->
                 <div class="form-group row">
                     <label for="domisili" class="col-sm-3 col-form-label">Domisili</label>

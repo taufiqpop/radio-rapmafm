@@ -41,9 +41,10 @@
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
                                     <th scope="col" class="cursor-active">Nama Lengkap</th>
-                                    <th scope="col" class="cursor-active">Nama Panggilan</th>
+                                    <th scope="col" class="cursor-active">Nickname</th>
                                     <th scope="col" class="cursor-active">Jurusan</th>
                                     <th scope="col" class="cursor-active">Semester</th>
+                                    <th scope="col" class="cursor-active">NIM</th>
                                     <th scope="col" class="cursor-active">Domisili</th>
                                     <th scope="col" class="cursor-active">No HP</th>
                                     <th scope="col" class="cursor-active">Status</th>
@@ -59,6 +60,7 @@
                                         <td><?= $data->nickname; ?></td>
                                         <td><?= $data->jurusan; ?></td>
                                         <td><?= $data->semester; ?></td>
+                                        <td><?= $data->nim; ?></td>
                                         <td><?= $data->domisili; ?></td>
                                         <td><?= $data->nohp; ?></td>
                                         <td><?= $data->status; ?></td>
