@@ -38,13 +38,11 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
-                                    <th scope="col" class="cursor-stop">Thumbnail</th>
                                     <th scope="col" class="cursor-active">Judul</th>
-                                    <th scope="col" class="cursor-active">Tanggal Rilis</th>
-                                    <th scope="col" class="cursor-active">Tahun Rilis</th>
+                                    <th scope="col" class="cursor-active">Tanggal</th>
+                                    <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-active">Penulis</th>
-                                    <th scope="col" class="cursor-active">Kategori</th>
-                                    <th scope="col" class="cursor-active">Tag</th>
+                                    <th scope="col" class="cursor-active">Keterangan</th>
                                     <th scope="col" class="cursor-stop">Action</th>
                                 </tr>
                             </thead>
@@ -53,20 +51,14 @@
                                     <?php $data = json_decode($berita['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td>
-                                            <img src="<?= base_url(); ?>img/news/<?= $data->images ?>" class=" thumbnail">
-                                        </td>
                                         <td style="max-width: 200px;"><?= $data->judul ?></td>
                                         <td><?= $data->hari; ?>, <br><?= $data->tanggal ?></td>
                                         <td><?= $berita['tahun']; ?></td>
                                         <td><?= $data->penulis ?></td>
-                                        <td><?= $berita['kategori']; ?></td>
-                                        <td style="max-width: 200px;"><?= $berita['tag']; ?></td>
+                                        <td><?= $data->keterangan ?></td>
                                         <td>
-                                            <a href="<?= base_url(); ?>control/news/detail/<?= $berita['id']; ?>" class="btn btn-info mb-1"><i class="fas fa-info"></i></a>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
                                             <?php if (in_groups(['Admin', 'Jurnalistik'])) : ?>
-
                                                 <a href="<?= base_url(); ?>control/news/edit/<?= $berita['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/news/<?= $berita['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>

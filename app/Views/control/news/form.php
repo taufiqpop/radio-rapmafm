@@ -55,39 +55,11 @@
                     </div>
                 </div>
 
-                <!-- Kategori -->
+                <!-- Keterangan -->
                 <div class="form-group row">
-                    <label for="kategori" class="col-sm-2 col-form-label">Kategori | Tag</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" placeholder="Kategori" name="kategori" required>
-                    </div>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" placeholder="Tag" name="tag" required>
-                    </div>
-                </div>
-
-                <!-- Thumbnail -->
-                <div class="form-group row">
-                    <label for="images" class="col-sm-2 col-form-label">Thumbnail</label>
-                    <div class="col-sm-2">
-                        <img src="<?= base_url(); ?>img/default.svg" class="img-thumbnail img-preview">
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input <?= ($validation->hasError('images')) ? 'is invalid' : ''; ?>" id="imgRapma" name="images" onchange="previewImgRapma()">
-                            <div class="invalid-feedback">
-                                <?= $validation->getError('images'); ?>
-                            </div>
-                            <label class="custom-file-label" for="images">Choose Thumbnail</label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Konten -->
-                <div class="form-group row">
-                    <label for="konten" class="col-sm-2 col-form-label">Konten</label>
-                    <div class="col-sm-7">
-                        <textarea class="tinymce" placeholder="write here.." name="konten"></textarea>
+                    <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" placeholder="Keterangan" name="keterangan" required>
                     </div>
                 </div>
 

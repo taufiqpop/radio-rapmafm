@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class News extends Migration
+class Newsflash extends Migration
 {
     public function up()
     {
@@ -22,10 +22,6 @@ class News extends Migration
             'value' => [
                 'type'       => 'TEXT',
             ],
-            'tahun' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '255',
-            ],
             'created_at' => [
                 'type'       => 'DATETIME',
             ],
@@ -37,12 +33,11 @@ class News extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addKey('tahun');
-        $this->forge->createTable('news');
+        $this->forge->createTable('newsflash');
     }
 
     public function down()
     {
-        $this->forge->dropTable('news');
+        $this->forge->dropTable('newsflash');
     }
 }

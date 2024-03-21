@@ -9,12 +9,12 @@ class NewsModel extends Model
     protected $table            = 'news';
     protected $primaryKey       = 'id';
     protected $returnType       = 'array';
-    protected $allowedFields    = ['key', 'value', 'kategori', 'tag', 'tahun', 'created_at', 'updated_at', 'deleted_at'];
+    protected $allowedFields    = ['key', 'value', 'tahun', 'created_at', 'updated_at', 'deleted_at'];
     protected $useTimestamps    = true;
 
     public function search($keyword)
     {
-        return $this->table('news')->like('value', $keyword)->orLike('kategori', $keyword)->orLike('tag', $keyword)->orLike('tahun', $keyword);
+        return $this->table('news')->like('value', $keyword)->orLike('tahun', $keyword);
     }
 
     public function jumlahNews()

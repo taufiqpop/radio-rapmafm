@@ -12,7 +12,6 @@
                 <!-- Forms -->
                 <form action="<?= base_url(); ?>news/update/<?= $berita['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
-                    <input type="hidden" name="imgLama" value="<?= $data->images ?>">
 
                     <!-- Judul Berita -->
                     <div class="form-group row">
@@ -58,39 +57,11 @@
                         </div>
                     </div>
 
-                    <!-- Kategori -->
+                    <!-- Keterangan -->
                     <div class="form-group row">
-                        <label for="kategori" class="col-sm-2 col-form-label">Kategori | Tag</label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" name="kategori" value="<?= $berita['kategori'] ?>" required>
-                        </div>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" name="tag" value="<?= $berita['tag'] ?>" required>
-                        </div>
-                    </div>
-
-                    <!-- Images -->
-                    <div class="form-group row">
-                        <label for="images" class="col-sm-2 col-form-label">Images</label>
-                        <div class="col-sm-4">
-                            <img src="<?= base_url(); ?>img/news/<?= $data->images ?>" class="img-thumbnail img-preview">
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input <?= ($validation->hasError('images')) ? 'is invalid' : ''; ?>" id="imgRapma" name="images" onchange="previewImgRapma()">
-                                <div class="invalid-feedback">
-                                    <?= $validation->getError('images'); ?>
-                                </div>
-                                <label class="custom-file-label" for="images"><?= $data->images ?></label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Konten -->
-                    <div class="form-group row">
-                        <label for="konten" class="col-sm-2 col-form-label">Konten</label>
-                        <div class="col-sm-7">
-                            <textarea class="tinymce" name="konten"><?= $data->konten; ?></textarea>
+                        <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="keterangan" value="<?= $data->keterangan; ?>" required>
                         </div>
                     </div>
 
