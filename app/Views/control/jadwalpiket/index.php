@@ -14,8 +14,8 @@
                     <h4 class="h4 mb-4 text-gray-800">Periode : (<?= $data->tglmulai; ?>) - (<?= $data->tglselesai; ?>)</h4>
                     <?php if (in_groups(['Admin', 'AOff'])) : ?>
                         <a href="<?= base_url(); ?>control/jadwalpiket/edit/<?= $jadwal['id']; ?>" class="btn btn-primary">Edit Jadwal Piket</a>
+                        <br><br>
                     <?php endif; ?>
-                    <br><br>
                 </center>
 
                 <!-- Messages -->

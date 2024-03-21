@@ -96,6 +96,14 @@ $routes->delete('/control/umum/(:num)', 'Umum::delete/$1', ['filter' => 'role:Ad
 $routes->add('/umum/insert', 'Umum::insert', ['filter' => 'role:Admin, MU']);
 $routes->add('/umum/update/(:num)', 'Umum::update/$1', ['filter' => 'role:Admin, MU']);
 
+// Konten
+$routes->add('/control/konten', 'Konten::index', ['filter' => 'role:Admin, GM, MU, AOn']);
+$routes->get('/control/konten/form', 'Konten::form', ['filter' => 'role:Admin, AOn']);
+$routes->get('/control/konten/edit/(:num)', 'Konten::edit/$1', ['filter' => 'role:Admin, AOn']);
+$routes->delete('/control/konten/(:num)', 'Konten::delete/$1', ['filter' => 'role:Admin, AOn']);
+$routes->add('/konten/insert', 'Konten::insert', ['filter' => 'role:Admin, AOn']);
+$routes->add('/konten/update/(:num)', 'Konten::update/$1', ['filter' => 'role:Admin, AOn']);
+
 // Achievements
 $routes->add('/control/achievements', 'Achievements::index', ['filter' => 'role:Admin, GM, MU, AOn']);
 $routes->get('/control/achievements/form', 'Achievements::form', ['filter' => 'role:Admin, AOn']);

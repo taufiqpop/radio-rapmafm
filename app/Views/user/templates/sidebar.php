@@ -96,6 +96,14 @@
 
     <!-- Admisi On Air -->
     <?php if (in_groups(['Admin', 'GM', 'MU', 'AOn'])) : ?>
+        <!-- Data Konten -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/konten">
+                <i class="fas fa-chart-bar"></i>
+                <span>Data Konten</span>
+            </a>
+        </li>
+
         <!-- Achievements -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/achievements">
