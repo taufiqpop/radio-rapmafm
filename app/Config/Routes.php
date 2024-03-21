@@ -164,6 +164,14 @@ $routes->add('/control/penyiar', 'Penyiar::index', ['filter' => 'role:Admin, GM,
 $routes->get('/control/penyiar/edit/(:num)', 'Penyiar::edit/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
 $routes->add('/penyiar/update/(:num)', 'Penyiar::update/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
 
+// LiveReport
+$routes->add('/control/livereport', 'LiveReport::index', ['filter' => 'role:Admin, GM, MK, Jurnalistik']);
+$routes->add('/control/livereport/form', 'LiveReport::form', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->get('/control/livereport/edit/(:num)', 'LiveReport::edit/$1', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->delete('/control/livereport/(:num)', 'LiveReport::delete/$1', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->add('/livereport/insert', 'LiveReport::insert', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->add('/livereport/update/(:num)', 'LiveReport::update/$1', ['filter' => 'role:Admin, Jurnalistik']);
+
 // Rapma News
 $routes->add('/control/news', 'News::index', ['filter' => 'role:Admin, GM, MK, Jurnalistik']);
 $routes->get('/control/news/detail/(:num)', 'News::detail/$1', ['filter' => 'role:Admin, GM, MK, Jurnalistik']);

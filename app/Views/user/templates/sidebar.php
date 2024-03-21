@@ -187,6 +187,14 @@
                 <span>Rapma News</span>
             </a>
         </li>
+
+        <!-- Live Report -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/livereport">
+                <i class="fas fa-camera"></i>
+                <span>Live Report</span>
+            </a>
+        </li>
     <?php endif; ?>
 
     <!-- Music Director -->
