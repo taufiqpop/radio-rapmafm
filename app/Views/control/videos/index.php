@@ -38,10 +38,11 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="cursor-active">No</th>
-                                    <th scope="col" class="cursor-active">Type</th>
+                                    <th scope="col" class="cursor-active">Tipe</th>
                                     <th scope="col" class="cursor-active">Title</th>
+                                    <th scope="col" class="cursor-active">Tanggal</th>
                                     <th scope="col" class="cursor-active">Tahun</th>
-                                    <th scope="col" class="cursor-active">Keterangan</th>
+                                    <th scope="col" class="cursor-active">Platform</th>
                                     <th scope="col" class="cursor-active">Status</th>
                                     <?php if (in_groups(['Admin', 'Produksi'])) : ?>
                                         <th scope="col" class="cursor-active">Action</th>
@@ -55,8 +56,9 @@
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td><?= $video['type']; ?></td>
                                         <td><?= $data->title; ?></td>
+                                        <td><?= $data->hari; ?>, <?= $data->tanggal; ?></td>
                                         <td><?= $data->tahun; ?></td>
-                                        <td><?= $data->keterangan; ?></td>
+                                        <td><?= $data->platform; ?></td>
                                         <td><?= $data->status; ?></td>
                                         <td>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>

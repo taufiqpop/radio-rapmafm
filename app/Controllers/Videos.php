@@ -26,7 +26,7 @@ class Videos extends BaseController
         $videos->orderBy('type', 'DESC');
 
         $data = [
-            'title'       => 'Rapma FM | Audio',
+            'title'       => 'Rapma FM | Video',
             'videos'      => $videos->paginate(10, 'videos'),
             'pager'       => $videos->pager,
             'currentPage' => $currentPage,
@@ -39,7 +39,7 @@ class Videos extends BaseController
     public function form()
     {
         $data = [
-            'title'  => 'Rapma FM | Form Audio',
+            'title'  => 'Rapma FM | Form Video',
         ];
 
         return view('control/videos/form', $data);
@@ -50,9 +50,11 @@ class Videos extends BaseController
     {
         $input = [
             'title'         => $this->request->getPost('title'),
+            'hari'          => $this->request->getPost('hari'),
+            'tanggal'       => $this->request->getPost('tanggal'),
             'tahun'         => $this->request->getPost('tahun'),
             'link'          => $this->request->getPost('link'),
-            'keterangan'    => $this->request->getPost('keterangan'),
+            'platform'      => $this->request->getPost('platform'),
             'status'        => $this->request->getPost('status'),
         ];
 
@@ -63,7 +65,7 @@ class Videos extends BaseController
         ];
 
         $this->videosModel->insert($data);
-        session()->setFlashdata('pesan', 'Data Audio Berhasil Ditambahkan!');
+        session()->setFlashdata('pesan', 'Data Video Berhasil Ditambahkan!');
 
         return redirect('control/videos');
     }
@@ -72,7 +74,7 @@ class Videos extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'    => 'Rapma FM | Edit Data Audio',
+            'title'    => 'Rapma FM | Edit Data Video',
             'videos'   => $this->videosModel->find($id),
         ];
 
@@ -92,9 +94,11 @@ class Videos extends BaseController
     {
         $input = [
             'title'         => $this->request->getPost('title'),
+            'hari'          => $this->request->getPost('hari'),
+            'tanggal'       => $this->request->getPost('tanggal'),
             'tahun'         => $this->request->getPost('tahun'),
             'link'          => $this->request->getPost('link'),
-            'keterangan'    => $this->request->getPost('keterangan'),
+            'platform'      => $this->request->getPost('platform'),
             'status'        => $this->request->getPost('status'),
         ];
 
@@ -105,7 +109,7 @@ class Videos extends BaseController
         ];
 
         $this->videosModel->update($id, $data);
-        session()->setFlashdata('pesan', 'Data Audio Berhasil Diubah!');
+        session()->setFlashdata('pesan', 'Data Video Berhasil Diubah!');
 
         return redirect('control/videos');
     }
@@ -114,7 +118,7 @@ class Videos extends BaseController
     public function delete($id)
     {
         $this->videosModel->delete($id);
-        session()->setFlashdata('pesan', 'Data Audio Berhasil Dihapus!');
+        session()->setFlashdata('pesan', 'Data Video Berhasil Dihapus!');
 
         return redirect('control/videos');
     }

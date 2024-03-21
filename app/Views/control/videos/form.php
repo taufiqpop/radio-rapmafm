@@ -35,6 +35,18 @@
                     </div>
                 </div>
 
+                <!-- Tanggal -->
+                <div class="form-group row">
+                    <label for="hari" class="col-sm-3 col-form-label">Hari</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" placeholder="Senin - Minggu" name="hari" required>
+                    </div>
+                    <label for="tanggal" class="col-form-label">Tanggal</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" name="tanggal" required>
+                    </div>
+                </div>
+
                 <!-- Tahun -->
                 <div class="form-group row">
                     <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
@@ -43,11 +55,11 @@
                     </div>
                 </div>
 
-                <!-- Keterangan -->
+                <!-- Platform -->
                 <div class="form-group row">
-                    <label for="keterangan" class="col-sm-3 col-form-label">Keterangan</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="-" name="keterangan" required>
+                    <label for="platform" class="col-sm-3 col-form-label">Platform</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" placeholder="Instagram | YouTube | TikTok | Dll" name="platform" required>
                     </div>
                 </div>
 
@@ -55,7 +67,11 @@
                 <div class="form-group row">
                     <label for="status" class="col-sm-3 col-form-label">Status</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" placeholder="-" name="status" required>
+                        <select name="status">
+                            <option value="&#8212;">Belum Terlaksana</option>
+                            <option value="&#9989;">Terlaksana</option>
+                            <option value="&times;">Tidak Terlaksana</option>
+                        </select>
                     </div>
                 </div>
 

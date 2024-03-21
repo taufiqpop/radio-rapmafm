@@ -25,7 +25,7 @@
                     <div class="form-group row">
                         <label for="type" class="col-sm-3 col-form-label">Type</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" name="type" value="<?= $video['type']; ?>" required>
+                            <input type="text" class="form-control" name="type" value="<?= $video['type'] ?>" required>
                         </div>
                     </div>
 
@@ -37,6 +37,18 @@
                         </div>
                     </div>
 
+                    <!-- Tanggal -->
+                    <div class="form-group row">
+                        <label for="hari" class="col-sm-3 col-form-label">Hari</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" name="hari" value="<?= $data->hari; ?>" required>
+                        </div>
+                        <label for="tanggal" class="col-form-label">Tanggal</label>
+                        <div class="col-sm-3">
+                            <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required>
+                        </div>
+                    </div>
+
                     <!-- Tahun -->
                     <div class="form-group row">
                         <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
@@ -45,11 +57,11 @@
                         </div>
                     </div>
 
-                    <!-- Keterangan -->
+                    <!-- Platform -->
                     <div class="form-group row">
-                        <label for="keterangan" class="col-sm-3 col-form-label">Keterangan</label>
-                        <div class="col-sm-7">
-                            <input type="text" class="form-control" name="keterangan" value="<?= $data->keterangan; ?>" required>
+                        <label for="platform" class="col-sm-3 col-form-label">Platform</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="platform" value="<?= $data->platform; ?>" required>
                         </div>
                     </div>
 
@@ -57,7 +69,12 @@
                     <div class="form-group row">
                         <label for="status" class="col-sm-3 col-form-label">Status</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" name="status" value="<?= $data->status; ?>" required>
+                            <select name="status">
+                                <option value=<?= $data->status; ?>" selected></option>
+                                <option value="&#8212;">Belum Terlaksana</option>
+                                <option value="&#9989;">Terlaksana</option>
+                                <option value="&times;">Tidak Terlaksana</option>
+                            </select>
                         </div>
                     </div>
 
