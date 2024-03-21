@@ -40,7 +40,9 @@
                     <div class="form-group row">
                         <div class="col-sm-10">
                             <a href="<?= base_url(); ?>control/structure" class="btn btn-dark mb-1">Back</a>
-                            <button type="submit" class="btn btn-primary mb-1">Confirm Changes</button>
+                            <?php if (in_groups(['Admin', 'AOn'])) : ?>
+                                <button type="submit" class="btn btn-primary mb-1">Confirm Changes</button>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </form>

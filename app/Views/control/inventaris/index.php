@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Inventaris</h1>
-            <?php if (in_groups(['Admin', 'MU', 'AOff'])) : ?>
+            <?php if (in_groups(['Admin', 'AOff'])) : ?>
                 <a href="<?= base_url(); ?>control/inventaris/form" class="btn btn-primary">Add Inventaris</a>
                 <br><br>
             <?php endif; ?>
@@ -46,7 +46,7 @@
                                     <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-active">Jumlah</th>
                                     <th scope="col" class="cursor-active">Kondisi</th>
-                                    <?php if (in_groups(['Admin', 'MU', 'AOff'])) : ?>
+                                    <?php if (in_groups(['Admin', 'AOff'])) : ?>
                                         <th scope="col" class="cursor-stop">Action</th>
                                     <?php endif; ?>
                                 </tr>
@@ -64,7 +64,7 @@
                                         <td>20<?= $invent['tahun']; ?></td>
                                         <td><?= $data->jumlah; ?></td>
                                         <td><?= $data->kondisi ?></td>
-                                        <?php if (in_groups(['Admin', 'MU', 'AOff'])) : ?>
+                                        <?php if (in_groups(['Admin', 'AOff'])) : ?>
                                             <td>
                                                 <a href="<?= base_url(); ?>control/inventaris/edit/<?= $invent['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/inventaris/<?= $invent['id']; ?>" method="post" class="d-inline">

@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-11">
             <h1 class="h3 mb-4 text-gray-800">Data Label Rekaman</h1>
-            <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
+            <?php if (in_groups(['Admin', 'MD'])) : ?>
                 <a href="<?= base_url(); ?>control/labelrekaman/form" class="btn btn-primary">Add Label Rekaman</a>
                 <a href="<?= base_url(); ?>control/topchart" class="btn btn-info">Top Chart</a>
                 <br><br>
@@ -41,7 +41,7 @@
                                     <th scope="col" class="cursor-active">No</th>
                                     <th scope="col" class="cursor-active">Label</th>
                                     <th scope="col" class="cursor-active">Total Lagu</th>
-                                    <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
+                                    <?php if (in_groups(['Admin', 'MD'])) : ?>
                                         <th scope="col" class="cursor-active">Action</th>
                                     <?php endif; ?>
                                 </tr>
@@ -53,7 +53,7 @@
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td><?= $data->label; ?></td>
                                         <td><?= $data->total; ?></td>
-                                        <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
+                                        <?php if (in_groups(['Admin', 'MD'])) : ?>
                                             <td>
                                                 <a href="<?= base_url(); ?>control/labelrekaman/edit/<?= $label['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/labelrekaman/<?= $label['id']; ?>" method="post" class="d-inline">

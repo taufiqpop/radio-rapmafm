@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Media Partner</h1>
-            <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+            <?php if (in_groups(['Admin', 'MOn'])) : ?>
                 <a href="<?= base_url(); ?>control/medpart/form" class="btn btn-primary">Add Media Partner</a>
                 <br><br>
             <?php endif; ?>
@@ -45,7 +45,7 @@
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Jenis</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Status</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Kontraprestasi</th>
-                                    <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                                    <?php if (in_groups(['Admin', 'MOn'])) : ?>
                                         <th scope="col" class="cursor-stop" rowspan="2" style="padding-bottom: 35px;">Action</th>
                                     <?php endif ?>
                                 </tr>
@@ -67,7 +67,7 @@
                                         <td><?= $data->jenis; ?></td>
                                         <td><?= $data->status; ?></td>
                                         <td style="max-width: 300px;"><?= $data->kontraprestasi; ?></td>
-                                        <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                                        <?php if (in_groups(['Admin', 'MOn'])) : ?>
                                             <td>
                                                 <a href="<?= base_url(); ?>control/medpart/edit/<?= $mediapartner['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/medpart/<?= $mediapartner['id']; ?>" method="post" class="d-inline">

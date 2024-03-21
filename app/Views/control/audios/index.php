@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Audio Rapma FM</h1>
-            <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
+            <?php if (in_groups(['Admin', 'Produksi'])) : ?>
                 <a href="<?= base_url(); ?>control/audios/form" class="btn btn-primary">Add Data Audio</a>
                 <br><br>
             <?php endif; ?>
@@ -43,7 +43,7 @@
                                     <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-active">Keterangan</th>
                                     <th scope="col" class="cursor-active">Status</th>
-                                    <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
+                                    <?php if (in_groups(['Admin', 'Produksi'])) : ?>
                                         <th scope="col" class="cursor-active">Action</th>
                                     <?php endif; ?>
                                 </tr>
@@ -58,7 +58,7 @@
                                         <td><?= $data->tahun; ?></td>
                                         <td><?= $data->keterangan; ?></td>
                                         <td><?= $data->status; ?></td>
-                                        <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
+                                        <?php if (in_groups(['Admin', 'Produksi'])) : ?>
                                             <td>
                                                 <a href="<?= base_url(); ?>control/audios/edit/<?= $audio['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/audios/<?= $audio['id']; ?>" method="post" class="d-inline">

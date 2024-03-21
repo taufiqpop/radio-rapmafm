@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Iklan</h1>
-            <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+            <?php if (in_groups(['Admin', 'MOn'])) : ?>
                 <a href="<?= base_url(); ?>control/iklan/form" class="btn btn-primary">Add Iklan</a>
                 <br><br>
             <?php endif; ?>
@@ -44,7 +44,7 @@
                                     <th scope="col" class="cursor-active">Paket Iklan</th>
                                     <th scope="col" class="cursor-active">Harga</th>
                                     <th scope="col" class="cursor-active">Status</th>
-                                    <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                                    <?php if (in_groups(['Admin', 'MOn'])) : ?>
                                         <th scope="col" class="cursor-active">Action</th>
                                     <?php endif; ?>
                                 </tr>
@@ -60,7 +60,7 @@
                                         <td style="max-width: 500px;"><?= $data->paket; ?></td>
                                         <td>Rp. <?= $data->harga; ?></td>
                                         <td><?= $data->status; ?></td>
-                                        <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                                        <?php if (in_groups(['Admin', 'MOn'])) : ?>
                                             <td>
                                                 <a href="<?= base_url(); ?>control/iklan/edit/<?= $ads['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/iklan/<?= $ads['id']; ?>" method="post" class="d-inline">

@@ -8,7 +8,7 @@
             <h1 class="h3 mb-4 text-gray-800">Data Pemancar</h1>
 
             <!-- Forms -->
-            <?php if (in_groups(['Admin', 'MU', 'Teknisi'])) : ?>
+            <?php if (in_groups(['Admin', 'Teknisi'])) : ?>
                 <form action="<?= base_url(); ?>pemancar/add" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
@@ -76,7 +76,7 @@
                                         <td><?= $jangkauan['key']; ?></td>
                                         <td>
                                             <a href="<?= base_url(); ?>control/pemancar/detail/<?= $jangkauan['id']; ?>" class="btn btn-info mb-1"><i class="fas fa-info"></i></a>
-                                            <?php if (in_groups(['Admin', 'MU', 'Teknisi'])) : ?>
+                                            <?php if (in_groups(['Admin', 'Teknisi'])) : ?>
                                                 <a href="<?= base_url(); ?>control/pemancar/form/<?= $jangkauan['id']; ?>" class="btn btn-primary mb-1"><i class="fas fa-plus"></i></a>
                                                 <a href="<?= base_url(); ?>control/pemancar/edit/<?= $jangkauan['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/pemancar/<?= $jangkauan['id']; ?>" method="post" class="d-inline">

@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Video Rapma FM</h1>
-            <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
+            <?php if (in_groups(['Admin', 'Produksi'])) : ?>
                 <a href="<?= base_url(); ?>control/videos/form" class="btn btn-primary">Add Data Video</a>
                 <br><br>
             <?php endif; ?>
@@ -43,7 +43,7 @@
                                     <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-active">Keterangan</th>
                                     <th scope="col" class="cursor-active">Status</th>
-                                    <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
+                                    <?php if (in_groups(['Admin', 'Produksi'])) : ?>
                                         <th scope="col" class="cursor-active">Action</th>
                                     <?php endif; ?>
                                 </tr>
@@ -60,7 +60,7 @@
                                         <td><?= $data->status; ?></td>
                                         <td>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
-                                            <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
+                                            <?php if (in_groups(['Admin', 'Produksi'])) : ?>
                                                 <a href="<?= base_url(); ?>control/videos/edit/<?= $video['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/videos/<?= $video['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>

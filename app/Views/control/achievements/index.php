@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-11">
             <h1 class="h3 mb-4 text-gray-800">Daftar Achievements</h1>
-            <?php if (in_groups(['Admin', 'MU', 'AOn'])) : ?>
+            <?php if (in_groups(['Admin', 'AOn'])) : ?>
                 <a href="<?= base_url(); ?>control/achievements/form" class="btn btn-primary">Add Achievements</a>
                 <br><br>
             <?php endif; ?>
@@ -56,7 +56,7 @@
                                         <td><?= $achievement['tahun'] ?></td>
                                         <td>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
-                                            <?php if (in_groups(['Admin', 'MU', 'AOn'])) : ?>
+                                            <?php if (in_groups(['Admin', 'AOn'])) : ?>
 
                                                 <a href="<?= base_url(); ?>control/achievements/edit/<?= $achievement['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/achievements/<?= $achievement['id']; ?>" method="post" class="d-inline">

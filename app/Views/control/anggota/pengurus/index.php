@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Pengurus Rapma FM</h1>
-            <?php if (in_groups(['Admin', 'GM', 'MP', 'HRD'])) : ?>
+            <?php if (in_groups(['Admin', 'GM', 'HRD'])) : ?>
                 <a href="<?= base_url(); ?>control/pengurus/form" class="btn btn-primary">Add Pengurus</a>
             <?php endif; ?>
             <a href="<?= base_url(); ?>control/crew" class="btn btn-dark">Data Crew</a>
@@ -69,7 +69,7 @@
                                         <td>
                                             <a href="https://www.instagram.com/<?= $data->instagram; ?>" target="_blank" class="btn btn-primary mb-1"><i class="fab fa-instagram"></i></a>
                                             <a href="https://www.x.com/<?= $data->twitter; ?>" target="_blank" class="btn btn-info mb-1"><i class="fab fa-twitter"></i></a>
-                                            <?php if (in_groups(['Admin', 'GM', 'MP', 'HRD'])) : ?>
+                                            <?php if (in_groups(['Admin', 'GM', 'HRD'])) : ?>
 
                                                 <a href="<?= base_url(); ?>control/pengurus/edit/<?= $organizer['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/pengurus/<?= $organizer['id']; ?>" method="post" class="d-inline">

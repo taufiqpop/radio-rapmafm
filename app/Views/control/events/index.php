@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-11">
             <h1 class="h3 mb-4 text-gray-800">Events</h1>
-            <?php if (in_groups(['Admin', 'MU', 'AOn'])) : ?>
+            <?php if (in_groups(['Admin', 'AOn'])) : ?>
                 <a href="<?= base_url(); ?>control/events/form" class="btn btn-primary">Add Events</a>
                 <br><br>
             <?php endif; ?>
@@ -58,7 +58,7 @@
                                         <td><?= $data->tahun; ?></td>
                                         <td>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
-                                            <?php if (in_groups(['Admin', 'MU', 'AOn'])) : ?>
+                                            <?php if (in_groups(['Admin', 'AOn'])) : ?>
                                                 <a href="<?= base_url(); ?>control/events/edit/<?= $event['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/events/<?= $event['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>

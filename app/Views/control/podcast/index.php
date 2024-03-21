@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Daftar Podcast</h1>
-            <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
+            <?php if (in_groups(['Admin', 'Produksi'])) : ?>
                 <a href="<?= base_url(); ?>control/podcast/form" class="btn btn-primary">Add Podcast</a>
                 <br><br>
             <?php endif; ?>
@@ -52,13 +52,13 @@
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td>[<?= $podcasts['program'] ?>]</td>
-                                        <td><?= $data->judul ?></td>
+                                        <td style="max-width: 250px;"><?= $data->judul ?></td>
                                         <td><?= $data->bulan; ?> <?= $podcasts['tahun'] ?></td>
                                         <td><?= $data->talent ?></td>
                                         <td><?= $data->narasumber ?></td>
                                         <td>
                                             <a href="https://open.spotify.com/episode/<?= $data->link ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
-                                            <?php if (in_groups(['Admin', 'MK', 'Produksi'])) : ?>
+                                            <?php if (in_groups(['Admin', 'Produksi'])) : ?>
                                                 <a href="<?= base_url(); ?>control/podcast/edit/<?= $podcasts['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/podcast/<?= $podcasts['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>

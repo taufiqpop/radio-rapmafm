@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Lagu</h1>
-            <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
+            <?php if (in_groups(['Admin', 'MD'])) : ?>
                 <a href="<?= base_url(); ?>control/lagu/form" class="btn btn-primary">Add Lagu</a>
                 <br><br>
             <?php endif; ?>
@@ -40,12 +40,12 @@
                                     <th scope="col" class="cursor-active">No</th>
                                     <th scope="col" class="cursor-active">Judul</th>
                                     <th scope="col" class="cursor-active">Artist</th>
+                                    <th scope="col" class="cursor-active">Tahun</th>
                                     <th scope="col" class="cursor-active">Album</th>
                                     <th scope="col" class="cursor-active">Genre</th>
                                     <th scope="col" class="cursor-active">Type</th>
                                     <th scope="col" class="cursor-active">Lokasi</th>
-                                    <th scope="col" class="cursor-active">Tahun</th>
-                                    <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
+                                    <?php if (in_groups(['Admin', 'MD'])) : ?>
                                         <th scope="col" class="cursor-active">Action</th>
                                     <?php endif; ?>
                                 </tr>
@@ -55,14 +55,14 @@
                                     <?php $data = json_decode($song['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
-                                        <td><?= $data->judul; ?></td>
+                                        <td style="max-width: 300px;"><?= $data->judul; ?></td>
                                         <td><?= $data->artist; ?></td>
+                                        <td><?= $song['tahun']; ?></td>
                                         <td><?= $data->album; ?></td>
                                         <td><?= $data->genre; ?></td>
                                         <td><?= $data->tipe; ?></td>
                                         <td><?= $data->lokasi; ?></td>
-                                        <td><?= $song['tahun']; ?></td>
-                                        <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
+                                        <?php if (in_groups(['Admin', 'MD'])) : ?>
                                             <td>
                                                 <a href="<?= base_url(); ?>control/lagu/edit/<?= $song['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/lagu/<?= $song['id']; ?>" method="post" class="d-inline">

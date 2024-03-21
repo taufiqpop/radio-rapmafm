@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Magang Internal</h1>
-            <?php if (in_groups(['Admin', 'MP', 'HRD'])) : ?>
+            <?php if (in_groups(['Admin', 'HRD'])) : ?>
                 <a href="<?= base_url(); ?>control/maganginternal/form" class="btn btn-primary">Add Magang Internal</a>
                 <br><br>
             <?php endif; ?>
@@ -44,7 +44,7 @@
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Pemateri</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Tempat</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Status</th>
-                                    <?php if (in_groups(['Admin', 'MP', 'HRD'])) : ?>
+                                    <?php if (in_groups(['Admin', 'HRD'])) : ?>
                                         <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Action</th>
                                     <?php endif; ?>
                                 </tr>
@@ -68,7 +68,7 @@
                                         <td style="max-width: 200px;"><?= $data->pemateri; ?></td>
                                         <td style="max-width: 100px;"><?= $data->tempat; ?></td>
                                         <td><?= $data->status; ?></td>
-                                        <?php if (in_groups(['Admin', 'MP', 'HRD'])) : ?>
+                                        <?php if (in_groups(['Admin', 'HRD'])) : ?>
                                             <td>
                                                 <a href="<?= base_url(); ?>control/maganginternal/edit/<?= $magang['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/maganginternal/<?= $magang['id']; ?>" method="post" class="d-inline">

@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-11">
             <h1 class="h3 mb-4 text-gray-800">Data Pemutaran Serentak</h1>
-            <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
+            <?php if (in_groups(['Admin', 'MD'])) : ?>
                 <a href="<?= base_url(); ?>control/pemutaranserentak/form" class="btn btn-primary">Add Pemutaran Serentak</a>
                 <br><br>
             <?php endif; ?>
@@ -42,7 +42,7 @@
                                     <th scope="col" class="cursor-active">Label</th>
                                     <th scope="col" class="cursor-active">Penyanyi</th>
                                     <th scope="col" class="cursor-active">Judul Lagu</th>
-                                    <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
+                                    <?php if (in_groups(['Admin', 'MD'])) : ?>
                                         <th scope="col" class="cursor-active">Action</th>
                                     <?php endif; ?>
                                 </tr>
@@ -56,7 +56,7 @@
                                         <td><?= $data->label; ?></td>
                                         <td><?= $data->penyanyi; ?></td>
                                         <td><?= $data->judul; ?></td>
-                                        <?php if (in_groups(['Admin', 'MK', 'MD'])) : ?>
+                                        <?php if (in_groups(['Admin', 'MD'])) : ?>
                                             <td>
                                                 <a href="<?= base_url(); ?>control/pemutaranserentak/edit/<?= $pemutaran['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/pemutaranserentak/<?= $pemutaran['id']; ?>" method="post" class="d-inline">

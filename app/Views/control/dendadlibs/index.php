@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Data Denda Adlibs & Spot</h1>
-            <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+            <?php if (in_groups(['Admin', 'MOn'])) : ?>
                 <a href="<?= base_url(); ?>control/dendadlibs/form" class="btn btn-primary">Add Denda</a>
                 <br><br>
             <?php endif; ?>
@@ -42,7 +42,7 @@
                                     <th scope="col" class="cursor-active" colspan="3">Nama Adlibs & Spot</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Total</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Keterangan</th>
-                                    <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                                    <?php if (in_groups(['Admin', 'MOn'])) : ?>
                                         <th scope="col" class="cursor-stop" rowspan="2" style="padding-bottom: 35px;">Action</th>
                                     <?php endif ?>
                                 </tr>
@@ -63,7 +63,7 @@
                                         <td><?= $data->hari; ?>, <?= $data->tanggal; ?></td>
                                         <td>Rp. <?= $data->total; ?></td>
                                         <td><?= $data->keterangan; ?></td>
-                                        <?php if (in_groups(['Admin', 'MM', 'MOn'])) : ?>
+                                        <?php if (in_groups(['Admin', 'MOn'])) : ?>
                                             <td>
                                                 <a href="<?= base_url(); ?>control/dendadlibs/edit/<?= $denda['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/dendadlibs/<?= $denda['id']; ?>" method="post" class="d-inline">

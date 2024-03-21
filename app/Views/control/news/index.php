@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <h1 class="h3 mb-4 text-gray-800">Daftar News</h1>
-            <?php if (in_groups(['Admin', 'MK', 'Jurnalistik'])) : ?>
+            <?php if (in_groups(['Admin', 'Jurnalistik'])) : ?>
                 <a href="<?= base_url(); ?>control/news/form" class="btn btn-primary">Add News</a>
                 <br><br>
             <?php endif; ?>
@@ -65,7 +65,7 @@
                                         <td>
                                             <a href="<?= base_url(); ?>control/news/detail/<?= $berita['id']; ?>" class="btn btn-info mb-1"><i class="fas fa-info"></i></a>
                                             <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
-                                            <?php if (in_groups(['Admin', 'MK', 'Jurnalistik'])) : ?>
+                                            <?php if (in_groups(['Admin', 'Jurnalistik'])) : ?>
 
                                                 <a href="<?= base_url(); ?>control/news/edit/<?= $berita['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/news/<?= $berita['id']; ?>" method="post" class="d-inline">
