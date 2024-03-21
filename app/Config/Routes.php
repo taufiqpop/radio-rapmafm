@@ -135,6 +135,22 @@ $routes->delete('/control/peminjaman/(:num)', 'Peminjaman::delete/$1', ['filter'
 $routes->add('/peminjaman/insert', 'Peminjaman::insert', ['filter' => 'role:Admin, AOff']);
 $routes->add('/peminjaman/update/(:num)', 'Peminjaman::update/$1', ['filter' => 'role:Admin, AOff']);
 
+// Kerja Bakti
+$routes->add('/control/kerjabakti', 'KerjaBakti::index', ['filter' => 'role:Admin, GM, MU, AOff']);
+$routes->get('/control/kerjabakti/form', 'KerjaBakti::form', ['filter' => 'role:Admin, AOff']);
+$routes->get('/control/kerjabakti/edit/(:num)', 'KerjaBakti::edit/$1', ['filter' => 'role:Admin, AOff']);
+$routes->delete('/control/kerjabakti/(:num)', 'KerjaBakti::delete/$1', ['filter' => 'role:Admin, AOff']);
+$routes->add('/kerjabakti/insert', 'KerjaBakti::insert', ['filter' => 'role:Admin, AOff']);
+$routes->add('/kerjabakti/update/(:num)', 'KerjaBakti::update/$1', ['filter' => 'role:Admin, AOff']);
+
+// Jadwal Piket
+$routes->add('/control/jadwalpiket', 'JadwalPiket::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
+$routes->get('/control/jadwalpiket/form', 'JadwalPiket::form', ['filter' => 'role:Admin, AOff']);
+$routes->get('/control/jadwalpiket/edit/(:num)', 'JadwalPiket::edit/$1', ['filter' => 'role:Admin, AOff']);
+$routes->delete('/control/jadwalpiket/(:num)', 'JadwalPiket::delete/$1', ['filter' => 'role:Admin, AOff']);
+$routes->add('/jadwalpiket/insert', 'JadwalPiket::insert', ['filter' => 'role:Admin, AOff']);
+$routes->add('/jadwalpiket/update/(:num)', 'JadwalPiket::update/$1', ['filter' => 'role:Admin, AOff']);
+
 // Pemancar
 $routes->add('/control/pemancar', 'Pemancar::index', ['filter' => 'role:Admin, GM, MU, Teknisi']);
 $routes->get('/control/pemancar/detail/(:num)', 'Pemancar::detail/$1', ['filter' => 'role:Admin, GM, MU, Teknisi']);

@@ -80,10 +80,8 @@
     <!-- ==================================================================== -->
 
     <!-- Divisi Umum -->
-    <?php if (in_groups(['Admin', 'GM', 'MU', 'AOn', 'AOff', 'Teknisi'])) : ?>
-        <hr class="sidebar-divider">
-        <div class="sidebar-heading">Divisi Umum</div>
-    <?php endif; ?>
+    <hr class="sidebar-divider">
+    <div class="sidebar-heading">Divisi Umum</div>
 
     <!-- Manager -->
     <?php if (in_groups(['Admin', 'GM', 'MU', 'AOn', 'AOff', 'Teknisi'])) : ?>
@@ -124,12 +122,28 @@
     <?php endif; ?>
 
     <!-- Admisi Off Air -->
+    <!-- Jadwal Piket -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url(); ?>control/jadwalpiket">
+            <i class="fas fa-calendar-check"></i>
+            <span>Jadwal Piket</span>
+        </a>
+    </li>
+
     <?php if (in_groups(['Admin', 'GM', 'MU', 'AOff'])) : ?>
         <!-- Data Inventaris -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/inventaris">
                 <i class="fas fa-database"></i>
                 <span>Data Inventaris</span>
+            </a>
+        </li>
+
+        <!-- Kerja Bakti -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/kerjabakti">
+                <i class="fas fa-broom"></i>
+                <span>Kerja Bakti</span>
             </a>
         </li>
 

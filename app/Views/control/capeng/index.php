@@ -52,8 +52,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($capeng as $index => $ads) : ?>
-                                    <?php $data = json_decode($ads['value']) ?>
+                                <?php foreach ($capeng as $index => $calon) : ?>
+                                    <?php $data = json_decode($calon['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td><?= $data->nama; ?></td>
@@ -66,8 +66,8 @@
                                         <td><?= $data->keterangan; ?></td>
                                         <?php if (in_groups(['Admin', 'Advokat'])) : ?>
                                             <td>
-                                                <a href="<?= base_url(); ?>control/capeng/edit/<?= $ads['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/capeng/<?= $ads['id']; ?>" method="post" class="d-inline">
+                                                <a href="<?= base_url(); ?>control/capeng/edit/<?= $calon['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/capeng/<?= $calon['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>

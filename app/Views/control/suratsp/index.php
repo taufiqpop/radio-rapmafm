@@ -52,8 +52,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($suratsp as $index => $ads) : ?>
-                                    <?php $data = json_decode($ads['value']) ?>
+                                <?php foreach ($suratsp as $index => $sp) : ?>
+                                    <?php $data = json_decode($sp['value']) ?>
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td><?= $data->nama; ?></td>
@@ -66,8 +66,8 @@
                                         <td><?= $data->keterangan; ?></td>
                                         <?php if (in_groups(['Admin', 'Advokat'])) : ?>
                                             <td>
-                                                <a href="<?= base_url(); ?>control/suratsp/edit/<?= $ads['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
-                                                <form action="<?= base_url(); ?>control/suratsp/<?= $ads['id']; ?>" method="post" class="d-inline">
+                                                <a href="<?= base_url(); ?>control/suratsp/edit/<?= $sp['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
+                                                <form action="<?= base_url(); ?>control/suratsp/<?= $sp['id']; ?>" method="post" class="d-inline">
                                                     <?= csrf_field(); ?>
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <button type="submit" class="btn btn-danger mb-1" onclick="return confirm('Apakah Anda Yakin ??');"><i class="fas fa-trash"></i></button>
