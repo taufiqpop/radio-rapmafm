@@ -54,6 +54,9 @@ class User extends BaseController
     protected $capengModel;
     protected $suratspModel;
 
+    // Crew
+    protected $penyiarModel;
+
     public function __construct()
     {
         // Admin
@@ -105,6 +108,9 @@ class User extends BaseController
         $this->workshopbroadcastModel = new \App\Models\WorkshopBroadcastModel();
         $this->capengModel          = new \App\Models\CapengModel();
         $this->suratspModel         = new \App\Models\SuratSPModel();
+
+        // Crew
+        $this->penyiarModel      = new \App\Models\PenyiarModel();
     }
 
     // Dashboard
@@ -164,6 +170,8 @@ class User extends BaseController
             'jmlCapeng'             => $this->capengModel->jumlahCapeng(),
             'jmlSuratSP'            => $this->suratspModel->jumlahSuratSP(),
 
+            // Crew
+            'penyiar'               => $this->penyiarModel->paginate(1, 'penyiar'),
         ];
 
         return view('user/index', $data);
