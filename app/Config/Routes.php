@@ -36,18 +36,13 @@ $routes->get('/index', 'Home::index');
 $routes->add('/podcasts', 'Home::podcasts');
 $routes->add('/contact/insert', 'Home::insert');
 
-// Events //
-// RAPMAFEST #8
-$routes->get('/control/rapmafest8', 'Rapmafest8::index');
+// RAPMAFEST //
 $routes->get('/rapmafest8', 'Rapmafest8::index');
-
-// RAPMAFEST #9
-$routes->get('/control/rapmafest9', 'Rapmafest9::index');
 $routes->get('/rapmafest9', 'Rapmafest9::index');
-
-// RAPMAFEST #10
-$routes->get('/control/rapmafest10', 'Rapmafest10::index');
 $routes->get('/rapmafest10', 'Rapmafest10::index');
+
+// RAPMADAY
+$routes->get('/rapmaday8', 'rapmaday8::index');
 
 // Admin
 $routes->add('/admin', 'Admin::index', ['filter' => 'role:Admin, GM']);
@@ -200,6 +195,14 @@ $routes->add('/jadwalsiar/update/(:num)', 'JadwalSiar::update/$1', ['filter' => 
 $routes->add('/control/penyiar', 'Penyiar::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
 $routes->get('/control/penyiar/edit/(:num)', 'Penyiar::edit/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
 $routes->add('/penyiar/update/(:num)', 'Penyiar::update/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
+
+// Berita Web
+$routes->add('/control/beritaweb', 'BeritaWeb::index', ['filter' => 'role:Admin, GM, MK, Jurnalistik']);
+$routes->add('/control/beritaweb/form', 'BeritaWeb::form', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->get('/control/beritaweb/edit/(:num)', 'BeritaWeb::edit/$1', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->delete('/control/beritaweb/(:num)', 'BeritaWeb::delete/$1', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->add('/beritaweb/insert', 'BeritaWeb::insert', ['filter' => 'role:Admin, Jurnalistik']);
+$routes->add('/beritaweb/update/(:num)', 'BeritaWeb::update/$1', ['filter' => 'role:Admin, Jurnalistik']);
 
 // Live Report
 $routes->add('/control/livereport', 'LiveReport::index', ['filter' => 'role:Admin, GM, MK, Jurnalistik']);

@@ -218,6 +218,14 @@
             </a>
         </li>
 
+        <!-- Berita Website -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/beritaweb">
+                <i class="fas fa-code"></i>
+                <span>Berita Website</span>
+            </a>
+        </li>
+
         <!-- Rapma News -->
         <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/news">

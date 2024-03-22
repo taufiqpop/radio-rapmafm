@@ -5,6 +5,7 @@ namespace App\Controllers;
 class Home extends BaseController
 {
     protected $aboutModel;
+    protected $beritawebModel;
     protected $achievementsModel;
     protected $memberModel;
     protected $eventsModel;
@@ -19,6 +20,7 @@ class Home extends BaseController
     public function __construct()
     {
         $this->aboutModel        = new \App\Models\AboutModel();
+        $this->beritawebModel = new \App\Models\BeritaWebModel();
         $this->achievementsModel = new \App\Models\AchievementsModel();
         $this->memberModel       = new \App\Models\MemberModel();
         $this->eventsModel       = new \App\Models\EventsModel();
@@ -44,6 +46,7 @@ class Home extends BaseController
         $data = [
             'title'         => 'Rapma FM',
             'about'         => $this->aboutModel->paginate(5, 'about'),
+            'beritaweb'     => $this->beritawebModel->paginate(4, 'beritaweb'),
             'achievements'  => $achievements->paginate(100, 'achievements'),
             'member'        => $this->memberModel->paginate(1, 'member'),
             'events'        => $events->paginate(100, 'events'),
