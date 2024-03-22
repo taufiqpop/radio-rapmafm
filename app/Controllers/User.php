@@ -36,6 +36,7 @@ class User extends BaseController
     protected $newsflashModel;
     protected $infografisModel;
     protected $blogModel;
+    protected $beritawebModel;
 
     // Divisi Marketing
     protected $marketingModel;
@@ -91,6 +92,7 @@ class User extends BaseController
         $this->newsflashModel       = new \App\Models\NewsflashModel();
         $this->infografisModel      = new \App\Models\InfografisModel();
         $this->blogModel            = new \App\Models\BlogModel();
+        $this->beritawebModel       = new \App\Models\BeritaWebModel();
 
         // Divisi Marketing
         $this->marketingModel       = new \App\Models\MarketingModel();
@@ -152,6 +154,8 @@ class User extends BaseController
             'jmlNewsflash'          => $this->newsflashModel->jumlahNewsflash(),
             'jmlInfografis'         => $this->infografisModel->jumlahInfografis(),
             'jmlBlog'               => $this->blogModel->jumlahBlog(),
+            'jmlBeritaWeb'          => $this->beritawebModel->jumlahBeritaWeb(),
+
 
             // Divisi Marketing
             'jmlMarketing'          => $this->marketingModel->jumlahMarketing(),
