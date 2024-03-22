@@ -36,6 +36,19 @@ $routes->get('/index', 'Home::index');
 $routes->add('/podcasts', 'Home::podcasts');
 $routes->add('/contact/insert', 'Home::insert');
 
+// Events //
+// RAPMAFEST #8
+$routes->get('/control/rapmafest8', 'Rapmafest8::index');
+$routes->get('/rapmafest8', 'Rapmafest8::index');
+
+// RAPMAFEST #9
+$routes->get('/control/rapmafest9', 'Rapmafest9::index');
+$routes->get('/rapmafest9', 'Rapmafest9::index');
+
+// RAPMAFEST #10
+$routes->get('/control/rapmafest10', 'Rapmafest10::index');
+$routes->get('/rapmafest10', 'Rapmafest10::index');
+
 // Admin
 $routes->add('/admin', 'Admin::index', ['filter' => 'role:Admin, GM']);
 $routes->get('/admin/detail/(:num)', 'Admin::detail/$1', ['filter' => 'role:Admin, GM']);

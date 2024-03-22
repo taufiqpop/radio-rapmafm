@@ -286,39 +286,41 @@
       </div>
     </section>
 
-    <!-- Rapmanews -->
-    <section id="rapmanews">
-      <div class="section-title">
-        <h2 style="text-align: center;">Rapmanews</h2>
-      </div>
+    <!-- Rapma News -->
+    <section id="news">
       <div class="container">
-        <div class="row card mb-3">
-          <img class="card-img-top" src="https://source.unsplash.com/1200x400/?nature" alt="Card image cap">
-          <div class="card-body text-center">
-            <h5 class="card-title">GOR Kampus 2 UMS Jadi Moshpit Area Karnamereka???</h5>
-            <p class="card-text">107.5 Rapma FM! The First Edutainment Channel in Solo. CampusBrainers, dalam rangka meramaikan ulang tahun Rapma FM yang ke-26, agenda tahunan kita yaitu Rapmafest kali ini hadir</p>
-            <a href="#" class="btn btn-success">Read More</a>
+        <div class="row g-2 g-md-4">
+          <div class="section-title">
+            <h2 style="text-align: center;">Rapma News</h2>
           </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="row col-sm-6">
-          <div class="card">
-            <img class="card-img-top" src="https://source.unsplash.com/1200x400/?nature" alt="Card image cap">
+          <div class="row card mb-3">
+            <img class="card-img-top mt-3" src="https://source.unsplash.com/1200x400/?nature">
             <div class="card-body text-center">
-              <h5 class="card-title">KESERUAN FINAL LOMBA RAPMAFEST #10</h5>
-              <p class="card-text">107.5 Rapma FM! The First Edutainment Channel in Solo. Halloo CampusBrainers, wahh terpantau udah memasuki bulan Oktober</p>
+              <h5 class="card-title">GOR Kampus 2 UMS Jadi Moshpit Area Karnamereka???</h5>
+              <p class="card-text">107.5 Rapma FM! The First Edutainment Channel in Solo. CampusBrainers, dalam rangka meramaikan ulang tahun Rapma FM yang ke-26, agenda tahunan kita yaitu Rapmafest kali ini hadir</p>
               <a href="#" class="btn btn-success">Read More</a>
             </div>
           </div>
         </div>
-        <div class="row col-sm-6">
-          <div class="card">
-          <img class="card-img-top" src="https://source.unsplash.com/1200x400/?nature" alt="Card image cap">
-            <div class="card-body text-center">
-              <h5 class="card-title">ONLINE CLASS MERAMAIKAN ACARA RAPMAFEST #10</h5>
-              <p class="card-text">107.5 Rapma FM! The First Edutainment Channel in Solo Siapa disini yang ikut Online Class RAPMAFEST #10 angkat tangan!!! Gimana nih menurut kamu tentang rangkaian acara</p>
-              <a href="#" class="btn btn-success">Read More</a>
+        <div class="row justify-content-center">
+          <div class="row col-sm-6">
+            <div class="card">
+              <img class="card-img-top mt-3" src="https://source.unsplash.com/1200x400/?nature">
+              <div class="card-body text-center">
+                <h5 class="card-title">KESERUAN FINAL LOMBA RAPMAFEST #10</h5>
+                <p class="card-text">107.5 Rapma FM! The First Edutainment Channel in Solo. Halloo CampusBrainers, wahh terpantau udah memasuki bulan Oktober</p>
+                <a href="#" class="btn btn-success">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="row col-sm-6">
+            <div class="card">
+              <img class="card-img-top mt-3" src="https://source.unsplash.com/1200x400/?nature">
+              <div class="card-body text-center">
+                <h5 class="card-title">ONLINE CLASS MERAMAIKAN ACARA RAPMAFEST #10</h5>
+                <p class="card-text">107.5 Rapma FM! The First Edutainment Channel in Solo Siapa disini yang ikut Online Class RAPMAFEST #10 angkat tangan!!! Gimana nih menurut kamu tentang rangkaian acara</p>
+                <a href="#" class="btn btn-success">Read More</a>
+              </div>
             </div>
           </div>
         </div>

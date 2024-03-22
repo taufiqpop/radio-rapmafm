@@ -42,7 +42,9 @@
                                     <th scope="col" class="cursor-active">Events</th>
                                     <th scope="col" class="cursor-active">Jenis</th>
                                     <th scope="col" class="cursor-active">Tahun</th>
-                                    <th scope="col" class="cursor-stop">Action</th>
+                                    <?php if (in_groups(['Admin', 'AOn'])) : ?>
+                                        <th scope="col" class="cursor-stop">Action</th>
+                                    <?php endif; ?>
                                 </tr>
                             </thead>
                             <tbody>
@@ -57,7 +59,6 @@
                                         <td><?= $data->jenis; ?></td>
                                         <td><?= $data->tahun; ?></td>
                                         <td>
-                                            <a href="<?= $data->link; ?>" class="btn btn-success mb-1" target="_blank"><i class="fas fa-link"></i></a>
                                             <?php if (in_groups(['Admin', 'AOn'])) : ?>
                                                 <a href="<?= base_url(); ?>control/events/edit/<?= $event['id']; ?>" class="btn btn-warning mb-1"><i class="fas fa-edit"></i></a>
                                                 <form action="<?= base_url(); ?>control/events/<?= $event['id']; ?>" method="post" class="d-inline">
