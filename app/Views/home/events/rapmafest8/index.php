@@ -1,33 +1,6 @@
 <?= $this->extend('home/events/rapmafest8/templates/index'); ?>
 <?= $this->section('page-content'); ?>
 
-<!-- Header -->
-<header id="header" class="d-flex align-items-center" style="height: 100px;">
-  <div class="container-fluid container-xxl d-flex align-items-center">
-    <div id="logo" class="me-auto">
-      <a href="<?= base_url(); ?>rapmafest8" class="scrollto"><img src="<?= base_url(); ?>events/rapmafest8/img/Logo Rapmafest 8.png" alt="RAPMAFEST#8" title="RAPMAFEST#8"></a>
-    </div>
-
-    <!-- Navbar -->
-    <nav id="navbar" class="navbar order-last order-lg-0">
-      <ul>
-        <li><a class="nav-link scrollto active" href="<?= base_url(); ?>#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="<?= base_url(); ?>#about">About</a></li>
-        <li><a class="nav-link scrollto" href="<?= base_url(); ?>#webinar">Webinar</a></li>
-        <li><a class="nav-link scrollto" href="<?= base_url(); ?>#concert">Concert</a></li>
-        <li><a class="nav-link scrollto" href="<?= base_url(); ?>#schedule">Timeline</a></li>
-        <li><a class="nav-link scrollto" href="<?= base_url(); ?>#gallery">Gallery</a></li>
-        <li><a class="nav-link scrollto" href="<?= base_url(); ?>#sponsor">Sponsor</a></li>
-        <li><a class="nav-link scrollto" href="<?= base_url(); ?>#medpart">Medpart</a></li>
-        <li><a class="nav-link scrollto" href="<?= base_url(); ?>#rapmerch">Rapmerch</a></li>
-        <li><a class="nav-link scrollto" href="<?= base_url(); ?>#contact">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
-    <a class="buy-tickets scrollto" href="<?= base_url(); ?>#buy-tickets"><strong>Buy Ticket</strong></a>
-  </div>
-</header>
-
 <!-- Home -->
 <section id="hero">
   <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">

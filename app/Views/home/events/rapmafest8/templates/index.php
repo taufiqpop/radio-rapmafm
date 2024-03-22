@@ -13,7 +13,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicon -->
-    <link href="<?= base_url(); ?>events/rapmafest8/ico/rapmafest.ico" rel="icon">
+    <link href="<?= base_url(); ?>events/rapmafest8/img/rapmafest.ico" rel="icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
@@ -32,9 +32,51 @@
 
 <body>
 
+    <!-- Header -->
+    <header id="header" class="d-flex align-items-center" style="height: 100px;">
+        <div class="container-fluid container-xxl d-flex align-items-center">
+            <div id="logo" class="me-auto">
+                <a href="<?= base_url(); ?>rapmafest8" class="scrollto"><img src="<?= base_url(); ?>events/rapmafest8/img/Logo Rapmafest 8.png" alt="RAPMAFEST#8" title="RAPMAFEST#8"></a>
+            </div>
+
+            <!-- Navbar -->
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="<?= base_url(); ?>#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="<?= base_url(); ?>#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="<?= base_url(); ?>#webinar">Webinar</a></li>
+                    <li><a class="nav-link scrollto" href="<?= base_url(); ?>#concert">Concert</a></li>
+                    <li><a class="nav-link scrollto" href="<?= base_url(); ?>#schedule">Timeline</a></li>
+                    <li><a class="nav-link scrollto" href="<?= base_url(); ?>#gallery">Gallery</a></li>
+                    <li><a class="nav-link scrollto" href="<?= base_url(); ?>#sponsor">Sponsor</a></li>
+                    <li><a class="nav-link scrollto" href="<?= base_url(); ?>#medpart">Medpart</a></li>
+                    <li><a class="nav-link scrollto" href="<?= base_url(); ?>#rapmerch">Rapmerch</a></li>
+                    <li><a class="nav-link scrollto" href="<?= base_url(); ?>#contact">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <a class="buy-tickets scrollto" href="<?= base_url(); ?>#buy-tickets"><strong>Buy Ticket</strong></a>
+        </div>
+    </header>
+
     <!-- Main Content -->
     <?= $this->renderSection('page-content'); ?>
 
+    <!-- Pop Up -->
+    <!-- <div id="headlineatas">
+        <div id="topbar">
+            <span id="clos"><a target="_blank" onclick="getValue()">Close</a></span>
+        </div>
+        <div id="adsground">
+            <p>
+                <img id="merch" width="633px" src="events/rapmafest8/img/Rapmerch PopUp.png">
+                <hr>
+            <h5>
+                <b><a href="https://wa.me/+6281226112589?text=Halo%20kak%2C%20aku%20mau%20beli%20Merchandise%20Rapmafest%20%238%20ya!%20%3A)" target="_blank">Ara (0812-2611-2589)</a></b>
+            </h5>
+            </p>
+        </div>
+    </div> -->
 
     <!-- Footer -->
     <footer id="footer">
@@ -44,90 +86,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Pop Up -->
-    <!-- <style>
-        #topbar {
-            height: 30px;
-            width: auto;
-            margin: auto;
-            background: #4da1a3;
-            background-repeat: repeat-x;
-            text-align: left;
-            padding-top: 4px;
-        }
-        
-        #adsground {
-            height: auto;
-            margin: auto;
-            width: 100%;
-            background: #fff;
-            border-bottom: 4px #4da1a3 solid;
-            border-right: 4px #4da1a3 solid;
-            border-left: 4px #4da1a3 solid;
-            text-align: center;
-            padding: 4px;
-        }
-        
-        #headlineatas {
-            opacity: 0.98;
-            height: auto;
-            width: auto;
-            position: fixed;
-            border-bottom: 1px #4da1a3;
-            border-bottom: 0px #4da1a3;
-            color: #333;
-            padding: 0px;
-            z-index: 1001;
-            position: fixed;
-            top: 10%;
-            left: 350px;
-            font-size: 20px;
-        }
-        
-        #clos {
-            color: #fff;
-            font-size: 13px;
-            font-weight: bold;
-            text-shadow: black 0.1em 0.1em 0.1em;
-            float: right;
-            padding-top: 3px;
-            padding-right: 47%;
-        }
-        
-        @media (max-width: 675px) {
-            #headlineatas {
-                left: 0%;
-                right: 0%;
-                top: 20%;
-            }
-            #merch {
-                width: 100%;
-            }
-            #clos {
-                padding-right: 45%;
-            }
-        }
-    </style>
-
-    <script type="text/javascript">
-        function getValue() {
-            document.getElementById("headlineatas").style.display = 'none';
-        }
-    </script>
-
-    <div id="headlineatas">
-        <div id="topbar">
-            <span id="clos"><a target="_blank" onclick="getValue()">Close</a></span>
-        </div>
-        <div id="adsground">
-            <p>
-                <img id="merch" width="633px" src="events/rapmafest8/img/Rapmerch PopUp.png">
-                <hr>
-                <h5><b><a href="https://wa.me/+6281226112589?text=Halo%20kak%2C%20aku%20mau%20beli%20Merchandise%20Rapmafest%20%238%20ya!%20%3A)" target="_blank">Ara (0812‑2611-2589)</a></h5></b>
-            </p>
-        </div>
-    </div> -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

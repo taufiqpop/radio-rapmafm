@@ -1617,3 +1617,66 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   color: #ddd;
 }
+
+/* POP UP */
+#topbar {
+  height: 30px;
+  width: auto;
+  margin: auto;
+  background: #4da1a3;
+  background-repeat: repeat-x;
+  text-align: left;
+  padding-top: 4px;
+}
+
+#adsground {
+  height: auto;
+  margin: auto;
+  width: 100%;
+  background: #fff;
+  border-bottom: 4px #4da1a3 solid;
+  border-right: 4px #4da1a3 solid;
+  border-left: 4px #4da1a3 solid;
+  text-align: center;
+  padding: 4px;
+}
+
+#headlineatas {
+  opacity: 0.98;
+  height: auto;
+  width: auto;
+  position: fixed;
+  border-bottom: 1px #4da1a3;
+  border-bottom: 0px #4da1a3;
+  color: #333;
+  padding: 0px;
+  z-index: 1001;
+  position: fixed;
+  top: 10%;
+  left: 350px;
+  font-size: 20px;
+}
+
+#clos {
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-shadow: black 0.1em 0.1em 0.1em;
+  float: right;
+  padding-top: 3px;
+  padding-right: 47%;
+}
+
+@media (max-width: 675px) {
+  #headlineatas {
+      left: 0%;
+      right: 0%;
+      top: 20%;
+  }
+  #merch {
+      width: 100%;
+  }
+  #clos {
+      padding-right: 45%;
+  }
+}
