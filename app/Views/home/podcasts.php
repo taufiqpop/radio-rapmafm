@@ -29,7 +29,7 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <?= $pagerPodcast->links('podcast', 'data_pagination'); ?>
+            <?= $pager->links('podcast', 'data_pagination'); ?>
     </section>
 </main>
 
