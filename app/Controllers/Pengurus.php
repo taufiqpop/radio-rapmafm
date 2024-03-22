@@ -32,7 +32,7 @@ class Pengurus extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/anggota/pengurus/index', $data);
+        return view('control/personalia/anggota/pengurus/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Pengurus extends BaseController
             'title' => 'Rapma FM | Form Pengurus',
         ];
 
-        return view('control/anggota/pengurus/form', $data);
+        return view('control/personalia/anggota/pengurus/form', $data);
     }
 
     // Insert Data
@@ -91,7 +91,7 @@ class Pengurus extends BaseController
 
         $data['pengurus'] = $query->getResultArray();
 
-        return view('control/anggota/pengurus/edit', $data);
+        return view('control/personalia/anggota/pengurus/edit', $data);
     }
 
     // Update Data

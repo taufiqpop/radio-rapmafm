@@ -32,7 +32,7 @@ class Iklan extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/iklan/index', $data);
+        return view('control/marketing/iklan/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Iklan extends BaseController
             'title'  => 'Rapma FM | Form Iklan',
         ];
 
-        return view('control/iklan/form', $data);
+        return view('control/marketing/iklan/form', $data);
     }
 
     // Insert Data
@@ -73,7 +73,7 @@ class Iklan extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'     => 'Rapma FM | Edit Data Iklan',
+            'title'   => 'Rapma FM | Edit Data Iklan',
             'iklan'   => $this->iklanModel->find($id),
         ];
 
@@ -85,7 +85,7 @@ class Iklan extends BaseController
 
         $data['iklan'] = $query->getResultArray();
 
-        return view('control/iklan/edit', $data);
+        return view('control/marketing/iklan/edit', $data);
     }
 
     // Update Data

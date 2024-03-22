@@ -32,26 +32,7 @@ class Events extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/events/index', $data);
-    }
-
-    // Detail Events
-    public function detail($id)
-    {
-        $data = [
-            'title'  => 'Rapma FM | Detail Events',
-            'events' => $this->eventsModel->find($id),
-        ];
-
-        $db      = \Config\Database::connect();
-        $builder = $db->table('events');
-        $builder->select('id, key, value');
-        $builder->where('id', $id);
-        $query   = $builder->get();
-
-        $data['events'] = $query->getResultArray();
-
-        return view('control/events/detail', $data);
+        return view('control/umum/events/index', $data);
     }
 
     // Create Data
@@ -62,11 +43,11 @@ class Events extends BaseController
             'validation' => \Config\Services::validation()
         ];
 
-        return view('control/events/form', $data);
+        return view('control/umum/events/form', $data);
     }
 
     // Insert Data
-    public function insert($id = '')
+    public function insert()
     {
         // Validasi Input
         if (!$this->validate([
@@ -81,7 +62,7 @@ class Events extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('control/events/form')->withInput()->with('validation', $validation);
+            return redirect()->to('control/umum/events/form')->withInput()->with('validation', $validation);
         }
 
         // Ambil Gambar
@@ -134,7 +115,7 @@ class Events extends BaseController
 
         $data['events'] = $query->getResultArray();
 
-        return view('control/events/edit', $data);
+        return view('control/umum/events/edit', $data);
     }
 
     // Update Data
@@ -152,7 +133,7 @@ class Events extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('control/events/edit')->withInput()->with('validation', $validation);
+            return redirect()->to('control/umum/events/edit')->withInput()->with('validation', $validation);
         }
 
         $ambilGambar = $this->request->getFile('images');

@@ -32,7 +32,7 @@ class Konten extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/konten/index', $data);
+        return view('control/umum/konten/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Konten extends BaseController
             'title'  => 'Rapma FM | Form Data Konten',
         ];
 
-        return view('control/konten/form', $data);
+        return view('control/umum/konten/form', $data);
     }
 
     // Insert Data
@@ -84,7 +84,7 @@ class Konten extends BaseController
 
         $data['konten'] = $query->getResultArray();
 
-        return view('control/konten/edit', $data);
+        return view('control/umum/konten/edit', $data);
     }
 
     // Update Data

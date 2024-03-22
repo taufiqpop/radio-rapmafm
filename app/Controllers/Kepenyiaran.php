@@ -27,12 +27,12 @@ class Kepenyiaran extends BaseController
 
         $data = [
             'title'       => 'Rapma FM | Timeline Divisi Kepenyiaran',
-            'kepenyiaran'        => $kepenyiaran->paginate(10, 'kepenyiaran'),
+            'kepenyiaran' => $kepenyiaran->paginate(10, 'kepenyiaran'),
             'pager'       => $kepenyiaran->pager,
             'currentPage' => $currentPage,
         ];
 
-        return view('control/kepenyiaran/index', $data);
+        return view('control/kepenyiaran/kepenyiaran/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Kepenyiaran extends BaseController
             'title'  => 'Rapma FM | Form Timeline Divisi Kepenyiaran',
         ];
 
-        return view('control/kepenyiaran/form', $data);
+        return view('control/kepenyiaran/kepenyiaran/form', $data);
     }
 
     // Insert Data
@@ -90,7 +90,7 @@ class Kepenyiaran extends BaseController
 
         $data['kepenyiaran'] = $query->getResultArray();
 
-        return view('control/kepenyiaran/edit', $data);
+        return view('control/kepenyiaran/kepenyiaran/edit', $data);
     }
 
     // Update Data

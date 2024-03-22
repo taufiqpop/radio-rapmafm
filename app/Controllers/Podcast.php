@@ -32,7 +32,7 @@ class Podcast extends BaseController
             'currentPage'   => $currentPage,
         ];
 
-        return view('control/podcast/index', $data);
+        return view('control/kepenyiaran/podcast/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Podcast extends BaseController
             'title'      => 'Rapma FM | Form Podcast',
         ];
 
-        return view('control/podcast/form', $data);
+        return view('control/kepenyiaran/podcast/form', $data);
     }
 
     // Insert Data
@@ -86,7 +86,7 @@ class Podcast extends BaseController
 
         $data['podcast'] = $query->getResultArray();
 
-        return view('control/podcast/edit', $data);
+        return view('control/kepenyiaran/podcast/edit', $data);
     }
 
     // Update Data

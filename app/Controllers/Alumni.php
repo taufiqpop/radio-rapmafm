@@ -32,7 +32,7 @@ class Alumni extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/anggota/alumni/index', $data);
+        return view('control/personalia/anggota/alumni/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Alumni extends BaseController
             'title' => 'Rapma FM | Form Alumni',
         ];
 
-        return view('control/anggota/alumni/form', $data);
+        return view('control/personalia/anggota/alumni/form', $data);
     }
 
     // Insert Data
@@ -87,7 +87,7 @@ class Alumni extends BaseController
 
         $data['alumni'] = $query->getResultArray();
 
-        return view('control/anggota/alumni/edit', $data);
+        return view('control/personalia/anggota/alumni/edit', $data);
     }
 
     // Update Data

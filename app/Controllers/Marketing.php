@@ -27,12 +27,12 @@ class Marketing extends BaseController
 
         $data = [
             'title'       => 'Rapma FM | Timeline Divisi Marketing',
-            'marketing'        => $marketing->paginate(10, 'marketing'),
+            'marketing'   => $marketing->paginate(10, 'marketing'),
             'pager'       => $marketing->pager,
             'currentPage' => $currentPage,
         ];
 
-        return view('control/marketing/index', $data);
+        return view('control/marketing/marketing/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Marketing extends BaseController
             'title'  => 'Rapma FM | Form Timeline Divisi Marketing',
         ];
 
-        return view('control/marketing/form', $data);
+        return view('control/marketing/marketing/form', $data);
     }
 
     // Insert Data
@@ -90,7 +90,7 @@ class Marketing extends BaseController
 
         $data['marketing'] = $query->getResultArray();
 
-        return view('control/marketing/edit', $data);
+        return view('control/marketing/marketing/edit', $data);
     }
 
     // Update Data

@@ -32,7 +32,7 @@ class Program extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/program/index', $data);
+        return view('control/kepenyiaran/program/index', $data);
     }
 
     // Create Data
@@ -43,7 +43,7 @@ class Program extends BaseController
             'validation' => \Config\Services::validation()
         ];
 
-        return view('control/program/form', $data);
+        return view('control/kepenyiaran/program/form', $data);
     }
 
     // Insert Data
@@ -115,7 +115,7 @@ class Program extends BaseController
 
         $data['program'] = $query->getResultArray();
 
-        return view('control/program/edit', $data);
+        return view('control/kepenyiaran/program/edit', $data);
     }
 
     // Update Data

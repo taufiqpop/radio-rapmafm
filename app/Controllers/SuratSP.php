@@ -32,7 +32,7 @@ class SuratSP extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/suratsp/index', $data);
+        return view('control/personalia/suratsp/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class SuratSP extends BaseController
             'title'  => 'Rapma FM | Form Surat SP',
         ];
 
-        return view('control/suratsp/form', $data);
+        return view('control/personalia/suratsp/form', $data);
     }
 
     // Insert Data
@@ -87,7 +87,7 @@ class SuratSP extends BaseController
 
         $data['suratsp'] = $query->getResultArray();
 
-        return view('control/suratsp/edit', $data);
+        return view('control/personalia/suratsp/edit', $data);
     }
 
     // Update Data

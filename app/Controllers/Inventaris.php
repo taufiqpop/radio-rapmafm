@@ -32,7 +32,7 @@ class Inventaris extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/inventaris/index', $data);
+        return view('control/umum/inventaris/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Inventaris extends BaseController
             'title' => 'Rapma FM | Form Inventaris',
         ];
 
-        return view('control/inventaris/form', $data);
+        return view('control/umum/inventaris/form', $data);
     }
 
     // Insert Data
@@ -86,7 +86,7 @@ class Inventaris extends BaseController
 
         $data['inventaris'] = $query->getResultArray();
 
-        return view('control/inventaris/edit', $data);
+        return view('control/umum/inventaris/edit', $data);
     }
 
     // Update Data

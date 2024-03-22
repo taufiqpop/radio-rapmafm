@@ -32,7 +32,7 @@ class Crew extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/anggota/crew/index', $data);
+        return view('control/personalia/anggota/crew/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Crew extends BaseController
             'title'  => 'Rapma FM | Form Crew',
         ];
 
-        return view('control/anggota/crew/form', $data);
+        return view('control/personalia/anggota/crew/form', $data);
     }
 
     // Insert Data
@@ -88,7 +88,7 @@ class Crew extends BaseController
 
         $data['crew'] = $query->getResultArray();
 
-        return view('control/anggota/crew/edit', $data);
+        return view('control/personalia/anggota/crew/edit', $data);
     }
 
     // Update Data

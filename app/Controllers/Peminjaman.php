@@ -32,7 +32,7 @@ class Peminjaman extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/peminjaman/index', $data);
+        return view('control/umum/peminjaman/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Peminjaman extends BaseController
             'title'  => 'Rapma FM | Form Peminjaman',
         ];
 
-        return view('control/peminjaman/form', $data);
+        return view('control/umum/peminjaman/form', $data);
     }
 
     // Insert Data
@@ -86,7 +86,7 @@ class Peminjaman extends BaseController
 
         $data['peminjaman'] = $query->getResultArray();
 
-        return view('control/peminjaman/edit', $data);
+        return view('control/umum/peminjaman/edit', $data);
     }
 
     // Update Data

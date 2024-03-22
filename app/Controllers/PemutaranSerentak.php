@@ -32,7 +32,7 @@ class PemutaranSerentak extends BaseController
             'currentPage'             => $currentPage,
         ];
 
-        return view('control/pemutaranserentak/index', $data);
+        return view('control/kepenyiaran/pemutaranserentak/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class PemutaranSerentak extends BaseController
             'title'  => 'Rapma FM | Form Pemutaran Serentak',
         ];
 
-        return view('control/pemutaranserentak/form', $data);
+        return view('control/kepenyiaran/pemutaranserentak/form', $data);
     }
 
     // Insert Data
@@ -82,7 +82,7 @@ class PemutaranSerentak extends BaseController
 
         $data['pemutaranserentak'] = $query->getResultArray();
 
-        return view('control/pemutaranserentak/edit', $data);
+        return view('control/kepenyiaran/pemutaranserentak/edit', $data);
     }
 
     // Update Data

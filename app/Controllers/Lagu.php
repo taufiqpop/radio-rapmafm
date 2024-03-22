@@ -32,7 +32,7 @@ class Lagu extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/lagu/index', $data);
+        return view('control/kepenyiaran/lagu/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Lagu extends BaseController
             'title'  => 'Rapma FM | Form Lagu',
         ];
 
-        return view('control/lagu/form', $data);
+        return view('control/kepenyiaran/lagu/form', $data);
     }
 
     // Insert Data
@@ -85,7 +85,7 @@ class Lagu extends BaseController
 
         $data['lagu'] = $query->getResultArray();
 
-        return view('control/lagu/edit', $data);
+        return view('control/kepenyiaran/lagu/edit', $data);
     }
 
     // Update Data

@@ -27,12 +27,12 @@ class Personalia extends BaseController
 
         $data = [
             'title'       => 'Rapma FM | Timeline Divisi Personalia',
-            'personalia'        => $personalia->paginate(10, 'personalia'),
+            'personalia'  => $personalia->paginate(10, 'personalia'),
             'pager'       => $personalia->pager,
             'currentPage' => $currentPage,
         ];
 
-        return view('control/personalia/index', $data);
+        return view('control/personalia/personalia/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Personalia extends BaseController
             'title'  => 'Rapma FM | Form Timeline Divisi Personalia',
         ];
 
-        return view('control/personalia/form', $data);
+        return view('control/personalia/personalia/form', $data);
     }
 
     // Insert Data
@@ -90,7 +90,7 @@ class Personalia extends BaseController
 
         $data['personalia'] = $query->getResultArray();
 
-        return view('control/personalia/edit', $data);
+        return view('control/personalia/personalia/edit', $data);
     }
 
     // Update Data

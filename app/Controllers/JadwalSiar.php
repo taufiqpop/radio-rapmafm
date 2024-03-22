@@ -19,7 +19,7 @@ class JadwalSiar extends BaseController
             'jadwalsiar'  => $this->jadwalsiarModel->paginate(1, 'jadwalsiar'),
         ];
 
-        return view('control/jadwalsiar/index', $data);
+        return view('control/kepenyiaran/jadwalsiar/index', $data);
     }
 
     // Edit Data
@@ -38,7 +38,7 @@ class JadwalSiar extends BaseController
 
         $data['jadwalsiar'] = $query->getResultArray();
 
-        return view('control/jadwalsiar/edit', $data);
+        return view('control/kepenyiaran/jadwalsiar/edit', $data);
     }
 
     // Update Data

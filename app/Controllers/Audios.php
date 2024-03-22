@@ -32,7 +32,7 @@ class Audios extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/audios/index', $data);
+        return view('control/kepenyiaran/audios/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Audios extends BaseController
             'title'  => 'Rapma FM | Form Audio',
         ];
 
-        return view('control/audios/form', $data);
+        return view('control/kepenyiaran/audios/form', $data);
     }
 
     // Insert Data
@@ -83,7 +83,7 @@ class Audios extends BaseController
 
         $data['audios'] = $query->getResultArray();
 
-        return view('control/audios/edit', $data);
+        return view('control/kepenyiaran/audios/edit', $data);
     }
 
     // Update Data

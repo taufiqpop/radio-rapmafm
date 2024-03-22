@@ -32,7 +32,7 @@ class Blog extends BaseController
             'currentPage'   => $currentPage,
         ];
 
-        return view('control/blog/index', $data);
+        return view('control/kepenyiaran/blog/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Blog extends BaseController
             'title'      => 'Rapma FM | Form Blog',
         ];
 
-        return view('control/blog/form', $data);
+        return view('control/kepenyiaran/blog/form', $data);
     }
 
     // Insert Data
@@ -83,7 +83,7 @@ class Blog extends BaseController
 
         $data['blog'] = $query->getResultArray();
 
-        return view('control/blog/edit', $data);
+        return view('control/kepenyiaran/blog/edit', $data);
     }
 
     // Update Data

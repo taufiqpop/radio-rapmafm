@@ -32,7 +32,7 @@ class SuratMasuk extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/suratmasuk/index', $data);
+        return view('control/gmpa/suratmasuk/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class SuratMasuk extends BaseController
             'title'  => 'Rapma FM | Form Surat Masuk',
         ];
 
-        return view('control/suratmasuk/form', $data);
+        return view('control/gmpa/suratmasuk/form', $data);
     }
 
     // Insert Data
@@ -83,7 +83,7 @@ class SuratMasuk extends BaseController
 
         $data['suratmasuk'] = $query->getResultArray();
 
-        return view('control/suratmasuk/edit', $data);
+        return view('control/gmpa/suratmasuk/edit', $data);
     }
 
     // Update Data

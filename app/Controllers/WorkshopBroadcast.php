@@ -32,7 +32,7 @@ class WorkshopBroadcast extends BaseController
             'currentPage'       => $currentPage,
         ];
 
-        return view('control/workshopbroadcast/index', $data);
+        return view('control/personalia/workshopbroadcast/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class WorkshopBroadcast extends BaseController
             'title'  => 'Rapma FM | Form Workshop Broadcast',
         ];
 
-        return view('control/workshopbroadcast/form', $data);
+        return view('control/personalia/workshopbroadcast/form', $data);
     }
 
     // Insert Data
@@ -88,7 +88,7 @@ class WorkshopBroadcast extends BaseController
 
         $data['workshopbroadcast'] = $query->getResultArray();
 
-        return view('control/workshopbroadcast/edit', $data);
+        return view('control/personalia/workshopbroadcast/edit', $data);
     }
 
     // Update Data

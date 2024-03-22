@@ -23,7 +23,7 @@ class About extends BaseController
         $builder = $db->table('about');
         $builder->select('id, value, created_at, updated_at, deleted_at');
 
-        return view('control/about/index', $data);
+        return view('control/umum/about/index', $data);
     }
 
     // Update Data

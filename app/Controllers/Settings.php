@@ -19,7 +19,7 @@ class Settings extends BaseController
             'settings'  => $this->settingsModel->paginate(1, 'settings'),
         ];
 
-        return view('control/settings/index', $data);
+        return view('control/umum/settings/index', $data);
     }
 
     // Update Data

@@ -32,7 +32,7 @@ class LabelRekaman extends BaseController
             'currentPage'        => $currentPage,
         ];
 
-        return view('control/labelrekaman/index', $data);
+        return view('control/kepenyiaran/labelrekaman/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class LabelRekaman extends BaseController
             'title'  => 'Rapma FM | Form Label Rekaman',
         ];
 
-        return view('control/labelrekaman/form', $data);
+        return view('control/kepenyiaran/labelrekaman/form', $data);
     }
 
     // Insert Data
@@ -80,7 +80,7 @@ class LabelRekaman extends BaseController
 
         $data['labelrekaman'] = $query->getResultArray();
 
-        return view('control/labelrekaman/edit', $data);
+        return view('control/kepenyiaran/labelrekaman/edit', $data);
     }
 
     // Update Data

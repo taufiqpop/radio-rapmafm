@@ -32,7 +32,7 @@ class Medpart extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/medpart/index', $data);
+        return view('control/marketing/medpart/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Medpart extends BaseController
             'title'  => 'Rapma FM | Form Media Partner',
         ];
 
-        return view('control/medpart/form', $data);
+        return view('control/marketing/medpart/form', $data);
     }
 
     // Insert Data
@@ -89,7 +89,7 @@ class Medpart extends BaseController
 
         $data['medpart'] = $query->getResultArray();
 
-        return view('control/medpart/edit', $data);
+        return view('control/marketing/medpart/edit', $data);
     }
 
     // Update Data

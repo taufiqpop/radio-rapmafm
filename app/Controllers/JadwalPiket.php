@@ -19,7 +19,7 @@ class JadwalPiket extends BaseController
             'jadwalpiket'  => $this->jadwalpiketModel->paginate(1, 'jadwalpiket'),
         ];
 
-        return view('control/jadwalpiket/index', $data);
+        return view('control/umum/jadwalpiket/index', $data);
     }
 
     // Edit Data
@@ -38,7 +38,7 @@ class JadwalPiket extends BaseController
 
         $data['jadwalpiket'] = $query->getResultArray();
 
-        return view('control/jadwalpiket/edit', $data);
+        return view('control/umum/jadwalpiket/edit', $data);
     }
 
     // Update Data

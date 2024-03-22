@@ -31,7 +31,7 @@ class Topchart extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/topchart/index', $data);
+        return view('control/kepenyiaran/topchart/index', $data);
     }
 
     // Insert Data
@@ -69,7 +69,7 @@ class Topchart extends BaseController
 
         $data['topchart'] = $query->getResultArray();
 
-        return view('control/topchart/edit', $data);
+        return view('control/kepenyiaran/topchart/edit', $data);
     }
 
     // Update Data

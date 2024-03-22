@@ -32,7 +32,7 @@ class Umum extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/umum/index', $data);
+        return view('control/umum/umum/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Umum extends BaseController
             'title'  => 'Rapma FM | Form Timeline Divisi Umum',
         ];
 
-        return view('control/umum/form', $data);
+        return view('control/umum/umum/form', $data);
     }
 
     // Insert Data
@@ -90,7 +90,7 @@ class Umum extends BaseController
 
         $data['umum'] = $query->getResultArray();
 
-        return view('control/umum/edit', $data);
+        return view('control/umum/umum/edit', $data);
     }
 
     // Update Data

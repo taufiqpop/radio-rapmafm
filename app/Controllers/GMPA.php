@@ -32,7 +32,7 @@ class GMPA extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/gmpa/index', $data);
+        return view('control/gmpa/gmpa/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class GMPA extends BaseController
             'title'  => 'Rapma FM | Form Timeline Divisi GMPA',
         ];
 
-        return view('control/gmpa/form', $data);
+        return view('control/gmpa/gmpa/form', $data);
     }
 
     // Insert Data
@@ -90,7 +90,7 @@ class GMPA extends BaseController
 
         $data['gmpa'] = $query->getResultArray();
 
-        return view('control/gmpa/edit', $data);
+        return view('control/gmpa/gmpa/edit', $data);
     }
 
     // Update Data

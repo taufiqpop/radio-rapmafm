@@ -32,7 +32,7 @@ class Videos extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/videos/index', $data);
+        return view('control/kepenyiaran/videos/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Videos extends BaseController
             'title'  => 'Rapma FM | Form Video',
         ];
 
-        return view('control/videos/form', $data);
+        return view('control/kepenyiaran/videos/form', $data);
     }
 
     // Insert Data
@@ -86,7 +86,7 @@ class Videos extends BaseController
 
         $data['videos'] = $query->getResultArray();
 
-        return view('control/videos/edit', $data);
+        return view('control/kepenyiaran/videos/edit', $data);
     }
 
     // Update Data

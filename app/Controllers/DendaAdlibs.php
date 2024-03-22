@@ -32,7 +32,7 @@ class DendaAdlibs extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/dendadlibs/index', $data);
+        return view('control/marketing/dendadlibs/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class DendaAdlibs extends BaseController
             'title'  => 'Rapma FM | Form Denda Adlibs & Spot',
         ];
 
-        return view('control/dendadlibs/form', $data);
+        return view('control/marketing/dendadlibs/form', $data);
     }
 
     // Insert Data
@@ -85,7 +85,7 @@ class DendaAdlibs extends BaseController
 
         $data['dendadlibs'] = $query->getResultArray();
 
-        return view('control/dendadlibs/edit', $data);
+        return view('control/marketing/dendadlibs/edit', $data);
     }
 
     // Update Data

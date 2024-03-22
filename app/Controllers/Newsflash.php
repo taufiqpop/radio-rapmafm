@@ -32,7 +32,7 @@ class Newsflash extends BaseController
             'currentPage'   => $currentPage,
         ];
 
-        return view('control/newsflash/index', $data);
+        return view('control/kepenyiaran/newsflash/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Newsflash extends BaseController
             'title'      => 'Rapma FM | Form Newsflash',
         ];
 
-        return view('control/newsflash/form', $data);
+        return view('control/kepenyiaran/newsflash/form', $data);
     }
 
     // Insert Data
@@ -85,7 +85,7 @@ class Newsflash extends BaseController
 
         $data['newsflash'] = $query->getResultArray();
 
-        return view('control/newsflash/edit', $data);
+        return view('control/kepenyiaran/newsflash/edit', $data);
     }
 
     // Update Data

@@ -32,7 +32,7 @@ class SuratKeluar extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/suratkeluar/index', $data);
+        return view('control/gmpa/suratkeluar/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class SuratKeluar extends BaseController
             'title'  => 'Rapma FM | Form Surat Keluar',
         ];
 
-        return view('control/suratkeluar/form', $data);
+        return view('control/gmpa/suratkeluar/form', $data);
     }
 
     // Insert Data
@@ -71,7 +71,7 @@ class SuratKeluar extends BaseController
     public function edit($id)
     {
         $data = [
-            'title'     => 'Rapma FM | Edit Data Surat Keluar',
+            'title'         => 'Rapma FM | Edit Data Surat Keluar',
             'suratkeluar'   => $this->suratkeluarModel->find($id),
         ];
 
@@ -83,7 +83,7 @@ class SuratKeluar extends BaseController
 
         $data['suratkeluar'] = $query->getResultArray();
 
-        return view('control/suratkeluar/edit', $data);
+        return view('control/gmpa/suratkeluar/edit', $data);
     }
 
     // Update Data

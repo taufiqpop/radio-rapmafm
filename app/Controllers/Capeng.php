@@ -32,7 +32,7 @@ class Capeng extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/capeng/index', $data);
+        return view('control/personalia/capeng/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Capeng extends BaseController
             'title'  => 'Rapma FM | Form Kontrak Capeng',
         ];
 
-        return view('control/capeng/form', $data);
+        return view('control/personalia/capeng/form', $data);
     }
 
     // Insert Data
@@ -87,7 +87,7 @@ class Capeng extends BaseController
 
         $data['capeng'] = $query->getResultArray();
 
-        return view('control/capeng/edit', $data);
+        return view('control/personalia/capeng/edit', $data);
     }
 
     // Update Data

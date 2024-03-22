@@ -32,7 +32,7 @@ class KerjaBakti extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/kerjabakti/index', $data);
+        return view('control/umum/kerjabakti/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class KerjaBakti extends BaseController
             'title'  => 'Rapma FM | Form Kerja Bakti',
         ];
 
-        return view('control/kerjabakti/form', $data);
+        return view('control/umum/kerjabakti/form', $data);
     }
 
     // Insert Data
@@ -85,7 +85,7 @@ class KerjaBakti extends BaseController
 
         $data['kerjabakti'] = $query->getResultArray();
 
-        return view('control/kerjabakti/edit', $data);
+        return view('control/umum/kerjabakti/edit', $data);
     }
 
     // Update Data

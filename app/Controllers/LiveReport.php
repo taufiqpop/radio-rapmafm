@@ -32,7 +32,7 @@ class LiveReport extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/livereport/index', $data);
+        return view('control/kepenyiaran/livereport/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class LiveReport extends BaseController
             'title'  => 'Rapma FM | Form Live Report',
         ];
 
-        return view('control/livereport/form', $data);
+        return view('control/kepenyiaran/livereport/form', $data);
     }
 
     // Insert Data
@@ -86,7 +86,7 @@ class LiveReport extends BaseController
 
         $data['livereport'] = $query->getResultArray();
 
-        return view('control/livereport/edit', $data);
+        return view('control/kepenyiaran/livereport/edit', $data);
     }
 
     // Update Data

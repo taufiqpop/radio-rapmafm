@@ -32,7 +32,7 @@ class MTalent extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/mtalent/index', $data);
+        return view('control/marketing/mtalent/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class MTalent extends BaseController
             'title'  => 'Rapma FM | Form M-Talent',
         ];
 
-        return view('control/mtalent/form', $data);
+        return view('control/marketing/mtalent/form', $data);
     }
 
     // Insert Data
@@ -90,7 +90,7 @@ class MTalent extends BaseController
 
         $data['mtalent'] = $query->getResultArray();
 
-        return view('control/mtalent/edit', $data);
+        return view('control/marketing/mtalent/edit', $data);
     }
 
     // Update Data

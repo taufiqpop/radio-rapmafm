@@ -32,7 +32,7 @@ class MagangInternal extends BaseController
             'currentPage'       => $currentPage,
         ];
 
-        return view('control/maganginternal/index', $data);
+        return view('control/personalia/maganginternal/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class MagangInternal extends BaseController
             'title'  => 'Rapma FM | Form Magang Internal',
         ];
 
-        return view('control/maganginternal/form', $data);
+        return view('control/personalia/maganginternal/form', $data);
     }
 
     // Insert Data
@@ -88,7 +88,7 @@ class MagangInternal extends BaseController
 
         $data['maganginternal'] = $query->getResultArray();
 
-        return view('control/maganginternal/edit', $data);
+        return view('control/personalia/maganginternal/edit', $data);
     }
 
     // Update Data

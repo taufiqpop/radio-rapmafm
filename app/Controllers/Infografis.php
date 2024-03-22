@@ -32,7 +32,7 @@ class Infografis extends BaseController
             'currentPage'   => $currentPage,
         ];
 
-        return view('control/infografis/index', $data);
+        return view('control/kepenyiaran/infografis/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class Infografis extends BaseController
             'title'      => 'Rapma FM | Form Infografis',
         ];
 
-        return view('control/infografis/form', $data);
+        return view('control/kepenyiaran/infografis/form', $data);
     }
 
     // Insert Data
@@ -82,7 +82,7 @@ class Infografis extends BaseController
 
         $data['infografis'] = $query->getResultArray();
 
-        return view('control/infografis/edit', $data);
+        return view('control/kepenyiaran/infografis/edit', $data);
     }
 
     // Update Data

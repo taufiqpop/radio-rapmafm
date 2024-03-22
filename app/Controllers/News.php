@@ -32,7 +32,7 @@ class News extends BaseController
             'currentPage'   => $currentPage,
         ];
 
-        return view('control/news/index', $data);
+        return view('control/kepenyiaran/news/index', $data);
     }
 
     // Create Data
@@ -42,7 +42,7 @@ class News extends BaseController
             'title'      => 'Rapma FM | Form Rapma News',
         ];
 
-        return view('control/news/form', $data);
+        return view('control/kepenyiaran/news/form', $data);
     }
 
     // Insert Data
@@ -85,7 +85,7 @@ class News extends BaseController
 
         $data['news'] = $query->getResultArray();
 
-        return view('control/news/edit', $data);
+        return view('control/kepenyiaran/news/edit', $data);
     }
 
     // Update Data

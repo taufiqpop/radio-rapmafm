@@ -32,7 +32,7 @@ class Pemancar extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/pemancar/index', $data);
+        return view('control/umum/pemancar/index', $data);
     }
 
     // Add Data Tanggal
@@ -64,7 +64,7 @@ class Pemancar extends BaseController
 
         $data['pemancar'] = $query->getResultArray();
 
-        return view('control/pemancar/detail', $data);
+        return view('control/umum/pemancar/detail', $data);
     }
 
     // Form Pemancar
@@ -83,7 +83,7 @@ class Pemancar extends BaseController
 
         $data['pemancar'] = $query->getResultArray();
 
-        return view('control/pemancar/form', $data);
+        return view('control/umum/pemancar/form', $data);
     }
 
     // Insert Data
@@ -124,7 +124,7 @@ class Pemancar extends BaseController
 
         $data['pemancar'] = $query->getResultArray();
 
-        return view('control/pemancar/edit', $data);
+        return view('control/umum/pemancar/edit', $data);
     }
 
     // Update Data

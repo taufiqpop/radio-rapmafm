@@ -27,12 +27,12 @@ class Achievements extends BaseController
 
         $data = [
             'title'         => 'Rapma FM | Achievements',
-            'achievements'  => $achievements->paginate(5, 'achievements'),
+            'achievements'  => $achievements->paginate(10, 'achievements'),
             'pager'         => $achievements->pager,
             'currentPage'   => $currentPage,
         ];
 
-        return view('control/achievements/index', $data);
+        return view('control/umum/achievements/index', $data);
     }
 
     // Create Data
@@ -43,7 +43,7 @@ class Achievements extends BaseController
             'validation' => \Config\Services::validation()
         ];
 
-        return view('control/achievements/form', $data);
+        return view('control/umum/achievements/form', $data);
     }
 
     // Insert Data
@@ -62,7 +62,7 @@ class Achievements extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('control/achievements/form')->withInput()->with('validation', $validation);
+            return redirect()->to('control/umum/achievements/form')->withInput()->with('validation', $validation);
         }
 
         // Ambil Gambar
@@ -114,7 +114,7 @@ class Achievements extends BaseController
 
         $data['achievements'] = $query->getResultArray();
 
-        return view('control/achievements/edit', $data);
+        return view('control/umum/achievements/edit', $data);
     }
 
     // Update Data
@@ -132,7 +132,7 @@ class Achievements extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('control/achievements/edit')->withInput()->with('validation', $validation);
+            return redirect()->to('control/umum/achievements/edit')->withInput()->with('validation', $validation);
         }
 
         $ambilGambar = $this->request->getFile('images');

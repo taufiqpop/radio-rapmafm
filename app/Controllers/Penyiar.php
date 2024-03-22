@@ -19,7 +19,7 @@ class Penyiar extends BaseController
             'penyiar'     => $this->penyiarModel->paginate(1, 'penyiar'),
         ];
 
-        return view('control/penyiar/index', $data);
+        return view('control/kepenyiaran/penyiar/index', $data);
     }
 
     // Edit Data
@@ -38,7 +38,7 @@ class Penyiar extends BaseController
 
         $data['penyiar'] = $query->getResultArray();
 
-        return view('control/penyiar/edit', $data);
+        return view('control/kepenyiaran/penyiar/edit', $data);
     }
 
     // Update Data

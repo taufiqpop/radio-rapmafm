@@ -34,7 +34,7 @@ class Structure extends BaseController
             'currentPage' => $currentPage,
         ];
 
-        return view('control/structure/index', $data);
+        return view('control/umum/structure/index', $data);
     }
 
     // Edit Data
@@ -54,7 +54,7 @@ class Structure extends BaseController
 
         $data['structure'] = $query->getResultArray();
 
-        return view('control/structure/edit', $data);
+        return view('control/umum/structure/edit', $data);
     }
 
     // Update Data
@@ -72,7 +72,7 @@ class Structure extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('control/structure/edit')->withInput()->with('validation', $validation);
+            return redirect()->to('control/umum/structure/edit')->withInput()->with('validation', $validation);
         }
 
         $ambilGambar = $this->request->getFile('images');
@@ -125,7 +125,7 @@ class Structure extends BaseController
 
         $data['member'] = $query->getResultArray();
 
-        return view('control/structure/member', $data);
+        return view('control/umum/structure/member', $data);
     }
 
     // Update Gambar Crew
@@ -143,7 +143,7 @@ class Structure extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('control/structure/member')->withInput()->with('validation', $validation);
+            return redirect()->to('control/umum/structure/member')->withInput()->with('validation', $validation);
         }
 
         $ambilGambar = $this->request->getFile('images');
