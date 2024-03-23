@@ -46,9 +46,12 @@
     <!-- ==================================================================== -->
 
     <!-- GMPA -->
-    <?php if (in_groups(['Admin', 'GM', 'PA'])) : ?>
+    <?php if (in_groups(['Admin', 'GM', 'PA', 'Crew'])) : ?>
         <hr class="sidebar-divider">
         <div class="sidebar-heading">Divisi GMPA</div>
+    <?php endif; ?>
+
+    <?php if (in_groups(['Admin', 'GM', 'PA'])) : ?>
 
         <!-- General Manager -->
         <!-- Timeline GMPA -->
@@ -73,6 +76,16 @@
             <a class="nav-link" href="<?= base_url(); ?>control/suratkeluar">
                 <i class="fas fa-envelope-open-text"></i>
                 <span>Surat Keluar</span>
+            </a>
+        </li>
+    <?php endif; ?>
+
+    <?php if (in_groups(['Admin', 'GM', 'PA', 'Crew'])) : ?>
+        <!-- Arus Kas -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/aruskas">
+                <i class="fas fa-dollar-sign"></i>
+                <span>Arus Kas</span>
             </a>
         </li>
     <?php endif; ?>

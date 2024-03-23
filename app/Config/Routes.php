@@ -91,6 +91,14 @@ $routes->delete('/control/suratkeluar/(:num)', 'SuratKeluar::delete/$1', ['filte
 $routes->add('/suratkeluar/insert', 'SuratKeluar::insert', ['filter' => 'role:Admin, PA']);
 $routes->add('/suratkeluar/update/(:num)', 'SuratKeluar::update/$1', ['filter' => 'role:Admin, PA']);
 
+// Arus Kas
+$routes->add('/control/aruskas', 'ArusKas::index', ['filter' => 'role:Admin, GM, PA, Crew']);
+$routes->get('/control/aruskas/form', 'ArusKas::form', ['filter' => 'role:Admin, PA']);
+$routes->get('/control/aruskas/edit/(:num)', 'ArusKas::edit/$1', ['filter' => 'role:Admin, PA']);
+$routes->delete('/control/aruskas/(:num)', 'ArusKas::delete/$1', ['filter' => 'role:Admin, PA']);
+$routes->add('/aruskas/insert', 'ArusKas::insert', ['filter' => 'role:Admin, PA']);
+$routes->add('/aruskas/update/(:num)', 'ArusKas::update/$1', ['filter' => 'role:Admin, PA']);
+
 // DIVISI UMUM //
 // About
 $routes->get('/control/about', 'About::index', ['filter' => 'role:Admin, GM, MU, AOn']);
