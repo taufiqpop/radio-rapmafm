@@ -261,16 +261,16 @@ class User extends BaseController
         }
 
         $data = [
+            'id'            => $id,
             'email'         => $this->request->getVar('email'),
             'username'      => $this->request->getVar('username'),
             'fullname'      => $this->request->getVar('fullname'),
             'user_image'    => $namaImgUser,
         ];
 
-        $this->usersModel->update($id, $data);
-
+        $this->usersModel->save($data);
         session()->setFlashdata('pesan', 'Data User Berhasil Diubah!');
 
-        return redirect('admin');
+        return redirect('user');
     }
 }
