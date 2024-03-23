@@ -53,7 +53,7 @@
                                         <td>
                                             <img src="<?= base_url(); ?>img/beritaweb/<?= $data->images ?>" class="thumbnail">
                                         </td>
-                                        <td><?= $data->judul ?></td>
+                                        <td style="max-width: 200px;"><?= $data->judul ?></td>
                                         <td><?= $data->hari ?>, <?= $data->tanggal ?></td>
                                         <td style="max-width: 500px;"><?= $data->deskripsi ?></td>
                                         <td>

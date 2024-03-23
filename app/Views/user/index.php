@@ -772,9 +772,9 @@
             <?php endif; ?>
 
             <!-- Admin -->
-            <?php if (in_groups(['Admin', 'Crew', 'Alumni', 'Demis'])) : ?>
+            <?php if (in_groups(['Admin'])) : ?>
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Admin</h1>
                 </div>
             <?php endif; ?>
             <div class="row">
@@ -817,41 +817,45 @@
                         </div>
                     </div>
                 <?php endif; ?>
+            </div>
 
-                <?php if (in_groups(['Admin', 'Crew', 'Alumni', 'Demis'])) : ?>
-                    <!-- Penyiar -->
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-primary shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <marquee style="color: red;" behavior="alternate" direction="left" scrolldelay="80" truespeed>
-                                            <div class="text-lg font-weight-bold text-primary text-uppercase mb-1">Ganti Penyiar</div>
-                                        </marquee>
-                                        <?php foreach ($penyiar as $siar) : ?>
-                                            <?php $data = json_decode($siar['value']) ?>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                <marquee style="color: red;" behavior="alternate" direction="left" scrolldelay="80" truespeed>
-                                                    <?= $data->program; ?> ||
-                                                    <?= $data->penyiar1; ?>
-                                                    <?php if ($data->penyiar2 != '-') : ?>
-                                                        X <?= $data->penyiar2; ?>
-                                                    <?php endif; ?>
-                                                </marquee>
-                                            </div>
-                                        <?php endforeach; ?>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="<?= base_url(); ?>control/penyiar">
-                                            <i class="fas fa-microphone slow-spin fa-3x text-primary"></i>
-                                        </a>
-                                    </div>
+            <!-- Dashboard -->
+            <?php if (in_groups(['Crew', 'Alumni', 'Demis'])) : ?>
+                <div class="d-sm-flex align-items-center justify-content-between mb-4 ml-2">
+                    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                </div>
+                <!-- Penyiar -->
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <marquee style="color: red;" behavior="alternate" direction="left" scrolldelay="80" truespeed>
+                                        <div class="text-lg font-weight-bold text-primary text-uppercase mb-1">Ganti Penyiar</div>
+                                    </marquee>
+                                    <?php foreach ($penyiar as $siar) : ?>
+                                        <?php $data = json_decode($siar['value']) ?>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <marquee style="color: red;" behavior="alternate" direction="left" scrolldelay="80" truespeed>
+                                                <?= $data->program; ?> ||
+                                                <?= $data->penyiar1; ?>
+                                                <?php if ($data->penyiar2 != '-') : ?>
+                                                    X <?= $data->penyiar2; ?>
+                                                <?php endif; ?>
+                                            </marquee>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="<?= base_url(); ?>control/penyiar">
+                                        <i class="fas fa-microphone slow-spin fa-3x text-primary"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                <?php endif; ?>
-            </div>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </div>

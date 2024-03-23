@@ -293,24 +293,18 @@
           <div class="section-title">
             <h2 style="text-align: center;">Rapma News</h2>
           </div>
-          <!-- <div class="row card mb-3">
-            <img class="card-img-top mt-3" src="https://source.unsplash.com/1200x400/?nature">
-            <div class="card-body text-center">
-              <h5 class="card-title">GOR Kampus 2 UMS Jadi Moshpit Area Karnamereka???</h5>
-              <p class="card-text">107.5 Rapma FM! The First Edutainment Channel in Solo. CampusBrainers, dalam rangka meramaikan ulang tahun Rapma FM yang ke-26, agenda tahunan kita yaitu Rapmafest kali ini hadir</p>
-              <a href="#" class="btn btn-success">Read More</a>
-            </div>
-          </div> -->
           <div class="row justify-content-center">
             <?php foreach ($beritaweb as $index => $berita) : ?>
               <?php $data = json_decode($berita['value']) ?>
-              <div class="row col-sm-6 mb-sm-2 ml-sm-1">
+              <div class="row col-sm-4 mb-sm-2 ml-sm-1">
                 <div class="card">
-                  <img class="card-img-top mt-2" src="<?= base_url(); ?>img/beritaweb/<?= $data->images; ?>">
+                  <img class="card-img-top mt-2 img-fluid" style="height: 250px;" src="<?= base_url(); ?>img/beritaweb/<?= $data->images; ?>">
+                  <small style="color: gray; text-align: center;">(<?= $data->hari; ?>, <?= $data->tanggal; ?>)</small>
                   <div class="card-body text-center">
-                    <h5 class="card-title"><?= $data->judul; ?></h5>
-                    <p class="card-text"><?= $data->deskripsi; ?></p>
-                    <a href="#" class="btn btn-success">Read More</a>
+                    <a href="<?= $data->link; ?>" target="_blank">
+                      <h5 class="card-title" style="color: black;"><?= $data->judul; ?></h5>
+                    </a>
+                    <p class="card-text" style="text-align: justify;"><?= $data->deskripsi; ?></p>
                   </div>
                 </div>
               </div>

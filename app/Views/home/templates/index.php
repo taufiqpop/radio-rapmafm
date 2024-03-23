@@ -85,7 +85,6 @@
                     <source src="<?= $setting['streaming']; ?>" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <a href="<?= base_url(); ?>user" style="color:black;" target="_blank"><a href="<?= base_url(); ?>user" style="color:black;" target="_blank"> &copy;</a>
             </div>
         </header>
     <?php endforeach ?>
@@ -98,7 +97,7 @@
     <footer id="footer">
         <div class="container">
             <div class="copyright">
-                Copyright <strong><span><?= date('Y'); ?> <a href="<?= base_url(); ?>login" style="color:black;" target="_blank"> &copy;</a> Rapma FM</span></strong>
+                Copyright <strong><span><?= date('Y'); ?> <a href="<?= base_url(); ?>user" style="color:black;" target="_blank"> &copy;</a> Rapma FM</span></strong>
             </div>
         </div>
     </footer>

@@ -43,10 +43,14 @@ class Home extends BaseController
         $achievements = $this->achievementsModel;
         $achievements->orderBy('id', 'DESC');
 
+        // Berita Web
+        $beritaweb = $this->beritawebModel;
+        $beritaweb->orderBy('id', 'DESC');
+
         $data = [
             'title'         => 'Rapma FM',
             'about'         => $this->aboutModel->paginate(5, 'about'),
-            'beritaweb'     => $this->beritawebModel->paginate(4, 'beritaweb'),
+            'beritaweb'     => $beritaweb->paginate(6, 'beritaweb'),
             'achievements'  => $achievements->paginate(100, 'achievements'),
             'member'        => $this->memberModel->paginate(1, 'member'),
             'events'        => $events->paginate(100, 'events'),
