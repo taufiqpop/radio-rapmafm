@@ -265,7 +265,7 @@
               <div class="card">
                 <br>
                 <center>
-                  <h4 class="card-title"><?= $data->judul; ?><br>(<?= $achievement['tahun']; ?>)</h4>
+                  <h4 class="card-title m-2"><?= $data->judul; ?> (<?= $achievement['tahun']; ?>)</h4>
                 </center>
                 <center>
                   <img class="card-img-top" src="<?= base_url(); ?>img/achievements/<?= $data->images ?>" style="width:75%">
