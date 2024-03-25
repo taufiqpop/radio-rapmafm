@@ -14,16 +14,19 @@
                 <!-- Tanggal Masuk -->
                 <div class="form-group row">
                     <label for="tglmasuk" class="col-sm-3 col-form-label">Tanggal Masuk</label>
+                    <div class="col-sm-1">
+                        <select name="hari" required autofocus>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
+                    </div>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="tglmasuk" required autofocus>
-                    </div>
-                </div>
-
-                <!-- Hari Masuk -->
-                <div class="form-group row">
-                    <label for="hari" class="col-sm-3 col-form-label">Hari Masuk</label>
-                    <div class="col-sm-7">
-                        <input type="text" class="form-control" name="hari" placeholder="Senin - Minggu" required>
                     </div>
                 </div>
 
@@ -43,25 +46,39 @@
                     </div>
                 </div>
 
-                <!-- Hari & Tanggal Mulai -->
+                <!-- Tanggal Mulai -->
                 <div class="form-group row">
-                    <label for="harimulai" class="col-sm-3 col-form-label">Hari Mulai</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" name="harimulai" placeholder="-" required>
+                    <label for="harimulai" class="col-sm-3 col-form-label">Tanggal Mulai</label>
+                    <div class="col-sm-1">
+                        <select name="harimulai" required>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
                     </div>
-                    <label for="tglmulai" class="col-form-label">Tanggal</label>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="tglmulai" required>
                     </div>
                 </div>
 
-                <!-- Hari & Tanggal Selesai -->
+                <!-- Tanggal Selesai -->
                 <div class="form-group row">
-                    <label for="hariselesai" class="col-sm-3 col-form-label">Hari Selesai</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" name="hariselesai" placeholder="-" required>
+                    <label for="hariselesai" class="col-sm-3 col-form-label">Tanggal Selesai</label>
+                    <div class="col-sm-1">
+                        <select name="hariselesai" required>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
                     </div>
-                    <label for="tglselesai" class="col-form-label">Tanggal</label>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="tglselesai" required>
                     </div>
@@ -84,7 +101,7 @@
                     <div class="col-sm-7">
                         <select name="status">
                             <option value="Belum Terlaksana">Belum Terlaksana</option>
-                            <option value="Terlaksana">Terlaksana</option>
+                            <option value="Sudah Terlaksana">Sudah Terlaksana</option>
                             <option value="Cancel">Cancel</option>
                         </select>
                     </div>

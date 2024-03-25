@@ -119,9 +119,9 @@
                         <div class="col-sm-7">
                             <select name="status">
                                 <option value="<?= $data->status; ?>" selected><?= $data->status; ?></option>
-                                <option value="&#9989;">Terlaksana</option>
-                                <option value="&#8212;">Belum Terlaksana</option>
-                                <option value="&times;">Tidak Terlaksana</option>
+                                <option value="Sudah Terlaksana">Sudah Terlaksana</option>
+                                <option value="Belum Terlaksana">Belum Terlaksana</option>
+                                <option value="Tidak Terlaksana">Tidak Terlaksana</option>
                             </select>
                         </div>
                     </div>

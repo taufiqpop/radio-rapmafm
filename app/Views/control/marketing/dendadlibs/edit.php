@@ -34,7 +34,7 @@
                         <label for="program" class="col-sm-3 col-form-label">Program Siar</label>
                         <div class="col-sm-7">
                             <select name="program">
-                                <option value="<?= $data->program; ?>" selected></option>
+                                <option value="<?= $data->program; ?>" selected><?= $data->program; ?></option>
                                 <option value="BASOSAPI">BASOSAPI</option>
                                 <option value="11N1">11N1</option>
                                 <option value="RAPMANESIA">RAPMANESIA</option>
@@ -49,10 +49,10 @@
                                 <option value="MERINDING">MERINDING</option>
                                 <option value="K-ARENA">K-ARENA</option>
                                 <option value="SPORTACULAR">SPORTACULAR</option>
+                                <option value="TOP 15">TOP 15</option>
                                 <option value="SUDUT KAMPUS">SUDUT KAMPUS</option>
                                 <option value="NO SATNIGHT">NO SATNIGHT</option>
                                 <option value="CLASSIC NIGHT">CLASSIC NIGHT</option>
-                                <option value="RAPMATALKS">RAPMATALKS</option>
                             </select>
                         </div>
                     </div>
@@ -60,16 +60,20 @@
                     <!-- Tanggal -->
                     <div class="form-group row">
                         <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-1">
+                            <select name="hari" required>
+                                <option value="<?= $data->hari; ?>"><?= $data->hari; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
+                        </div>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required>
-                        </div>
-                    </div>
-
-                    <!-- Hari -->
-                    <div class="form-group row">
-                        <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control" name="hari" value="<?= $data->hari; ?>" required>
                         </div>
                     </div>
 
@@ -86,8 +90,8 @@
                         <label for="keterangan" class="col-sm-3 col-form-label">Keterangan</label>
                         <div class="col-sm-7">
                             <select name="keterangan">
-                                <option value="<?= $data->keterangan; ?>" selected></option>
-                                <option value="LUNAS">LUNAS</option>
+                                <option value="<?= $data->keterangan; ?>" selected><?= $data->keterangan; ?></option>
+                                <option value="SUDAH LUNAS">SUDAH LUNAS</option>
                                 <option value="BELUM LUNAS">BELUM LUNAS</option>
                             </select>
                         </div>

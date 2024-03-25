@@ -11,25 +11,39 @@
             <form action="<?= base_url(); ?>mtalent/insert" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
 
-                <!-- Hari Mulai -->
+                <!-- Tanggal Mulai -->
                 <div class="form-group row">
-                    <label for="harimulai" class="col-sm-3 col-form-label">Hari Mulai</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" name="harimulai" placeholder="Senin - Minggu" required autofocus>
+                    <label for="harimulai" class="col-sm-3 col-form-label">Tanggal Mulai</label>
+                    <div class="col-sm-1">
+                        <select name="harimulai" required autofocus>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
                     </div>
-                    <label for="tglmulai" class="col-form-label">Tanggal</label>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="tglmulai" required>
                     </div>
                 </div>
 
-                <!-- Hari Selesai -->
+                <!-- Tanggal Selesai -->
                 <div class="form-group row">
-                    <label for="hariselesai" class="col-sm-3 col-form-label">Hari Selesai</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" name="hariselesai" placeholder="Senin - Minggu" required>
+                    <label for="hariselesai" class="col-sm-3 col-form-label">Tanggal Selesai</label>
+                    <div class="col-sm-1">
+                        <select name="hariselesai" required>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
                     </div>
-                    <label for="tglselesai" class="col-form-label">Tanggal</label>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="tglselesai" required>
                     </div>
@@ -38,7 +52,7 @@
                 <!-- Jenis -->
                 <div class="form-group row">
                     <label for="jenis" class="col-sm-3 col-form-label">Jenis</label>
-                    <div class="col-sm-5">
+                    <div class="col-sm-4">
                         <input type="text" class="form-control" placeholder="MC | Moderator | Rapma Band | Dll" name="jenis" required>
                     </div>
                 </div>
@@ -62,23 +76,23 @@
                 <!-- Nama Talent -->
                 <div class="form-group row">
                     <label for="talent" class="col-sm-3 col-form-label">Nama Talent</label>
-                    <div class="col-sm-5">
+                    <div class="col-sm-4">
                         <input type="text" class="form-control" placeholder="Nama Talent" name="talent" required>
                     </div>
                 </div>
 
                 <!-- Tempat -->
                 <div class="form-group row">
-                    <label for="tempat" class="col-sm-3 col-form-label">Tempat</label>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control" placeholder="Tempat" name="tempat" required>
+                    <label for="tempat" class="col-sm-3 col-form-label">Lokasi</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" placeholder="Lokasi" name="tempat" required>
                     </div>
                 </div>
 
                 <!-- Fee Talent -->
                 <div class="form-group row">
                     <label for="feetalent" class="col-sm-3 col-form-label">Fee Talent (Tanpa Rp.)</label>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <input type="text" class="form-control" placeholder="100.000" name="feetalent" required>
                     </div>
                 </div>
@@ -86,7 +100,7 @@
                 <!-- Fee Rapma FM -->
                 <div class="form-group row">
                     <label for="feerapma" class="col-sm-3 col-form-label">Fee Rapma FM (Tanpa Rp.)</label>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <input type="text" class="form-control" placeholder="100.000" name="feerapma" required>
                     </div>
                 </div>

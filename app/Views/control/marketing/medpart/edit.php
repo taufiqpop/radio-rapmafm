@@ -16,16 +16,20 @@
                     <!-- Tanggal Masuk -->
                     <div class="form-group row">
                         <label for="tglmasuk" class="col-sm-3 col-form-label">Tanggal Masuk</label>
+                        <div class="col-sm-1">
+                            <select name="hari" required autofocus>
+                                <option value="<?= $data->hari; ?>"><?= $data->hari; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
+                        </div>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tglmasuk" value="<?= $data->tglmasuk; ?>" required autofocus>
-                        </div>
-                    </div>
-
-                    <!-- Hari Masuk -->
-                    <div class="form-group row">
-                        <label for="hari" class="col-sm-3 col-form-label">Hari Masuk</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="hari" value="<?= $data->hari; ?>" required>
                         </div>
                     </div>
 
@@ -45,25 +49,41 @@
                         </div>
                     </div>
 
-                    <!-- Hari & Tanggal Mulai -->
+                    <!-- Tanggal Mulai -->
                     <div class="form-group row">
-                        <label for="harimulai" class="col-sm-3 col-form-label">Hari Mulai</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="harimulai" value="<?= $data->harimulai; ?>" required>
+                        <label for="harimulai" class="col-sm-3 col-form-label">Tanggal Mulai</label>
+                        <div class="col-sm-1">
+                            <select name="harimulai" required>
+                                <option value="<?= $data->harimulai; ?>"><?= $data->harimulai; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
                         </div>
-                        <label for="tglmulai" class="col-form-label">Tanggal</label>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tglmulai" value="<?= $data->tglmulai; ?>" required>
                         </div>
                     </div>
 
-                    <!-- Hari & Tanggal Selesai -->
+                    <!-- Tanggal Selesai -->
                     <div class="form-group row">
-                        <label for="hariselesai" class="col-sm-3 col-form-label">Hari Selesai</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="hariselesai" value="<?= $data->hariselesai; ?>" required>
+                        <label for="hariselesai" class="col-sm-3 col-form-label">Tanggal Selesai</label>
+                        <div class="col-sm-1">
+                            <select name="hariselesai" required>
+                                <option value="<?= $data->hariselesai; ?>"><?= $data->hariselesai; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
                         </div>
-                        <label for="tglselesai" class="col-form-label">Tanggal</label>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tglselesai" value="<?= $data->tglselesai; ?>" required>
                         </div>
@@ -74,7 +94,7 @@
                         <label for="jenis" class="col-sm-3 col-form-label">Jenis</label>
                         <div class="col-sm-7">
                             <select name="jenis">
-                                <option value="<?= $data->jenis; ?>" selected></option>
+                                <option value="<?= $data->jenis; ?>" selected><?= $data->jenis; ?></option>
                                 <option value="Internal">Internal</option>
                                 <option value="Eksternal">Eksternal</option>
                             </select>
@@ -86,7 +106,7 @@
                         <label for="status" class="col-sm-3 col-form-label">Status</label>
                         <div class="col-sm-7">
                             <select name="status">
-                                <option value="<?= $data->status; ?>" selected></option>
+                                <option value="<?= $data->status; ?>" selected><?= $data->status; ?></option>
                                 <option value="Terlaksana">Terlaksana</option>
                                 <option value="Belum Terlaksana">Belum Terlaksana</option>
                                 <option value="Cancel">Cancel</option>

@@ -21,10 +21,18 @@
                     <!-- Hari Mulai -->
                     <div class="form-group row">
                         <label for="harimulai" class="col-sm-3 col-form-label">Hari Mulai</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="harimulai" value="<?= $data->harimulai; ?>" required autofocus>
+                        <div class="col-sm-1">
+                            <select name="harimulai" required autofocus>
+                                <option value="<?= $data->harimulai; ?>"><?= $data->harimulai; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
                         </div>
-                        <label for="tglmulai" class="col-form-label">Tanggal</label>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tglmulai" value="<?= $data->tglmulai; ?>" required>
                         </div>
@@ -33,10 +41,18 @@
                     <!-- Hari Selesai -->
                     <div class="form-group row">
                         <label for="hariselesai" class="col-sm-3 col-form-label">Hari Selesai</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="hariselesai" value="<?= $data->hariselesai; ?>" required>
+                        <div class="col-sm-1">
+                            <select name="hariselesai" required>
+                                <option value="<?= $data->hariselesai; ?>"><?= $data->hariselesai; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
                         </div>
-                        <label for="tglselesai" class="col-form-label">Tanggal</label>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tglselesai" value="<?= $data->tglselesai; ?>" required>
                         </div>

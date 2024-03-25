@@ -46,10 +46,10 @@
                             <option value="MERINDING">MERINDING</option>
                             <option value="K-ARENA">K-ARENA</option>
                             <option value="SPORTACULAR">SPORTACULAR</option>
+                            <option value="TOP 15">TOP 15</option>
                             <option value="SUDUT KAMPUS">SUDUT KAMPUS</option>
                             <option value="NO SATNIGHT">NO SATNIGHT</option>
                             <option value="CLASSIC NIGHT">CLASSIC NIGHT</option>
-                            <option value="RAPMATALKS">RAPMATALKS</option>
                         </select>
                     </div>
                 </div>
@@ -57,16 +57,19 @@
                 <!-- Tanggal -->
                 <div class="form-group row">
                     <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
+                    <div class="col-sm-1">
+                        <select name="hari" required>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
+                    </div>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="tanggal" required>
-                    </div>
-                </div>
-
-                <!-- Hari -->
-                <div class="form-group row">
-                    <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" name="hari" placeholder="Senin - Sabtu" required>
                     </div>
                 </div>
 
@@ -84,7 +87,7 @@
                     <div class="col-sm-7">
                         <select name="keterangan">
                             <option value="BELUM LUNAS">BELUM LUNAS</option>
-                            <option value="LUNAS">LUNAS</option>
+                            <option value="SUDAH LUNAS">SUDAH LUNAS</option>
                         </select>
                     </div>
                 </div>

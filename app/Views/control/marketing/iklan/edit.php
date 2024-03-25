@@ -32,16 +32,20 @@
                     <!-- Tanggal MOU -->
                     <div class="form-group row">
                         <label for="tglmou" class="col-sm-3 col-form-label">Tanggal MOU</label>
+                        <div class="col-sm-1">
+                            <select name="hari" required>
+                                <option value="<?= $data->hari; ?>"><?= $data->hari; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
+                        </div>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tglmou" value="<?= $data->tglmou; ?>" required>
-                        </div>
-                    </div>
-
-                    <!-- Hari -->
-                    <div class="form-group row">
-                        <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="hari" value="<?= $data->hari; ?>" required>
                         </div>
                     </div>
 
@@ -58,8 +62,8 @@
                         <label for="status" class="col-sm-3 col-form-label">Status</label>
                         <div class="col-sm-7">
                             <select name="status">
-                                <option value="<?= $data->status; ?>" selected></option>
-                                <option value="Tembus">Tembus</option>
+                                <option value="<?= $data->status; ?>" selected><?= $data->status; ?></option>
+                                <option value="Sudah Tembus">Sudah Tembus</option>
                                 <option value="Belum Tembus">Belum Tembus</option>
                                 <option value="Tidak Tembus">Tidak Tembus</option>
                             </select>

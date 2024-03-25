@@ -39,7 +39,7 @@
                                 <tr>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">No</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Nama</th>
-                                    <th scope="col" class="cursor-active" colspan="3">Nama Adlibs & Spot</th>
+                                    <th scope="col" class="cursor-active" colspan="3">Adlibs / Spot</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Total</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Keterangan</th>
                                     <?php if (in_groups(['Admin', 'MOn'])) : ?>
@@ -47,9 +47,9 @@
                                     <?php endif ?>
                                 </tr>
                                 <tr>
-                                    <th scope="col" class="cursor-active">Acara</th>
                                     <th scope="col" class="cursor-active">Program</th>
                                     <th scope="col" class="cursor-active">Tanggal</th>
+                                    <th scope="col" class="cursor-active">Acara</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -58,9 +58,9 @@
                                     <tr>
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td><?= $data->nama; ?></td>
-                                        <td><?= $data->acara; ?></td>
                                         <td><?= $data->program; ?></td>
                                         <td><?= $data->hari; ?>, <?= $data->tanggal; ?></td>
+                                        <td><?= $data->acara; ?></td>
                                         <td>Rp. <?= $data->total; ?></td>
                                         <td><?= $data->keterangan; ?></td>
                                         <?php if (in_groups(['Admin', 'MOn'])) : ?>
