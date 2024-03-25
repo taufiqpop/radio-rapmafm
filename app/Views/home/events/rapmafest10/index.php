@@ -4,7 +4,7 @@
 <section id="home" class="hero-animated d-flex align-items-center">
   <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
     <img src="<?= base_url(); ?>events/rapmafest10/img/logo besar.png" class="logo-Rapmafest"> <!--class="img-fluid animated"-->
-    <h1 style="color: #fee19f; font-family: 'Spicy Rice';">On The Atmosphere
+    <h1 style="color: #fee19f; font-family: 'Spicy Rice';">We're Already Landed
       <div class="d-flex">
         <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a>
         <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>-->
@@ -59,14 +59,14 @@
       <ul class="nav nav-tabs row gy-4 d-flex">
         <li class="nav-item col-6 col-md-4 col-lg-6">
           <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-            <img src="<?= base_url(); ?>events/rapmafest10//img/Icon/VO.png" style="float: left;width: 13%;">
+            <img src="<?= base_url(); ?>events/rapmafest10/img/Icon/VO.png" style="float: left;width: 13%;">
             <h4 style="color: white;">Lomba Voice Over</h4>
           </a>
         </li><!-- End Tab 1 Nav -->
 
         <li class="nav-item col-6 col-md-4 col-lg-6">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-            <img src="<?= base_url(); ?>events/rapmafest10//img/Icon/siar.png" style="float: left;width: 13%;">
+            <img src="<?= base_url(); ?>events/rapmafest10/img/Icon/siar.png" style="float: left;width: 13%;">
             <h4 style="color: white;">Lomba siar</h4>
           </a>
         </li><!-- End Tab 2 Nav -->
@@ -213,7 +213,7 @@
           <h4 style="color: white;">Improve Public Speaking & Basic Content Creator</h4>
         </div>
         <div class="col-md-6">
-          <leftcenter><img src="<?= base_url(); ?>events/rapmafest10//img/Pembicara kelas online/fauda haekal.png" class="img-fluid"></leftcenter>
+          <leftcenter><img src="<?= base_url(); ?>events/rapmafest10/img/Pembicara kelas online/fauda haekal.png" class="img-fluid"></leftcenter>
           <div class="img-item">
             <hr>
             <p style="text-align: justify;color: white;">
@@ -224,7 +224,7 @@
 
 
         <div class="col-md-6">
-          <img src="<?= base_url(); ?>events/rapmafest10//img/Pembicara kelas online/dhika putra (1).png" class="img-fluid">
+          <img src="<?= base_url(); ?>events/rapmafest10/img/Pembicara kelas online/dhika putra (1).png" class="img-fluid">
           <div class="img-item">
             <hr>
             <p style="text-align: justify;color: white;">
@@ -247,84 +247,94 @@
       <div class="row">
         <div class="col-lg-3 col-md-4">
           <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-            <img src="<?= base_url(); ?>events/rapmafest10//img/GS konser/Ksatria Kegelapan New.png" class="img-fluid">
+            <img src="<?= base_url(); ?>events/rapmafest10/img/GS konser/Ksatria Kegelapan New.png" class="img-fluid">
             <div class="details">
               <hr>
               <p style="text-align: justify; color: white;">
-                Ksatria kegelapan merupakan band asal wonogiri yang telah memulai debutnya pada tahun 2021. Band bergenre pop punk ini memiliki instrumen musik yang mampu memikat animo penonton menjadi semakin meriah.<br><img src="<?= base_url(); ?>events/rapmafest10//img/Icon/icon IG.png" style="width: 30px;"> : <a href="https://instagram.com/ksatria.kegelapan?igshid=MzRlODBiNWFlZA==" target="_blank" style="color: #e45630;">@ksatria.kegelapan</a>
+                Ksatria kegelapan merupakan band asal wonogiri yang telah memulai debutnya pada tahun 2021. Band bergenre
+                pop punk ini memiliki instrumen musik yang mampu memikat animo penonton menjadi semakin meriah.<br><img src="<?= base_url(); ?>events/rapmafest10/img/Icon/icon IG.png" style="width: 30px;"> :
+                <a href="https://instagram.com/ksatria.kegelapan?igshid=MzRlODBiNWFlZA==" target="_blank" style="color: #e45630;">@ksatria.kegelapan</a>
                 <br>
               </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-3 col-center-block">
+        <div class="col-lg-4 col-lg-3 col-center-block">
           <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-            <img src="<?= base_url(); ?>events/rapmafest10//img/GS konser/Karna Mereka New.png" class="img-fluid">
+            <img src="<?= base_url(); ?>events/rapmafest10/img/GS konser/Karna Mereka New.png" class="img-fluid">
             <div class="details">
               <hr>
               <p style="text-align: justify; color: white;">
-                "Ayah Ibu" merupakan salah satu lagu yang di ciptakan oleh band KARNAMEREKA dan telah memiliki 7,7Jt lebih total pendengar di platform Spotify. Band dengan genre melodic punk ini telah memulai karirnya dari tahun 2010 hingga saat ini, dengan pembawaan musiknya yang khas sehingga banyak di sukai oleh kalangan anak muda. Bahkan pada platform spotify akun band ini sudah tembus 510k lebih pendengar perbulan<br><img src="<?= base_url(); ?>events/rapmafest10//img/Icon/icon IG.png" style="width: 30px;"> :
+                "Ayah Ibu" merupakan salah satu lagu yang di ciptakan oleh band KARNAMEREKA dan telah memiliki 7,7Jt lebih
+                total pendengar di platform Spotify. Band dengan genre melodic punk ini telah memulai karirnya dari tahun
+                2010 hingga saat ini, dengan pembawaan musiknya yang khas sehingga banyak di sukai oleh kalangan anak
+                muda. Bahkan pada platform spotify akun band ini sudah tembus 510k lebih pendengar perbulan<br><img src="<?= base_url(); ?>events/rapmafest10/img/Icon/icon IG.png" style="width: 30px;"> :
                 <a href=https://instagram.com/karnamereka_official/ target="_blank" style="color: #e45630;">@karnamereka_official</a> (144K Followers)
-                <br> <img src="<?= base_url(); ?>events/rapmafest10//img/Icon/icon Tk.png" style="width: 30px;"> : <a href="https://www.tiktok.com/@karnamereka_official?_t=8eRDcBP85jN&_r=1" target="_blank" style="color: #e45630;">@karnamereka_official</a> (165,8K Followers and 5,5M Likes)
-                <br> <img src="<?= base_url(); ?>events/rapmafest10//img/Icon/icon yt.png" style="width: 30px;"> : <a href="https://youtube.com/@KarnamerekaTV?feature=shareb" target="_blank" style="color: #e45630;">KARNAMEREKA</a> (114k Subscriber)
-                <br> <img src="<?= base_url(); ?>events/rapmafest10//img/Icon/icon spo.png" style="width: 30px;"> : <a href="https://open.spotify.com/artist/7ihcdlIbI4nuavBwOA5QXq" target="_blank" style="color: #e45630;">Karnamereka</a>
+                <br> <img src="<?= base_url(); ?>events/rapmafest10/img/Icon/icon Tk.png" style="width: 30px;"> : <a href="https://www.tiktok.com/@karnamereka_official?_t=8eRDcBP85jN&_r=1" target="_blank" style="color: #e45630;">@karnamereka_official</a> (165,8K Followers and 5,5M Likes)
+                <br> <img src="<?= base_url(); ?>events/rapmafest10/img/Icon/icon yt.png" style="width: 30px;"> : <a href="https://youtube.com/@KarnamerekaTV?feature=shareb" target="_blank" style="color: #e45630;">KARNAMEREKA</a> (114k Subscriber)
+                <br> <img src="<?= base_url(); ?>events/rapmafest10/img/Icon/icon spo.png" style="width: 30px;"> : <a href="https://open.spotify.com/artist/7ihcdlIbI4nuavBwOA5QXq" target="_blank" style="color: #e45630;">Karnamereka</a>
                 <a>(507,419 monthly listeners) </a>
               </p>
               </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4">
+        <div class="col-lg-3 col-lg-4">
           <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-            <img src="<?= base_url(); ?>events/rapmafest10//img/GS konser/Cloudcry New.png" class="img-fluid">
+            <img src="<?= base_url(); ?>events/rapmafest10/img/GS konser/Cloudcry New.png" class="img-fluid">
             <div class="details">
               <hr>
               <p style="text-align: justify; color: white;">
-                Cloudcry merupakan band asal kota solo yang mempunyai lagu berjudul “twist” sebagai singel pertamanya. Band ini memiliki ciri khas pembawaan musiknya yang mampu membuat penonton terhipnotis dalam keseruan performnya.
-                <br> <img src="<?= base_url(); ?>events/rapmafest10//img/Icon/icon IG.png" style="width: 30px;"> : <a href="https://instagram.com/cloudcryofficial?igshid=MzRlODBiNWFlZA==" target="_blank" style="color: #e45630;">@cloudcryofficial</a>
+                Cloudcry merupakan band asal kota solo yang mempunyai lagu berjudul “twist” sebagai singel pertamanya.
+                Band ini memiliki ciri khas pembawaan musiknya yang mampu membuat penonton terhipnotis dalam keseruan
+                performnya.
+                <br> <img src="<?= base_url(); ?>events/rapmafest10/img/Icon/icon IG.png" style="width: 30px;"> : <a href="https://instagram.com/cloudcryofficial?igshid=MzRlODBiNWFlZA==" target="_blank" style="color: #e45630;">@cloudcryofficial</a>
               </p>
 
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 mt-4 mt-lg-0 m-auto">
+        <div class="col-lg-3 col-sm-4">
           <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-            <img src="<?= base_url(); ?>events/rapmafest10//img/GS konser/Outplain New.png" class="img-fluid">
+            <img src="<?= base_url(); ?>events/rapmafest10/img/GS konser/Outplain New.png" class="img-fluid">
             <div class="details">
               <br>
               <hr>
               <p style="text-align: justify; color: white;">
-                Lagu berjudul "Lost" merupakan single dari band asal kota Surakarta yaitu Outplain. Band ini memiliki pembawaan musiknya yang khas sehingga banyak disukai kalangan anak muda.
-                <br> <img src="<?= base_url(); ?>events/rapmafest10//img/Icon/icon IG.png" style="width: 30px;"> : <a href="https://www.instagram.com/outplainmusic/" target="_blank" style="color: #e45630;">@outplainmusic
+                Lagu berjudul "Lost" merupakan single dari band asal kota Surakarta yaitu Outplain. Band ini memiliki
+                pembawaan musiknya yang khas sehingga banyak disukai kalangan anak muda.
+                <br> <img src="<?= base_url(); ?>events/rapmafest10/img/Icon/icon IG.png" style="width: 30px;"> : <a href="https://www.instagram.com/outplainmusic/" target="_blank" style="color: #e45630;">@outplainmusic
                 </a>
               </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 mt-4 mt-lg-0 m-auto">
+        <div class="col-sm-3 col-md-3 col-center-block">
           <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-            <img src="<?= base_url(); ?>events/rapmafest10//img/GS konser/Nevermine New.png" class="img-fluid">
+            <img src="<?= base_url(); ?>events/rapmafest10/img/GS konser/Nevermine New.png" class="img-fluid">
             <div class="details">
               <hr>
               <p style="text-align: justify; color: white;">
-                Merupakan band asal klaten yang sudah terkenal di daerah Solo Raya. Band ini telah memulai karirnya sejak tahun 2022 dengan aliran musik pop punk yang mampu menarik penonton untuk bergabung dan menikmati keseruan performnya.
-                <br> <img src="<?= base_url(); ?>events/rapmafest10//img/Icon/icon IG.png" style="width: 30px;"> : <a href="https://www.instagram.com/nevermineid/" target="_blank" style="color: #e45630;">@nevermineid</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 ">
-          <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-            <img src="<?= base_url(); ?>events/rapmafest10//img/GS konser/Ken Brothers.png" class="img-fluid">
-            <div class="details">
-              <hr>
-              <p style="text-align: justify; color: white;">
-                Ken Brother's merupakan band bergenre Rock yang sangat di gandrungi oleh anak muda. Band ini juga memiliki cukup banyak penggemar terutama di area Solo Raya.
-                <br> <img src="<?= base_url(); ?>events/rapmafest10//img/Icon/icon IG.png" style="width: 30px;"> : <a href="https://instagram.com/kenbrothersofficial?igshid=MzRlODBiNWFlZA==" target="_blank" style="color: #e40082;">@kenbrothersofficial</a>
+                Merupakan band asal klaten yang sudah terkenal di daerah Solo Raya. Band ini telah memulai karirnya sejak tahun
+                2022 dengan aliran musik pop punk yang mampu menarik penonton untuk bergabung dan menikmati keseruan performnya.
+                <br> <img src="<?= base_url(); ?>events/rapmafest10/img/Icon/icon IG.png" style="width: 30px;"> : <a href="https://www.instagram.com/nevermineid/" target="_blank" style="color: #e45630;">@nevermineid</a>
               </p>
             </div>
           </div>
                     
+        </div>
+        <div class="col-lg-3 col-sm-4 ">
+          <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+            <img src="<?= base_url(); ?>events/rapmafest10/img/GS konser/Ken Brothers.png" class="img-fluid">
+            <div class="details">
+              <hr>
+              <p style="text-align: justify; color: white;">
+                Ken Brother's merupakan band bergenre Rock yang sangat di gandrungi oleh anak muda. Band ini juga memiliki
+                cukup banyak penggemar terutama di area Solo Raya.
+                <br> <img src="<?= base_url(); ?>events/rapmafest10/img/Icon/icon IG.png" style="width: 30px;"> : <a href="https://instagram.com/kenbrothersofficial?igshid=MzRlODBiNWFlZA==" target="_blank" style="color: #e40082;">@kenbrothersofficial</a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -350,7 +360,7 @@
               <br><br><br>
               <h3 style="color: white;">Presale 1</h3>
               <br><br>
-              <img style="width: 140px;height:130px" src="<?= base_url(); ?>events/rapmafest10//img/Icon/consert.png">
+              <img style="width: 140px;height:130px" src="<?= base_url(); ?>events/rapmafest10/img/Icon/consert.png">
               <br><br><br>
               <h4 style="color: white;"><sup>Rp</sup>30.000<span></span></h4>
             </div>
@@ -373,7 +383,7 @@
               <br><br><br>
               <h3 style="color: white;">PRESALE 2</h3>
               <br><br>
-              <img style="width: 140px;height:130px" src="<?= base_url(); ?>events/rapmafest10//img/Icon/consert.png">
+              <img style="width: 140px;height:130px" src="<?= base_url(); ?>events/rapmafest10/img/Icon/consert.png">
               <br><br><br>
               <h4 style="color: white;"><sup>Rp</sup>40.000<span></span></h4>
             </div>
@@ -396,7 +406,7 @@
               <br><br><br>
               <h3 style="color: white;">PRESALE 3</h3>
               <br><br>
-              <img style="width: 140px;height:130px" src="<?= base_url(); ?>events/rapmafest10//img/Icon/consert.png">
+              <img style="width: 140px;height:130px" src="<?= base_url(); ?>events/rapmafest10/img/Icon/consert.png">
               <br><br><br>
               <h4 style="color: white;"><sup>Rp</sup>50.000<span></span></h4>
             </div>
@@ -406,7 +416,7 @@
             </ul>
 
             <div class="text-center mt-auto">
-              <a href="https://forms.gle/1jPBMQrWf8KC2TGU9" target="_blank" class="buy-btn">Buy Now</a>
+              <a href="#" class=" btn btn-dark disabled">SOLD OUT</a>
             </div>
 
           </div>
@@ -434,7 +444,7 @@
               <h3 style="color: white;">PAKET BARENG DOI</h3>
               <P style="color: white;">2 TICKETS</P>
               <br><br>
-              <img style="width: 140px;height:130px" src="<?= base_url(); ?>events/rapmafest10//img/Icon/consert.png">
+              <img style="width: 140px;height:130px" src="<?= base_url(); ?>events/rapmafest10/img/Icon/consert.png">
               <br><br><br>
               <h4 style="color: white;"><sup>Rp</sup>80.000<span></span></h4>
             </div>
@@ -444,7 +454,7 @@
             </ul>
 
             <div class="text-center mt-auto">
-              <a href="https://forms.gle/1jPBMQrWf8KC2TGU9" target="_blank" class="buy-btn">Buy Now</a>
+              <a href="#" class=" btn btn-dark disabled">SOLD OUT</a>
             </div>
 
           </div>
@@ -457,14 +467,14 @@
               <h3 style="color: white;">PAKET RAMEAN</h3>
               <P style="color: white;">5 TICKETS</P>
               <br><br>
-              <img style="width: 140px;height:130px" src="<?= base_url(); ?>events/rapmafest10//img/Icon/consert.png">
+              <img style="width: 140px;height:130px" src="<?= base_url(); ?>events/rapmafest10/img/Icon/consert.png">
               <br><br><br>
               <h4 style="color: white;"><sup>Rp</sup>150.000<span></span></h4>
             </div>
             <ul>
             </ul>
             <div class="text-center mt-auto">
-              <a href="https://forms.gle/1jPBMQrWf8KC2TGU9" target="_blank" class="buy-btn">Buy Now</a>
+              <a href="#" class=" btn btn-dark disabled">SOLD OUT</a>
             </div>
           </div>
         </div><!-- End Pricing Item-->
@@ -573,25 +583,25 @@
 
           <div class="swiper-slide w-100">
             <div class="testimonial-item">
-              <img src="<?= base_url(); ?>events/rapmafest10//img/Rapmerch/sky package.png" class="w-100">
+              <img src="<?= base_url(); ?>events/rapmafest10/img/Rapmerch/sky package.png" class="w-100">
             </div>
           </div><!- End testimonial item ->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="<?= base_url(); ?>events/rapmafest10//img/Rapmerch/moon package.png" class="w-100">
+                <img src="<?= base_url(); ?>events/rapmafest10/img/Rapmerch/moon package.png" class="w-100">
               </div>
             </div><!- End testimonial item ->
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <img src="<?= base_url(); ?>events/rapmafest10//img/Rapmerch/love package.png" class="w-100">
+                  <img src="<?= base_url(); ?>events/rapmafest10/img/Rapmerch/love package.png" class="w-100">
                 </div>
               </div><!- End testimonial item ->
 
                 <div class="swiper-slide">
                   <div class="testimonial-item">
-                    <img src="<?= base_url(); ?>events/rapmafest10//img/Rapmerch/hope packager.png" class="w-100">
+                    <img src="<?= base_url(); ?>events/rapmafest10/img/Rapmerch/hope packager.png" class="w-100">
                   </div>
                 </div><!- End testimonial item ->
         </div>
@@ -604,8 +614,7 @@
     <section id="sponsor">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2 style="color: white;">SPONSOR</h2>
-          <img src="<?= base_url(); ?>events/rapmafest10//img/Sponsor dan Medpart/open for sponsor.png" class="img-fluid" width="1000px">
+          <img src="<?= base_url(); ?>events/rapmafest10/img/Sponsor dan Medpart/sponsorship.png" class="img-fluid" width="1000px">
         </div>
       </div>
     </section><!--End Sponsorsip-->
@@ -614,8 +623,7 @@
     <section id="medpart">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2 style="color: white;">MEDIA PARTNER</h2>
-          <img src="<?= base_url(); ?>events/rapmafest10//img/Sponsor dan Medpart/open for media partner.png" class="img-fluid" width="1000px">
+          <img src="<?= base_url(); ?>events/rapmafest10/img/Sponsor dan Medpart/media partner.png" class="img-fluid" width="1000px">
         </div>
       </div>
     </section><!--End Media partner-->
@@ -633,7 +641,7 @@
           <div class="col-sm-4">
             <div class="contact-box" style="height: 300px;" data-aos="fade-up" data-aos-delay="100">
               <br>
-              <img style="width: 70px;height:60px" src="<?= base_url(); ?>events/rapmafest10//img/Icon/contact person new.png">
+              <img style="width: 70px;height:60px" src="<?= base_url(); ?>events/rapmafest10/img/Icon/contact person new.png">
               <div>
                 <br>
                 <h2 style="color: white;">CONTACT PERSON</h2>
@@ -647,7 +655,7 @@
           <div class="col-sm-4">
             <div class="contact-box" style="height: 300px;" data-aos="fade-up" data-aos-delay="100">
               <br>
-              <img style="width: 70px;height:60px" src="<?= base_url(); ?>events/rapmafest10//img/Icon/sponsorship new.png">
+              <img style="width: 70px;height:60px" src="<?= base_url(); ?>events/rapmafest10/img/Icon/sponsorship new.png">
               <div>
                 <br>
                 <h2 style="color: white;">SPONSORSHIP</h2>
@@ -660,7 +668,7 @@
           <div class="col-sm-4">
             <div class="contact-box" style="height: 300px;" data-aos="fade-up" data-aos-delay="100">
               <br>
-              <img style="width: 70px;height:60px" src="<?= base_url(); ?>events/rapmafest10//img/Icon/Email new.png">
+              <img style="width: 70px;height:60px" src="<?= base_url(); ?>events/rapmafest10/img/Icon/Email new.png">
               <div>
                 <br>
                 <h2 style="color: white;">EMAIL</h2>
@@ -674,8 +682,8 @@
     </section><!-- End Contact Section -->
 
 
-
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--
+    <script src="<?= base_url(); ?>https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  
     <!- Pop Up Rapmerch ->
       <script>
@@ -688,16 +696,15 @@
           <div class="modal-content">
             <div class="modal-body position-absolute">
               <button type="button" class="btn-close float-end mb-2 position-absolute me-3" data-bs-dismiss="modal" aria-label="Close" style="z-index: 10;right: 0;border: none;background-color: red;"></button>
-              <img src="<?= base_url(); ?>events/rapmafest10//img/Rapmerch/pop up.png" class="w-100">
-              <center><a href="http://wa.me/6285600719122?text=Mau%20Beli%20Rapmerch%20Dong%20Kak%20%5E_%5E" target="_blank"
+              <img src="<?= base_url(); ?>events/rapmafest10/img/pop up bundling.png" class="w-100">
+              <center><a href="http://wa.me/6285173066807?text=Mau%20Beli%20Bundling%20Ticketnya%20Dong%20Kak%20%5E_%5E" target="_blank"
                   class="buy-btn-rapmerch scrollto text-white py-3"
                   style="position: absolute;bottom: 25px;right: 20px;background: #9851bf;"> Buy Now </a></center>
             </div>
           </div>
         </div>
       </div>
-      <!- End Pop Up ->
-      -->
+      <!- End Pop Up -> -->
 </main>
 
 <?= $this->endSection(); ?>
