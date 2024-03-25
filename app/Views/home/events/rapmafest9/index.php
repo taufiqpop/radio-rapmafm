@@ -6,7 +6,7 @@
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
         <div class="row-cols-auto">
             <div class="w-auto">
-                <img src="<?= base_url(); ?>events/rapmafest9/img/Logo.png" class="logo-rapma" style="margin: 0px auto;float: none;display: table;">
+                <img src="<?= base_url(); ?>events/rapmafest9/img/(Logo & Base Logo).png" class="logo-rapma" style="margin: 0px auto;float: none;display: table;">
                 <h1 class="text-center" style="color: #ff71a9;font-family: Krinkes Decor PERSONAL USE;font-size: 300%;">We're Done0</h1><br>
                 <h2 class="text-center" style="color: #ff71a9;font-family: Krinkes Decor PERSONAL USE;font-size: 300%;margin-top: 0px;">Thank You CampusBrainers</h2>
             </div>
@@ -504,7 +504,7 @@
                         <img style="width: 140px;height:120px" src="<?= base_url(); ?>events/rapmafest9/img/konser.png">
                         <br><br>
                         <h2>5 TICKETS</h2>
-                        <h3 style="margin-top: -10px;">+ 1 ROWNDIVISION SHIRT</h3>
+                        <h3 style="margin-top: -28px;">+ 1 ROWNDIVISION SHIRT</h3>
                         <h4><sup>Rp</sup>200.000</h4>
                         <hr>
                         <div class="btn-wrap">
@@ -580,6 +580,10 @@
 
         </div>
     </section>
+    <!-- End Pricing Section -->
+
+    <script src="<?= base_url(); ?>https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- Pop Up Rapmerch -->
     <script>
         $(document).ready(function() {

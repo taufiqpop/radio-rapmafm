@@ -13,7 +13,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicon -->
-    <link href="<?= base_url(); ?>events/rapmafest8/img/rapmafest.ico" rel="icon">
+    <link href="<?= base_url(); ?>events/rapmafest8/img/logo.ico" rel="icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
