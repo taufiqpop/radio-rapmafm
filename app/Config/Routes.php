@@ -60,7 +60,7 @@ $routes->get('/password/(:num)', 'ChangePassword::index/$1', ['filter' => 'role:
 $routes->add('/password/setPassword/(:num)', 'ChangePassword::setPassword/$1', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff']);
 
 // Pesan
-$routes->add('/pesan', 'Pesan::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Alumni, Demis']);
+$routes->add('/pesan', 'Pesan::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff']);
 
 // Settings
 $routes->get('/control/settings', 'Settings::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, MD, AOn, Teknisi, MOn, MOff']);

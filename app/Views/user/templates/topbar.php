@@ -40,10 +40,12 @@
                     <i class="fa fa-bell fa-sm fa-fw mr-2 text-gray-400"></i>
                     Live Chat
                 </a>
-                <a class="dropdown-item" href="<?= base_url(); ?>pesan">
-                    <i class="fas fa-envelope fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Pesan
-                </a>
+                <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat'])) : ?>
+                    <a class="dropdown-item" href="<?= base_url(); ?>pesan">
+                        <i class="fas fa-envelope fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Pesan
+                    </a>
+                <?php endif; ?>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

@@ -478,7 +478,7 @@
     <hr class="sidebar-divider">
 
     <!-- Others -->
-    <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat', 'Demis', 'Alumni'])) : ?>
+    <?php if (in_groups(['Admin', 'GM', 'PA', 'MU', 'MK', 'MM', 'MP', 'AOn', 'AOff', 'Teknisi', 'Produksi', 'Jurnalistik', 'MD', 'MOn', 'MOff', 'HRD', 'Advokat'])) : ?>
         <div class="sidebar-heading">Others</div>
 
         <!-- Pesan -->
