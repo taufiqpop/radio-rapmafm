@@ -37,11 +37,18 @@
 
                 <!-- Tanggal -->
                 <div class="form-group row">
-                    <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="Senin - Minggu" name="hari" required>
+                    <label for="hari" class="col-sm-3 col-form-label">Tanggal</label>
+                    <div class="col-sm-1">
+                        <select name="hari" required>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
                     </div>
-                    <label for="tanggal" class="col-form-label">Tanggal</label>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="tanggal" required>
                     </div>
@@ -50,7 +57,7 @@
                 <!-- Tahun -->
                 <div class="form-group row">
                     <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <input type="number" class="form-control" placeholder="2021" name="tahun" required>
                     </div>
                 </div>
@@ -68,9 +75,9 @@
                     <label for="status" class="col-sm-3 col-form-label">Status</label>
                     <div class="col-sm-7">
                         <select name="status">
-                            <option value="&#8212;">Belum Terlaksana</option>
-                            <option value="&#9989;">Terlaksana</option>
-                            <option value="&times;">Tidak Terlaksana</option>
+                            <option value="Belum Terlaksana">Belum Terlaksana</option>
+                            <option value="Sudah Terlaksana">Sudah Terlaksana</option>
+                            <option value="Tidak Terlaksana">Tidak Terlaksana</option>
                         </select>
                     </div>
                 </div>

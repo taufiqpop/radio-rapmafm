@@ -27,7 +27,7 @@
                         <label for="jenis" class="col-sm-2 col-form-label">Jenis Program</label>
                         <div class="col-sm-10">
                             <select name="jenis">
-                                <option value="<?= $data->jenis; ?>" selected></option>
+                                <option value="<?= $data->jenis; ?>" selected><?= $data->jenis; ?></option>
                                 <option value="Regular Program">Regular Program</option>
                                 <option value="Special Program">Special Program</option>
                                 <option value="Podcast">Podcast</option>

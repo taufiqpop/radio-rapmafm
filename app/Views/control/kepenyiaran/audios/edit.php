@@ -32,7 +32,7 @@
                     <!-- Tahun -->
                     <div class="form-group row">
                         <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <input type="number" class="form-control" name="tahun" value="<?= $data->tahun; ?>" required>
                         </div>
                     </div>
