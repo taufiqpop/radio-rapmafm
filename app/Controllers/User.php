@@ -12,6 +12,7 @@ class User extends BaseController
     protected $gmpaModel;
     protected $suratkeluarModel;
     protected $suratmasukModel;
+    protected $aruskasModel;
 
     // Divisi Umum
     protected $umumModel;
@@ -68,6 +69,7 @@ class User extends BaseController
         $this->gmpaModel            = new \App\Models\GMPAModel();
         $this->suratkeluarModel     = new \App\Models\SuratKeluarModel();
         $this->suratmasukModel      = new \App\Models\SuratMasukModel();
+        $this->aruskasModel         = new \App\Models\ArusKasModel();
 
         // Divisi Umum
         $this->umumModel            = new \App\Models\UmumModel();
@@ -112,7 +114,7 @@ class User extends BaseController
         $this->suratspModel         = new \App\Models\SuratSPModel();
 
         // Crew
-        $this->penyiarModel      = new \App\Models\PenyiarModel();
+        $this->penyiarModel         = new \App\Models\PenyiarModel();
     }
 
     // Dashboard
@@ -129,6 +131,7 @@ class User extends BaseController
             'jmlGMPA'               => $this->gmpaModel->jumlahGMPA(),
             'jmlSuratKeluar'        => $this->suratkeluarModel->jumlahSuratKeluar(),
             'jmlSuratMasuk'         => $this->suratmasukModel->jumlahSuratMasuk(),
+            'jmlArusKas'            => $this->aruskasModel->jumlahArusKas(),
 
 
             // Divisi Umum
