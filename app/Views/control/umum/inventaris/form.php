@@ -22,7 +22,7 @@
                 <!-- Nomor Barang -->
                 <div class="form-group row">
                     <label for="nomor" class="col-sm-3 col-form-label">Nomor Barang</label>
-                    <div class="col-sm-2">
+                    <div class="col-sm-1">
                         <input type="number" class="form-control" placeholder="0" name="nomor" required>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                 <!-- Jumlah Barang -->
                 <div class="form-group row">
                     <label for="jumlah" class="col-sm-3 col-form-label">Jumlah Barang</label>
-                    <div class="col-sm-2">
+                    <div class="col-sm-1">
                         <input type="number" class="form-control" placeholder="0" name="jumlah" required>
                     </div>
                 </div>
@@ -39,7 +39,16 @@
                 <div class="form-group row">
                     <label for="kode" class="col-sm-3 col-form-label">Kode Barang</label>
                     <div class="col-sm-2">
-                        <input type="text" class="form-control" placeholder="ABCDE" name="kode" required>
+                        <select name="kode" required>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="G">G</option>
+                            <option value="H">H</option>
+                        </select>
                     </div>
                 </div>
 
@@ -47,15 +56,15 @@
                 <div class="form-group row">
                     <label for="kondisi" class="col-sm-3 col-form-label">Kondisi Barang</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" placeholder="0 Baik, 0 Rusak" name="kondisi" required>
+                        <input type="text" class="form-control" placeholder="Baik | Rusak" name="kondisi" required>
                     </div>
                 </div>
 
-                <!-- Hari -->
+                <!-- Tanggal -->
                 <div class="form-group row">
-                    <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                    <div class="col-sm-3">
-                        <select name="hari" required autofocus>
+                    <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
+                    <div class="col-sm-1">
+                        <select name="hari" required>
                             <option value="Senin">Senin</option>
                             <option value="Selasa">Selasa</option>
                             <option value="Rabu">Rabu</option>
@@ -65,11 +74,6 @@
                             <option value="Minggu">Minggu</option>
                         </select>
                     </div>
-                </div>
-
-                <!-- Tanggal -->
-                <div class="form-group row">
-                    <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="tanggal" required>
                     </div>
@@ -78,7 +82,7 @@
                 <!-- Tahun -->
                 <div class="form-group row">
                     <label for="tahun" class="col-sm-3 col-form-label">Tahun (2 Digit Belakang)</label>
-                    <div class="col-sm-2">
+                    <div class="col-sm-1">
                         <input type="number" class="form-control" placeholder="00" name="tahun" required>
                     </div>
                 </div>

@@ -24,7 +24,7 @@
                     <!-- Nomor Barang -->
                     <div class="form-group row">
                         <label for="nomor" class="col-sm-3 col-form-label">Nomor Barang</label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-1">
                             <input type="number" class="form-control" name="nomor" value="<?= $data->nomor ?>" required>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                     <!-- Jumlah Barang -->
                     <div class="form-group row">
                         <label for="jumlah" class="col-sm-3 col-form-label">Jumlah Barang</label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-1">
                             <input type="number" class="form-control" name="jumlah" value="<?= $data->jumlah ?>" required>
                         </div>
                     </div>
@@ -41,7 +41,17 @@
                     <div class="form-group row">
                         <label for="kode" class="col-sm-3 col-form-label">Kode Barang</label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" name="kode" value="<?= $invent['kode']; ?>" required>
+                            <select name="kode" required>
+                                <option value="<?= $invent['kode']; ?>"><?= $invent['kode']; ?></option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                            </select>
                         </div>
                     </div>
 
@@ -53,11 +63,11 @@
                         </div>
                     </div>
 
-                    <!-- Hari -->
+                    <!-- Tanggal -->
                     <div class="form-group row">
-                        <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                        <div class="col-sm-3">
-                            <select name="hari" required autofocus>
+                        <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-1">
+                            <select name="hari" required>
                                 <option value="<?= $data->hari; ?>"><?= $data->hari; ?></option>
                                 <option value="Senin">Senin</option>
                                 <option value="Selasa">Selasa</option>
@@ -68,11 +78,6 @@
                                 <option value="Minggu">Minggu</option>
                             </select>
                         </div>
-                    </div>
-
-                    <!-- Tanggal -->
-                    <div class="form-group row">
-                        <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal ?>" required>
                         </div>
@@ -81,7 +86,7 @@
                     <!-- Tahun -->
                     <div class="form-group row">
                         <label for="tahun" class="col-sm-3 col-form-label">Tahun</label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-1">
                             <input type="number" class="form-control" name="tahun" value="<?= $invent['tahun']; ?>" required>
                         </div>
                     </div>

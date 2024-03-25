@@ -36,11 +36,11 @@
                     <!-- Jumlah -->
                     <div class="form-group row">
                         <label for="jmlpengurus" class="col-sm-3 col-form-label">Pengurus</label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-1">
                             <input type="number" class="form-control" name="jmlpengurus" value="<?= $data->jmlpengurus; ?>" required>
                         </div>
                         <label for="jmlcrew" class="col-form-label">Crew</label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-1">
                             <input type="number" class="form-control" name="jmlcrew" value="<?= $data->jmlcrew; ?>" required>
                         </div>
                     </div>
@@ -67,8 +67,8 @@
                         <div class="col-sm-7">
                             <select name="status">
                                 <option value="<?= $data->status; ?>"><?= $data->status; ?></option>
+                                <option value="&#9989;">Sudah Terlaksana</option>
                                 <option value="&#8212;">Belum Terlaksana</option>
-                                <option value="&#9989;">Terlaksana</option>
                                 <option value="&times;">Tidak Terlaksana</option>
                             </select>
                         </div>

@@ -51,9 +51,9 @@
                     <label for="status" class="col-sm-3 col-form-label">Status</label>
                     <div class="col-sm-7">
                         <select name="status">
-                            <option value="&#8212;">Belum Upload</option>
-                            <option value="&#9989;">Sudah Upload</option>
-                            <option value="&times;">Gagal Upload</option>
+                            <option value="Belum Upload">Belum Upload</option>
+                            <option value="Sudah Upload">Sudah Upload</option>
+                            <option value="Gagal Upload">Gagal Upload</option>
                         </select>
                     </div>
                 </div>
