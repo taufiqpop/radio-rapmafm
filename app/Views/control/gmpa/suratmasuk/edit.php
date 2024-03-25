@@ -13,10 +13,10 @@
                 <form action="<?= base_url(); ?>suratmasuk/update/<?= $surat['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
-                    <!-- Hari -->
+                    <!-- Tanggal -->
                     <div class="form-group row">
-                        <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                        <div class="col-sm-3">
+                        <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-1">
                             <select name="hari" required autofocus>
                                 <option value="<?= $data->hari; ?>"><?= $data->hari; ?></option>
                                 <option value="Senin">Senin</option>
@@ -28,11 +28,6 @@
                                 <option value="Minggu">Minggu</option>
                             </select>
                         </div>
-                    </div>
-
-                    <!-- Tanggal -->
-                    <div class="form-group row">
-                        <label for="tanggal" class="col-sm-3 col-form-label">Tanggal</label>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required>
                         </div>

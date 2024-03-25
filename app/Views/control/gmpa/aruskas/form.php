@@ -49,7 +49,7 @@
                     <div class="col-sm-7">
                         <select name="status">
                             <option value="Belum Bayar">Belum Bayar</option>
-                            <option value="Bayar">Bayar</option>
+                            <option value="Sudah Bayar">Sudah Bayar</option>
                             <option value="Tidak Bayar">Tidak Bayar</option>
                         </select>
                     </div>
