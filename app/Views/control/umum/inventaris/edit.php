@@ -57,7 +57,16 @@
                     <div class="form-group row">
                         <label for="hari" class="col-sm-3 col-form-label">Hari</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="hari" value="<?= $data->hari ?>" required>
+                            <select name="hari" required autofocus>
+                                <option value="<?= $data->hari; ?>"><?= $data->hari; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
                         </div>
                     </div>
 

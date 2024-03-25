@@ -21,11 +21,18 @@
 
                 <!-- Tanggal -->
                 <div class="form-group row">
-                    <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" name="hari" placeholder="Senin - Minggu" required>
+                    <label for="hari" class="col-sm-3 col-form-label">Tanggal</label>
+                    <div class="col-sm-1">
+                        <select name="hari" required autofocus>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
                     </div>
-                    <label for="tanggal" class="col-form-label">Tanggal</label>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="tanggal" required>
                     </div>

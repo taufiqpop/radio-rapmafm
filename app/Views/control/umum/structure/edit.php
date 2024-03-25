@@ -35,7 +35,7 @@
                         <label for="status" class="col-sm-2 col-form-label">Status</label>
                         <div class="col-sm-7">
                             <select name="status">
-                                <option value="<?= $data->status; ?>" selected></option>
+                                <option value="<?= $data->status; ?>" selected><?= $data->status; ?></option>
                                 <option value="">Not Active</option>
                                 <option value="active">Active</option>
                             </select>

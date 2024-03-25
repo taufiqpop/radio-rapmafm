@@ -19,25 +19,40 @@
                     </div>
                 </div>
 
-                <!-- Hari & Tanggal Dipinjam -->
+                <!-- Tanggal Dipinjam -->
                 <div class="form-group row">
-                    <label for="haripinjam" class="col-sm-3 col-form-label">Hari Dipinjam</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="Senin" name="haripinjam" required>
+                    <label for="haripinjam" class="col-sm-3 col-form-label">Tanggal Dipinjam</label>
+                    <div class="col-sm-1">
+                        <select name="haripinjam" required>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
                     </div>
-                    <label for="tanggalpinjam" class="col-form-label">Tanggal</label>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="tanggalpinjam" required>
                     </div>
                 </div>
 
-                <!-- Hari & Tanggal Kembali -->
+                <!-- Tanggal Kembali -->
                 <div class="form-group row">
-                    <label for="harikembali" class="col-sm-3 col-form-label">Hari Kembali</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="-" name="harikembali" required>
+                    <label for="harikembali" class="col-sm-3 col-form-label">Tanggal Kembali</label>
+                    <div class="col-sm-1">
+                        <select name="harikembali" required>
+                            <option value="-">-</option>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
                     </div>
-                    <label for="tanggalkembali" class="col-form-label">Tanggal</label>
                     <div class="col-sm-3">
                         <input type="text" class="form-control" placeholder="-" name="tanggalkembali" required>
                     </div>

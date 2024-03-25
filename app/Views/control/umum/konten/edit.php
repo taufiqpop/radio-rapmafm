@@ -23,11 +23,19 @@
 
                     <!-- Tanggal -->
                     <div class="form-group row">
-                        <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="hari" value="<?= $data->hari; ?>" required>
+                        <label for="hari" class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-1">
+                            <select name="hari" required autofocus>
+                                <option value="<?= $data->hari; ?>"><?= $data->hari; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
                         </div>
-                        <label for="tanggal" class="col-form-label">Tanggal</label>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required>
                         </div>
@@ -46,7 +54,7 @@
                         <label for="status" class="col-sm-3 col-form-label">Status</label>
                         <div class="col-sm-7">
                             <select name="status">
-                                <option value="<?= $data->status; ?>"></option>
+                                <option value="<?= $data->status; ?>"><?= $data->status; ?></option>
                                 <option value="&#8212;">Belum Upload</option>
                                 <option value="&#9989;">Sudah Upload</option>
                                 <option value="&times;">Gagal Upload</option>

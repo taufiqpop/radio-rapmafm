@@ -27,7 +27,7 @@
                         <label for="jenis" class="col-sm-3 col-form-label">Jenis</label>
                         <div class="col-sm-7">
                             <select name="jenis">
-                                <option value="<?= $data->jenis; ?>" selected></option>
+                                <option value="<?= $data->jenis; ?>" selected> <?= $data->jenis; ?></option>
                                 <option value="RAPMAFEST">RAPMAFEST</option>
                                 <option value="RAPMADAY">RAPMADAY</option>
                                 <option value="OPEN RECRUITMENT">OPEN RECRUITMENT</option>
