@@ -42,7 +42,7 @@
                         <label for="divisi" class="col-sm-3 col-form-label">Divisi</label>
                         <div class="col-sm-7">
                             <select name="divisi">
-                                <option value="<?= $data->divisi; ?>" selected></option>
+                                <option value="<?= $data->divisi; ?>" selected><?= $data->divisi; ?></option>
                                 <option value="GMPA">GMPA</option>
                                 <option value="Divisi Umum">Divisi Umum</option>
                                 <option value="Divisi Kepenyiaran">Divisi Kepenyiaran</option>

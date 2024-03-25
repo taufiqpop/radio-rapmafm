@@ -26,7 +26,7 @@
                         <label for="ttd" class="col-sm-3 col-form-label">TTD Kontrak</label>
                         <div class="col-sm-7">
                             <select name="ttd">
-                                <option value="<?= $data->ttd; ?>" selected></option>
+                                <option value="<?= $data->ttd; ?>" selected><?= $data->ttd; ?></option>
                                 <option value="&#8212;">Belum TTD</option>
                                 <option value="&#9989;">Sudah TTD</option>
                                 <option value="&times;">Tidak TTD</option>
@@ -37,10 +37,18 @@
                     <!-- Tanggal TTD -->
                     <div class="form-group row">
                         <label for="hari" class="col-sm-3 col-form-label">Hari TTD</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="hari" value="<?= $data->hari; ?>" required>
+                        <div class="col-sm-1">
+                            <select name="hari" required>
+                                <option value="<?= $data->hari; ?>"><?= $data->hari; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
                         </div>
-                        <label for="tanggal" class="col-form-label">Tanggal</label>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required>
                         </div>
@@ -51,7 +59,7 @@
                         <label for="pers" class="col-sm-3 col-form-label">Kartu Pers</label>
                         <div class="col-sm-7">
                             <select name="pers">
-                                <option value="<?= $data->pers; ?>" selected></option>
+                                <option value="<?= $data->pers; ?>" selected><?= $data->pers; ?></option>
                                 <option value="&#8212;">Belum Dapat</option>
                                 <option value="&#9989;">Sudah Dapat</option>
                                 <option value="&times;">Tidak Dapat</option>
@@ -64,7 +72,7 @@
                         <label for="lanyard" class="col-sm-3 col-form-label">Lanyard</label>
                         <div class="col-sm-7">
                             <select name="lanyard">
-                                <option value="<?= $data->lanyard; ?>" selected></option>
+                                <option value="<?= $data->lanyard; ?>" selected><?= $data->lanyard; ?></option>
                                 <option value="&#8212;">Belum Dapat</option>
                                 <option value="&#9989;">Sudah Dapat</option>
                                 <option value="&times;">Tidak Dapat</option>
@@ -77,7 +85,7 @@
                         <label for="pdh" class="col-sm-3 col-form-label">PDH</label>
                         <div class="col-sm-7">
                             <select name="pdh">
-                                <option value="<?= $data->pdh; ?>" selected></option>
+                                <option value="<?= $data->pdh; ?>" selected><?= $data->pdh; ?></option>
                                 <option value="&#8212;">Belum Dapat</option>
                                 <option value="&#9989;">Sudah Dapat</option>
                                 <option value="&times;">Tidak Dapat</option>
@@ -90,7 +98,7 @@
                         <label for="pin" class="col-sm-3 col-form-label">Pin</label>
                         <div class="col-sm-7">
                             <select name="pin">
-                                <option value="<?= $data->pin; ?>" selected></option>
+                                <option value="<?= $data->pin; ?>" selected><?= $data->pin; ?></option>
                                 <option value="&#8212;">Belum Dapat</option>
                                 <option value="&#9989;">Sudah Dapat</option>
                                 <option value="&times;">Tidak Dapat</option>

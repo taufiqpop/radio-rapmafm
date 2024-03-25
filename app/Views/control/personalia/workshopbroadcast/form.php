@@ -11,25 +11,35 @@
             <form action="<?= base_url(); ?>workshopbroadcast/insert" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
 
-                <!-- Hari -->
-                <div class="form-group row">
-                    <label for="harimulai" class="col-sm-3 col-form-label">Hari</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="Senin" name="harimulai" required autofocus>
-                    </div>
-                    <label for="hariselesai" class="col-form-label">-</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="Jum'at" name="hariselesai" required>
-                    </div>
-                </div>
-
                 <!-- Tanggal -->
                 <div class="form-group row">
                     <label for="dari" class="col-sm-3 col-form-label">Tanggal</label>
+                    <div class="col-sm-1">
+                        <select name="hariselesai" required autofocus>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
+                    </div>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="dari" required>
                     </div>
                     <label for="sampai" class="col-form-label">-</label>
+                    <div class="col-sm-1">
+                        <select name="hariselesai" required>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
+                    </div>
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="sampai" required>
                     </div>
@@ -38,11 +48,11 @@
                 <!-- Waktu -->
                 <div class="form-group row">
                     <label for="mulai" class="col-sm-3 col-form-label">Waktu</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <input type="text" class="form-control" placeholder="00:00" name="mulai" required>
                     </div>
                     <label for="selesai" class="col-form-label">-</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                         <input type="text" class="form-control" placeholder="23:59" name="selesai" required>
                     </div>
                 </div>
@@ -53,7 +63,7 @@
                     <div class="col-sm-7">
                         <select name="status">
                             <option value="Belum Terlaksana">Belum Terlaksana</option>
-                            <option value="Terlaksana">Terlaksana</option>
+                            <option value="Sudah Terlaksana">Sudah Terlaksana</option>
                             <option value="Tidak Terlaksana">Tidak Terlaksana</option>
                         </select>
                     </div>
@@ -86,7 +96,7 @@
                 <!-- Button -->
                 <div class="form-group row">
                     <div class="col-sm-7">
-                        <a href="<?= base_url(); ?>control/maganginternal" class="btn btn-dark mb-1">Back</a>
+                        <a href="<?= base_url(); ?>control/workshopbroadcast" class="btn btn-dark mb-1">Back</a>
                         <button type="submit" class="btn btn-primary mb-1">Publish</button>
                     </div>
                 </div>

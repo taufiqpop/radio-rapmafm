@@ -26,7 +26,7 @@
                         <label for="sp" class="col-sm-3 col-form-label">Surat Peringatan</label>
                         <div class="col-sm-7">
                             <select name="sp">
-                                <option value="<?= $data->sp; ?>" selected></option>
+                                <option value="<?= $data->sp; ?>" selected><?= $data->sp; ?></option>
                                 <option value="SP 1">SP 1</option>
                                 <option value="SP 2">SP 2</option>
                                 <option value="SP 3">SP 3</option>
@@ -37,10 +37,18 @@
                     <!-- Tanggal -->
                     <div class="form-group row">
                         <label for="hari" class="col-sm-3 col-form-label">Hari</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="hari" value="<?= $data->hari; ?>" required>
+                        <div class="col-sm-1">
+                            <select name="hari" required autofocus>
+                                <option value="<?= $data->hari; ?>"><?= $data->hari; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
                         </div>
-                        <label for="tanggal" class="col-form-label">Tanggal</label>
                         <div class="col-sm-3">
                             <input type="date" class="form-control" name="tanggal" value="<?= $data->tanggal; ?>" required>
                         </div>

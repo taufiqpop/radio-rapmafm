@@ -34,7 +34,7 @@
                         <label for="divisi" class="col-sm-3 col-form-label">Divisi</label>
                         <div class="col-sm-7">
                             <select name="divisi">
-                                <option value="<?= $data->divisi; ?>" selected></option>
+                                <option value="<?= $data->divisi; ?>" selected><?= $data->divisi; ?></option>
                                 <option value="GMPA">GMPA</option>
                                 <option value="Divisi Umum">Divisi Umum</option>
                                 <option value="Divisi Kepenyiaran">Divisi Kepenyiaran</option>
@@ -63,7 +63,7 @@
                     <!-- Semester -->
                     <div class="form-group row">
                         <label for="semester" class="col-sm-3 col-form-label">Semester</label>
-                        <div class="col-sm-2">
+                        <div class="col-sm-1">
                             <input type="number" class="form-control" name="semester" value="<?= $data->semester; ?>" required>
                         </div>
                     </div>
@@ -105,9 +105,9 @@
                         <label for="status" class="col-sm-3 col-form-label">Status</label>
                         <div class="col-sm-7">
                             <select name="status">
-                                <option value="<?= $data->status; ?>" selected></option>
+                                <option value="<?= $data->status; ?>" selected><?= $data->status; ?></option>
                                 <option value="Aktif">Aktif</option>
-                                <option value="Tidak Aktif">Tidak Aktif</option>
+                                <option value="Pasif">Pasif</option>
                             </select>
                         </div>
                     </div>

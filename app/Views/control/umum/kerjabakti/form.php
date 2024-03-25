@@ -25,7 +25,6 @@
                             <option value="Minggu">Minggu</option>
                         </select>
                     </div>
-
                     <div class="col-sm-3">
                         <input type="date" class="form-control" name="tanggal" required>
                     </div>
