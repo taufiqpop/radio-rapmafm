@@ -13,26 +13,38 @@
                 <form action="<?= base_url(); ?>kepenyiaran/update/<?= $timeline['id']; ?>" method="post" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
-                    <!-- Hari Perencanaan -->
-                    <div class="form-group row">
-                        <label for="darihari" class="col-sm-3 col-form-label">Hari Perencanaan</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="darihari" required value="<?= $data->darihari; ?>" autofocus>
-                        </div>
-                        <label for="sampaihari" class="col-form-label">-</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="sampaihari" value="<?= $data->sampaihari; ?>" required>
-                        </div>
-                    </div>
-
                     <!-- Tanggal Perencanaan -->
                     <div class="form-group row">
                         <label for="daritgl" class="col-sm-3 col-form-label">Tanggal Perencanaan</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-1">
+                            <select name="darihari" required autofocus>
+                                <option value="<?= $data->darihari; ?>" selected><?= $data->darihari; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
                             <input type="date" class="form-control" name="daritgl" value="<?= $data->daritgl; ?>" required>
                         </div>
                         <label for="sampaitgl" class="col-form-label">-</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-1">
+                            <select name="sampaihari" required>
+                                <option value="<?= $data->sampaihari; ?>" selected><?= $data->sampaihari; ?></option>
+                                <option value="Minggu">Minggu</option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
                             <input type="date" class="form-control" name="sampaitgl" value="<?= $data->sampaitgl; ?>" required>
                         </div>
                     </div>
@@ -42,10 +54,10 @@
                         <label for="subdivisi" class="col-sm-3 col-form-label">Sub Divisi</label>
                         <div class="col-sm-7">
                             <select name="subdivisi">
-                                <option value="<?= $data->subdivisi; ?>" selected></option>
+                                <option value="<?= $data->subdivisi; ?>" selected><?= $data->subdivisi; ?></option>
                                 <option value="Manager Kepenyiaran">Manager Kepenyiaran</option>
                                 <option value="Jurnalistik">Jurnalistik</option>
-                                <option value="MD">Music Director</option>
+                                <option value="Music Director">Music Director</option>
                                 <option value="Produksi">Produksi</option>
                             </select>
                         </div>
@@ -59,26 +71,38 @@
                         </div>
                     </div>
 
-                    <!-- Hari Pelaksanaan -->
-                    <div class="form-group row">
-                        <label for="mulaihari" class="col-sm-3 col-form-label">Hari Pelaksanaan</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="mulaihari" value="<?= $data->mulaihari; ?>" required>
-                        </div>
-                        <label for="selesaihari" class="col-form-label">-</label>
-                        <div class="col-sm-3">
-                            <input type="text" class="form-control" name="selesaihari" value="<?= $data->selesaihari; ?>" required>
-                        </div>
-                    </div>
-
                     <!-- Tanggal Pelaksanaan -->
                     <div class="form-group row">
                         <label for="mulaitgl" class="col-sm-3 col-form-label">Tanggal Pelaksanaan</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-1">
+                            <select name="mulaihari" required autofocus>
+                                <option value="<?= $data->mulaihari; ?>" selected><?= $data->mulaihari; ?></option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                                <option value="Minggu">Minggu</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
                             <input type="date" class="form-control" name="mulaitgl" value="<?= $data->mulaitgl; ?>" required>
                         </div>
                         <label for="selesaitgl" class="col-form-label">-</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-1">
+                            <select name="selesaihari" required>
+                                <option value="<?= $data->selesaihari; ?>" selected><?= $data->selesaihari; ?></option>
+                                <option value="Minggu">Minggu</option>
+                                <option value="Senin">Senin</option>
+                                <option value="Selasa">Selasa</option>
+                                <option value="Rabu">Rabu</option>
+                                <option value="Kamis">Kamis</option>
+                                <option value="Jum'at">Jum'at</option>
+                                <option value="Sabtu">Sabtu</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
                             <input type="date" class="form-control" name="selesaitgl" value="<?= $data->selesaitgl; ?>" required>
                         </div>
                     </div>
@@ -96,10 +120,10 @@
                         <label for="status" class="col-sm-3 col-form-label">Status</label>
                         <div class="col-sm-7">
                             <select name="status">
-                                <option value="<?= $data->status; ?>" selected></option>
-                                <option value="Terlaksana">Terlaksana</option>
-                                <option value="Belum Terlaksana">Belum Terlaksana</option>
-                                <option value="Tidak Terlaksana">Tidak Terlaksana</option>
+                                <option value="<?= $data->status; ?>" selected><?= $data->status; ?></option>
+                                <option value="&#9989;">Terlaksana</option>
+                                <option value="&#8212;">Belum Terlaksana</option>
+                                <option value="&times;">Tidak Terlaksana</option>
                             </select>
                         </div>
                     </div>

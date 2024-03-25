@@ -11,26 +11,36 @@
             <form action="<?= base_url(); ?>marketing/insert" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
 
-                <!-- Hari Perencanaan -->
-                <div class="form-group row">
-                    <label for="darihari" class="col-sm-3 col-form-label">Hari Perencanaan</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="Senin" name="darihari" required autofocus>
-                    </div>
-                    <label for="sampaihari" class="col-form-label">-</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="Jum'at" name="sampaihari" required>
-                    </div>
-                </div>
-
                 <!-- Tanggal Perencanaan -->
                 <div class="form-group row">
                     <label for="daritgl" class="col-sm-3 col-form-label">Tanggal Perencanaan</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-1">
+                        <select name="darihari" required autofocus>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
                         <input type="date" class="form-control" name="daritgl" required>
                     </div>
                     <label for="sampaitgl" class="col-form-label">-</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-1">
+                        <select name="sampaihari" required>
+                            <option value="Minggu">Minggu</option>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
                         <input type="date" class="form-control" name="sampaitgl" required>
                     </div>
                 </div>
@@ -55,26 +65,38 @@
                     </div>
                 </div>
 
-                <!-- Hari Pelaksanaan -->
-                <div class="form-group row">
-                    <label for="mulaihari" class="col-sm-3 col-form-label">Hari Pelaksanaan</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="-" name="mulaihari" required>
-                    </div>
-                    <label for="selesaihari" class="col-form-label">-</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="-" name="selesaihari" required>
-                    </div>
-                </div>
-
                 <!-- Tanggal Pelaksanaan -->
                 <div class="form-group row">
                     <label for="mulaitgl" class="col-sm-3 col-form-label">Tanggal Pelaksanaan</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-1">
+                        <select name="mulaihari" required autofocus>
+                            <option value="-">-</option>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                            <option value="Minggu">Minggu</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
                         <input type="text" class="form-control" name="mulaitgl" placeholder="-" required>
                     </div>
                     <label for="selesaitgl" class="col-form-label">-</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-1">
+                        <select name="selesaihari" required>
+                            <option value="-">-</option>
+                            <option value="Minggu">Minggu</option>
+                            <option value="Senin">Senin</option>
+                            <option value="Selasa">Selasa</option>
+                            <option value="Rabu">Rabu</option>
+                            <option value="Kamis">Kamis</option>
+                            <option value="Jum'at">Jum'at</option>
+                            <option value="Sabtu">Sabtu</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
                         <input type="text" class="form-control" name="selesaitgl" placeholder="-" required>
                     </div>
                 </div>
@@ -92,9 +114,9 @@
                     <label for="status" class="col-sm-3 col-form-label">Status</label>
                     <div class="col-sm-7">
                         <select name="status">
-                            <option value="Belum Terlaksana">Belum Terlaksana</option>
-                            <option value="Terlaksana">Terlaksana</option>
-                            <option value="Tidak Terlaksana">Tidak Terlaksana</option>
+                            <option value="&#8212;">Belum Terlaksana</option>
+                            <option value="&#9989;">Terlaksana</option>
+                            <option value="&times;">Tidak Terlaksana</option>
                         </select>
                     </div>
                 </div>
