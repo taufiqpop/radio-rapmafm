@@ -32,12 +32,12 @@
                             <table class="table table-jadwal-siar" width="100%" cellspacing="0">
                                 <thead>
                                     <tr style="background-color: orange; color:black; font-size:large">
-                                        <th scope="col" class="cursor-stop">Senin</th>
-                                        <th scope="col" class="cursor-stop">Selasa</th>
-                                        <th scope="col" class="cursor-stop">Rabu</th>
-                                        <th scope="col" class="cursor-stop">Kamis</th>
-                                        <th scope="col" class="cursor-stop">Jum'at</th>
-                                        <th scope="col" class="cursor-stop">Sabtu</th>
+                                        <th scope="col">Senin</th>
+                                        <th scope="col">Selasa</th>
+                                        <th scope="col">Rabu</th>
+                                        <th scope="col">Kamis</th>
+                                        <th scope="col">Jum'at</th>
+                                        <th scope="col">Sabtu</th>
                                     </tr>
                                 </thead>
                                 <tbody style="color:black">
