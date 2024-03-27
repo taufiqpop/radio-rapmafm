@@ -6,6 +6,7 @@ class User extends BaseController
 {
     // Admin
     protected $usersModel;
+    protected $settingsModel;
     protected $pesanModel;
 
     // GMPA
@@ -63,6 +64,7 @@ class User extends BaseController
     {
         // Admin
         $this->usersModel           = new \App\Models\UsersModel();
+        $this->settingsModel        = new \App\Models\SettingsModel();
         $this->pesanModel           = new \App\Models\PesanModel();
 
         // GMPA
@@ -75,7 +77,7 @@ class User extends BaseController
         $this->umumModel            = new \App\Models\UmumModel();
         $this->achievementsModel    = new \App\Models\AchievementsModel();
         $this->eventsModel          = new \App\Models\EventsModel();
-        $this->kontenModel = new \App\Models\KontenModel();
+        $this->kontenModel          = new \App\Models\KontenModel();
         $this->inventarisModel      = new \App\Models\InventarisModel();
         $this->peminjamanModel      = new \App\Models\PeminjamanModel();
         $this->kerjabaktiModel      = new \App\Models\KerjaBaktiModel();

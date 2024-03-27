@@ -74,7 +74,7 @@
                     <div class="form-group row">
                         <label for="paket" class="col-sm-3 col-form-label">Paket Iklan</label>
                         <div class="col-sm-7">
-                            <textarea class="tinymce" name="paket"><?= $data->paket; ?></textarea>
+                            <textarea class="form-control areatext" name="paket"><?= $data->paket; ?></textarea>
                         </div>
                     </div>
 

@@ -89,7 +89,7 @@
                 <div class="form-group row">
                     <label for="materi" class="col-sm-3 col-form-label">Materi</label>
                     <div class="col-sm-7">
-                        <textarea class="tinymce" placeholder="write here.." name="materi"></textarea>
+                        <textarea class="form-control areatext" placeholder="write here.." name="materi"></textarea>
                     </div>
                 </div>
 

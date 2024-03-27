@@ -32,7 +32,7 @@
                     <div class="form-group row">
                         <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                         <div class="col-sm-10">
-                            <textarea name="deskripsi"><?= $data->deskripsi; ?></textarea>
+                            <textarea class="form-control areatext" name="deskripsi"><?= $data->deskripsi; ?></textarea>
                         </div>
                     </div>
 

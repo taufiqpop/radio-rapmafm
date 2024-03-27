@@ -111,7 +111,7 @@
                 <div class="form-group row">
                     <label for="kontraprestasi" class="col-sm-3 col-form-label">Kontraprestasi</label>
                     <div class="col-sm-7">
-                        <textarea class="tinymce" placeholder="write here.." name="kontraprestasi"></textarea>
+                        <textarea class="form-control areatext" placeholder="write here.." name="kontraprestasi"></textarea>
                     </div>
                 </div>
 

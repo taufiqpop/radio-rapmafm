@@ -18,8 +18,7 @@
                         <label for="program" class="col-sm-2 col-form-label">Program Siar</label>
                         <div class="col-sm-7">
                             <select name="program">
-                                <option value="<?= $data->program; ?>" selected></option>
-                                <option value="RAPMATALKS">RAPMATALKS</option>
+                                <option value="<?= $data->program; ?>" selected><?= $data->program; ?></option>
                                 <option value="BASOSAPI">BASOSAPI</option>
                                 <option value="11N1">11N1</option>
                                 <option value="RAPMANESIA">RAPMANESIA</option>
@@ -34,6 +33,7 @@
                                 <option value="MERINDING">MERINDING</option>
                                 <option value="K-ARENA">K-ARENA</option>
                                 <option value="SPORTACULAR">SPORTACULAR</option>
+                                <option value="TOP 15">TOP 15</option>
                                 <option value="SUDUT KAMPUS">SUDUT KAMPUS</option>
                                 <option value="NO SATNIGHT">NO SATNIGHT</option>
                                 <option value="CLASSIC NIGHT">CLASSIC NIGHT</option>

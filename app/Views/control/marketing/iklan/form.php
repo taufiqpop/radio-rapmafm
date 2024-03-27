@@ -70,7 +70,7 @@
                 <div class="form-group row">
                     <label for="paket" class="col-sm-3 col-form-label">Paket Iklan</label>
                     <div class="col-sm-7">
-                        <textarea class="tinymce" placeholder="write here.." name="paket"></textarea>
+                        <textarea class="form-control areatext" placeholder="write here.." name="paket"></textarea>
                     </div>
                 </div>
 

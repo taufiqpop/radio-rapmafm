@@ -94,7 +94,7 @@
                     <div class="form-group row">
                         <label for="materi" class="col-sm-3 col-form-label">Materi</label>
                         <div class="col-sm-7">
-                            <textarea class="tinymce" name="materi"><?= $data->materi; ?></textarea>
+                            <textarea class="form-control areatext" name="materi"><?= $data->materi; ?></textarea>
                         </div>
                     </div>
 

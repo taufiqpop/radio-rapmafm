@@ -263,18 +263,13 @@
             <?php $data = json_decode($achievement['value']) ?>
             <div class="col-6 col-md-4">
               <div class="card">
-                <br>
                 <center>
-                  <h4 class="card-title m-2"><?= $data->judul; ?> (<?= $achievement['tahun']; ?>)</h4>
-                </center>
-                <center>
+                  <h5 class="card-title m-3"><?= $data->judul; ?> <br>(<?= $achievement['tahun']; ?>)</h5>
                   <img class="card-img-top" src="<?= base_url(); ?>img/achievements/<?= $data->images ?>" style="width:75%">
-                </center>
-                <div class="card-body">
-                  <center>
+                  <div class="card-body">
                     <a href="https://www.instagram.com/p/BwyOA9ehluQ/?utm_source=ig_web_copy_link" target="_blank" class="btn btn-success">See Details</a>
-                  </center>
-                </div>
+                  </div>
+                </center>
               </div>
             </div>
           <?php endforeach; ?>
@@ -300,7 +295,7 @@
                     <a href="<?= $data->link; ?>" target="_blank">
                       <h5 class="card-title" style="color: black;"><?= $data->judul; ?></h5>
                     </a>
-                    <p class="card-text" style="text-align: justify;"><?= $data->deskripsi; ?></p>
+                    <p class="card-text mt-4" style="text-align: justify; text-indent: 30px"><?= $data->deskripsi; ?></p>
                   </div>
                 </div>
               </div>

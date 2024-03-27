@@ -118,7 +118,7 @@
                     <div class="form-group row">
                         <label for="kontraprestasi" class="col-sm-3 col-form-label">Kontraprestasi</label>
                         <div class="col-sm-7">
-                            <textarea class="tinymce" name="kontraprestasi"><?= $data->kontraprestasi; ?></textarea>
+                            <textarea class="form-control areatext" name="kontraprestasi"><?= $data->kontraprestasi; ?></textarea>
                         </div>
                     </div>
 

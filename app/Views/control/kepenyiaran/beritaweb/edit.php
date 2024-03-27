@@ -50,12 +50,11 @@
                         </div>
                     </div>
 
-
                     <!-- Deskripsi -->
                     <div class="form-group row">
                         <label for="deskripsi" class="col-sm-3 col-form-label">Deskripsi</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" name="deskripsi" value="<?= $data->deskripsi; ?>" required>
+                            <textarea class="form-control form-control areatext" name="materi"><?= $data->deskripsi; ?></textarea>
                         </div>
                     </div>
 

@@ -49,7 +49,7 @@
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
+                    <div class="copyright text-center my-auto" style="color: black;">
                         <span>Copyright <strong><?= date('Y'); ?> &copy; Taufiq Pop</span></strong>
                     </div>
                 </div>
