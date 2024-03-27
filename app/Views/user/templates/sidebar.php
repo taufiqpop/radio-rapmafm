@@ -184,12 +184,12 @@
     <!-- Teknisi -->
     <?php if (in_groups(['Admin', 'GM', 'MU', 'Teknisi'])) : ?>
         <!-- Pemancar -->
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="<?= base_url(); ?>control/pemancar">
                 <i class="fas fa-broadcast-tower"></i>
                 <span>Pemancar</span>
             </a>
-        </li>
+        </li> -->
     <?php endif; ?>
 
     <!-- ==================================================================== -->
