@@ -168,11 +168,8 @@ $routes->add('/kerjabakti/insert', 'KerjaBakti::insert', ['filter' => 'role:Admi
 $routes->add('/kerjabakti/update/(:num)', 'KerjaBakti::update/$1', ['filter' => 'role:Admin, AOff']);
 
 // Jadwal Piket
-$routes->add('/control/jadwalpiket', 'JadwalPiket::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
-$routes->get('/control/jadwalpiket/form', 'JadwalPiket::form', ['filter' => 'role:Admin, AOff']);
+$routes->get('/control/jadwalpiket', 'JadwalPiket::index', ['filter' => 'role:Admin, GM, PA, MM, MP, MU, MK, Produksi, Jurnalistik, MD, AOn, AOff, Teknisi, HRD, Advokat, MOn, MOff, Crew']);
 $routes->get('/control/jadwalpiket/edit/(:num)', 'JadwalPiket::edit/$1', ['filter' => 'role:Admin, AOff']);
-$routes->delete('/control/jadwalpiket/(:num)', 'JadwalPiket::delete/$1', ['filter' => 'role:Admin, AOff']);
-$routes->add('/jadwalpiket/insert', 'JadwalPiket::insert', ['filter' => 'role:Admin, AOff']);
 $routes->add('/jadwalpiket/update/(:num)', 'JadwalPiket::update/$1', ['filter' => 'role:Admin, AOff']);
 
 // Pemancar
