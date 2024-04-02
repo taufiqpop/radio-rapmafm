@@ -88,8 +88,9 @@
                 <!-- Materi -->
                 <div class="form-group row">
                     <label for="materi" class="col-sm-3 col-form-label">Materi</label>
-                    <div class="col-sm-7">
-                        <textarea class="form-control areatext" placeholder="write here.." name="materi"></textarea>
+                    <div class="col-sm-8">
+                        <input id="materi" type="hidden" name="materi" required>
+                        <trix-editor input="materi"></trix-editor>
                     </div>
                 </div>
 

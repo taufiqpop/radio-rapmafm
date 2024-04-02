@@ -73,8 +73,9 @@
                     <!-- Paket Iklan -->
                     <div class="form-group row">
                         <label for="paket" class="col-sm-3 col-form-label">Paket Iklan</label>
-                        <div class="col-sm-7">
-                            <textarea class="form-control areatext" name="paket"><?= $data->paket; ?></textarea>
+                        <div class="col-sm-8">
+                            <input id="paket" type="hidden" name="paket" value="<?= $data->paket; ?>" required>
+                            <trix-editor input="paket"></trix-editor>
                         </div>
                     </div>
 

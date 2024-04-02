@@ -110,8 +110,9 @@
                 <!-- Kontraprestasi -->
                 <div class="form-group row">
                     <label for="kontraprestasi" class="col-sm-3 col-form-label">Kontraprestasi</label>
-                    <div class="col-sm-7">
-                        <textarea class="form-control areatext" placeholder="write here.." name="kontraprestasi"></textarea>
+                    <div class="col-sm-8">
+                        <input id="kontraprestasi" type="hidden" name="kontraprestasi" required>
+                        <trix-editor input="kontraprestasi"></trix-editor>
                     </div>
                 </div>
 
