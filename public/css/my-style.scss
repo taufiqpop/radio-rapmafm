@@ -1,0 +1,118 @@
+.thumbnail {
+    height: 100px;
+    /* border-radius: 50%; */
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table > tbody > tr > th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table > thead > tr > th {
+    text-align: center;
+}
+
+/* Users */
+.user-details {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.role-profile {
+    margin-left: 15px;
+    text-align: center;
+}
+
+/* Details Data Backend */
+.detail-img {
+    margin-bottom: 10px;
+}
+
+.tombol-detail {
+    margin-top: 20px;
+}
+
+/* Sidebar Navbar */
+#accordionSidebar {
+    position: relative;
+}
+#navbar {
+    position: relative;
+}
+#page-content {
+    position: relative;
+}
+
+/* Cursor Mode */
+@mixin cursor($status){
+    cursor: $status;
+};
+
+.cursor-active {
+    @include cursor(pointer);
+}
+
+.cursor-stop {
+    @include cursor(not-allowed);
+}
+
+/* Background Images */
+.bg-img {
+    background: url('/img/Wallpaper.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Table Jadwal Siar */
+.table-jadwal-siar {
+    border: 3px solid #000;
+  }
+  
+  .table-jadwal-siar th,
+  .table-jadwal-siar td {
+    border: 3px solid #000;
+  }
+  
+  .table-jadwal-siar thead th,
+  .table-jadwal-siar thead td {
+    border-bottom-width: 1px;
+  }
+
+  .form-jadwal-siar {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1.5rem;
+    font-weight:bold;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d1d3e2;
+    border-radius: 0.35rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  /* Fa-Spin Slow Mode */
+  .slow-spin {
+    -webkit-animation: fa-spin 6s infinite linear;
+    animation: fa-spin 6s infinite linear;
+  }
+
+  /* Text Area */
+  .areatext {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* TRIX Editor */
+  trix-editor {
+    background-color: white;
+  }
