@@ -54,8 +54,10 @@
         <header id="header" stats="false">
             <div class="d-flex flex-column">
                 <div class="profile">
-                    <img src="<?= base_url(); ?>img/home/RapmaFM.png" class="img-fluid rounded-circle">
-                    <h1 class="text-light"><a href="<?= base_url(); ?>" title="Rapma FM"><?= $setting['owner']; ?></a></h1>
+                    <a href="<?= base_url(); ?>user" target="_blank" title="Rapma FM">
+                        <img src="<?= base_url(); ?>img/home/RapmaFM.png" class="img-fluid rounded-circle">
+                    </a>
+                    <h1 class="text-light"> <?= $setting['owner']; ?></a></h1>
                 </div>
 
                 <!-- Navbar -->
@@ -97,7 +99,7 @@
     <footer id="footer">
         <div class="container">
             <div class="copyright">
-                Copyright <strong><span><?= date('Y'); ?> <a href="<?= base_url(); ?>user" style="color:black;" target="_blank"> &copy;</a> Rapma FM</span></strong>
+                Copyright <strong><span><?= date('Y'); ?> <a href="https://rapmafm.com:2222" style="color:black;" target="_blank"> &copy;</a> Rapma FM</span></strong>
             </div>
         </div>
     </footer>
