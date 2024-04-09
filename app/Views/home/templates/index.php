@@ -32,16 +32,11 @@
     <link href="<?= base_url(); ?>css/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-    <!-- CSS Link -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Main CSS -->
     <link href="<?= base_url(); ?>css/style.css" rel="stylesheet">
 
     <!-- My CSS -->
-    <link href="<?= base_url(); ?>css/my-style-frontend.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>css/my-style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -57,52 +52,51 @@
                     <a href="<?= base_url(); ?>user" target="_blank" title="Rapma FM">
                         <img src="<?= base_url(); ?>img/home/RapmaFM.png" class="img-fluid rounded-circle">
                     </a>
-                    <h1 class="text-light"> <?= $setting['owner']; ?></a></h1>
+                    <h1 class="text-light"><?= $setting['owner']; ?></h1>
                 </div>
 
                 <!-- Navbar -->
                 <nav id="navbar" class="nav-menu navbar">
                     <ul>
-                        <li><a href="<?= base_url(); ?>index#hero" class="nav-link scrollto active"><i class="bx bx-home" title="Home"></i>
+                        <li><a href="<?= base_url(); ?>index#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
                                 <span>Home</span></a></li>
-                        <li><a href="<?= base_url(); ?>index#structure" class="nav-link scrollto"><i class="bx bx-user" title="Structure"></i>
+                        <li><a href="<?= base_url(); ?>index#structure" class="nav-link scrollto"><i class="bx bx-user"></i>
                                 <span>Structure</span></a></li>
-                        <li><a href="<?= base_url(); ?>index#program" class="nav-link scrollto"><i class="bx bx-microphone" title="Program"></i>
+                        <li><a href="<?= base_url(); ?>index#program" class="nav-link scrollto"><i class="bx bx-microphone"></i>
                                 <span>Program</span></a></li>
-                        <li><a href="<?= base_url(); ?>index#chart" class="nav-link scrollto"><i class="bx bx-music" title="Top Chart"></i>
+                        <li><a href="<?= base_url(); ?>index#chart" class="nav-link scrollto"><i class="bx bx-music"></i>
                                 <span>Top Chart</span></a></li>
-                        <li><a href="<?= base_url(); ?>podcasts" class="nav-link scrollto"><i class="bx bx-headphone" title="Top Chart"></i>
+                        <li><a href="<?= base_url(); ?>podcasts" class="nav-link scrollto"><i class="bx bx-headphone"></i>
                                 <span>Podcast</span></a></li>
-                        <li><a href="<?= base_url(); ?>index#event" class="nav-link scrollto"><i class="bx bx-calendar-event" title="Events"></i>
+                        <li><a href="<?= base_url(); ?>index#event" class="nav-link scrollto"><i class="bx bx-calendar-event"></i>
                                 <span>Events</span></a></li>
-                        <li><a href="<?= base_url(); ?>index#achievement" class="nav-link scrollto"><i class="bx bx-trophy" title="Achievements"></i>
+                        <li><a href="<?= base_url(); ?>index#achievement" class="nav-link scrollto"><i class="bx bx-trophy"></i>
                                 <span>Achievements</span></a></li>
-                        <li><a href="<?= base_url(); ?>index#news" class="nav-link scrollto"><i class="bx bx-news" title="Rapma News"></i>
+                        <li><a href="<?= base_url(); ?>index#news" class="nav-link scrollto"><i class="bx bx-news"></i>
                                 <span>Rapma News</span></a></li>
-                        <li><a href="<?= base_url(); ?>index#contact" class="nav-link scrollto"><i class="bx bx-envelope" title="Contact"></i>
+                        <li><a href="<?= base_url(); ?>index#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
                                 <span>Contact</span></a></li>
                     </ul>
                 </nav>
-                <audio id="demosMenu" controls autoplay style="width: auto; height: 25px;">
+                <audio id="demosMenu" style="width: auto; height: 25px;" controls autoplay>
                     <source src="<?= $setting['streaming']; ?>" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
         </header>
-    <?php endforeach ?>
 
+        <!-- Main Content -->
+        <?= $this->renderSection('page-content'); ?>
 
-    <!-- Main Content -->
-    <?= $this->renderSection('page-content'); ?>
-
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="copyright">
-                Copyright <strong><span><?= date('Y'); ?> <a href="https://rapmafm.com:2222" style="color:black;" target="_blank"> &copy;</a> Rapma FM</span></strong>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="copyright">
+                    Copyright <strong><span><?= date('Y'); ?> <a href="https://rapmafm.com:2222" style="color:black;" target="_blank"> &copy;</a> <?= $setting['owner']; ?></span></strong>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    <?php endforeach ?>
 
     <!-- JavaScript -->
     <script src="<?= base_url(); ?>js/aos/aos.js"></script>
@@ -116,11 +110,6 @@
     <script src="<?= base_url(); ?>vendor/jquery/jquery.min.js"></script>
     <script src="<?= base_url(); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url(); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- JS Link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Main JavaScript -->
     <script src="<?= base_url(); ?>js/main-frontend.js"></script>
