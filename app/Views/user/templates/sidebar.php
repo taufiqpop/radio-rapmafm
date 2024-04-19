@@ -142,6 +142,14 @@
                 <span>Struktur Organisasi</span>
             </a>
         </li>
+
+        <!-- Mini Games -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>control/minigames">
+                <i class="fas fa-gamepad"></i>
+                <span>Mini Games</span>
+            </a>
+        </li>
     <?php endif; ?>
 
     <!-- Admisi Off Air -->

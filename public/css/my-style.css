@@ -113,3 +113,39 @@
 trix-editor {
   background-color: white;
 }/*# sourceMappingURL=my-style.css.map */
+
+/* Mini Games */
+.minigames {
+  transition: 0.5s;
+}
+
+.minigames:hover {
+  transform: scale(1.1);
+}
+
+/* Events */
+.eventrapma {
+  transition: 0.5s;
+}
+
+.eventrapma:hover {
+  transform: scale(1.05);
+}
+
+/* Achievement */
+.achievementrapma {
+  transition: 0.5s;
+}
+
+.achievementrapma:hover {
+  transform: scale(1.05);
+}
+
+/* Rapma News */
+.rapmanews {
+  transition: 0.5s;
+}
+
+.rapmanews:hover {
+  transform: scale(1.03);
+}

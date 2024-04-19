@@ -37,6 +37,7 @@
 
     <!-- My CSS -->
     <link href="<?= base_url(); ?>css/my-style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -64,13 +65,15 @@
                                 <span>Structure</span></a></li>
                         <li><a href="<?= base_url(); ?>index#program" class="nav-link scrollto"><i class="bx bx-microphone"></i>
                                 <span>Program</span></a></li>
+                        <li><a href="<?= base_url(); ?>index#minigames" class="nav-link scrollto"><i class="bx bx-joystick"></i>
+                                <span>Mini Games</span></a></li>
                         <li><a href="<?= base_url(); ?>index#chart" class="nav-link scrollto"><i class="bx bx-music"></i>
                                 <span>Top Chart</span></a></li>
                         <li><a href="<?= base_url(); ?>podcasts" class="nav-link scrollto"><i class="bx bx-headphone"></i>
                                 <span>Podcast</span></a></li>
-                        <li><a href="<?= base_url(); ?>index#event" class="nav-link scrollto"><i class="bx bx-calendar-event"></i>
+                        <li><a href="<?= base_url(); ?>index#events" class="nav-link scrollto"><i class="bx bx-calendar-event"></i>
                                 <span>Events</span></a></li>
-                        <li><a href="<?= base_url(); ?>index#achievement" class="nav-link scrollto"><i class="bx bx-trophy"></i>
+                        <li><a href="<?= base_url(); ?>index#achievements" class="nav-link scrollto"><i class="bx bx-trophy"></i>
                                 <span>Achievements</span></a></li>
                         <li><a href="<?= base_url(); ?>index#news" class="nav-link scrollto"><i class="bx bx-news"></i>
                                 <span>Rapma News</span></a></li>

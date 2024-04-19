@@ -37,12 +37,15 @@ $routes->add('/podcasts', 'Home::podcasts');
 $routes->add('/contact/insert', 'Home::insert');
 
 // RAPMAFEST //
-$routes->get('/rapmafest8', 'Rapmafest8::index');
-$routes->get('/rapmafest9', 'Rapmafest9::index');
-$routes->get('/rapmafest10', 'Rapmafest10::index');
+$routes->get('/rapmafest8', 'Home::rapmafest8');
+$routes->get('/rapmafest9', 'Home::rapmafest9');
+$routes->get('/rapmafest10', 'Home::rapmafest10');
 
 // RAPMADAY
-$routes->get('/rapmaday8', 'rapmaday8::index');
+$routes->get('/rapmaday8', 'Home::rapmaday8');
+
+// Mini Games
+$routes->get('/games/tictactoe', 'Home::tictactoe');
 
 // Admin
 $routes->add('/admin', 'Admin::index', ['filter' => 'role:Admin, GM']);
@@ -142,6 +145,14 @@ $routes->get('/control/structure/edit/(:num)', 'Structure::edit/$1', ['filter' =
 $routes->get('/control/structure/member', 'Structure::member', ['filter' => 'role:Admin, AOn']);
 $routes->add('/structure/update/(:num)', 'Structure::update/$1', ['filter' => 'role:Admin, AOn']);
 $routes->add('/structure/member/update/(:num)', 'Structure::new/$1', ['filter' => 'role:Admin, AOn']);
+
+// Mini Games
+$routes->add('/control/minigames', 'MiniGames::index', ['filter' => 'role:Admin, GM, MU, AOn']);
+$routes->get('/control/minigames/form', 'MiniGames::form', ['filter' => 'role:Admin, AOn']);
+$routes->get('/control/minigames/edit/(:num)', 'MiniGames::edit/$1', ['filter' => 'role:Admin, AOn']);
+$routes->delete('/control/minigames/(:num)', 'MiniGames::delete/$1', ['filter' => 'role:Admin, AOn']);
+$routes->add('/minigames/insert', 'MiniGames::insert', ['filter' => 'role:Admin, AOn']);
+$routes->add('/minigames/update/(:num)', 'MiniGames::update/$1', ['filter' => 'role:Admin, AOn']);
 
 // Inventaris
 $routes->add('/control/inventaris', 'Inventaris::index', ['filter' => 'role:Admin, GM, MU, AOff']);

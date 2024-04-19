@@ -101,7 +101,7 @@
 
   <main id="main">
     <!-- About -->
-    <section id="about" class="portfolio section-bg">
+    <section id="about" class="section-bg">
       <div class="container">
         <div class="section-title">
           <h2 class="text-center">About</h2>
@@ -178,9 +178,9 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active" title="All Program">All</li>
-              <li data-filter=".filter-card" title="Special Program">Special Program</li>
-              <li data-filter=".filter-app" title="Regular Program">Regular Program</li>
-              <li data-filter=".filter-book" title="Podcast">Podcast</li>
+              <li data-filter=".filter-special" title="Special Program">Special</li>
+              <li data-filter=".filter-regular" title="Regular Program">Regular</li>
+              <li data-filter=".filter-podcast" title="Podcast">Podcast</li>
             </ul>
           </div>
         </div>
@@ -202,8 +202,36 @@
       </div>
     </section>
 
+    <!-- Mini Games -->
+    <section id="minigames">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="text-center">Mini Games</h2>
+        </div>
+        <?php foreach ($minigames as $index => $games) : ?>
+          <?php $data = json_decode($games['value']) ?>
+          <div class="row" data-aos="fade-in">
+            <div class="col-md-3">
+              <a href="<?= base_url(); ?>games/<?= $data->link; ?>">
+                <div class="card bg-dark text-white minigames">
+                  <img class="card-img img-fluid" src="<?= base_url(); ?>img/minigames/<?= $data->images; ?>">
+                  <div class="card-img-overlay d-flex align-items-center p-0">
+                    <h5 class="card-title text-center flex-fill p-4 fs-3" style="background-color: rgba(0,0,0,0.5)">
+                      <marquee behavior="alternate" direction="left" scrolldelay="50" truespeed>
+                        <strong><?= $data->nama; ?></strong>
+                      </marquee>
+                    </h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </section>
+
     <!-- Top Chart -->
-    <section id="chart">
+    <section id="chart" class="section-bg">
       <div class="container">
         <div class="section-title">
           <h2 class="text-center">Rapma Top 15</h2>
@@ -221,8 +249,8 @@
         </div>
     </section>
 
-    <!-- Event -->
-    <section id="event" class="portfolio section-bg">
+    <!-- Events -->
+    <section id="events">
       <div class="container">
         <div class="row g-4 g-md-6">
           <div class="section-title">
@@ -235,7 +263,7 @@
                 <center>
                   <h2 class="card-title"><b><?= $data->nama; ?></b></h2>
                 </center>
-                <center>
+                <center class="eventrapma">
                   <img class="card-img-top" src="<?= base_url(); ?>img/events/<?= $data->images; ?>" style="width:100%">
                 </center>
                 <div class="card-body">
@@ -250,8 +278,8 @@
       </div>
     </section>
 
-    <!-- Achievement -->
-    <section id="achievement">
+    <!-- Achievements -->
+    <section id="achievements" class="section-bg">
       <div class="container">
         <div class="row g-2 g-lg-4">
           <div class="section-title">
@@ -263,7 +291,9 @@
               <div class="card">
                 <center>
                   <h5 class="card-title p-2"><?= $data->judul; ?> <br>(<?= $achievement['tahun']; ?>)</h5>
-                  <img class="card-img-top px-3" src="<?= base_url(); ?>img/achievements/<?= $data->images ?>">
+                  <div class="achievementrapma">
+                    <img class="card-img-top px-3" src="<?= base_url(); ?>img/achievements/<?= $data->images ?>">
+                  </div>
                   <div class="card-body">
                     <a href="https://www.instagram.com/p/BwyOA9ehluQ/?utm_source=ig_web_copy_link" target="_blank" class="btn btn-success">See Details</a>
                   </div>
@@ -276,7 +306,7 @@
     </section>
 
     <!-- Rapma News -->
-    <section id="news" class="portfolio section-bg">
+    <section id="news">
       <div class="container">
         <div class="row g-2 g-lg-4">
           <div class="section-title">
@@ -286,7 +316,9 @@
             <?php $data = json_decode($berita['value']) ?>
             <div class="col-12 col-lg-4" data-aos="fade-up">
               <div class="card" style="min-height: 700px;">
-                <img class="card-img-top img-fluid p-2 mh-300" src="<?= base_url(); ?>img/beritaweb/<?= $data->images; ?>">
+                <div class="rapmanews">
+                  <img class="card-img-top img-fluid p-2 mh-300" src="<?= base_url(); ?>img/beritaweb/<?= $data->images; ?>">
+                </div>
                 <small style="color:slategray;" class="text-center">(<?= $data->hari; ?>, <?= $data->tanggal; ?>)</small>
                 <div class="card-body text-center">
                   <a href="<?= $data->link; ?>" target="_blank">

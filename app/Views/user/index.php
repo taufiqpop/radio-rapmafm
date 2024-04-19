@@ -128,6 +128,63 @@
                         </div>
                     </div>
 
+                    <!-- Total Inventaris -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Inventaris</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlInventaris; ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="<?= base_url(); ?>control/inventaris">
+                                            <i class="fas fa-database fa-2x text-success"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Peminjaman -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Peminjaman</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlPeminjaman; ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="<?= base_url(); ?>control/peminjaman">
+                                            <i class="fas fa-people-carry fa-2x text-success"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Kerja Bakti -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Kerja Bakti</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlKerjaBakti; ?></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="<?= base_url(); ?>control/kerjabakti">
+                                            <i class="fas fa-broom fa-2x text-success"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Total Data Konten -->
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card border-left-info shadow h-100 py-2">
@@ -185,56 +242,18 @@
                         </div>
                     </div>
 
-                    <!-- Total Inventaris -->
+                    <!-- Total Mini Games -->
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card border-left-info shadow h-100 py-2">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Inventaris</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlInventaris; ?></div>
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Mini Games</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlMiniGames; ?></div>
                                     </div>
                                     <div class="col-auto">
-                                        <a href="<?= base_url(); ?>control/inventaris">
-                                            <i class="fas fa-database fa-2x text-success"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Total Peminjaman -->
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-success shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Peminjaman</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlPeminjaman; ?></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="<?= base_url(); ?>control/peminjaman">
-                                            <i class="fas fa-people-carry fa-2x text-success"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Total Kerja Bakti -->
-                    <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-left-success shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Kerja Bakti</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlKerjaBakti; ?></div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="<?= base_url(); ?>control/kerjabakti">
-                                            <i class="fas fa-broom fa-2x text-success"></i>
+                                        <a href="<?= base_url(); ?>control/minigames">
+                                            <i class="fas fa-gamepad fa-2x text-info"></i>
                                         </a>
                                     </div>
                                 </div>

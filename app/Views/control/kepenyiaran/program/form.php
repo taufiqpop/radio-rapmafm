@@ -36,9 +36,9 @@
                     <label for="filter" class="col-sm-2 col-form-label">Filter</label>
                     <div class="col-sm-10">
                         <select name="filter">
-                            <option value="filter-app">Regular</option>
-                            <option value="filter-card">Special</option>
-                            <option value="filter-book">Podcast</option>
+                            <option value="filter-regular">Regular</option>
+                            <option value="filter-special">Special</option>
+                            <option value="filter-podcast">Podcast</option>
                         </select>
                     </div>
                 </div>

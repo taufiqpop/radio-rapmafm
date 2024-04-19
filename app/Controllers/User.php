@@ -20,6 +20,7 @@ class User extends BaseController
     protected $achievementsModel;
     protected $eventsModel;
     protected $kontenModel;
+    protected $minigamesModel;
     protected $inventarisModel;
     protected $peminjamanModel;
     protected $kerjabaktiModel;
@@ -78,6 +79,7 @@ class User extends BaseController
         $this->achievementsModel    = new \App\Models\AchievementsModel();
         $this->eventsModel          = new \App\Models\EventsModel();
         $this->kontenModel          = new \App\Models\KontenModel();
+        $this->minigamesModel       = new \App\Models\MiniGamesModel();
         $this->inventarisModel      = new \App\Models\InventarisModel();
         $this->peminjamanModel      = new \App\Models\PeminjamanModel();
         $this->kerjabaktiModel      = new \App\Models\KerjaBaktiModel();
@@ -141,6 +143,7 @@ class User extends BaseController
             'jmlAchievements'       => $this->achievementsModel->jumlahAchievements(),
             'jmlEvents'             => $this->eventsModel->jumlahEvents(),
             'jmlKonten'             => $this->kontenModel->jumlahKonten(),
+            'jmlMiniGames'          => $this->minigamesModel->jumlahMiniGames(),
             'jmlInventaris'         => $this->inventarisModel->jumlahInventaris(),
             'jmlPeminjaman'         => $this->peminjamanModel->jumlahPeminjaman(),
             'jmlKerjaBakti'         => $this->kerjabaktiModel->jumlahKerjaBakti(),

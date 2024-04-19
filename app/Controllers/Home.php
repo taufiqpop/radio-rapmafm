@@ -16,11 +16,12 @@ class Home extends BaseController
     protected $podcastModel;
     protected $penyiarModel;
     protected $settingsModel;
+    protected $minigamesModel;
 
     public function __construct()
     {
         $this->aboutModel        = new \App\Models\AboutModel();
-        $this->beritawebModel = new \App\Models\BeritaWebModel();
+        $this->beritawebModel    = new \App\Models\BeritaWebModel();
         $this->achievementsModel = new \App\Models\AchievementsModel();
         $this->memberModel       = new \App\Models\MemberModel();
         $this->eventsModel       = new \App\Models\EventsModel();
@@ -31,6 +32,7 @@ class Home extends BaseController
         $this->podcastModel      = new \App\Models\PodcastModel();
         $this->penyiarModel      = new \App\Models\PenyiarModel();
         $this->settingsModel     = new \App\Models\SettingsModel();
+        $this->minigamesModel    = new \App\Models\MiniGamesModel();
     }
 
     public function index()
@@ -58,6 +60,7 @@ class Home extends BaseController
             'structure'     => $this->structureModel->paginate(5, 'structure'),
             'topchart'      => $this->topchartModel->paginate(5, 'topchart'),
             'penyiar'       => $this->penyiarModel->paginate(1, 'penyiar'),
+            'minigames'     => $this->minigamesModel->paginate(10, 'minigames'),
             'settings'      => $this->settingsModel->paginate(5, 'settings'),
         ];
 
@@ -102,5 +105,57 @@ class Home extends BaseController
         ];
 
         return view('home/podcasts', $data);
+    }
+
+    // Events
+    // RAPMAFEST 8
+    public function rapmafest8()
+    {
+        $data = [
+            'title' => 'Rapma FM | RAPMAFEST 8',
+        ];
+
+        return view('home/events/rapmafest8/index', $data);
+    }
+
+    // RAPMADAY 8
+    public function rapmaday8()
+    {
+        $data = [
+            'title' => 'Rapma FM | RAPMADAY 8',
+        ];
+
+        return view('home/events/rapmaday8/index', $data);
+    }
+
+    // RAPMAFEST 9
+    public function rapmafest9()
+    {
+        $data = [
+            'title' => 'Rapma FM | RAPMAFEST 9',
+        ];
+
+        return view('home/events/rapmafest9/index', $data);
+    }
+
+    // RAPMAFEST 10
+    public function rapmafest10()
+    {
+        $data = [
+            'title' => 'Rapma FM | RAPMAFEST 10',
+        ];
+
+        return view('home/events/rapmafest10/index', $data);
+    }
+
+    // Mini Games
+    public function tictactoe()
+    {
+        $data = [
+            'title'     => 'Rapma FM | Tic Tac Toe',
+            'settings'  => $this->settingsModel->paginate(1, 'settings'),
+        ];
+
+        return view('home/minigames/tictactoe', $data);
     }
 }
