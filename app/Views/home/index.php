@@ -208,9 +208,9 @@
         <div class="section-title">
           <h2 class="text-center">Mini Games</h2>
         </div>
-        <?php foreach ($minigames as $index => $games) : ?>
-          <?php $data = json_decode($games['value']) ?>
-          <div class="row" data-aos="fade-in">
+        <div class="row" data-aos="fade-in">
+          <?php foreach ($minigames as $index => $games) : ?>
+            <?php $data = json_decode($games['value']) ?>
             <div class="col-md-3">
               <a href="<?= base_url(); ?>games/<?= $data->link; ?>">
                 <div class="card bg-dark text-white minigames">
@@ -225,8 +225,8 @@
                 </div>
               </a>
             </div>
-          </div>
-        <?php endforeach; ?>
+          <?php endforeach; ?>
+        </div>
       </div>
     </section>
 

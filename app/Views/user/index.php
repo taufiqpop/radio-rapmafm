@@ -195,7 +195,7 @@
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlKonten; ?></div>
                                     </div>
                                     <div class="col-auto">
-                                        <a href="<?= base_url(); ?>control/events">
+                                        <a href="<?= base_url(); ?>control/konten">
                                             <i class="fas fa-chart-bar fa-2x text-info"></i>
                                         </a>
                                     </div>
@@ -529,7 +529,7 @@
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlNewsflash; ?></div>
                                     </div>
                                     <div class="col-auto">
-                                        <a href="<?= base_url(); ?>control/livereport">
+                                        <a href="<?= base_url(); ?>control/newsflash">
                                             <i class="fas fa-bolt fa-2x text-danger"></i>
                                         </a>
                                     </div>
