@@ -156,6 +156,6 @@ class Home extends BaseController
             'settings'  => $this->settingsModel->paginate(1, 'settings'),
         ];
 
-        return view('home/minigames/tictactoe', $data);
+        return view('home/minigames/tictactoe/index', $data);
     }
 }
