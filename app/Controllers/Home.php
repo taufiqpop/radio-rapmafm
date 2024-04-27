@@ -148,7 +148,7 @@ class Home extends BaseController
         return view('home/events/rapmafest10/index', $data);
     }
 
-    // Mini Games
+    // Mini Games || Tic Tac Toe
     public function tictactoe()
     {
         $data = [
@@ -157,5 +157,16 @@ class Home extends BaseController
         ];
 
         return view('home/minigames/tictactoe/index', $data);
+    }
+
+    // Mini Games || Memory Card
+    public function memorycard()
+    {
+        $data = [
+            'title'     => 'Rapma FM | Memory Cards',
+            'settings'  => $this->settingsModel->paginate(1, 'settings'),
+        ];
+
+        return view('home/minigames/memorycards/index', $data);
     }
 }

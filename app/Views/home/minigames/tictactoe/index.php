@@ -2,19 +2,18 @@
 <?= $this->section('page-content'); ?>
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>minigames/tictactoe/src/tictactoe.css">
+<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>minigames/tictactoe/src/style.css">
 
 <!-- Podcast -->
 <main id="main">
   <section id="tictactoe">
     <div class="container">
       <div class="section-title">
-        <h2 class="text-center">Mini Games</h2>
-        <h1 class="text-center">-- Tic Tac Toe --</h1>
+        <h2 class="text-center">Mini Games || Tic Tac Toe</h2>
       </div>
-      <b>
+      <strong>
         <p id="print"></p>
-      </b>
+      </strong>
       <br>
       <p id="ins">
         Game Dimulai Jika Kamu Klik Dalam Kotak Permainan
@@ -50,6 +49,6 @@
 </main>
 
 <!-- JS -->
-<script src="<?= base_url(); ?>minigames/tictactoe/src/tictactoe.js"></script>
+<script src="<?= base_url(); ?>minigames/tictactoe/src/script.js"></script>
 
 <?= $this->endSection(); ?>

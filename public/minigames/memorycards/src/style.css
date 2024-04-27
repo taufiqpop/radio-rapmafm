@@ -1,0 +1,150 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.wrappers{
+  padding: 25px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.kartus, .kartu, .pov, .rincian, p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kartus{
+  padding-right: 32px;
+  height: 350px;
+  width: 350px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.kartus .kartu{
+  cursor: pointer;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  height: calc(100% / 4 - 10px);
+  width: calc(100% / 4 - 10px);
+}
+.kartu.shake{
+  animation: shake 0.35s ease-in-out;
+}
+@keyframes shake {
+  0%, 100%{
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(-13px);
+  }
+  40%{
+    transform: translateX(13px);
+  }
+  60%{
+    transform: translateX(-8px);
+  }
+  80%{
+    transform: translateX(8px);
+  }
+}
+.kartus .kartu .pov{
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  background: #fff;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  transition: transform 0.25s linear;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.kartu .pov-front img{
+  max-width: 17px;
+}
+.kartu .pov-back{
+  transform: rotateY(-180deg);
+}
+.kartu .pov-back img{
+  max-width: 40px;
+}
+.kartu.flip .pov-front{
+  transform: rotateY(180deg);
+}
+.kartu.flip .pov-back{
+  transform: rotateY(0);
+}
+
+.rincian{
+  width: 100%;
+  margin-top: 15px;
+  padding: 0 20px;
+  border-radius: 7px;
+  background: #fff;
+  height: calc(100% / 4 - 30px);
+  justify-content: space-between;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.rincian p{
+  font-size: 16px;
+  padding-top: 14px;
+  height: 16px;
+}
+.rincian p span{
+  margin-left: 8px;
+}
+
+.rincian button{
+  cursor: pointer;
+  font-size: 14px;
+  color: #008C52;
+  border-radius: 4px;
+  padding: 4px 4px;
+  background: #fff;
+  border: 2px solid #008C52;
+  transition: 0.3s ease;
+}
+.rincian button:hover{
+  color: #fff;
+  background: #008C52;
+}
+
+@media screen and (max-width: 700px) {
+  .kartus{
+    height: 350px;
+    width: 350px;
+  }
+  .kartu .pov-front img{
+    max-width: 16px;
+  }
+  .kartu .pov-back img{
+    max-width: 40px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .kartus{
+    height: 300px;
+    width: 300px;
+  }
+  .kartu .pov-back img{
+    max-width: 35px;
+  }
+  .rincian{
+    margin-top: 10px;
+    padding: 0 15px;
+    height: calc(100% / 4 - 20px);
+  }
+  .rincian p{
+    height: 15px;
+    font-size: 12px;
+    padding-right: 13px;
+  }
+  .rincian button{
+    font-size: 8px;
+    padding: 5px 10px;
+    border: none;
+    color: #fff;
+    background: #008C52;
+  }
+}
