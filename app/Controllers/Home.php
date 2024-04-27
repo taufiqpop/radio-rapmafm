@@ -160,7 +160,7 @@ class Home extends BaseController
     }
 
     // Mini Games || Memory Cards
-    public function memorycard()
+    public function memorycards()
     {
         $data = [
             'title'     => 'Rapma FM | Memory Cards',
@@ -179,5 +179,27 @@ class Home extends BaseController
         ];
 
         return view('home/minigames/quiz/index', $data);
+    }
+
+    // Mini Games || Typing Test
+    public function typing()
+    {
+        $data = [
+            'title'     => 'Rapma FM | Typing Test',
+            'settings'  => $this->settingsModel->paginate(1, 'settings'),
+        ];
+
+        return view('home/minigames/typing/index', $data);
+    }
+
+    // Mini Games || Snake
+    public function snake()
+    {
+        $data = [
+            'title'     => 'Rapma FM | Snake',
+            'settings'  => $this->settingsModel->paginate(1, 'settings'),
+        ];
+
+        return view('home/minigames/snake/index', $data);
     }
 }
