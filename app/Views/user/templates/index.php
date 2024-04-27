@@ -52,7 +52,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto" style="color: black;">
-                        <span>Copyright <strong><?= date('Y'); ?> &copy; Taufiq Pop</span></strong>
+                        <span><a href="https://pdki-indonesia.dgip.go.id/search?nomor=EC00202336098&type=copyright&keyword=rapma+fm&id=d91a5e8620b933340f84680116cd8cc0265e0eccc3b1e27bb648fcc0f4b42a50&page=1" target="_blank" style="color: black; text-decoration: none;">Copyright</a> <strong><?= date('Y'); ?> &copy; <a href="https://drive.google.com/file/d/1nfa2ZLJhaE8l9t1I5TggJp8cHY91-3Rm/view" target="_blank" style="color: black; text-decoration: none;">Taufiq Pop</a></span></strong>
                     </div>
                 </div>
             </footer>
