@@ -211,7 +211,7 @@
         <div class="row" data-aos="fade-in">
           <?php foreach ($minigames as $index => $games) : ?>
             <?php $data = json_decode($games['value']) ?>
-            <div class="col-md-3">
+            <div class="col-md-3 mb-4">
               <a href="<?= base_url(); ?>games/<?= $data->link; ?>">
                 <div class="card bg-dark text-white minigames">
                   <img class="card-img img-fluid" src="<?= base_url(); ?>img/minigames/<?= $data->images; ?>">

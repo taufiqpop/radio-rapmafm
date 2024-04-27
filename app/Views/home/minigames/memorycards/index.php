@@ -116,6 +116,7 @@
               <button>Refresh</button>
             </div>
           </ul>
+          <a href="<?= base_url(); ?>index#minigames" class="btn btn-dark">&larr; Back</a>
         </div>
       </center>
     </div>

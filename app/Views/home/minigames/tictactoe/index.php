@@ -43,7 +43,10 @@
       <br><br>
 
       <button id="but" onclick="myfunc_2()">RESET</button>
-      <br><br><br><br><br>
+      <br><br>
+      <a href="<?= base_url(); ?>index#minigames" class="btn btn-dark">&larr; Back</a>
+
+      <br><br><br>
     </div>
   </section>
 </main>
