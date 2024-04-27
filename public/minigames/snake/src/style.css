@@ -1,18 +1,9 @@
 /* Import Google font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #E3F2FD;
-}
+
 .wrapper {
   width: 65vmin;
   height: 70vmin;

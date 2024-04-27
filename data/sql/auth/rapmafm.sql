@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2024 at 05:35 AM
+-- Generation Time: Apr 27, 2024 at 10:12 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,7 +40,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`id`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '{\"deskripsi\":\"<p style=\\\"text-align: justify;\\\">&nbsp; &nbsp; &nbsp; &nbsp; RAPMA FM sebagai Radio komunitas kampus dan satu-satunya media elektronik yang dimiliki oleh Universitas Muhammadiyah Surakarta mempunyai peranan sebagai media informasi, hiburan, dan dakwah dengan istilah yang dipakai untuk aplikasi siar yaitu smart, fun, and pure dengan slogan &ldquo;The First Edutainment Channel In Solo&rdquo;. RAPMA FM sendiri sebagai salah satu UKM memberikan kontribusi untuk Universitas Muhammadiyah Surakarta dan telah diberikan kepercayaan untuk mempublikasikan dan menginformasikan tentang segala hal mengenai seputaran dunia kampus dan hasil-hasil kampus Universitas Muhammadiyah Surakarta kepada mahasiswa, masyarakat luar ataupun khalayak ramai.<\\/p>\",\"link\":\"http:\\/\\/rapmafm.ukm.ums.ac.id\\/p\\/about-us.html\"}', '2024-03-13 02:58:55', '2024-03-20 04:54:37', '2024-03-13 02:58:55');
+(1, '{\"deskripsi\":\"RAPMA FM sebagai Radio komunitas kampus dan satu-satunya media elektronik yang dimiliki oleh Universitas Muhammadiyah Surakarta mempunyai peranan sebagai media informasi, hiburan, dan dakwah dengan istilah yang dipakai untuk aplikasi siar yaitu smart, fun, and pure dengan slogan \\u201cThe First Edutainment Channel In Solo\\u201d. RAPMA FM sendiri sebagai salah satu UKM memberikan kontribusi untuk Universitas Muhammadiyah Surakarta dan telah diberikan kepercayaan untuk mempublikasikan dan menginformasikan tentang segala hal mengenai seputaran dunia kampus dan hasil-hasil kampus Universitas Muhammadiyah Surakarta kepada mahasiswa, masyarakat luar ataupun khalayak ramai\",\"link\":\"http:\\/\\/rapmafm.ukm.ums.ac.id\\/p\\/about-us.html\"}', '2024-03-13 02:58:55', '2024-03-27 01:52:25', '2024-03-13 02:58:55');
 
 -- --------------------------------------------------------
 
@@ -100,6 +100,21 @@ INSERT INTO `alumni` (`id`, `key`, `value`, `tahun`, `created_at`, `updated_at`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `aruskas`
+--
+
+CREATE TABLE `aruskas` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `key` varchar(255) NOT NULL,
+  `value` text NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `deleted_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `audios`
 --
 
@@ -118,7 +133,7 @@ CREATE TABLE `audios` (
 --
 
 INSERT INTO `audios` (`id`, `key`, `value`, `type`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'ID\'s', '{\"title\":\"ID\'s\",\"tahun\":\"2019\",\"keterangan\":\"-\",\"status\":\"-\"}', 'ID\'s', '2024-03-20 04:37:27', '2024-03-20 04:37:55', '0000-00-00 00:00:00');
+(1, 'ID\'s', '{\"title\":\"ID\'s\",\"tahun\":\"2019\",\"keterangan\":\"-\",\"status\":\"-\"}', 'ID\'s', '2024-03-20 04:37:27', '2024-03-25 06:59:09', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -369,7 +384,36 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (118, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-23 03:26:21', 1),
 (119, '::1', 'salmawidya@gmail.com', 26, '2024-03-23 03:26:57', 1),
 (120, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-23 03:50:53', 1),
-(121, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-23 03:50:53', 1);
+(121, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-23 03:50:53', 1),
+(122, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-25 04:17:31', 1),
+(123, '::1', 'rezalutfian@gmail.com', 2, '2024-03-25 04:18:38', 1),
+(124, '::1', 'lalapo19@gmail.com', 3, '2024-03-25 04:18:45', 1),
+(125, '::1', 'crewrpm@gmail.com', 27, '2024-03-25 04:27:51', 1),
+(126, '::1', 'alumnirpm@gmail.com', 29, '2024-03-25 04:28:01', 1),
+(127, '::1', 'rezalutfian@gmail.com', 2, '2024-03-25 04:35:04', 1),
+(128, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-25 05:22:52', 1),
+(129, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-27 01:02:11', 1),
+(130, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-27 02:12:48', 1),
+(131, '::1', 'alumnirpm@gmail.com', 29, '2024-03-27 02:13:35', 1),
+(132, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-27 02:14:45', 1),
+(133, '::1', 'crewrpm@gmail.com', 27, '2024-03-27 02:15:14', 1),
+(134, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-02 03:54:49', 1),
+(135, '::1', 'thifalkhansa@gmail.com', 22, '2024-04-02 05:43:32', 1),
+(136, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-04 06:51:42', 1),
+(137, '::1', 'sidamlighfal@gmail.com', 16, '2024-04-04 06:56:29', 1),
+(138, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-04 06:57:24', 1),
+(139, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-04 07:03:30', 1),
+(140, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-04 07:03:30', 1),
+(141, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-17 03:32:04', 1),
+(142, '::1', 'taufiqpop', NULL, '2024-04-19 03:39:50', 0),
+(143, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-19 03:39:52', 1),
+(144, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-19 03:52:54', 1),
+(145, '::1', 'iranf@gmail.com', 19, '2024-04-19 04:04:20', 1),
+(146, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-19 05:42:25', 1),
+(147, '::1', 'taufiqpop', NULL, '2024-04-27 04:24:59', 0),
+(148, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-27 04:25:02', 1),
+(149, '::1', 'iranf@gmail.com', 19, '2024-04-27 04:25:11', 1),
+(150, '::1', 'iranf@gmail.com', 19, '2024-04-27 06:14:04', 1);
 
 -- --------------------------------------------------------
 
@@ -470,7 +514,7 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-28\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/3UQz9EO6DUvuurHthAvlkI?si=9c9273e359c54c02\",\"keterangan\":\"Aman\"}', '2024-03-21 07:17:40', '2024-03-21 07:17:43', '0000-00-00 00:00:00');
+(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-28\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/3UQz9EO6DUvuurHthAvlkI?si=9c9273e359c54c02\",\"keterangan\":\"Aman\"}', '2024-03-21 07:17:40', '2024-03-25 06:47:46', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -492,8 +536,8 @@ CREATE TABLE `capeng` (
 --
 
 INSERT INTO `capeng` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, 'Pop', '{\"nama\":\"Pop\",\"ttd\":\"\\u2705\",\"hari\":\"Sabtu\",\"tanggal\":\"2024-03-16\",\"pers\":\"\\u2705\",\"lanyard\":\"\\u2705\",\"pdh\":\"\\u2705\",\"pin\":\"\\u2705\",\"keterangan\":\"-\"}', '2024-03-21 02:52:35', '2024-03-21 03:17:09', '0000-00-00 00:00:00'),
-(3, 'Sidam', '{\"nama\":\"Sidam\",\"ttd\":\"\\u2705\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-12\",\"pers\":\"\\u2705\",\"lanyard\":\"\\u2705\",\"pdh\":\"\\u2014\",\"pin\":\"\\u00d7\",\"keterangan\":\"-\"}', '2024-03-21 03:17:31', '2024-03-21 03:17:51', '0000-00-00 00:00:00');
+(2, 'Pop', '{\"nama\":\"Pop\",\"ttd\":\"\\u2705\",\"hari\":\"Sabtu\",\"tanggal\":\"2024-03-16\",\"pers\":\"\\u2705\",\"lanyard\":\"\\u2705\",\"pdh\":\"\\u2705\",\"pin\":\"\\u2705\",\"keterangan\":\"-\"}', '2024-03-21 02:52:35', '2024-03-25 06:32:20', '0000-00-00 00:00:00'),
+(3, 'Sidam', '{\"nama\":\"Sidam\",\"ttd\":\"\\u2705\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-12\",\"pers\":\"\\u2705\",\"lanyard\":\"\\u2705\",\"pdh\":\"\\u2014\",\"pin\":\"\\u00d7\",\"keterangan\":\"-\"}', '2024-03-21 03:17:31', '2024-03-25 06:32:17', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -515,7 +559,7 @@ CREATE TABLE `crew` (
 --
 
 INSERT INTO `crew` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '', '{\"nama\":\"Taufiq Pop\",\"nickname\":\"Pop\",\"jurusan\":\"Informatika\",\"semester\":\"6\",\"nim\":\"L200190085\",\"domisili\":\"Klaten\",\"nohp\":\"081328024137\",\"status\":\"Aktif\",\"instagram\":\"taufiqpop99\",\"twitter\":\"taufiqpop99\"}', '2024-03-20 05:34:46', '2024-03-21 05:47:36', '0000-00-00 00:00:00');
+(1, '', '{\"nama\":\"Taufiq Pop\",\"nickname\":\"Pop\",\"jurusan\":\"Informatika\",\"semester\":\"6\",\"nim\":\"L200190085\",\"domisili\":\"Klaten\",\"nohp\":\"081328024137\",\"status\":\"Pasif\",\"instagram\":\"taufiqpop99\",\"twitter\":\"taufiqpop99\"}', '2024-03-20 05:34:46', '2024-03-25 06:44:24', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -537,8 +581,7 @@ CREATE TABLE `dendadlibs` (
 --
 
 INSERT INTO `dendadlibs` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Pop', '{\"nama\":\"Pop\",\"acara\":\"Moju-Moju\",\"program\":\"THE GOOD VIBES\",\"tanggal\":\"2024-03-20\",\"hari\":\"Senin\",\"total\":\"6.000\",\"keterangan\":\"LUNAS\"}', '2024-03-20 03:34:57', '2024-03-20 04:02:13', '0000-00-00 00:00:00'),
-(2, 'Pop', '{\"nama\":\"Pop\",\"acara\":\"Photography &  Poster Competition \",\"program\":\"RAPMANESIA\",\"tanggal\":\"2024-03-30\",\"hari\":\"Senin\",\"total\":\"4.000\",\"keterangan\":\"BELUM LUNAS\"}', '2024-03-20 04:02:27', '2024-03-20 04:02:27', '0000-00-00 00:00:00');
+(2, 'Pop', '{\"nama\":\"Pop\",\"acara\":\"Photography &  Poster Competition \",\"program\":\"TOP 15\",\"tanggal\":\"2024-03-30\",\"hari\":\"Sabtu\",\"total\":\"4.000\",\"keterangan\":\"SUDAH LUNAS\"}', '2024-03-20 04:02:27', '2024-03-25 06:09:23', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -566,7 +609,7 @@ INSERT INTO `events` (`id`, `key`, `value`, `tahun`, `created_at`, `updated_at`,
 (3, 'RAPMADAY #8', '{\"nama\":\"RAPMADAY #8\",\"jenis\":\"RAPMADAY\",\"tahun\":\"2022\",\"link\":\"rapmaday8\",\"images\":\"1710311756_46703cd167a29bb1e23b.png\"}', '', '2024-03-13 06:35:56', '2024-03-22 06:09:56', '0000-00-00 00:00:00'),
 (4, 'RAPMAFEST #9', '{\"nama\":\"RAPMAFEST #9\",\"jenis\":\"RAPMAFEST\",\"tahun\":\"2022\",\"link\":\"rapmafest9\",\"images\":\"1710311781_c6212142abe50b84bef9.png\"}', '', '2024-03-13 06:36:21', '2024-03-22 06:10:22', '0000-00-00 00:00:00'),
 (5, 'RAPMADAY #9', '{\"nama\":\"RAPMADAY #9\",\"jenis\":\"RAPMADAY\",\"tahun\":\"2023\",\"link\":\"https:\\/\\/youtu.be\\/wx-mFQCOW7I\",\"images\":\"1710311805_67cdf95c3d07c2f51f37.png\"}', '', '2024-03-13 06:36:45', '2024-03-22 06:07:23', '0000-00-00 00:00:00'),
-(6, 'RAPMAFEST #10', '{\"nama\":\"RAPMAFEST #10\",\"jenis\":\"RAPMAFEST\",\"tahun\":\"2023\",\"link\":\"rapmafest10\",\"images\":\"1710311825_ce70a5d847f061be8766.png\"}', '', '2024-03-13 06:37:05', '2024-03-22 06:08:11', '0000-00-00 00:00:00');
+(6, 'RAPMAFEST #10', '{\"nama\":\"RAPMAFEST #10\",\"jenis\":\"RAPMAFEST\",\"tahun\":\"2023\",\"link\":\"rapmafest10\",\"images\":\"1710311825_ce70a5d847f061be8766.png\"}', '', '2024-03-13 06:37:05', '2024-03-25 05:40:32', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -588,7 +631,8 @@ CREATE TABLE `gmpa` (
 --
 
 INSERT INTO `gmpa` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(3, '2024-03-18', '{\"daritgl\":\"2024-03-18\",\"sampaitgl\":\"2024-03-23\",\"darihari\":\"Senin\",\"sampaihari\":\"Sabtu\",\"subdivisi\":\"GM\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-06\",\"selesaitgl\":\"2024-03-18\",\"mulaihari\":\"Senin\",\"selesaihari\":\"Jum\'at\",\"kendala\":\"-\",\"status\":\"Terlaksana\"}', '2024-03-20 03:11:57', '2024-03-20 03:12:38', '0000-00-00 00:00:00');
+(7, '2024-03-12', '{\"daritgl\":\"2024-03-12\",\"sampaitgl\":\"2024-03-13\",\"darihari\":\"Senin\",\"sampaihari\":\"Minggu\",\"subdivisi\":\"General Manager\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-06\",\"selesaitgl\":\"2024-03-06\",\"mulaihari\":\"-\",\"selesaihari\":\"-\",\"kendala\":\"-\",\"status\":\"Sudah Terlaksana\"}', '2024-03-25 05:30:50', '2024-03-25 06:15:23', '0000-00-00 00:00:00'),
+(8, '2024-03-25', '{\"daritgl\":\"2024-03-25\",\"sampaitgl\":\"2024-03-30\",\"darihari\":\"Minggu\",\"sampaihari\":\"Senin\",\"subdivisi\":\"General Manager\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-11\",\"selesaitgl\":\"2024-04-01\",\"mulaihari\":\"Selasa\",\"selesaihari\":\"Kamis\",\"kendala\":\"-\",\"status\":\"Sudah Terlaksana\"}', '2024-03-27 01:03:04', '2024-03-27 01:03:13', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -610,7 +654,7 @@ CREATE TABLE `iklan` (
 --
 
 INSERT INTO `iklan` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Pop', '{\"nama\":\"Pop\",\"client\":\"MTATV\",\"tglmou\":\"2024-03-13\",\"hari\":\"Kamis\",\"paket\":\"<script src=\\\"\\/\\/cdn.public.flmngr.com\\/FLMNFLMN\\/widgets.js\\\"><\\/script>\",\"harga\":\"10.000.000\",\"status\":\"Tidak Tembus\"}', '2024-03-20 03:31:37', '2024-03-20 03:47:41', '0000-00-00 00:00:00');
+(1, 'Pop', '{\"nama\":\"Pop\",\"client\":\"MTATV\",\"tglmou\":\"2024-03-13\",\"hari\":\"Kamis\",\"paket\":\"<ul><li>Haloo<\\/li><\\/ul>\",\"harga\":\"10.000.000\",\"status\":\"Sudah Tembus\"}', '2024-03-20 03:31:37', '2024-04-02 05:15:23', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -632,7 +676,7 @@ CREATE TABLE `infografis` (
 --
 
 INSERT INTO `infografis` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-06\",\"keterangan\":\"-\"}', '2024-03-21 07:15:27', '2024-03-21 07:15:31', '0000-00-00 00:00:00');
+(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-06\",\"keterangan\":\"-\"}', '2024-03-21 07:15:27', '2024-03-25 06:54:23', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -656,7 +700,7 @@ CREATE TABLE `inventaris` (
 --
 
 INSERT INTO `inventaris` (`id`, `key`, `value`, `kode`, `tahun`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Sound System', '{\"barang\":\"Sound System\",\"nomor\":\"2\",\"jumlah\":\"2\",\"kondisi\":\"Baik\",\"tanggal\":\"2024-03-20\",\"hari\":\"Senin\"}', 'B', '21', '2024-03-20 04:56:25', '2024-03-20 04:57:16', '0000-00-00 00:00:00');
+(1, 'Sound System', '{\"barang\":\"Sound System\",\"nomor\":\"2\",\"jumlah\":\"2\",\"kondisi\":\"Baik\",\"tanggal\":\"2024-03-20\",\"hari\":\"Rabu\"}', 'F', '21', '2024-03-20 04:56:25', '2024-03-25 06:23:49', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -722,7 +766,7 @@ CREATE TABLE `kepenyiaran` (
 --
 
 INSERT INTO `kepenyiaran` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-20', '{\"daritgl\":\"2024-03-20\",\"sampaitgl\":\"2024-03-20\",\"darihari\":\"Senin\",\"sampaihari\":\"Sabtu\",\"subdivisi\":\"Manager Kepenyiaran\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-20\",\"selesaitgl\":\"2024-03-20\",\"mulaihari\":\"Senin\",\"selesaihari\":\"Sabtu\",\"kendala\":\"-\",\"status\":\"Terlaksana\"}', '2024-03-20 04:18:36', '2024-03-20 04:20:02', '0000-00-00 00:00:00');
+(1, '2024-03-20', '{\"daritgl\":\"2024-03-20\",\"sampaitgl\":\"2024-03-20\",\"darihari\":\"Senin\",\"sampaihari\":\"Sabtu\",\"subdivisi\":\"Manager Kepenyiaran\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-20\",\"selesaitgl\":\"2024-03-20\",\"mulaihari\":\"Senin\",\"selesaihari\":\"Sabtu\",\"kendala\":\"-\",\"status\":\"Belum Terlaksana\"}', '2024-03-20 04:18:36', '2024-03-25 06:45:47', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -744,7 +788,7 @@ CREATE TABLE `kerjabakti` (
 --
 
 INSERT INTO `kerjabakti` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-03', '{\"tanggal\":\"2024-03-03\",\"hari\":\"Kamis\",\"jmlcrew\":\"1\",\"jmlpengurus\":\"1\",\"alasan\":\"-\",\"kendala\":\"-\",\"status\":\"\\u2705\"}', '2024-03-21 04:07:49', '2024-03-21 04:09:40', '0000-00-00 00:00:00');
+(1, '2024-03-03', '{\"tanggal\":\"2024-03-03\",\"hari\":\"Kamis\",\"jmlcrew\":\"1\",\"jmlpengurus\":\"1\",\"alasan\":\"-\",\"kendala\":\"-\",\"status\":\"\\u2705\"}', '2024-03-21 04:07:49', '2024-03-25 06:26:34', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -766,7 +810,7 @@ CREATE TABLE `konten` (
 --
 
 INSERT INTO `konten` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-07\",\"platform\":\"TikTok\",\"status\":\"\\u2705\",\"keterangan\":\"-\"}', '2024-03-21 05:33:49', '2024-03-21 05:35:29', '0000-00-00 00:00:00');
+(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-07\",\"platform\":\"TikTok\",\"status\":\"Sudah Upload\",\"keterangan\":\"-\"}', '2024-03-21 05:33:49', '2024-03-25 06:20:23', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -833,7 +877,7 @@ CREATE TABLE `livereport` (
 --
 
 INSERT INTO `livereport` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, '2024-02-28', '{\"nama\":\"Pop\",\"hari\":\"Kamis\",\"tanggal\":\"2024-02-28\",\"jam\":\"08:00 - 09:00\",\"lokasi\":\"Edutorium UMS\",\"perihal\":\"Undangan\",\"program\":\"11N1\",\"status\":\"\\u2705\"}', '2024-03-21 06:35:18', '2024-03-21 06:37:42', '0000-00-00 00:00:00');
+(2, '2024-02-28', '{\"nama\":\"Pop\",\"hari\":\"Kamis\",\"tanggal\":\"2024-02-28\",\"jam\":\"08:00 - 09:00\",\"lokasi\":\"Edutorium UMS\",\"perihal\":\"Undangan\",\"program\":\"11N1\",\"status\":\"\\u2705\"}', '2024-03-21 06:35:18', '2024-03-25 06:53:32', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -855,7 +899,7 @@ CREATE TABLE `maganginternal` (
 --
 
 INSERT INTO `maganginternal` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-20', '{\"dari\":\"2024-03-20\",\"sampai\":\"2024-03-13\",\"harimulai\":\"Senin\",\"hariselesai\":\"Jum\'at\",\"mulai\":\"09:00\",\"selesai\":\"23:00\",\"materi\":\"<script src=\\\"\\/\\/cdn.public.flmngr.com\\/FLMNFLMN\\/widgets.js\\\"><\\/script>\",\"pemateri\":\"Dodik Murdiyanto Laksmana Putra, Fajar Khoirul  Umam, & Ginang\",\"tempat\":\"Online via Zoom Meeting\",\"status\":\"Terlaksana\"}', '2024-03-20 05:23:24', '2024-03-20 05:23:33', '0000-00-00 00:00:00');
+(1, '2024-03-20', '{\"dari\":\"2024-03-20\",\"sampai\":\"2024-03-13\",\"harimulai\":\"Senin\",\"hariselesai\":\"Jum\'at\",\"mulai\":\"09:00\",\"selesai\":\"23:00\",\"materi\":\"<div><strong><em>Halo<\\/em><\\/strong><\\/div>\",\"pemateri\":\"Dodik Murdiyanto Laksmana Putra, Fajar Khoirul  Umam, & Ginang\",\"tempat\":\"Online via Zoom Meeting\",\"status\":\"Sudah Terlaksana\"}', '2024-03-20 05:23:24', '2024-04-02 05:12:46', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -877,7 +921,7 @@ CREATE TABLE `marketing` (
 --
 
 INSERT INTO `marketing` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-07', '{\"daritgl\":\"2024-03-07\",\"sampaitgl\":\"2024-04-03\",\"darihari\":\"Senin\",\"sampaihari\":\"Sabtu\",\"subdivisi\":\"Manager Marketing\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-05\",\"selesaitgl\":\"2024-03-20\",\"mulaihari\":\"-\",\"selesaihari\":\"-\",\"kendala\":\"-\",\"status\":\"Tidak Terlaksana\"}', '2024-03-20 03:25:56', '2024-03-20 03:26:20', '0000-00-00 00:00:00');
+(1, '2024-03-07', '{\"daritgl\":\"2024-03-07\",\"sampaitgl\":\"2024-04-03\",\"darihari\":\"Senin\",\"sampaihari\":\"Sabtu\",\"subdivisi\":\"Manager Marketing\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-05\",\"selesaitgl\":\"2024-03-20\",\"mulaihari\":\"-\",\"selesaihari\":\"-\",\"kendala\":\"-\",\"status\":\"Tidak Terlaksana\"}', '2024-03-20 03:25:56', '2024-03-25 06:00:13', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -899,8 +943,7 @@ CREATE TABLE `medpart` (
 --
 
 INSERT INTO `medpart` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-20', '{\"tglmasuk\":\"2024-03-20\",\"hari\":\"Kamis\",\"harimulai\":\"Senin\",\"hariselesai\":\"Jum\'at\",\"tglmulai\":\"2024-03-07\",\"tglselesai\":\"2024-02-26\",\"instansi\":\"Kopma\",\"acara\":\"Photography &  Poster Competition \",\"status\":\"Cancel\",\"jenis\":\"Eksternal\",\"kontraprestasi\":\"<script src=\\\"\\/\\/cdn.public.flmngr.com\\/FLMNFLMN\\/widgets.js\\\"><\\/script>\"}', '2024-03-20 03:29:06', '2024-03-20 03:57:17', '0000-00-00 00:00:00'),
-(2, '2024-03-21', '{\"tglmasuk\":\"2024-03-21\",\"hari\":\"Kamis\",\"harimulai\":\"Senin\",\"hariselesai\":\"Jum\'at\",\"tglmulai\":\"2024-03-20\",\"tglselesai\":\"2024-03-06\",\"instansi\":\"Kopma\",\"acara\":\"Photography &  Poster Competition \",\"status\":\"Belum Terlaksana\",\"jenis\":\"Internal\",\"kontraprestasi\":\"<script src=\\\"\\/\\/cdn.public.flmngr.com\\/FLMNFLMN\\/widgets.js\\\"><\\/script>\"}', '2024-03-20 03:59:37', '2024-03-20 03:59:50', '0000-00-00 00:00:00');
+(1, '2024-03-20', '{\"tglmasuk\":\"2024-03-20\",\"hari\":\"Kamis\",\"harimulai\":\"Senin\",\"hariselesai\":\"Jum\'at\",\"tglmulai\":\"2024-03-07\",\"tglselesai\":\"2024-02-26\",\"instansi\":\"Kopma\",\"acara\":\"Photography &  Poster Competition \",\"status\":\"Cancel\",\"jenis\":\"Eksternal\",\"kontraprestasi\":\"<div><strong>Haloooo<\\/strong><\\/div>\"}', '2024-03-20 03:29:06', '2024-04-02 05:16:30', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -993,7 +1036,35 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 (46, '2024-03-21-061926', 'App\\Database\\Migrations\\Newsflash', 'default', 'App', 1711002037, 6),
 (47, '2024-03-21-065317', 'App\\Database\\Migrations\\Infografis', 'default', 'App', 1711004036, 7),
 (48, '2024-03-21-065326', 'App\\Database\\Migrations\\Blog', 'default', 'App', 1711004036, 7),
-(49, '2024-03-22-073832', 'App\\Database\\Migrations\\Beritaweb', 'default', 'App', 1711093136, 8);
+(49, '2024-03-22-073832', 'App\\Database\\Migrations\\Beritaweb', 'default', 'App', 1711093136, 8),
+(50, '2024-03-23-142606', 'App\\Database\\Migrations\\Aruskas', 'default', 'App', 1711330631, 9),
+(51, '2024-04-19-034930', 'App\\Database\\Migrations\\Minigames', 'default', 'App', 1713499586, 10);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `minigames`
+--
+
+CREATE TABLE `minigames` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `key` varchar(255) NOT NULL,
+  `value` text NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `deleted_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `minigames`
+--
+
+INSERT INTO `minigames` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Tic Tac Toe', '{\"nama\":\"Tic Tac Toe\",\"link\":\"tictactoe\",\"images\":\"1713505211_2950e29d62dd9769e526.jpeg\"}', '2024-04-19 05:40:11', '2024-04-19 05:40:11', '0000-00-00 00:00:00'),
+(2, 'Memory Cards', '{\"nama\":\"Memory Cards\",\"link\":\"memorycards\",\"images\":\"1714192139_8c51eccad115fd09da17.png\"}', '2024-04-27 04:28:59', '2024-04-27 04:29:32', '0000-00-00 00:00:00'),
+(3, 'Quiz', '{\"nama\":\"Quiz\",\"link\":\"quiz\",\"images\":\"1714193776_c643e7df72b1998fc1b9.jpg\"}', '2024-04-27 04:56:16', '2024-04-27 04:56:16', '0000-00-00 00:00:00'),
+(4, 'Typing Test', '{\"nama\":\"Typing Test\",\"link\":\"typing\",\"images\":\"1714203982_5626b7f809aedd5c1699.png\"}', '2024-04-27 07:46:22', '2024-04-27 07:46:22', '0000-00-00 00:00:00'),
+(5, 'Snake', '{\"nama\":\"Snake\",\"link\":\"snake\",\"images\":\"1714203995_192e497d1c78f3367680.png\"}', '2024-04-27 07:46:35', '2024-04-27 07:46:35', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1015,7 +1086,7 @@ CREATE TABLE `mtalent` (
 --
 
 INSERT INTO `mtalent` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-13', '{\"tglmulai\":\"2024-03-13\",\"harimulai\":\"Senin\",\"tglselesai\":\"2024-03-20\",\"hariselesai\":\"Jum\'at\",\"jenis\":\"Rapma Band\",\"instansi\":\"Kopma\",\"acara\":\"Photography &  Poster Competition \",\"talent\":\"Sidam, Ainun \",\"tempat\":\"Online via Zoom Meeting\",\"feetalent\":\"225.000\",\"feerapma\":\"75.000\",\"kontraprestasi\":\"<script src=\\\"\\/\\/cdn.public.flmngr.com\\/FLMNFLMN\\/widgets.js\\\"><\\/script>\"}', '2024-03-20 03:38:57', '2024-03-20 04:10:08', '0000-00-00 00:00:00');
+(1, '2024-03-13', '{\"tglmulai\":\"2024-03-13\",\"harimulai\":\"Senin\",\"tglselesai\":\"2024-03-20\",\"hariselesai\":\"Jum\'at\",\"jenis\":\"Rapma Band\",\"instansi\":\"Kopma\",\"acara\":\"Photography &  Poster Competition \",\"talent\":\"Sidam, Ainun \",\"tempat\":\"Online via Zoom Meeting\",\"feetalent\":\"225.000\",\"feerapma\":\"75.000\",\"kontraprestasi\":\"<ul><li><strong><em>Iklan 1<\\/em><\\/strong><\\/li><li><strong><em>Iklan 2<\\/em><\\/strong><\\/li><\\/ul>\"}', '2024-03-20 03:38:57', '2024-04-02 05:01:36', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1038,7 +1109,7 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `key`, `value`, `tahun`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Kejutan 2020, Harga BBM Turun', '{\"judul\":\"Kejutan 2020, Harga BBM Turun\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-04\",\"penulis\":\"Jurnalistik\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"keterangan\":\"Foto\"}', '2021', '2024-03-21 06:28:17', '2024-03-23 03:11:39', '0000-00-00 00:00:00');
+(1, 'Kejutan 2020, Harga BBM Turun', '{\"judul\":\"Kejutan 2020, Harga BBM Turun\",\"hari\":\"Rabu\",\"tanggal\":\"2024-03-04\",\"penulis\":\"Jurnalistik\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"keterangan\":\"Foto\"}', '2021', '2024-03-21 06:28:17', '2024-03-25 06:51:22', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1060,7 +1131,7 @@ CREATE TABLE `newsflash` (
 --
 
 INSERT INTO `newsflash` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-06\",\"penulis\":\"Jurnalistik\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"kendala\":\"-\",\"keterangan\":\"-\"}', '2024-03-21 06:58:42', '2024-03-21 07:06:04', '0000-00-00 00:00:00');
+(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Jum\'at\",\"tanggal\":\"2024-03-06\",\"penulis\":\"Jurnalistik\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"kendala\":\"-\",\"keterangan\":\"-\"}', '2024-03-21 06:58:42', '2024-03-25 06:55:45', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1104,7 +1175,7 @@ CREATE TABLE `peminjaman` (
 --
 
 INSERT INTO `peminjaman` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'PSM Voca Alkindi', '{\"peminjam\":\"PSM Voca Alkindi\",\"tanggalpinjam\":\"2024-03-18\",\"tanggalkembali\":\"2024-03-21\",\"haripinjam\":\"Senin\",\"harikembali\":\"Sabtu\",\"barang\":\"Sound System\",\"pendapatan\":\"-\",\"keterangan\":\"-\"}', '2024-03-20 04:58:00', '2024-03-20 05:04:55', '0000-00-00 00:00:00');
+(1, 'PSM Voca Alkindi', '{\"peminjam\":\"PSM Voca Alkindi\",\"tanggalpinjam\":\"2024-03-18\",\"tanggalkembali\":\"2024-03-21\",\"haripinjam\":\"Senin\",\"harikembali\":\"Sabtu\",\"barang\":\"Sound System\",\"pendapatan\":\"-\",\"keterangan\":\"-\"}', '2024-03-20 04:58:00', '2024-03-25 06:26:52', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1148,7 +1219,7 @@ CREATE TABLE `pengurus` (
 --
 
 INSERT INTO `pengurus` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, '', '{\"nama\":\"Taufiq Pop\",\"nickname\":\"Pop\",\"divisi\":\"Divisi Umum\",\"subdivisi\":\"Teknisi On Air\",\"jurusan\":\"Informatika\",\"semester\":\"5\",\"nim\":\"L200190085\",\"nia\":\"209.19.557\",\"domisili\":\"Klaten\",\"nohp\":\"081328024137\",\"status\":\"Aktif\",\"instagram\":\"taufiqpop99\",\"twitter\":\"taufiqpop99\"}', '2024-03-21 05:44:31', '2024-03-21 05:46:24', '0000-00-00 00:00:00');
+(2, '', '{\"nama\":\"Taufiq Pop\",\"nickname\":\"Pop\",\"divisi\":\"Divisi Umum\",\"subdivisi\":\"Teknisi On Air\",\"jurusan\":\"Informatika\",\"semester\":\"5\",\"nim\":\"L200190085\",\"nia\":\"209.19.557\",\"domisili\":\"Klaten\",\"nohp\":\"081328024137\",\"status\":\"Pasif\",\"instagram\":\"taufiqpop99\",\"twitter\":\"taufiqpop99\"}', '2024-03-21 05:44:31', '2024-03-25 06:43:09', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1170,7 +1241,7 @@ CREATE TABLE `penyiar` (
 --
 
 INSERT INTO `penyiar` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'BASOSAPI', '{\"program\":\"BASOSAPI\",\"penyiar1\":\"Uli\",\"penyiar2\":\"Sidam\"}', '2024-03-19 03:52:45', '2024-03-23 03:14:15', '2024-03-19 03:52:45');
+(1, 'TOP 15', '{\"program\":\"TOP 15\",\"penyiar1\":\"Zahra\",\"penyiar2\":\"-\"}', '2024-03-19 03:52:45', '2024-03-27 01:07:26', '2024-03-19 03:52:45');
 
 -- --------------------------------------------------------
 
@@ -1192,7 +1263,7 @@ CREATE TABLE `personalia` (
 --
 
 INSERT INTO `personalia` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-18', '{\"daritgl\":\"2024-03-18\",\"sampaitgl\":\"2024-03-23\",\"darihari\":\"Senin\",\"sampaihari\":\"Sabtu\",\"subdivisi\":\"Manager Personalia\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-20\",\"selesaitgl\":\"2024-03-20\",\"mulaihari\":\"Senin\",\"selesaihari\":\"Sabtu\",\"kendala\":\"-\",\"status\":\"Terlaksana\"}', '2024-03-20 05:20:39', '2024-03-20 05:21:39', '0000-00-00 00:00:00');
+(1, '2024-03-18', '{\"daritgl\":\"2024-03-18\",\"sampaitgl\":\"2024-03-23\",\"darihari\":\"Senin\",\"sampaihari\":\"Sabtu\",\"subdivisi\":\"Manager Personalia\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-20\",\"selesaitgl\":\"2024-03-20\",\"mulaihari\":\"Senin\",\"selesaihari\":\"Sabtu\",\"kendala\":\"-\",\"status\":\"Sudah Terlaksana\"}', '2024-03-20 05:20:39', '2024-03-25 06:28:11', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1273,25 +1344,25 @@ CREATE TABLE `program` (
 --
 
 INSERT INTO `program` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'BASOSAPI', '{\"program\":\"BASOSAPI\",\"jenis\":\"Regular Program\",\"filter\":\"filter-app\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/0H0UTyvK4su14jJVDcfk2X?si=0e221fd2423c4e70\",\"images\":\"1710312120_135e5ffee5029c18d101.png\"}', '2024-03-13 06:42:00', '2024-03-14 03:49:42', '0000-00-00 00:00:00'),
-(2, '11N1', '{\"program\":\"11N1\",\"jenis\":\"Regular Program\",\"filter\":\"filter-app\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/2xZvhNVfFhs729lHLLKEbs?si=70f8296146fb44e0\",\"images\":\"1710312192_f8ce076c31673d1dcaab.png\"}', '2024-03-13 06:43:12', '2024-03-14 03:49:41', '0000-00-00 00:00:00'),
-(3, 'RAPMANESIA', '{\"program\":\"RAPMANESIA\",\"jenis\":\"Regular Program\",\"filter\":\"filter-app\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/7rl9eIYGm9jOpvPd21PobJ?si=a2ffbdd78c874a9e\",\"images\":\"1710312366_af62087fdc064d713c10.png\"}', '2024-03-13 06:46:06', '2024-03-14 03:49:39', '0000-00-00 00:00:00'),
-(4, 'THE GOOD VIBES', '{\"program\":\"THE GOOD VIBES\",\"jenis\":\"Regular Program\",\"filter\":\"filter-app\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/0wJCTRfCwIqT7RBrAENsux?si=d5982fb80c624fbf\",\"images\":\"1710312387_2305d43ab26b555c70b6.png\"}', '2024-03-13 06:46:27', '2024-03-14 03:49:38', '0000-00-00 00:00:00'),
-(5, 'KHASANAH PETANG', '{\"program\":\"KHASANAH PETANG\",\"jenis\":\"Regular Program\",\"filter\":\"filter-app\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/2OpCjIc6YBl883Aw3qJ1bQ?si=zW2mHW2VToeFD_1M_5L7jg\",\"images\":\"1710312409_1dfb9144b8f8e2d3b6c5.jpg\"}', '2024-03-13 06:46:49', '2024-03-14 03:49:36', '0000-00-00 00:00:00'),
-(6, 'MUSIC BOX', '{\"program\":\"MUSIC BOX\",\"jenis\":\"Regular Program\",\"filter\":\"filter-app\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/7DvP3sMJa5LpgLSfkAR2mm?si=3a09928028b94df3\",\"images\":\"1710312444_9d5e907723a29b30aaa5.png\"}', '2024-03-13 06:47:24', '2024-03-14 03:49:34', '0000-00-00 00:00:00'),
-(7, 'AFTERDAY', '{\"program\":\"AFTERDAY\",\"jenis\":\"Regular Program\",\"filter\":\"filter-app\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/3ED6VNFrqqjrAJd2TdQDso?si=Oq_TJuU3SKWsPObAYSO1BQ\",\"images\":\"1710312464_78e524f183208e2c963c.png\"}', '2024-03-13 06:47:44', '2024-03-14 03:49:33', '0000-00-00 00:00:00'),
-(8, 'RAPMATALKS', '{\"program\":\"RAPMATALKS\",\"jenis\":\"Podcast\",\"filter\":\"filter-book\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/2a8fTWrWjcSFdzstWYGsa8?si=LZSkdRdrRPGh_-bcDMD61w\",\"images\":\"1710312506_39e7c3d0d63f7b3f20e5.png\"}', '2024-03-13 06:48:26', '2024-03-14 03:49:31', '0000-00-00 00:00:00'),
-(9, 'TOP 15', '{\"program\":\"TOP 15\",\"jenis\":\"Regular Program\",\"filter\":\"filter-app\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/3SzzwZRfHLyEJFSdhM9gVW?si=b0ce528bac70443d\",\"images\":\"1710312545_407e7b5fcfc48c696e9b.png\"}', '2024-03-13 06:49:05', '2024-03-14 03:49:18', '0000-00-00 00:00:00'),
-(10, 'MOVIE SCREEN', '{\"program\":\"MOVIE SCREEN\",\"jenis\":\"Special Program\",\"filter\":\"filter-card\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/0c3UrX8b5sVauco3iEXYNA?si=fa275c68c3834fd9\",\"images\":\"1710312722_77a7bbc4e255e813e76f.png\"}', '2024-03-13 06:52:02', '2024-03-14 03:49:02', '0000-00-00 00:00:00'),
-(11, 'KING & QUEEN', '{\"program\":\"KING & QUEEN\",\"jenis\":\"Special Program\",\"filter\":\"filter-card\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/3UQz9EO6DUvuurHthAvlkI?si=9c9273e359c54c02\",\"images\":\"1710312761_938398504d59df3dbe86.png\"}', '2024-03-13 06:52:41', '2024-03-14 03:48:58', '0000-00-00 00:00:00'),
-(12, 'INDIEZONE', '{\"program\":\"INDIEZONE\",\"jenis\":\"Special Program\",\"filter\":\"filter-card\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"images\":\"1710312781_38b73694d2d2078df2cd.png\"}', '2024-03-13 06:53:01', '2024-03-14 03:48:54', '0000-00-00 00:00:00'),
-(13, 'TEKSAS', '{\"program\":\"TEKSAS\",\"jenis\":\"Special Program\",\"filter\":\"filter-card\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/6eSgHfMK6972yDe9Ch2o8F?si=800d1f78b93d4425\",\"images\":\"1710312819_e6f6f3cd6380d86da08b.png\"}', '2024-03-13 06:53:39', '2024-03-14 03:48:50', '0000-00-00 00:00:00'),
-(14, 'K-ARENA', '{\"program\":\"K-ARENA\",\"jenis\":\"Special Program\",\"filter\":\"filter-card\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1dAcappKAmIOxcbZMjyHG9?si=fa7a3c9fab694581\",\"images\":\"1710312844_87910e2b81e6b361f7b1.png\"}', '2024-03-13 06:54:04', '2024-03-14 03:48:46', '0000-00-00 00:00:00'),
-(15, 'MERINDING', '{\"program\":\"MERINDING\",\"jenis\":\"Special Program\",\"filter\":\"filter-card\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1T4gXy589d4nDZ820F0W2q?si=b43b7113efea4f2b\",\"images\":\"1710312866_30b3c80207ee19b8fb60.png\"}', '2024-03-13 06:54:26', '2024-03-14 03:48:42', '0000-00-00 00:00:00'),
-(16, 'SPORTACULAR', '{\"program\":\"SPORTACULAR\",\"jenis\":\"Special Program\",\"filter\":\"filter-card\",\"link\":\"https:\\/\\/www.instagram.com\\/rapmafm\\/\",\"images\":\"1710312900_c15e1a7295e893b8b27b.png\"}', '2024-03-13 06:55:00', '2024-03-14 03:48:38', '0000-00-00 00:00:00'),
-(17, 'SUDUT KAMPUS', '{\"program\":\"SUDUT KAMPUS\",\"jenis\":\"Special Program\",\"filter\":\"filter-card\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/2mru4VWHqOk0g702FerJDl?si=1ab330e8de2d41f9\",\"images\":\"1710376875_16f62a5cdde66f509562.png\"}', '2024-03-13 06:55:24', '2024-03-14 03:48:34', '0000-00-00 00:00:00'),
-(18, 'NOSATNIGHT', '{\"program\":\"NOSATNIGHT\",\"jenis\":\"Special Program\",\"filter\":\"filter-card\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/5JCrqf2RRplT0WexV3UqOP?si=980ed3002a6e4946\",\"images\":\"1710376885_891d230b786d7bfc617e.png\"}', '2024-03-13 06:55:40', '2024-03-20 04:32:55', '0000-00-00 00:00:00'),
-(19, 'CLASSIC NIGHT', '{\"program\":\"CLASSIC NIGHT\",\"jenis\":\"Special Program\",\"filter\":\"filter-card\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/0H0UTyvK4su14jJVDcfk2X?si=0e221fd2423c4e70\",\"images\":\"1710376903_dc13ca4b8b0a8088415c.png\"}', '2024-03-14 00:41:43', '2024-03-20 04:31:38', '0000-00-00 00:00:00');
+(1, 'BASOSAPI', '{\"program\":\"BASOSAPI\",\"jenis\":\"Regular Program\",\"filter\":\"filter-regular\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/0H0UTyvK4su14jJVDcfk2X?si=0e221fd2423c4e70\",\"images\":\"1710312120_135e5ffee5029c18d101.png\"}', '2024-03-13 06:42:00', '2024-04-19 03:45:11', '0000-00-00 00:00:00'),
+(2, '11N1', '{\"program\":\"11N1\",\"jenis\":\"Regular Program\",\"filter\":\"filter-regular\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/2xZvhNVfFhs729lHLLKEbs?si=70f8296146fb44e0\",\"images\":\"1710312192_f8ce076c31673d1dcaab.png\"}', '2024-03-13 06:43:12', '2024-04-19 03:45:04', '0000-00-00 00:00:00'),
+(3, 'RAPMANESIA', '{\"program\":\"RAPMANESIA\",\"jenis\":\"Regular Program\",\"filter\":\"filter-regular\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/7rl9eIYGm9jOpvPd21PobJ?si=a2ffbdd78c874a9e\",\"images\":\"1710312366_af62087fdc064d713c10.png\"}', '2024-03-13 06:46:06', '2024-04-19 03:45:08', '0000-00-00 00:00:00'),
+(4, 'THE GOOD VIBES', '{\"program\":\"THE GOOD VIBES\",\"jenis\":\"Regular Program\",\"filter\":\"filter-regular\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/0wJCTRfCwIqT7RBrAENsux?si=d5982fb80c624fbf\",\"images\":\"1710312387_2305d43ab26b555c70b6.png\"}', '2024-03-13 06:46:27', '2024-04-19 03:44:56', '0000-00-00 00:00:00'),
+(5, 'KHASANAH PETANG', '{\"program\":\"KHASANAH PETANG\",\"jenis\":\"Regular Program\",\"filter\":\"filter-regular\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/2OpCjIc6YBl883Aw3qJ1bQ?si=zW2mHW2VToeFD_1M_5L7jg\",\"images\":\"1710312409_1dfb9144b8f8e2d3b6c5.jpg\"}', '2024-03-13 06:46:49', '2024-04-19 03:44:53', '0000-00-00 00:00:00'),
+(6, 'MUSIC BOX', '{\"program\":\"MUSIC BOX\",\"jenis\":\"Regular Program\",\"filter\":\"filter-regular\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/7DvP3sMJa5LpgLSfkAR2mm?si=3a09928028b94df3\",\"images\":\"1710312444_9d5e907723a29b30aaa5.png\"}', '2024-03-13 06:47:24', '2024-04-19 03:44:51', '0000-00-00 00:00:00'),
+(7, 'AFTERDAY', '{\"program\":\"AFTERDAY\",\"jenis\":\"Regular Program\",\"filter\":\"filter-regular\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/3ED6VNFrqqjrAJd2TdQDso?si=Oq_TJuU3SKWsPObAYSO1BQ\",\"images\":\"1710312464_78e524f183208e2c963c.png\"}', '2024-03-13 06:47:44', '2024-04-19 03:44:47', '0000-00-00 00:00:00'),
+(8, 'RAPMATALKS', '{\"program\":\"RAPMATALKS\",\"jenis\":\"Podcast\",\"filter\":\"filter-podcast\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/2a8fTWrWjcSFdzstWYGsa8?si=LZSkdRdrRPGh_-bcDMD61w\",\"images\":\"1710312506_39e7c3d0d63f7b3f20e5.png\"}', '2024-03-13 06:48:26', '2024-04-19 03:44:44', '0000-00-00 00:00:00'),
+(9, 'TOP 15', '{\"program\":\"TOP 15\",\"jenis\":\"Regular Program\",\"filter\":\"filter-regular\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/3SzzwZRfHLyEJFSdhM9gVW?si=b0ce528bac70443d\",\"images\":\"1710312545_407e7b5fcfc48c696e9b.png\"}', '2024-03-13 06:49:05', '2024-04-19 03:44:39', '0000-00-00 00:00:00'),
+(10, 'MOVIE SCREEN', '{\"program\":\"MOVIE SCREEN\",\"jenis\":\"Special Program\",\"filter\":\"filter-special\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/0c3UrX8b5sVauco3iEXYNA?si=fa275c68c3834fd9\",\"images\":\"1710312722_77a7bbc4e255e813e76f.png\"}', '2024-03-13 06:52:02', '2024-04-19 03:43:50', '0000-00-00 00:00:00'),
+(11, 'KING & QUEEN', '{\"program\":\"KING & QUEEN\",\"jenis\":\"Special Program\",\"filter\":\"filter-special\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/3UQz9EO6DUvuurHthAvlkI?si=9c9273e359c54c02\",\"images\":\"1710312761_938398504d59df3dbe86.png\"}', '2024-03-13 06:52:41', '2024-04-19 03:43:43', '0000-00-00 00:00:00'),
+(12, 'INDIEZONE', '{\"program\":\"INDIEZONE\",\"jenis\":\"Special Program\",\"filter\":\"filter-special\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"images\":\"1710312781_38b73694d2d2078df2cd.png\"}', '2024-03-13 06:53:01', '2024-04-19 03:43:40', '0000-00-00 00:00:00'),
+(13, 'TEKSAS', '{\"program\":\"TEKSAS\",\"jenis\":\"Special Program\",\"filter\":\"filter-special\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/6eSgHfMK6972yDe9Ch2o8F?si=800d1f78b93d4425\",\"images\":\"1710312819_e6f6f3cd6380d86da08b.png\"}', '2024-03-13 06:53:39', '2024-04-19 03:43:38', '0000-00-00 00:00:00'),
+(14, 'K-ARENA', '{\"program\":\"K-ARENA\",\"jenis\":\"Special Program\",\"filter\":\"filter-special\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1dAcappKAmIOxcbZMjyHG9?si=fa7a3c9fab694581\",\"images\":\"1710312844_87910e2b81e6b361f7b1.png\"}', '2024-03-13 06:54:04', '2024-04-19 03:43:34', '0000-00-00 00:00:00'),
+(15, 'MERINDING', '{\"program\":\"MERINDING\",\"jenis\":\"Special Program\",\"filter\":\"filter-special\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1T4gXy589d4nDZ820F0W2q?si=b43b7113efea4f2b\",\"images\":\"1710312866_30b3c80207ee19b8fb60.png\"}', '2024-03-13 06:54:26', '2024-04-19 03:43:19', '0000-00-00 00:00:00'),
+(16, 'SPORTACULAR', '{\"program\":\"SPORTACULAR\",\"jenis\":\"Special Program\",\"filter\":\"filter-special\",\"link\":\"https:\\/\\/www.instagram.com\\/rapmafm\\/\",\"images\":\"1710312900_c15e1a7295e893b8b27b.png\"}', '2024-03-13 06:55:00', '2024-04-19 03:42:30', '0000-00-00 00:00:00'),
+(17, 'SUDUT KAMPUS', '{\"program\":\"SUDUT KAMPUS\",\"jenis\":\"Special Program\",\"filter\":\"filter-special\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/2mru4VWHqOk0g702FerJDl?si=1ab330e8de2d41f9\",\"images\":\"1710376875_16f62a5cdde66f509562.png\"}', '2024-03-13 06:55:24', '2024-04-19 03:42:25', '0000-00-00 00:00:00'),
+(18, 'NOSATNIGHT', '{\"program\":\"NOSATNIGHT\",\"jenis\":\"Special Program\",\"filter\":\"filter-special\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/5JCrqf2RRplT0WexV3UqOP?si=980ed3002a6e4946\",\"images\":\"1710376885_891d230b786d7bfc617e.png\"}', '2024-03-13 06:55:40', '2024-04-19 03:42:21', '0000-00-00 00:00:00'),
+(19, 'CLASSIC NIGHT', '{\"program\":\"CLASSIC NIGHT\",\"jenis\":\"Special Program\",\"filter\":\"filter-special\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/0H0UTyvK4su14jJVDcfk2X?si=0e221fd2423c4e70\",\"images\":\"1710376903_dc13ca4b8b0a8088415c.png\"}', '2024-03-14 00:41:43', '2024-04-19 03:41:56', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1329,7 +1400,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `owner`, `slogan`, `nama_mtalent`, `no_mtalent`, `nama_medpart`, `no_medpart`, `ymail`, `gmail`, `alamat`, `twitter`, `facebook`, `instagram`, `youtube`, `spotify`, `whatsapp`, `blogger`, `line`, `tiktok`, `streaming`, `created_at`, `updated_at`) VALUES
-(1, 'Rapma FM', 'The First Edutainment Channel In Solo', 'Dzaky', '85155332202', 'Mela', '88228923126', 'radio.rapmafm@yahoo.co.id', 'umsrapmafm@gmail.com', 'Sayap Kanan Perpustakaan Lantai Dasar, Kampus II Universitas Muhammadiyah Surakarta, Jalan Ahmad Yani Tromol Pos I Pabelan, Kartasura, Sukoharjo, Jawa Tengah, Indonesia, 57162.', 'https://x.com/rapmafmums', 'https://www.facebook.com/umsrapmafm', 'https://www.instagram.com/rapmafm', 'https://www.youtube.com/channel/UCDsAfuUjcWxydKzUF4QI0yg', 'https://open.spotify.com/show/3Gy8RYWni0Tsr0eF6zxfUB', 'https://wa.me/+6285640316175', 'http://rapmafm.ukm.ums.ac.id', 'https://liff.line.me/1645278921-kWRPP32q?accountId=vxw1531h&openerPlatform=webview&openerKey=webview%3AunifiedSearch', 'https://vt.tiktok.com/ZSJrHdqTV', 'https://c2.siar.us/radio/8270/stream', '2024-03-12 06:33:41', '2024-03-22 03:24:06');
+(1, 'Rapma FM', 'The First Edutainment Channel In Solo', 'Dzaky', '85155332202', 'Mela', '88228923126', 'radio.rapmafm@yahoo.co.id', 'umsrapmafm@gmail.com', 'Sayap Kanan Perpustakaan Lantai Dasar, Kampus II Universitas Muhammadiyah Surakarta, Jalan Ahmad Yani Tromol Pos I Pabelan, Kartasura, Sukoharjo, Jawa Tengah, Indonesia, 57162.', 'https://x.com/rapmafmums', 'https://www.facebook.com/umsrapmafm', 'https://www.instagram.com/rapmafm', 'https://youtube.com/@RapmafmUMS', 'https://open.spotify.com/show/3Gy8RYWni0Tsr0eF6zxfUB', 'https://wa.me/+6285640316175', 'http://rapmafm.ukm.ums.ac.id', 'https://liff.line.me/1645278921-kWRPP32q?accountId=vxw1531h&openerPlatform=webview&openerKey=webview%3AunifiedSearch', 'https://vt.tiktok.com/ZSJrHdqTV', 'https://c2.siar.us/radio/8270/stream', '2024-03-12 06:33:41', '2024-03-27 02:08:17');
 
 -- --------------------------------------------------------
 
@@ -1377,7 +1448,7 @@ CREATE TABLE `suratkeluar` (
 --
 
 INSERT INTO `suratkeluar` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-15', '{\"tanggal\":\"2024-03-15\",\"hari\":\"Kamis\",\"nosurat\":\"001\\/D\\/GM\\/RAPMAFM \\/I\\/2020 \",\"penerima\":\"Sutarto\",\"perihal\":\"Undangan\"}', '2024-03-20 03:18:58', '2024-03-20 03:19:25', '0000-00-00 00:00:00');
+(1, '2024-03-15', '{\"tanggal\":\"2024-03-15\",\"hari\":\"Senin\",\"nosurat\":\"001\\/D\\/GM\\/RAPMAFM \\/I\\/2020 \",\"penerima\":\"Sutarto\",\"perihal\":\"Undangan\"}', '2024-03-20 03:18:58', '2024-03-25 05:35:48', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1399,7 +1470,7 @@ CREATE TABLE `suratmasuk` (
 --
 
 INSERT INTO `suratmasuk` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-22', '{\"tanggal\":\"2024-03-22\",\"hari\":\"Kamis\",\"nosurat\":\"001\\/D\\/GM\\/RAPMAFM\\/I\\/2020\",\"instansi\":\"Kopma\",\"perihal\":\"Surat Keterangan Berita Kehilangan STNK\"}', '2024-03-20 03:16:51', '2024-03-20 03:17:36', '0000-00-00 00:00:00');
+(1, '2024-03-22', '{\"tanggal\":\"2024-03-22\",\"hari\":\"Kamis\",\"nosurat\":\"001\\/D\\/GM\\/RAPMAFM\\/I\\/2020\",\"instansi\":\"Kopma\",\"perihal\":\"Surat Keterangan Berita Kehilangan STNK\"}', '2024-03-20 03:16:51', '2024-03-25 06:16:56', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1422,7 +1493,7 @@ CREATE TABLE `suratsp` (
 
 INSERT INTO `suratsp` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Pop', '{\"nama\":\"Pop\",\"sp\":\"SP 1\",\"hari\":\"Senin\",\"tanggal\":\"2024-03-19\",\"alasan\":\"Karena\",\"prodi\":\"IT\",\"angkatan\":\"2019\",\"nohp\":\"081328024137\",\"keterangan\":\"-\"}', '2024-03-21 03:07:41', '2024-03-21 03:09:44', '0000-00-00 00:00:00'),
-(2, 'Pop', '{\"nama\":\"Pop\",\"sp\":\"SP 2\",\"hari\":\"Senin\",\"tanggal\":\"2024-03-26\",\"alasan\":\"Karena\",\"prodi\":\"IT\",\"angkatan\":\"2019\",\"nohp\":\"081328024137\",\"keterangan\":\"-\"}', '2024-03-21 03:10:10', '2024-03-21 03:10:10', '0000-00-00 00:00:00');
+(2, 'Pop', '{\"nama\":\"Pop\",\"sp\":\"SP 2\",\"hari\":\"Selasa\",\"tanggal\":\"2024-03-26\",\"alasan\":\"Karena\",\"prodi\":\"IT\",\"angkatan\":\"2019\",\"nohp\":\"081328024137\",\"keterangan\":\"-\"}', '2024-03-21 03:10:10', '2024-03-25 06:30:33', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1467,7 +1538,7 @@ CREATE TABLE `umum` (
 --
 
 INSERT INTO `umum` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-20', '{\"daritgl\":\"2024-03-20\",\"sampaitgl\":\"2024-03-20\",\"darihari\":\"Senin\",\"sampaihari\":\"Sabtu\",\"subdivisi\":\"Manager Umum\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-20\",\"selesaitgl\":\"2024-03-20\",\"mulaihari\":\"Senin\",\"selesaihari\":\"Jum\'at\",\"kendala\":\"-\",\"status\":\"Terlaksana\"}', '2024-03-20 05:08:43', '2024-03-20 05:11:01', '0000-00-00 00:00:00');
+(2, '2024-03-24', '{\"daritgl\":\"2024-03-24\",\"sampaitgl\":\"2024-03-29\",\"darihari\":\"Senin\",\"sampaihari\":\"Minggu\",\"subdivisi\":\"Admisi On Air\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-20\",\"selesaitgl\":\"2024-03-13\",\"mulaihari\":\"Minggu\",\"selesaihari\":\"Sabtu\",\"kendala\":\"-\",\"status\":\"Sudah Terlaksana\"}', '2024-03-25 05:28:54', '2024-03-25 06:18:53', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1551,7 +1622,7 @@ CREATE TABLE `videos` (
 --
 
 INSERT INTO `videos` (`id`, `key`, `value`, `type`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(4, 'MashUp', '{\"title\":\"MashUp\",\"hari\":\"Kamis\",\"tanggal\":\"2024-02-27\",\"tahun\":\"2021\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"platform\":\"TikTok\",\"status\":\"\\u2705\"}', 'Mashup', '2024-03-21 06:06:50', '2024-03-21 06:09:24', '0000-00-00 00:00:00');
+(4, 'MashUp', '{\"title\":\"MashUp\",\"hari\":\"Kamis\",\"tanggal\":\"2024-02-27\",\"tahun\":\"2021\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"platform\":\"TikTok\",\"status\":\"Sudah Terlaksana\"}', 'Mashup', '2024-03-21 06:06:50', '2024-03-25 07:01:24', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1573,7 +1644,7 @@ CREATE TABLE `workshopbroadcast` (
 --
 
 INSERT INTO `workshopbroadcast` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-20', '{\"dari\":\"2024-03-20\",\"sampai\":\"2024-03-20\",\"harimulai\":\"Senin\",\"hariselesai\":\"Jum\'at\",\"mulai\":\"09:00\",\"selesai\":\"23:00\",\"materi\":\"<script src=\\\"\\/\\/cdn.public.flmngr.com\\/FLMNFLMN\\/widgets.js\\\"><\\/script>\",\"pemateri\":\"Okie Berland Maulana\",\"tempat\":\"Online via Zoom Meeting\",\"status\":\"Terlaksana\"}', '2024-03-20 05:24:43', '2024-03-20 05:24:52', '0000-00-00 00:00:00');
+(1, '2024-03-20', '{\"dari\":\"2024-03-20\",\"sampai\":\"2024-03-20\",\"harimulai\":\"Senin\",\"hariselesai\":\"Jum\'at\",\"mulai\":\"09:00\",\"selesai\":\"23:00\",\"materi\":\"<ul><li>Test 1<\\/li><li>Test 2<\\/li><li>Test 3<\\/li><\\/ul>\",\"pemateri\":\"Okie Berland Maulana\",\"tempat\":\"Online via Zoom Meeting\",\"status\":\"Terlaksana\"}', '2024-03-20 05:24:43', '2024-04-02 05:03:15', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -1598,6 +1669,12 @@ ALTER TABLE `achievements`
 ALTER TABLE `alumni`
   ADD PRIMARY KEY (`id`),
   ADD KEY `tahun` (`tahun`);
+
+--
+-- Indexes for table `aruskas`
+--
+ALTER TABLE `aruskas`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `audios`
@@ -1810,6 +1887,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `minigames`
+--
+ALTER TABLE `minigames`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `mtalent`
 --
 ALTER TABLE `mtalent`
@@ -1970,6 +2053,12 @@ ALTER TABLE `alumni`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `aruskas`
+--
+ALTER TABLE `aruskas`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `audios`
 --
 ALTER TABLE `audios`
@@ -1991,7 +2080,7 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -2009,7 +2098,7 @@ ALTER TABLE `auth_reset_attempts`
 -- AUTO_INCREMENT for table `auth_tokens`
 --
 ALTER TABLE `auth_tokens`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `beritaweb`
@@ -2051,7 +2140,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `gmpa`
 --
 ALTER TABLE `gmpa`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `iklan`
@@ -2135,7 +2224,7 @@ ALTER TABLE `marketing`
 -- AUTO_INCREMENT for table `medpart`
 --
 ALTER TABLE `medpart`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `member`
@@ -2147,7 +2236,13 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
+-- AUTO_INCREMENT for table `minigames`
+--
+ALTER TABLE `minigames`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `mtalent`
@@ -2261,7 +2356,7 @@ ALTER TABLE `topchart`
 -- AUTO_INCREMENT for table `umum`
 --
 ALTER TABLE `umum`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -19,6 +19,7 @@
               <p></p>
             </div>
             <div class="content">
+              <a href="<?= base_url(); ?>index#minigames" class="btn btn-dark">&larr; Back</a>
               <ul class="result-details">
                 <li class="time">
                   <p>Time Left :</p>

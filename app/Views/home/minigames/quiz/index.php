@@ -111,6 +111,7 @@
                             <div class="info">5. Kamu akan mendapatkan poin berdasarkan jawabanmu yang benar.</div>
                         </div>
                         <div class="buttons">
+                            <a href="<?= base_url(); ?>index#minigames" class="btn btn-dark">&larr; Back</a>
                             <button class="quit">Exit Quiz</button>
                             <button class="restart">Continue</button>
                         </div>
