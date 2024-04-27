@@ -25,6 +25,9 @@
             <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
           </div>
         </div>
+        <div class="mt-4">
+          <a href="<?= base_url(); ?>index#minigames" class="btn btn-dark">&larr; Back</a>
+        </div>
       </center>
   </section>
 </main>
