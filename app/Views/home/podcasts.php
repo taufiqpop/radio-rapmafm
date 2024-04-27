@@ -6,7 +6,7 @@
     <section id="podcast">
         <div class="container">
             <div class="section-title">
-                <h2 style="text-align: center;">Podcast</h2>
+                <h2 class="text-center">Podcast</h2>
             </div>
 
             <!-- Search Bar -->

@@ -1,39 +1,55 @@
-<!DOCTYPE html>
-<html>
+<?= $this->extend('home/templates/index'); ?>
+<?= $this->section('page-content'); ?>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Belajar React</title>
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>minigames/tictactoe/src/tictactoe.css">
 
-  <!-- React Library -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<!-- Podcast -->
+<main id="main">
+  <section id="tictactoe">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="text-center">Mini Games</h2>
+        <h1 class="text-center">-- Tic Tac Toe --</h1>
+      </div>
+      <b>
+        <p id="print"></p>
+      </b>
+      <br>
+      <p id="ins">
+        Game Dimulai Jika Kamu Klik Dalam Kotak Permainan
+        <br>
+        - Pemain 1 = <b>Player X</b>
+        <br>
+        - Pemain 2 = <b>Player O</b>
+      </p>
+      <br><br>
+      <div class="ui">
+        <div class="row">
+          <input type="text" id="b1" class="cell" onclick="myfunc_3(); myfunc();" readonly>
+          <input type="text" id="b2" class="cell" onclick="myfunc_4(); myfunc();" readonly>
+          <input type="text" id="b3" class="cell" onclick="myfunc_5(); myfunc();" readonly>
+        </div>
+        <div class="row">
+          <input type="text" id="b4" class="cell" onclick="myfunc_6(); myfunc();" readonly>
+          <input type="text" id="b5" class="cell" onclick="myfunc_7(); myfunc();" readonly>
+          <input type="text" id="b6" class="cell" onclick="myfunc_8(); myfunc();" readonly>
+        </div>
+        <div class="row">
+          <input type="text" id="b7" class="cell" onclick="myfunc_9(); myfunc();" readonly>
+          <input type="text" id="b8" class="cell" onclick="myfunc_10();myfunc();" readonly>
+          <input type="text" id="b9" class="cell" onclick="myfunc_11();myfunc();" readonly>
+        </div>
+      </div>
+      <br><br>
 
-  <!-- Don't use this in production: -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-</head>
+      <button id="but" onclick="myfunc_2()">RESET</button>
+      <br><br><br><br><br>
+    </div>
+  </section>
+</main>
 
-<body>
-  <div id="root"></div>
+<!-- JS -->
+<script src="<?= base_url(); ?>minigames/tictactoe/src/tictactoe.js"></script>
 
-  <script type="text/babel">
-    function HomePage () {
-        const [likes, setLikes] = React.useState(0);
-
-        function HandleClick () {
-            setLikes(likes + 1)
-        }
-    
-        return (
-            <>
-            <button onClick={HandleClick}>Like ({likes})</button>
-            </>
-        );
-    }
-    const container = document.getElementById('root');
-    const root = ReactDOM.createRoot(container);
-    root.render(<HomePage />);
-    </script>
-</body>
-
-</html>
+<?= $this->endSection(); ?>
