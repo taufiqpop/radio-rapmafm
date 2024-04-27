@@ -159,7 +159,7 @@ class Home extends BaseController
         return view('home/minigames/tictactoe/index', $data);
     }
 
-    // Mini Games || Memory Card
+    // Mini Games || Memory Cards
     public function memorycard()
     {
         $data = [
@@ -168,5 +168,16 @@ class Home extends BaseController
         ];
 
         return view('home/minigames/memorycards/index', $data);
+    }
+
+    // Mini Games || Quiz
+    public function quiz()
+    {
+        $data = [
+            'title'     => 'Rapma FM | Quiz',
+            'settings'  => $this->settingsModel->paginate(1, 'settings'),
+        ];
+
+        return view('home/minigames/quiz/index', $data);
     }
 }

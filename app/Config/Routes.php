@@ -47,6 +47,7 @@ $routes->get('/rapmaday8', 'Home::rapmaday8');
 // Mini Games
 $routes->get('/games/tictactoe', 'Home::tictactoe');
 $routes->get('/games/memorycards', 'Home::memorycard');
+$routes->get('/games/quiz', 'Home::quiz');
 
 // Admin
 $routes->add('/admin', 'Admin::index', ['filter' => 'role:Admin, GM']);
