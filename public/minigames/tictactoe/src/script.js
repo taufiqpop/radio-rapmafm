@@ -291,7 +291,7 @@ function myfunc() {
   }
 
   // Checking of Player O finish
-  // Here, Checking about Tie
+  // Here, Checking about Draw
   else if (
     (b1 == "X" || b1 == "O") &&
     (b2 == "X" || b2 == "O") &&
@@ -303,7 +303,7 @@ function myfunc() {
     (b8 == "X" || b8 == "O") &&
     (b9 == "X" || b9 == "O")
   ) {
-    document.getElementById("print").innerHTML = "Match Tie";
+    document.getElementById("print").innerHTML = "Match Draw";
   } else {
     // Here, Printing Result
     if (flag == 1) {
