@@ -159,14 +159,14 @@ function myfunc() {
   }
 
   // Checking of Player X finish
-  // Checking for Player 0 starts, Is player 0 Menang or
+  // Checking for Player O starts, Is player O Menang or
   // not and after that disabled all the other fields
   else if (
     (b1 == "O" || b1 == "O") &&
     (b2 == "O" || b2 == "O") &&
     (b3 == "O" || b3 == "O")
   ) {
-    document.getElementById("print").innerHTML = "Player 0 Menang";
+    document.getElementById("print").innerHTML = "Player O Menang";
     b4btn.disabled = true;
     b5btn.disabled = true;
     b6btn.disabled = true;
@@ -182,7 +182,7 @@ function myfunc() {
     (b4 == "O" || b4 == "O") &&
     (b7 == "O" || b7 == "O")
   ) {
-    document.getElementById("print").innerHTML = "Player 0 Menang";
+    document.getElementById("print").innerHTML = "Player O Menang";
     b2btn.disabled = true;
     b3btn.disabled = true;
     b5btn.disabled = true;
@@ -198,7 +198,7 @@ function myfunc() {
     (b8 == "O" || b8 == "O") &&
     (b9 == "O" || b9 == "O")
   ) {
-    document.getElementById("print").innerHTML = "Player 0 Menang";
+    document.getElementById("print").innerHTML = "Player O Menang";
     b1btn.disabled = true;
     b2btn.disabled = true;
     b3btn.disabled = true;
@@ -214,7 +214,7 @@ function myfunc() {
     (b6 == "O" || b6 == "O") &&
     (b9 == "O" || b9 == "O")
   ) {
-    document.getElementById("print").innerHTML = "Player 0 Menang";
+    document.getElementById("print").innerHTML = "Player O Menang";
     b1btn.disabled = true;
     b2btn.disabled = true;
     b4btn.disabled = true;
@@ -229,7 +229,7 @@ function myfunc() {
     (b5 == "O" || b5 == "O") &&
     (b9 == "O" || b9 == "O")
   ) {
-    document.getElementById("print").innerHTML = "Player 0 Menang";
+    document.getElementById("print").innerHTML = "Player O Menang";
     b2btn.disabled = true;
     b3btn.disabled = true;
     b4btn.disabled = true;
@@ -245,7 +245,7 @@ function myfunc() {
     (b5 == "O" || b5 == "O") &&
     (b7 == "O" || b7 == "O")
   ) {
-    document.getElementById("print").innerHTML = "Player 0 Menang";
+    document.getElementById("print").innerHTML = "Player O Menang";
     b1btn.disabled = true;
     b2btn.disabled = true;
     b4btn.disabled = true;
@@ -261,7 +261,7 @@ function myfunc() {
     (b5 == "O" || b5 == "O") &&
     (b8 == "O" || b8 == "O")
   ) {
-    document.getElementById("print").innerHTML = "Player 0 Menang";
+    document.getElementById("print").innerHTML = "Player O Menang";
     b1btn.disabled = true;
     b3btn.disabled = true;
     b4btn.disabled = true;
@@ -277,7 +277,7 @@ function myfunc() {
     (b5 == "O" || b5 == "O") &&
     (b6 == "O" || b6 == "O")
   ) {
-    document.getElementById("print").innerHTML = "Player 0 Menang";
+    document.getElementById("print").innerHTML = "Player O Menang";
     b1btn.disabled = true;
     b2btn.disabled = true;
     b3btn.disabled = true;
@@ -290,7 +290,7 @@ function myfunc() {
     b6btn.style.color = "red";
   }
 
-  // Checking of Player 0 finish
+  // Checking of Player O finish
   // Here, Checking about Tie
   else if (
     (b1 == "X" || b1 == "O") &&
@@ -309,7 +309,7 @@ function myfunc() {
     if (flag == 1) {
       document.getElementById("print").innerHTML = "Player X Turn";
     } else {
-      document.getElementById("print").innerHTML = "Player 0 Turn";
+      document.getElementById("print").innerHTML = "Player O Turn";
     }
   }
 }
@@ -321,7 +321,7 @@ function myfunc_2() {
 }
 
 // Here onwards, functions check turn of the player
-// and put accordingly value X or 0
+// and put accordingly value X or O
 flag = 1;
 function myfunc_3() {
   if (flag == 1) {
