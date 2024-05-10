@@ -86,20 +86,11 @@
     <!-- Main JS -->
     <script src="<?= base_url(); ?>js/sb-admin-2.min.js"></script>
 
-    <!-- TinyMCE -->
-    <script src="<?= base_url(); ?>js/tinymce/tinymce.min.js"></script>
-    <script src="<?= base_url(); ?>js/tinymce-plugin.js"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea'
-        });
-    </script>
-
     <!-- JQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <!-- My JavaScript Backend -->
+    <!-- My Script -->
     <script src="<?= base_url(); ?>js/my-script.js"></script>
 
     <!-- TRIX Editor -->

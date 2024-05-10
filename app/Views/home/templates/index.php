@@ -115,10 +115,13 @@
     <script src="<?= base_url(); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Main JavaScript -->
-    <script src="<?= base_url(); ?>js/main-frontend.js"></script>
+    <script src="<?= base_url(); ?>js/main.js"></script>
 
-    <!-- My JS -->
-    <script src="<?= base_url(); ?>js/my-scripts-frontend.js"></script>
+    <!-- My Script -->
+    <script src="<?= base_url(); ?>js/my-script.js"></script>
+
+    <!-- Live Chat -->
+    <script src="<?= base_url(); ?>js/livechat.js"></script>
 </body>
 
 </html>
