@@ -4,7 +4,7 @@ window.onload = function () {
 };
 
 function jam() {
-  var e = document.getElementById("jam"),
+  let e = document.getElementById("jam"),
     d = new Date(),
     h,
     m,
