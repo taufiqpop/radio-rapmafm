@@ -102,7 +102,7 @@
                     <div class="form-group row">
                         <label for="feetalent" class="col-sm-3 col-form-label">Fee Talent (Tanpa Rp.)</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="feetalent" value="<?= $data->feetalent; ?>" required>
+                            <input type="number" class="form-control" name="feetalent" value="<?= $data->feetalent; ?>" required>
                         </div>
                     </div>
 
@@ -110,7 +110,7 @@
                     <div class="form-group row">
                         <label for="feerapma" class="col-sm-3 col-form-label">Fee Rapma FM (Tanpa Rp.)</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="feerapma" value="<?= $data->feerapma; ?>" required>
+                            <input type="number" class="form-control" name="feerapma" value="<?= $data->feerapma; ?>" required>
                         </div>
                     </div>
 

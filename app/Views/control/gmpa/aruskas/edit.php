@@ -33,15 +33,15 @@
                     <div class="form-group row">
                         <label for="total" class="col-sm-3 col-form-label">Total (Tanpa Rp.)</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="total" value="<?= $data->total; ?>" required>
+                            <input type="number" class="form-control" name="total" value="<?= $data->total; ?>" required>
                         </div>
                     </div>
 
-                    <!-- Belum Bayar -->
+                    <!-- Sudah Bayar -->
                     <div class="form-group row">
-                        <label for="blmbayar" class="col-sm-3 col-form-label">Belum Bayar (Tanpa Rp.)</label>
+                        <label for="sudahbayar" class="col-sm-3 col-form-label">Sudah Bayar (Tanpa Rp.)</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="blmbayar" value="<?= $data->blmbayar; ?>" required>
+                            <input type="number" class="form-control" name="sudahbayar" value="<?= $data->sudahbayar; ?>" required>
                         </div>
                     </div>
 
@@ -50,10 +50,9 @@
                         <label for="status" class="col-sm-3 col-form-label">Status</label>
                         <div class="col-sm-7">
                             <select name="status">
-                                <option value="<?= $data->status; ?>" selected></option>
-                                <option value="Sudah Bayar">Sudah Bayar</option>
-                                <option value="Belum Bayar">Belum Bayar</option>
-                                <option value="Tidak Bayar">Tidak Bayar</option>
+                                <option value="<?= $data->status; ?>" selected><?= $data->status; ?></option>
+                                <option value="Belum Lunas">Belum Lunas</option>
+                                <option value="Sudah Lunas">Sudah Lunas</option>
                             </select>
                         </div>
                     </div>

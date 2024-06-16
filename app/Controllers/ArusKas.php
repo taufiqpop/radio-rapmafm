@@ -52,7 +52,7 @@ class ArusKas extends BaseController
             'nama'      => $this->request->getPost('nama'),
             'tanggal'   => $this->request->getPost('tanggal'),
             'total'     => $this->request->getPost('total'),
-            'blmbayar'  => $this->request->getPost('blmbayar'),
+            'sudahbayar'  => $this->request->getPost('sudahbayar'),
             'status'    => $this->request->getPost('status'),
         ];
 
@@ -93,7 +93,7 @@ class ArusKas extends BaseController
             'nama'      => $this->request->getPost('nama'),
             'tanggal'   => $this->request->getPost('tanggal'),
             'total'     => $this->request->getPost('total'),
-            'blmbayar'  => $this->request->getPost('blmbayar'),
+            'sudahbayar'  => $this->request->getPost('sudahbayar'),
             'status'    => $this->request->getPost('status'),
         ];
 

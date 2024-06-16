@@ -44,7 +44,7 @@
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Acara</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Nama Talent</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Tempat</th>
-                                    <th scope="col" class="cursor-active" colspan="2">Fee</th>
+                                    <th scope="col" class="cursor-active" colspan="3">Fee</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Kontraprestasi</th>
                                     <?php if (in_groups(['Admin', 'MOff'])) : ?>
                                         <th scope="col" class="cursor-stop" rowspan="2" style="padding-bottom: 35px;">Action</th>
@@ -55,6 +55,7 @@
                                     <th scope="col" class="cursor-active">Selesai</th>
                                     <th scope="col" class="cursor-active">Talent</th>
                                     <th scope="col" class="cursor-active">Rapma FM</th>
+                                    <th scope="col" class="cursor-active">Total</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -69,8 +70,10 @@
                                         <td style="max-width: 150px;"><?= $data->acara; ?></td>
                                         <td><?= $data->talent; ?></td>
                                         <td style="max-width: 150px;"><?= $data->tempat; ?></td>
-                                        <td>Rp. <?= $data->feetalent; ?></td>
-                                        <td>Rp. <?= $data->feerapma; ?></td>
+                                        <td>Rp. <?= number_format(floatval($data->feetalent), 0, ',', '.') ?></td>
+                                        <td>Rp. <?= number_format(floatval($data->feerapma), 0, ',', '.') ?></td>
+                                        <td>Rp. <?= number_format(floatval(($data->feetalent + $data->feerapma)), 0, ',', '.'); ?></td>
+                                        </td>
                                         <td style="max-width: 300px;"><?= $data->kontraprestasi; ?></td>
                                         <?php if (in_groups(['Admin', 'MOff'])) : ?>
                                             <td>

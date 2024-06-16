@@ -93,7 +93,7 @@
                 <div class="form-group row">
                     <label for="feetalent" class="col-sm-3 col-form-label">Fee Talent (Tanpa Rp.)</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="100.000" name="feetalent" required>
+                        <input type="number" class="form-control" placeholder="100000" name="feetalent" required>
                     </div>
                 </div>
 
@@ -101,7 +101,7 @@
                 <div class="form-group row">
                     <label for="feerapma" class="col-sm-3 col-form-label">Fee Rapma FM (Tanpa Rp.)</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="100.000" name="feerapma" required>
+                        <input type="number" class="form-control" placeholder="100000" name="feerapma" required>
                     </div>
                 </div>
 

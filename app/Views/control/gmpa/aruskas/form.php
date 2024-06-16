@@ -31,15 +31,15 @@
                 <div class="form-group row">
                     <label for="total" class="col-sm-3 col-form-label">Total (Tanpa Rp.)</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" placeholder="5.000" name="total" required>
+                        <input type="number" class="form-control" placeholder="100000" name="total" required>
                     </div>
                 </div>
 
-                <!-- Belum Bayar -->
+                <!-- Sudah Bayar -->
                 <div class="form-group row">
-                    <label for="blmbayar" class="col-sm-3 col-form-label">Belum Bayar (Tanpa Rp.)</label>
+                    <label for="sudahbayar" class="col-sm-3 col-form-label">Sudah Bayar (Tanpa Rp.)</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" placeholder="5.000" name="blmbayar" required>
+                        <input type="number" class="form-control" placeholder="100000" name="sudahbayar" required>
                     </div>
                 </div>
 
@@ -48,9 +48,8 @@
                     <label for="status" class="col-sm-3 col-form-label">Status</label>
                     <div class="col-sm-7">
                         <select name="status">
-                            <option value="Belum Bayar">Belum Bayar</option>
-                            <option value="Sudah Bayar">Sudah Bayar</option>
-                            <option value="Tidak Bayar">Tidak Bayar</option>
+                            <option value="Belum Lunas">Belum Lunas</option>
+                            <option value="Sudah Lunas">Sudah Lunas</option>
                         </select>
                     </div>
                 </div>

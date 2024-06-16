@@ -41,7 +41,8 @@
                                     <th scope="col" class="cursor-active">Nama</th>
                                     <th scope="col" class="cursor-active">Tanggal</th>
                                     <th scope="col" class="cursor-active">Total</th>
-                                    <th scope="col" class="cursor-active">Belum Bayar</th>
+                                    <th scope="col" class="cursor-active">Sudah bayar</th>
+                                    <th scope="col" class="cursor-active">Kurang</th>
                                     <th scope="col" class="cursor-active">Status</th>
                                     <?php if (in_groups(['Admin', 'PA'])) : ?>
                                         <th scope="col" class="cursor-active">Action</th>
@@ -55,8 +56,14 @@
                                         <th scope="row"><?= $index + 1; ?></th>
                                         <td><?= $data->nama; ?></td>
                                         <td><?= $data->tanggal; ?></td>
-                                        <td>Rp. <?= $data->total; ?></td>
-                                        <td>Rp. <?= $data->blmbayar; ?></td>
+                                        <td>Rp. <?= number_format(floatval($data->total), 0, ',', '.'); ?></td>
+                                        <td>Rp. <?= number_format(floatval($data->sudahbayar), 0, ',', '.'); ?></td>
+                                        <td><?php if ($data->total != $data->sudahbayar) : ?>
+                                                Rp. <?= number_format(floatval(($data->total - $data->sudahbayar)), 0, ',', '.'); ?>
+                                            <?php else : ?>
+                                                <?= '-'; ?>
+                                            <?php endif; ?>
+                                        </td>
                                         <td><?= $data->status; ?></td>
                                         <?php if (in_groups(['Admin', 'PA'])) : ?>
                                             <td>

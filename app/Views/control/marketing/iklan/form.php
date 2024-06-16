@@ -50,7 +50,7 @@
                 <div class="form-group row">
                     <label for="harga" class="col-sm-3 col-form-label">Harga (Tanpa Rp.)</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" placeholder="5.000.000" name="harga" required>
+                        <input type="number" class="form-control" placeholder="100000" name="harga" required>
                     </div>
                 </div>
 

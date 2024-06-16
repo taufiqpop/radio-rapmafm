@@ -58,7 +58,7 @@
                                         <td><?= $data->client; ?></td>
                                         <td><?= $data->hari; ?>, <?= $data->tglmou; ?></td>
                                         <td style="max-width: 500px;"><?= $data->paket; ?></td>
-                                        <td>Rp. <?= $data->harga; ?></td>
+                                        <td>Rp. <?= number_format(floatval($data->harga), 0, ',', '.') ?></td>
                                         <td><?= $data->status; ?></td>
                                         <?php if (in_groups(['Admin', 'MOn'])) : ?>
                                             <td>

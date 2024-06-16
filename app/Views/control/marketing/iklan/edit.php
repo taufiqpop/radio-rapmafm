@@ -51,9 +51,9 @@
 
                     <!-- Harga -->
                     <div class="form-group row">
-                        <label for="harga" class="col-sm-3 col-form-label">Harga</label>
+                        <label for="harga" class="col-sm-3 col-form-label">Harga (Tanpa Rp.)</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="harga" value="<?= $data->harga; ?>" required>
+                            <input type="number" class="form-control" name="harga" value="<?= $data->harga; ?>" required>
                         </div>
                     </div>
 

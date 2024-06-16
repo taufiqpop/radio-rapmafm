@@ -41,6 +41,8 @@
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Nama</th>
                                     <th scope="col" class="cursor-active" colspan="3">Adlibs / Spot</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Total</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Sudah Bayar</th>
+                                    <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Kurang</th>
                                     <th scope="col" class="cursor-active" rowspan="2" style="padding-bottom: 35px;">Keterangan</th>
                                     <?php if (in_groups(['Admin', 'MOn'])) : ?>
                                         <th scope="col" class="cursor-stop" rowspan="2" style="padding-bottom: 35px;">Action</th>
@@ -61,7 +63,14 @@
                                         <td><?= $data->program; ?></td>
                                         <td><?= $data->hari; ?>, <?= $data->tanggal; ?></td>
                                         <td><?= $data->acara; ?></td>
-                                        <td>Rp. <?= $data->total; ?></td>
+                                        <td>Rp. <?= number_format(floatval($data->total), 0, ',', '.'); ?></td>
+                                        <td>Rp. <?= number_format(floatval($data->sudahbayar), 0, ',', '.'); ?></td>
+                                        <td><?php if ($data->total != $data->sudahbayar) : ?>
+                                                Rp. <?= number_format(floatval(($data->total - $data->sudahbayar)), 0, ',', '.'); ?>
+                                            <?php else : ?>
+                                                <?= '-'; ?>
+                                            <?php endif; ?>
+                                        </td>
                                         <td><?= $data->keterangan; ?></td>
                                         <?php if (in_groups(['Admin', 'MOn'])) : ?>
                                             <td>

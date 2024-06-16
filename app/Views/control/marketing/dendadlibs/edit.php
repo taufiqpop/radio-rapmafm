@@ -81,7 +81,15 @@
                     <div class="form-group row">
                         <label for="total" class="col-sm-3 col-form-label">Total (Tanpa Rp.)</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="total" value="<?= $data->total; ?>" required>
+                            <input type="number" class="form-control" name="total" value="<?= $data->total; ?>" required>
+                        </div>
+                    </div>
+
+                    <!-- Sudah Bayar -->
+                    <div class="form-group row">
+                        <label for="sudahbayar" class="col-sm-3 col-form-label">Sudah Bayar (Tanpa Rp.)</label>
+                        <div class="col-sm-4">
+                            <input type="number" class="form-control" name="sudahbayar" value="<?= $data->sudahbayar; ?>" required>
                         </div>
                     </div>
 
