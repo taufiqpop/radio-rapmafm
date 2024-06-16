@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 16, 2024 at 12:53 AM
+-- Generation Time: Jun 16, 2024 at 12:58 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -1071,13 +1071,6 @@ CREATE TABLE `suratkeluar` (
   `deleted_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
---
--- Dumping data for table `suratkeluar`
---
-
-INSERT INTO `suratkeluar` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-15', '{\"tanggal\":\"2024-03-15\",\"hari\":\"Senin\",\"nosurat\":\"001\\/D\\/GM\\/RAPMAFM \\/I\\/2020 \",\"penerima\":\"Sutarto\",\"perihal\":\"Undangan\"}', '2024-03-20 03:18:58', '2024-03-25 05:35:48', '0000-00-00 00:00:00');
-
 -- --------------------------------------------------------
 
 --
@@ -1093,13 +1086,6 @@ CREATE TABLE `suratmasuk` (
   `deleted_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
---
--- Dumping data for table `suratmasuk`
---
-
-INSERT INTO `suratmasuk` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-22', '{\"tanggal\":\"2024-03-22\",\"hari\":\"Kamis\",\"nosurat\":\"001\\/D\\/GM\\/RAPMAFM\\/I\\/2020\",\"instansi\":\"Kopma\",\"perihal\":\"Surat Keterangan Berita Kehilangan STNK\"}', '2024-03-20 03:16:51', '2024-03-25 06:16:56', '0000-00-00 00:00:00');
-
 -- --------------------------------------------------------
 
 --
@@ -1114,14 +1100,6 @@ CREATE TABLE `suratsp` (
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
---
--- Dumping data for table `suratsp`
---
-
-INSERT INTO `suratsp` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Pop', '{\"nama\":\"Pop\",\"sp\":\"SP 1\",\"hari\":\"Senin\",\"tanggal\":\"2024-03-19\",\"alasan\":\"Karena\",\"prodi\":\"IT\",\"angkatan\":\"2019\",\"nohp\":\"081328024137\",\"keterangan\":\"-\"}', '2024-03-21 03:07:41', '2024-03-21 03:09:44', '0000-00-00 00:00:00'),
-(2, 'Pop', '{\"nama\":\"Pop\",\"sp\":\"SP 2\",\"hari\":\"Selasa\",\"tanggal\":\"2024-03-26\",\"alasan\":\"Karena\",\"prodi\":\"IT\",\"angkatan\":\"2019\",\"nohp\":\"081328024137\",\"keterangan\":\"-\"}', '2024-03-21 03:10:10', '2024-03-25 06:30:33', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1160,13 +1138,6 @@ CREATE TABLE `umum` (
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
---
--- Dumping data for table `umum`
---
-
-INSERT INTO `umum` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, '2024-03-24', '{\"daritgl\":\"2024-03-24\",\"sampaitgl\":\"2024-03-29\",\"darihari\":\"Senin\",\"sampaihari\":\"Minggu\",\"subdivisi\":\"Admisi On Air\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-20\",\"selesaitgl\":\"2024-03-13\",\"mulaihari\":\"Minggu\",\"selesaihari\":\"Sabtu\",\"kendala\":\"-\",\"status\":\"Sudah Terlaksana\"}', '2024-03-25 05:28:54', '2024-03-25 06:18:53', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1245,13 +1216,6 @@ CREATE TABLE `videos` (
   `deleted_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
---
--- Dumping data for table `videos`
---
-
-INSERT INTO `videos` (`id`, `key`, `value`, `type`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(4, 'MashUp', '{\"title\":\"MashUp\",\"hari\":\"Kamis\",\"tanggal\":\"2024-02-27\",\"tahun\":\"2021\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"platform\":\"TikTok\",\"status\":\"Sudah Terlaksana\"}', 'Mashup', '2024-03-21 06:06:50', '2024-03-25 07:01:24', '0000-00-00 00:00:00');
-
 -- --------------------------------------------------------
 
 --
@@ -1266,13 +1230,6 @@ CREATE TABLE `workshopbroadcast` (
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
---
--- Dumping data for table `workshopbroadcast`
---
-
-INSERT INTO `workshopbroadcast` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-20', '{\"dari\":\"2024-03-20\",\"sampai\":\"2024-03-20\",\"harimulai\":\"Senin\",\"hariselesai\":\"Jum\'at\",\"mulai\":\"09:00\",\"selesai\":\"23:00\",\"materi\":\"<ul><li>Test 1<\\/li><li>Test 2<\\/li><li>Test 3<\\/li><\\/ul>\",\"pemateri\":\"Okie Berland Maulana\",\"tempat\":\"Online via Zoom Meeting\",\"status\":\"Terlaksana\"}', '2024-03-20 05:24:43', '2024-04-02 05:03:15', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -1960,19 +1917,19 @@ ALTER TABLE `structure`
 -- AUTO_INCREMENT for table `suratkeluar`
 --
 ALTER TABLE `suratkeluar`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `suratmasuk`
 --
 ALTER TABLE `suratmasuk`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `suratsp`
 --
 ALTER TABLE `suratsp`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `topchart`
@@ -1984,7 +1941,7 @@ ALTER TABLE `topchart`
 -- AUTO_INCREMENT for table `umum`
 --
 ALTER TABLE `umum`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -1996,13 +1953,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `workshopbroadcast`
 --
 ALTER TABLE `workshopbroadcast`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
