@@ -70,7 +70,7 @@
                 <div class="form-group row">
                     <label for="pendapatan" class="col-sm-3 col-form-label">Pendapatan (Tanpa Rp.)</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" placeholder="50.000" name="pendapatan" required>
+                        <input type="number" class="form-control" placeholder="10000" name="pendapatan" required>
                     </div>
                 </div>
 

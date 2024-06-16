@@ -60,8 +60,11 @@
                                             <?= $data->harikembali; ?><?php if ($data->harikembali != '-') : ?>, <?= $data->tanggalkembali; ?><?php endif; ?>
                                         </td>
                                         <td><?= $data->barang; ?></td>
-                                        <td>
-                                            <?php if ($data->pendapatan != '-') : ?>Rp. <?php endif; ?><?= $data->pendapatan; ?>
+                                        <td><?php if ($data->pendapatan != "0") : ?>
+                                                Rp. <?= number_format(floatval(($data->pendapatan)), 0, ',', '.'); ?>
+                                            <?php else : ?>
+                                                <?= '-'; ?>
+                                            <?php endif; ?>
                                         </td>
                                         <td><?= $data->keterangan; ?></td>
                                         <?php if (in_groups(['Admin', 'AOff'])) : ?>
