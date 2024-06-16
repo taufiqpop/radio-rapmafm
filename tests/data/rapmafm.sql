@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 27, 2024 at 10:12 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost:3306
+-- Generation Time: Jun 16, 2024 at 12:53 AM
+-- Server version: 8.0.30
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,12 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `about` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `about`
@@ -49,14 +49,14 @@ INSERT INTO `about` (`id`, `value`, `created_at`, `updated_at`, `deleted_at`) VA
 --
 
 CREATE TABLE `achievements` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `tahun` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `achievements`
@@ -80,22 +80,14 @@ INSERT INTO `achievements` (`id`, `key`, `value`, `tahun`, `created_at`, `update
 --
 
 CREATE TABLE `alumni` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `tahun` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `alumni`
---
-
-INSERT INTO `alumni` (`id`, `key`, `value`, `tahun`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Taufiq Pop', '{\"nama\":\"Taufiq Pop\",\"nickname\":\"Pop\",\"divisi\":\"Divisi Umum\",\"subdivisi\":\"Teknisi On Air\",\"jurusan\":\"Informatika\",\"domisili\":\"Klaten\",\"nohp\":\"081328024137\",\"instagram\":\"taufiqpop99\"}', '2021', '2024-03-20 05:38:23', '2024-03-20 05:39:21', '0000-00-00 00:00:00'),
-(2, 'Ainunafi NF', '{\"nama\":\"Ainunafi NF\",\"nickname\":\"Ainun\",\"divisi\":\"Divisi Kepenyiaran\",\"subdivisi\":\"Jurnalistik\",\"jurusan\":\"Ilmu Komunikasi\",\"domisili\":\"Surakarta\",\"nohp\":\"0814162131\",\"instagram\":\"ainunafi\"}', '2021', '2024-03-23 03:12:43', '2024-03-23 03:13:08', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -104,13 +96,13 @@ INSERT INTO `alumni` (`id`, `key`, `value`, `tahun`, `created_at`, `updated_at`,
 --
 
 CREATE TABLE `aruskas` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -119,21 +111,14 @@ CREATE TABLE `aruskas` (
 --
 
 CREATE TABLE `audios` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `type` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `audios`
---
-
-INSERT INTO `audios` (`id`, `key`, `value`, `type`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'ID\'s', '{\"title\":\"ID\'s\",\"tahun\":\"2019\",\"keterangan\":\"-\",\"status\":\"-\"}', 'ID\'s', '2024-03-20 04:37:27', '2024-03-25 06:59:09', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -142,12 +127,12 @@ INSERT INTO `audios` (`id`, `key`, `value`, `type`, `created_at`, `updated_at`, 
 --
 
 CREATE TABLE `auth_activation_attempts` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `ip_address` varchar(255) NOT NULL,
   `user_agent` varchar(255) NOT NULL,
   `token` varchar(255) DEFAULT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -156,10 +141,10 @@ CREATE TABLE `auth_activation_attempts` (
 --
 
 CREATE TABLE `auth_groups` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `auth_groups`
@@ -194,9 +179,9 @@ INSERT INTO `auth_groups` (`id`, `name`, `description`) VALUES
 --
 
 CREATE TABLE `auth_groups_permissions` (
-  `group_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
-  `permission_id` int(11) UNSIGNED NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `group_id` int UNSIGNED NOT NULL DEFAULT '0',
+  `permission_id` int UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -205,9 +190,9 @@ CREATE TABLE `auth_groups_permissions` (
 --
 
 CREATE TABLE `auth_groups_users` (
-  `group_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
-  `user_id` int(11) UNSIGNED NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `group_id` int UNSIGNED NOT NULL DEFAULT '0',
+  `user_id` int UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `auth_groups_users`
@@ -251,169 +236,13 @@ INSERT INTO `auth_groups_users` (`group_id`, `user_id`) VALUES
 --
 
 CREATE TABLE `auth_logins` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `ip_address` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `user_id` int(11) UNSIGNED DEFAULT NULL,
+  `user_id` int UNSIGNED DEFAULT NULL,
   `date` datetime NOT NULL,
   `success` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `auth_logins`
---
-
-INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `success`) VALUES
-(1, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-20 02:54:33', 1),
-(2, '::1', 'taufiqpop99rezalutfian', NULL, '2024-03-20 02:55:38', 0),
-(3, '::1', 'rezalutfian@gmail.com', 2, '2024-03-20 02:55:43', 1),
-(4, '::1', 'lalapo19@gmail.com', 3, '2024-03-20 02:59:43', 1),
-(5, '::1', 'rezalutfian@gmail.com', 2, '2024-03-20 03:00:22', 1),
-(6, '::1', 'lalapo19@gmail.com', 3, '2024-03-20 03:13:05', 1),
-(7, '::1', 'agnesdyva@gmail.com', 4, '2024-03-20 03:20:27', 1),
-(8, '::1', 'mhanip@gmail.com', 5, '2024-03-20 03:21:06', 1),
-(9, '::1', 'taufiqpop99maudy', NULL, '2024-03-20 04:11:28', 0),
-(10, '::1', 'maulidiakartika@gmail.com', 6, '2024-03-20 04:11:30', 1),
-(11, '::1', 'mhanip@gmail.com', 5, '2024-03-20 04:11:56', 1),
-(12, '::1', 'maulidiakartika@gmail.com', 6, '2024-03-20 04:12:59', 1),
-(13, '::1', 'taufiqpop99aqsal', NULL, '2024-03-20 04:13:31', 0),
-(14, '::1', 'satyaaqsal@gmail.com', 7, '2024-03-20 04:13:33', 1),
-(15, '::1', 'taufiqpop99lalapo19', NULL, '2024-03-20 04:13:53', 0),
-(16, '::1', 'lalapo19@gmail.com', 3, '2024-03-20 04:13:55', 1),
-(17, '::1', 'taufiqpop99falah', NULL, '2024-03-20 04:14:04', 0),
-(18, '::1', 'fajrulfalah@gmail.com', 8, '2024-03-20 04:14:06', 1),
-(19, '::1', 'vanianuradhani@gmail.com', 9, '2024-03-20 04:14:32', 1),
-(20, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-20 04:14:44', 1),
-(21, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-20 04:15:22', 1),
-(22, '::1', 'brilliantadhi@gmail.com', 10, '2024-03-20 04:15:41', 1),
-(23, '::1', 'dazuf@gmail.com', 11, '2024-03-20 04:41:05', 1),
-(24, '::1', 'alexandria@gmail.com', 12, '2024-03-20 04:41:51', 1),
-(25, '::1', 'taufiqpop99ainunafi', NULL, '2024-03-20 04:42:07', 0),
-(26, '::1', 'ainunafi@gmail.com', 13, '2024-03-20 04:42:09', 1),
-(27, '::1', 'taufiqpop99safinaff', NULL, '2024-03-20 04:42:37', 0),
-(28, '::1', 'taufiqpop99safinaff', NULL, '2024-03-20 04:42:38', 0),
-(29, '::1', 'safinaff@gmail.com', 14, '2024-03-20 04:42:40', 1),
-(30, '::1', 'maulidyarania@gmail.com', 15, '2024-03-20 04:42:51', 1),
-(31, '::1', 'taufiqpop99sidam', NULL, '2024-03-20 04:43:13', 0),
-(32, '::1', 'sidamlighfal@gmail.com', 16, '2024-03-20 04:43:15', 1),
-(33, '::1', 'taufiqpop99giri', NULL, '2024-03-20 05:12:06', 0),
-(34, '::1', 'girifahrez@gmail.com', 17, '2024-03-20 05:12:08', 1),
-(35, '::1', 'pramudyaimam@gmail.com', 18, '2024-03-20 05:12:32', 1),
-(36, '::1', 'iranf@gmail.com', 19, '2024-03-20 05:12:53', 1),
-(37, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-20 05:13:09', 1),
-(38, '::1', 'pratamayoga@gmail.com', 20, '2024-03-20 05:13:25', 1),
-(39, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-20 05:13:59', 1),
-(40, '::1', 'wikan@gmail.com', 21, '2024-03-20 05:14:33', 1),
-(41, '::1', 'thifalkhansa@gmail.com', 22, '2024-03-20 05:15:21', 1),
-(42, '::1', 'dimasadi@gmail.com', 23, '2024-03-20 05:15:33', 1),
-(43, '::1', 'ainilatyfah@gmail.com', 24, '2024-03-20 05:15:48', 1),
-(44, '::1', 'verel@gmail.com', 26, '2024-03-20 05:16:12', 1),
-(45, '::1', 'crewrpm@gmail.com', 27, '2024-03-20 05:16:31', 1),
-(46, '::1', 'demisionerpm@gmail.com', 28, '2024-03-20 05:17:36', 1),
-(47, '::1', 'taufiqpop99alumnirapma', NULL, '2024-03-20 05:17:54', 0),
-(48, '::1', 'alumnirpm@gmail.com', 29, '2024-03-20 05:17:57', 1),
-(49, '::1', 'azzahrah@gmail.com', 25, '2024-03-20 05:18:22', 1),
-(50, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-20 05:40:28', 1),
-(51, '::1', 'dazuf@gmail.com', 11, '2024-03-20 06:05:57', 1),
-(52, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-20 07:06:05', 1),
-(53, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-21 00:54:20', 1),
-(54, '::1', 'dazuf@gmail.com', 11, '2024-03-21 00:56:39', 1),
-(55, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-21 01:35:56', 1),
-(56, '::1', 'rezalutfian@gmail.com', 2, '2024-03-21 01:43:14', 1),
-(57, '::1', 'sidamlighfal@gmail.com', 16, '2024-03-21 01:43:39', 1),
-(58, '::1', 'brilliantadhi@gmail.com', 10, '2024-03-21 01:48:36', 1),
-(59, '::1', 'mhanip@gmail.com', 5, '2024-03-21 01:52:26', 1),
-(60, '::1', 'azzahrah@gmail.com', 25, '2024-03-21 01:53:16', 1),
-(61, '::1', 'alumnirpm@gmail.com', 29, '2024-03-21 01:54:47', 1),
-(62, '::1', 'ainunafi@gmail.com', 13, '2024-03-21 02:01:01', 1),
-(63, '::1', 'ainilatyfah@gmail.com', 24, '2024-03-21 02:32:31', 1),
-(64, '::1', 'azzahrah@gmail.com', 25, '2024-03-21 03:23:32', 1),
-(65, '::1', 'azzahrah@gmail.com', 25, '2024-03-21 03:23:32', 1),
-(66, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-21 03:31:27', 1),
-(67, '::1', 'iranf@gmail.com', 19, '2024-03-21 03:37:47', 1),
-(68, '::1', 'ainunafi@gmail.com', 13, '2024-03-21 03:38:00', 1),
-(69, '::1', 'ainilatyfah@gmail.com', 24, '2024-03-21 03:41:49', 1),
-(70, '::1', 'ainunafi@gmail.com', 13, '2024-03-21 03:44:23', 1),
-(71, '::1', 'sidamlighfal@gmail.com', 16, '2024-03-21 03:45:37', 1),
-(72, '::1', 'vanianuradhani@gmail.com', 9, '2024-03-21 03:45:51', 1),
-(73, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-21 03:54:58', 1),
-(74, '::1', 'pratamayoga@gmail.com', 20, '2024-03-21 03:56:19', 1),
-(75, '::1', 'crewrpm@gmail.com', 27, '2024-03-21 04:48:01', 1),
-(76, '::1', 'iranf@gmail.com', 19, '2024-03-21 04:55:44', 1),
-(77, '::1', 'thifalkhansa@gmail.com', 22, '2024-03-21 05:39:51', 1),
-(78, '::1', 'alexandria@gmail.com', 12, '2024-03-21 05:55:21', 1),
-(79, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-21 05:57:50', 1),
-(80, '::1', 'ainunafi@gmail.com', 13, '2024-03-21 06:41:05', 1),
-(81, '::1', 'crewrpm@gmail.com', 27, '2024-03-21 07:00:11', 1),
-(82, '::1', 'alumnirpm@gmail.com', 29, '2024-03-21 07:03:48', 1),
-(83, '::1', 'demisionerpm@gmail.com', 28, '2024-03-21 07:03:55', 1),
-(84, '::1', 'crewrpm@gmail.com', 27, '2024-03-21 07:05:11', 1),
-(85, '::1', 'ainunafi@gmail.com', 13, '2024-03-21 07:08:04', 1),
-(86, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-21 07:20:55', 1),
-(87, '::1', 'ainunafi@gmail.com', 13, '2024-03-21 07:29:27', 1),
-(88, '::1', 'brilliantadhi@gmail.com', 10, '2024-03-21 07:29:37', 1),
-(89, '::1', 'mhanip@gmail.com', 5, '2024-03-21 07:30:46', 1),
-(90, '::1', 'azzahrah@gmail.com', 25, '2024-03-21 07:33:12', 1),
-(91, '::1', 'sidamlighfal@gmail.com', 16, '2024-03-21 07:33:37', 1),
-(92, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-22 03:01:34', 1),
-(93, '::1', 'alumnirpm@gmail.com', 29, '2024-03-22 03:36:36', 1),
-(94, '::1', 'demisionerpm@gmail.com', 28, '2024-03-22 03:38:21', 1),
-(95, '::1', 'crewrpm@gmail.com', 27, '2024-03-22 03:38:42', 1),
-(96, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-22 03:54:13', 1),
-(97, '::1', 'alumnirpm@gmail.com', 29, '2024-03-22 04:03:52', 1),
-(98, '::1', 'crewrpm@gmail.com', 27, '2024-03-22 04:12:51', 1),
-(99, '::1', 'dazuf@gmail.com', 11, '2024-03-22 04:16:26', 1),
-(100, '::1', 'iranf@gmail.com', 19, '2024-03-22 06:05:55', 1),
-(101, '::1', 'ainunafi@gmail.com', 13, '2024-03-22 07:44:31', 1),
-(102, '::1', 'crewrpm@gmail.com', 27, '2024-03-22 08:23:14', 1),
-(103, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-23 01:25:27', 1),
-(104, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-23 01:25:27', 1),
-(105, '::1', 'crewrpm@gmail.com', 27, '2024-03-23 01:27:19', 1),
-(106, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-23 01:50:28', 1),
-(107, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-23 01:50:44', 1),
-(108, '::1', 'alumnirpm@gmail.com', 29, '2024-03-23 01:50:52', 1),
-(109, '::1', 'ainunafi@gmail.com', 13, '2024-03-23 01:51:32', 1),
-(110, '::1', 'ainunafi@gmail.com', 13, '2024-03-23 03:10:02', 1),
-(111, '::1', 'alumnirpm@gmail.com', 29, '2024-03-23 03:12:03', 1),
-(112, '::1', 'crewrpm@gmail.com', 27, '2024-03-23 03:13:33', 1),
-(113, '::1', 'thifalkhansa@gmail.com', 22, '2024-03-23 03:14:49', 1),
-(114, '::1', 'thifal', NULL, '2024-03-23 03:15:07', 0),
-(115, '::1', 'thifalkhansa@gmail.com', 22, '2024-03-23 03:15:11', 1),
-(116, '::1', 'thifalkhansa@gmail.com', 22, '2024-03-23 03:15:25', 1),
-(117, '::1', 'sesihaga@gmail.com', 22, '2024-03-23 03:25:14', 1),
-(118, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-23 03:26:21', 1),
-(119, '::1', 'salmawidya@gmail.com', 26, '2024-03-23 03:26:57', 1),
-(120, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-23 03:50:53', 1),
-(121, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-23 03:50:53', 1),
-(122, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-25 04:17:31', 1),
-(123, '::1', 'rezalutfian@gmail.com', 2, '2024-03-25 04:18:38', 1),
-(124, '::1', 'lalapo19@gmail.com', 3, '2024-03-25 04:18:45', 1),
-(125, '::1', 'crewrpm@gmail.com', 27, '2024-03-25 04:27:51', 1),
-(126, '::1', 'alumnirpm@gmail.com', 29, '2024-03-25 04:28:01', 1),
-(127, '::1', 'rezalutfian@gmail.com', 2, '2024-03-25 04:35:04', 1),
-(128, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-25 05:22:52', 1),
-(129, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-27 01:02:11', 1),
-(130, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-27 02:12:48', 1),
-(131, '::1', 'alumnirpm@gmail.com', 29, '2024-03-27 02:13:35', 1),
-(132, '::1', 'taufiqpop999@gmail.com', 1, '2024-03-27 02:14:45', 1),
-(133, '::1', 'crewrpm@gmail.com', 27, '2024-03-27 02:15:14', 1),
-(134, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-02 03:54:49', 1),
-(135, '::1', 'thifalkhansa@gmail.com', 22, '2024-04-02 05:43:32', 1),
-(136, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-04 06:51:42', 1),
-(137, '::1', 'sidamlighfal@gmail.com', 16, '2024-04-04 06:56:29', 1),
-(138, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-04 06:57:24', 1),
-(139, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-04 07:03:30', 1),
-(140, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-04 07:03:30', 1),
-(141, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-17 03:32:04', 1),
-(142, '::1', 'taufiqpop', NULL, '2024-04-19 03:39:50', 0),
-(143, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-19 03:39:52', 1),
-(144, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-19 03:52:54', 1),
-(145, '::1', 'iranf@gmail.com', 19, '2024-04-19 04:04:20', 1),
-(146, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-19 05:42:25', 1),
-(147, '::1', 'taufiqpop', NULL, '2024-04-27 04:24:59', 0),
-(148, '::1', 'taufiqpop999@gmail.com', 1, '2024-04-27 04:25:02', 1),
-(149, '::1', 'iranf@gmail.com', 19, '2024-04-27 04:25:11', 1),
-(150, '::1', 'iranf@gmail.com', 19, '2024-04-27 06:14:04', 1);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -422,10 +251,10 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 --
 
 CREATE TABLE `auth_permissions` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -434,13 +263,13 @@ CREATE TABLE `auth_permissions` (
 --
 
 CREATE TABLE `auth_reset_attempts` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `email` varchar(255) NOT NULL,
   `ip_address` varchar(255) NOT NULL,
   `user_agent` varchar(255) NOT NULL,
   `token` varchar(255) DEFAULT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -449,12 +278,12 @@ CREATE TABLE `auth_reset_attempts` (
 --
 
 CREATE TABLE `auth_tokens` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `selector` varchar(255) NOT NULL,
   `hashedValidator` varchar(255) NOT NULL,
-  `user_id` int(11) UNSIGNED NOT NULL,
+  `user_id` int UNSIGNED NOT NULL,
   `expires` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -463,9 +292,9 @@ CREATE TABLE `auth_tokens` (
 --
 
 CREATE TABLE `auth_users_permissions` (
-  `user_id` int(11) UNSIGNED NOT NULL DEFAULT 0,
-  `permission_id` int(11) UNSIGNED NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `user_id` int UNSIGNED NOT NULL DEFAULT '0',
+  `permission_id` int UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -474,13 +303,13 @@ CREATE TABLE `auth_users_permissions` (
 --
 
 CREATE TABLE `beritaweb` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `beritaweb`
@@ -501,20 +330,13 @@ INSERT INTO `beritaweb` (`id`, `key`, `value`, `created_at`, `updated_at`, `dele
 --
 
 CREATE TABLE `blog` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `blog`
---
-
-INSERT INTO `blog` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-28\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/3UQz9EO6DUvuurHthAvlkI?si=9c9273e359c54c02\",\"keterangan\":\"Aman\"}', '2024-03-21 07:17:40', '2024-03-25 06:47:46', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -523,21 +345,13 @@ INSERT INTO `blog` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_a
 --
 
 CREATE TABLE `capeng` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `capeng`
---
-
-INSERT INTO `capeng` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, 'Pop', '{\"nama\":\"Pop\",\"ttd\":\"\\u2705\",\"hari\":\"Sabtu\",\"tanggal\":\"2024-03-16\",\"pers\":\"\\u2705\",\"lanyard\":\"\\u2705\",\"pdh\":\"\\u2705\",\"pin\":\"\\u2705\",\"keterangan\":\"-\"}', '2024-03-21 02:52:35', '2024-03-25 06:32:20', '0000-00-00 00:00:00'),
-(3, 'Sidam', '{\"nama\":\"Sidam\",\"ttd\":\"\\u2705\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-12\",\"pers\":\"\\u2705\",\"lanyard\":\"\\u2705\",\"pdh\":\"\\u2014\",\"pin\":\"\\u00d7\",\"keterangan\":\"-\"}', '2024-03-21 03:17:31', '2024-03-25 06:32:17', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -546,20 +360,13 @@ INSERT INTO `capeng` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted
 --
 
 CREATE TABLE `crew` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `crew`
---
-
-INSERT INTO `crew` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '', '{\"nama\":\"Taufiq Pop\",\"nickname\":\"Pop\",\"jurusan\":\"Informatika\",\"semester\":\"6\",\"nim\":\"L200190085\",\"domisili\":\"Klaten\",\"nohp\":\"081328024137\",\"status\":\"Pasif\",\"instagram\":\"taufiqpop99\",\"twitter\":\"taufiqpop99\"}', '2024-03-20 05:34:46', '2024-03-25 06:44:24', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -568,20 +375,13 @@ INSERT INTO `crew` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_a
 --
 
 CREATE TABLE `dendadlibs` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `dendadlibs`
---
-
-INSERT INTO `dendadlibs` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, 'Pop', '{\"nama\":\"Pop\",\"acara\":\"Photography &  Poster Competition \",\"program\":\"TOP 15\",\"tanggal\":\"2024-03-30\",\"hari\":\"Sabtu\",\"total\":\"4.000\",\"keterangan\":\"SUDAH LUNAS\"}', '2024-03-20 04:02:27', '2024-03-25 06:09:23', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -590,21 +390,21 @@ INSERT INTO `dendadlibs` (`id`, `key`, `value`, `created_at`, `updated_at`, `del
 --
 
 CREATE TABLE `events` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `tahun` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `events`
 --
 
 INSERT INTO `events` (`id`, `key`, `value`, `tahun`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'RAPMADAY #7', '{\"nama\":\"RAPMADAY #7\",\"deskripsi\":\"<script src=\\\"\\/\\/cdn.public.flmngr.com\\/FLMNFLMN\\/widgets.js\\\"><\\/script>\",\"jenis\":\"RAPMADAY\",\"tahun\":\"2021\",\"link\":\"https:\\/\\/youtu.be\\/tG9CjgjVY0k\",\"images\":\"1710311715_add3ca2b885fce9fe237.png\"}', '', '2024-03-13 06:35:15', '2024-03-13 06:35:15', '0000-00-00 00:00:00'),
+(1, 'RAPMADAY #7', '{\"nama\":\"RAPMADAY #7\",\"jenis\":\"RAPMADAY\",\"tahun\":\"2021\",\"link\":\"https:\\/\\/youtu.be\\/tG9CjgjVY0k\",\"images\":\"1710311715_add3ca2b885fce9fe237.png\"}', '', '2024-03-13 06:35:15', '2024-03-13 06:35:15', '0000-00-00 00:00:00'),
 (2, 'RAPMAFEST #8', '{\"nama\":\"RAPMAFEST #8\",\"jenis\":\"RAPMAFEST\",\"tahun\":\"2021\",\"link\":\"rapmafest8\",\"images\":\"1710311733_499d8a839347f1ae6fef.png\"}', '', '2024-03-13 06:35:33', '2024-03-22 06:10:28', '0000-00-00 00:00:00'),
 (3, 'RAPMADAY #8', '{\"nama\":\"RAPMADAY #8\",\"jenis\":\"RAPMADAY\",\"tahun\":\"2022\",\"link\":\"rapmaday8\",\"images\":\"1710311756_46703cd167a29bb1e23b.png\"}', '', '2024-03-13 06:35:56', '2024-03-22 06:09:56', '0000-00-00 00:00:00'),
 (4, 'RAPMAFEST #9', '{\"nama\":\"RAPMAFEST #9\",\"jenis\":\"RAPMAFEST\",\"tahun\":\"2022\",\"link\":\"rapmafest9\",\"images\":\"1710311781_c6212142abe50b84bef9.png\"}', '', '2024-03-13 06:36:21', '2024-03-22 06:10:22', '0000-00-00 00:00:00'),
@@ -618,21 +418,13 @@ INSERT INTO `events` (`id`, `key`, `value`, `tahun`, `created_at`, `updated_at`,
 --
 
 CREATE TABLE `gmpa` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `gmpa`
---
-
-INSERT INTO `gmpa` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(7, '2024-03-12', '{\"daritgl\":\"2024-03-12\",\"sampaitgl\":\"2024-03-13\",\"darihari\":\"Senin\",\"sampaihari\":\"Minggu\",\"subdivisi\":\"General Manager\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-06\",\"selesaitgl\":\"2024-03-06\",\"mulaihari\":\"-\",\"selesaihari\":\"-\",\"kendala\":\"-\",\"status\":\"Sudah Terlaksana\"}', '2024-03-25 05:30:50', '2024-03-25 06:15:23', '0000-00-00 00:00:00'),
-(8, '2024-03-25', '{\"daritgl\":\"2024-03-25\",\"sampaitgl\":\"2024-03-30\",\"darihari\":\"Minggu\",\"sampaihari\":\"Senin\",\"subdivisi\":\"General Manager\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-11\",\"selesaitgl\":\"2024-04-01\",\"mulaihari\":\"Selasa\",\"selesaihari\":\"Kamis\",\"kendala\":\"-\",\"status\":\"Sudah Terlaksana\"}', '2024-03-27 01:03:04', '2024-03-27 01:03:13', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -641,20 +433,13 @@ INSERT INTO `gmpa` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_a
 --
 
 CREATE TABLE `iklan` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `iklan`
---
-
-INSERT INTO `iklan` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Pop', '{\"nama\":\"Pop\",\"client\":\"MTATV\",\"tglmou\":\"2024-03-13\",\"hari\":\"Kamis\",\"paket\":\"<ul><li>Haloo<\\/li><\\/ul>\",\"harga\":\"10.000.000\",\"status\":\"Sudah Tembus\"}', '2024-03-20 03:31:37', '2024-04-02 05:15:23', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -663,20 +448,13 @@ INSERT INTO `iklan` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_
 --
 
 CREATE TABLE `infografis` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `infografis`
---
-
-INSERT INTO `infografis` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-06\",\"keterangan\":\"-\"}', '2024-03-21 07:15:27', '2024-03-25 06:54:23', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -685,7 +463,7 @@ INSERT INTO `infografis` (`id`, `key`, `value`, `created_at`, `updated_at`, `del
 --
 
 CREATE TABLE `inventaris` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `kode` varchar(255) NOT NULL,
@@ -693,14 +471,7 @@ CREATE TABLE `inventaris` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `inventaris`
---
-
-INSERT INTO `inventaris` (`id`, `key`, `value`, `kode`, `tahun`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Sound System', '{\"barang\":\"Sound System\",\"nomor\":\"2\",\"jumlah\":\"2\",\"kondisi\":\"Baik\",\"tanggal\":\"2024-03-20\",\"hari\":\"Rabu\"}', 'F', '21', '2024-03-20 04:56:25', '2024-03-25 06:23:49', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -709,13 +480,13 @@ INSERT INTO `inventaris` (`id`, `key`, `value`, `kode`, `tahun`, `created_at`, `
 --
 
 CREATE TABLE `jadwalpiket` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `jadwalpiket`
@@ -731,13 +502,13 @@ INSERT INTO `jadwalpiket` (`id`, `key`, `value`, `created_at`, `updated_at`, `de
 --
 
 CREATE TABLE `jadwalsiar` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `jadwalsiar`
@@ -753,20 +524,13 @@ INSERT INTO `jadwalsiar` (`id`, `key`, `value`, `created_at`, `updated_at`, `del
 --
 
 CREATE TABLE `kepenyiaran` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `kepenyiaran`
---
-
-INSERT INTO `kepenyiaran` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-20', '{\"daritgl\":\"2024-03-20\",\"sampaitgl\":\"2024-03-20\",\"darihari\":\"Senin\",\"sampaihari\":\"Sabtu\",\"subdivisi\":\"Manager Kepenyiaran\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-20\",\"selesaitgl\":\"2024-03-20\",\"mulaihari\":\"Senin\",\"selesaihari\":\"Sabtu\",\"kendala\":\"-\",\"status\":\"Belum Terlaksana\"}', '2024-03-20 04:18:36', '2024-03-25 06:45:47', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -775,20 +539,13 @@ INSERT INTO `kepenyiaran` (`id`, `key`, `value`, `created_at`, `updated_at`, `de
 --
 
 CREATE TABLE `kerjabakti` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `kerjabakti`
---
-
-INSERT INTO `kerjabakti` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-03', '{\"tanggal\":\"2024-03-03\",\"hari\":\"Kamis\",\"jmlcrew\":\"1\",\"jmlpengurus\":\"1\",\"alasan\":\"-\",\"kendala\":\"-\",\"status\":\"\\u2705\"}', '2024-03-21 04:07:49', '2024-03-25 06:26:34', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -797,20 +554,13 @@ INSERT INTO `kerjabakti` (`id`, `key`, `value`, `created_at`, `updated_at`, `del
 --
 
 CREATE TABLE `konten` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `konten`
---
-
-INSERT INTO `konten` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Kamis\",\"tanggal\":\"2024-03-07\",\"platform\":\"TikTok\",\"status\":\"Sudah Upload\",\"keterangan\":\"-\"}', '2024-03-21 05:33:49', '2024-03-25 06:20:23', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -819,20 +569,13 @@ INSERT INTO `konten` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted
 --
 
 CREATE TABLE `labelrekaman` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `labelrekaman`
---
-
-INSERT INTO `labelrekaman` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Le Moesiek Revole', '{\"label\":\"Le Moesiek Revole\",\"total\":\"5\"}', '2024-03-20 04:27:48', '2024-03-20 04:28:03', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -841,21 +584,14 @@ INSERT INTO `labelrekaman` (`id`, `key`, `value`, `created_at`, `updated_at`, `d
 --
 
 CREATE TABLE `lagu` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `tahun` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `lagu`
---
-
-INSERT INTO `lagu` (`id`, `key`, `value`, `tahun`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Anthony Ginting Lolos ke Final Usai Hajar Christo Popov', '{\"judul\":\"Anthony Ginting Lolos ke Final Usai Hajar Christo Popov\",\"artist\":\"Nicky Tirta, Rini Mentari\",\"album\":\"-\",\"genre\":\"-\",\"tipe\":\"Slow\",\"lokasi\":\"Indonesia\"}', '2012', '2024-03-20 04:24:57', '2024-03-20 04:25:00', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -864,20 +600,13 @@ INSERT INTO `lagu` (`id`, `key`, `value`, `tahun`, `created_at`, `updated_at`, `
 --
 
 CREATE TABLE `livereport` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `livereport`
---
-
-INSERT INTO `livereport` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, '2024-02-28', '{\"nama\":\"Pop\",\"hari\":\"Kamis\",\"tanggal\":\"2024-02-28\",\"jam\":\"08:00 - 09:00\",\"lokasi\":\"Edutorium UMS\",\"perihal\":\"Undangan\",\"program\":\"11N1\",\"status\":\"\\u2705\"}', '2024-03-21 06:35:18', '2024-03-25 06:53:32', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -886,20 +615,13 @@ INSERT INTO `livereport` (`id`, `key`, `value`, `created_at`, `updated_at`, `del
 --
 
 CREATE TABLE `maganginternal` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `maganginternal`
---
-
-INSERT INTO `maganginternal` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-20', '{\"dari\":\"2024-03-20\",\"sampai\":\"2024-03-13\",\"harimulai\":\"Senin\",\"hariselesai\":\"Jum\'at\",\"mulai\":\"09:00\",\"selesai\":\"23:00\",\"materi\":\"<div><strong><em>Halo<\\/em><\\/strong><\\/div>\",\"pemateri\":\"Dodik Murdiyanto Laksmana Putra, Fajar Khoirul  Umam, & Ginang\",\"tempat\":\"Online via Zoom Meeting\",\"status\":\"Sudah Terlaksana\"}', '2024-03-20 05:23:24', '2024-04-02 05:12:46', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -908,20 +630,13 @@ INSERT INTO `maganginternal` (`id`, `key`, `value`, `created_at`, `updated_at`, 
 --
 
 CREATE TABLE `marketing` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `marketing`
---
-
-INSERT INTO `marketing` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-07', '{\"daritgl\":\"2024-03-07\",\"sampaitgl\":\"2024-04-03\",\"darihari\":\"Senin\",\"sampaihari\":\"Sabtu\",\"subdivisi\":\"Manager Marketing\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-05\",\"selesaitgl\":\"2024-03-20\",\"mulaihari\":\"-\",\"selesaihari\":\"-\",\"kendala\":\"-\",\"status\":\"Tidak Terlaksana\"}', '2024-03-20 03:25:56', '2024-03-25 06:00:13', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -930,20 +645,13 @@ INSERT INTO `marketing` (`id`, `key`, `value`, `created_at`, `updated_at`, `dele
 --
 
 CREATE TABLE `medpart` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `medpart`
---
-
-INSERT INTO `medpart` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-20', '{\"tglmasuk\":\"2024-03-20\",\"hari\":\"Kamis\",\"harimulai\":\"Senin\",\"hariselesai\":\"Jum\'at\",\"tglmulai\":\"2024-03-07\",\"tglselesai\":\"2024-02-26\",\"instansi\":\"Kopma\",\"acara\":\"Photography &  Poster Competition \",\"status\":\"Cancel\",\"jenis\":\"Eksternal\",\"kontraprestasi\":\"<div><strong>Haloooo<\\/strong><\\/div>\"}', '2024-03-20 03:29:06', '2024-04-02 05:16:30', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -952,13 +660,13 @@ INSERT INTO `medpart` (`id`, `key`, `value`, `created_at`, `updated_at`, `delete
 --
 
 CREATE TABLE `member` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `member`
@@ -974,14 +682,14 @@ INSERT INTO `member` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted
 --
 
 CREATE TABLE `migrations` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` bigint UNSIGNED NOT NULL,
   `version` varchar(255) NOT NULL,
   `class` varchar(255) NOT NULL,
   `group` varchar(255) NOT NULL,
   `namespace` varchar(255) NOT NULL,
-  `time` int(11) NOT NULL,
-  `batch` int(11) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `time` int NOT NULL,
+  `batch` int UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `migrations`
@@ -1047,13 +755,13 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 --
 
 CREATE TABLE `minigames` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `minigames`
@@ -1073,20 +781,13 @@ INSERT INTO `minigames` (`id`, `key`, `value`, `created_at`, `updated_at`, `dele
 --
 
 CREATE TABLE `mtalent` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `mtalent`
---
-
-INSERT INTO `mtalent` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-13', '{\"tglmulai\":\"2024-03-13\",\"harimulai\":\"Senin\",\"tglselesai\":\"2024-03-20\",\"hariselesai\":\"Jum\'at\",\"jenis\":\"Rapma Band\",\"instansi\":\"Kopma\",\"acara\":\"Photography &  Poster Competition \",\"talent\":\"Sidam, Ainun \",\"tempat\":\"Online via Zoom Meeting\",\"feetalent\":\"225.000\",\"feerapma\":\"75.000\",\"kontraprestasi\":\"<ul><li><strong><em>Iklan 1<\\/em><\\/strong><\\/li><li><strong><em>Iklan 2<\\/em><\\/strong><\\/li><\\/ul>\"}', '2024-03-20 03:38:57', '2024-04-02 05:01:36', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -1095,21 +796,14 @@ INSERT INTO `mtalent` (`id`, `key`, `value`, `created_at`, `updated_at`, `delete
 --
 
 CREATE TABLE `news` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `tahun` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `news`
---
-
-INSERT INTO `news` (`id`, `key`, `value`, `tahun`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Kejutan 2020, Harga BBM Turun', '{\"judul\":\"Kejutan 2020, Harga BBM Turun\",\"hari\":\"Rabu\",\"tanggal\":\"2024-03-04\",\"penulis\":\"Jurnalistik\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"keterangan\":\"Foto\"}', '2021', '2024-03-21 06:28:17', '2024-03-25 06:51:22', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -1118,20 +812,13 @@ INSERT INTO `news` (`id`, `key`, `value`, `tahun`, `created_at`, `updated_at`, `
 --
 
 CREATE TABLE `newsflash` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `newsflash`
---
-
-INSERT INTO `newsflash` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Cinta, Cita, Perjuangan dan Patah Hati', '{\"judul\":\"Cinta, Cita, Perjuangan dan Patah Hati\",\"hari\":\"Jum\'at\",\"tanggal\":\"2024-03-06\",\"penulis\":\"Jurnalistik\",\"link\":\"https:\\/\\/open.spotify.com\\/episode\\/1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"kendala\":\"-\",\"keterangan\":\"-\"}', '2024-03-21 06:58:42', '2024-03-25 06:55:45', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -1140,20 +827,13 @@ INSERT INTO `newsflash` (`id`, `key`, `value`, `created_at`, `updated_at`, `dele
 --
 
 CREATE TABLE `pemancar` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `pemancar`
---
-
-INSERT INTO `pemancar` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-25', '[{\"daerah\":\"Menco\",\"kondisi\":\"Hilang\"}]', '2024-03-22 03:07:08', '2024-03-22 03:07:17', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -1162,20 +842,13 @@ INSERT INTO `pemancar` (`id`, `key`, `value`, `created_at`, `updated_at`, `delet
 --
 
 CREATE TABLE `peminjaman` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `peminjaman`
---
-
-INSERT INTO `peminjaman` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'PSM Voca Alkindi', '{\"peminjam\":\"PSM Voca Alkindi\",\"tanggalpinjam\":\"2024-03-18\",\"tanggalkembali\":\"2024-03-21\",\"haripinjam\":\"Senin\",\"harikembali\":\"Sabtu\",\"barang\":\"Sound System\",\"pendapatan\":\"-\",\"keterangan\":\"-\"}', '2024-03-20 04:58:00', '2024-03-25 06:26:52', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -1184,20 +857,13 @@ INSERT INTO `peminjaman` (`id`, `key`, `value`, `created_at`, `updated_at`, `del
 --
 
 CREATE TABLE `pemutaranserentak` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `pemutaranserentak`
---
-
-INSERT INTO `pemutaranserentak` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-22', '{\"tanggal\":\"2024-03-22\",\"label\":\"100 Musics\",\"penyanyi\":\"Alghazali ft. Chelsea Shania\",\"judul\":\"Anthony Ginting Lolos ke Final Usai Hajar Christo Popov\"}', '2024-03-20 04:26:00', '2024-03-20 04:26:03', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -1206,20 +872,13 @@ INSERT INTO `pemutaranserentak` (`id`, `key`, `value`, `created_at`, `updated_at
 --
 
 CREATE TABLE `pengurus` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `pengurus`
---
-
-INSERT INTO `pengurus` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, '', '{\"nama\":\"Taufiq Pop\",\"nickname\":\"Pop\",\"divisi\":\"Divisi Umum\",\"subdivisi\":\"Teknisi On Air\",\"jurusan\":\"Informatika\",\"semester\":\"5\",\"nim\":\"L200190085\",\"nia\":\"209.19.557\",\"domisili\":\"Klaten\",\"nohp\":\"081328024137\",\"status\":\"Pasif\",\"instagram\":\"taufiqpop99\",\"twitter\":\"taufiqpop99\"}', '2024-03-21 05:44:31', '2024-03-25 06:43:09', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -1228,13 +887,13 @@ INSERT INTO `pengurus` (`id`, `key`, `value`, `created_at`, `updated_at`, `delet
 --
 
 CREATE TABLE `penyiar` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `penyiar`
@@ -1250,20 +909,13 @@ INSERT INTO `penyiar` (`id`, `key`, `value`, `created_at`, `updated_at`, `delete
 --
 
 CREATE TABLE `personalia` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `personalia`
---
-
-INSERT INTO `personalia` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '2024-03-18', '{\"daritgl\":\"2024-03-18\",\"sampaitgl\":\"2024-03-23\",\"darihari\":\"Senin\",\"sampaihari\":\"Sabtu\",\"subdivisi\":\"Manager Personalia\",\"proker\":\"Pindah Studio\",\"mulaitgl\":\"2024-03-20\",\"selesaitgl\":\"2024-03-20\",\"mulaihari\":\"Senin\",\"selesaihari\":\"Sabtu\",\"kendala\":\"-\",\"status\":\"Sudah Terlaksana\"}', '2024-03-20 05:20:39', '2024-03-25 06:28:11', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -1272,7 +924,7 @@ INSERT INTO `personalia` (`id`, `key`, `value`, `created_at`, `updated_at`, `del
 --
 
 CREATE TABLE `pesan` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
   `subject` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -1280,14 +932,7 @@ CREATE TABLE `pesan` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `pesan`
---
-
-INSERT INTO `pesan` (`id`, `name`, `subject`, `email`, `message`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Pop', 'Halo', 'pop@gmail.com', 'Hellow', '2024-03-23 03:10:26', '2024-03-23 03:10:26', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -1296,7 +941,7 @@ INSERT INTO `pesan` (`id`, `name`, `subject`, `email`, `message`, `created_at`, 
 --
 
 CREATE TABLE `podcast` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `embed` text NOT NULL,
@@ -1305,24 +950,7 @@ CREATE TABLE `podcast` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `podcast`
---
-
-INSERT INTO `podcast` (`id`, `key`, `value`, `embed`, `tahun`, `program`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, '-', '{\"judul\":\"-\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-18\",\"link\":\"0c3UrX8b5sVauco3iEXYNA\",\"talent\":\"Wikan\",\"narasumber\":\"-\"}', '', '2021', 'MOVIE SCREEN', '2024-03-22 04:18:47', '2024-03-22 04:18:47', '0000-00-00 00:00:00'),
-(3, '-', '{\"judul\":\"-\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-17\",\"link\":\"3UQz9EO6DUvuurHthAvlkI?si=9c9273e359c54c02\",\"talent\":\"Maudy, Dazuf\",\"narasumber\":\"-\"}', '', '2021', 'KING & QUEEN', '2024-03-22 04:19:13', '2024-03-22 04:19:13', '0000-00-00 00:00:00'),
-(4, '-', '{\"judul\":\"-\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-17\",\"link\":\"1yxOYXK1bMWIs3tkpSUOIc?si=ca8a3dbee2454a7e\",\"talent\":\"Reza\",\"narasumber\":\"-\"}', '', '2021', 'INDIEZONE', '2024-03-22 04:19:48', '2024-03-22 04:19:48', '0000-00-00 00:00:00'),
-(5, '-', '{\"judul\":\"-\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-24\",\"link\":\"6eSgHfMK6972yDe9Ch2o8F?si=800d1f78b93d4425\",\"talent\":\"Brilly\",\"narasumber\":\"-\"}', '', '2021', 'TEKSAS', '2024-03-22 04:20:12', '2024-03-22 04:20:12', '0000-00-00 00:00:00'),
-(6, '-', '{\"judul\":\"-\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-24\",\"link\":\"1T4gXy589d4nDZ820F0W2q?si=b43b7113efea4f2b\",\"talent\":\"Safina, Hanip\",\"narasumber\":\"-\"}', '', '2021', 'MERINDING', '2024-03-22 04:20:43', '2024-03-22 04:20:43', '0000-00-00 00:00:00'),
-(7, '-', '{\"judul\":\"-\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-17\",\"link\":\"1dAcappKAmIOxcbZMjyHG9?si=fa7a3c9fab694581\",\"talent\":\"Uli\",\"narasumber\":\"-\"}', '', '2021', 'K-ARENA', '2024-03-22 04:21:04', '2024-03-22 04:21:04', '0000-00-00 00:00:00'),
-(8, '-', '{\"judul\":\"-\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-27\",\"link\":\"5JCrqf2RRplT0WexV3UqOP\",\"talent\":\"Vania\",\"narasumber\":\"-\"}', '', '2021', 'SUDUT KAMPUS', '2024-03-22 04:21:38', '2024-03-22 04:32:55', '0000-00-00 00:00:00'),
-(9, '-', '{\"judul\":\"-\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-31\",\"link\":\"2mru4VWHqOk0g702FerJDl?si=1ab330e8de2d41f9\",\"talent\":\"Sidam, Ainun\",\"narasumber\":\"-\"}', '', '2021', 'NO SATNIGHT', '2024-03-22 04:22:04', '2024-03-22 04:32:30', '0000-00-00 00:00:00'),
-(10, '-', '{\"judul\":\"-\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-02\",\"link\":\"0H0UTyvK4su14jJVDcfk2X?si=0e221fd2423c4e70\",\"talent\":\"A\",\"narasumber\":\"-\"}', '', '2021', 'CLASSIC NIGHT', '2024-03-22 04:22:30', '2024-03-22 04:22:30', '0000-00-00 00:00:00'),
-(11, '-', '{\"judul\":\"-\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-11\",\"link\":\"3SzzwZRfHLyEJFSdhM9gVW?si=b0ce528bac70443d\",\"talent\":\"Zahra\",\"narasumber\":\"-\"}', '', '2021', 'TOP 15', '2024-03-22 04:23:03', '2024-03-22 04:23:03', '0000-00-00 00:00:00'),
-(12, '-', '{\"judul\":\"-\",\"hari\":\"Minggu\",\"tanggal\":\"2024-03-25\",\"link\":\"2a8fTWrWjcSFdzstWYGsa8?si=LZSkdRdrRPGh_-bcDMD61w\",\"talent\":\"Aini\",\"narasumber\":\"-\"}', '', '2021', 'RAPMATALKS', '2024-03-22 04:23:35', '2024-03-22 04:23:35', '0000-00-00 00:00:00');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -1331,13 +959,13 @@ INSERT INTO `podcast` (`id`, `key`, `value`, `embed`, `tahun`, `program`, `creat
 --
 
 CREATE TABLE `program` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `program`
@@ -1371,7 +999,7 @@ INSERT INTO `program` (`id`, `key`, `value`, `created_at`, `updated_at`, `delete
 --
 
 CREATE TABLE `settings` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `owner` varchar(255) NOT NULL,
   `slogan` varchar(255) NOT NULL,
   `nama_mtalent` varchar(255) NOT NULL,
@@ -1393,7 +1021,7 @@ CREATE TABLE `settings` (
   `streaming` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `settings`
@@ -1409,13 +1037,13 @@ INSERT INTO `settings` (`id`, `owner`, `slogan`, `nama_mtalent`, `no_mtalent`, `
 --
 
 CREATE TABLE `structure` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `structure`
@@ -1435,13 +1063,13 @@ INSERT INTO `structure` (`id`, `key`, `value`, `created_at`, `updated_at`, `dele
 --
 
 CREATE TABLE `suratkeluar` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `suratkeluar`
@@ -1457,13 +1085,13 @@ INSERT INTO `suratkeluar` (`id`, `key`, `value`, `created_at`, `updated_at`, `de
 --
 
 CREATE TABLE `suratmasuk` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `suratmasuk`
@@ -1479,13 +1107,13 @@ INSERT INTO `suratmasuk` (`id`, `key`, `value`, `created_at`, `updated_at`, `del
 --
 
 CREATE TABLE `suratsp` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `suratsp`
@@ -1502,13 +1130,13 @@ INSERT INTO `suratsp` (`id`, `key`, `value`, `created_at`, `updated_at`, `delete
 --
 
 CREATE TABLE `topchart` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `topchart`
@@ -1525,13 +1153,13 @@ INSERT INTO `topchart` (`id`, `key`, `value`, `created_at`, `updated_at`, `delet
 --
 
 CREATE TABLE `umum` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `umum`
@@ -1547,7 +1175,7 @@ INSERT INTO `umum` (`id`, `key`, `value`, `created_at`, `updated_at`, `deleted_a
 --
 
 CREATE TABLE `users` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `email` varchar(255) NOT NULL,
   `username` varchar(30) DEFAULT NULL,
   `fullname` varchar(255) DEFAULT NULL,
@@ -1559,12 +1187,12 @@ CREATE TABLE `users` (
   `activate_hash` varchar(255) DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL,
   `status_message` varchar(255) DEFAULT NULL,
-  `active` tinyint(1) NOT NULL DEFAULT 0,
-  `force_pass_reset` tinyint(1) NOT NULL DEFAULT 0,
+  `active` tinyint(1) NOT NULL DEFAULT '0',
+  `force_pass_reset` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `users`
@@ -1608,14 +1236,14 @@ INSERT INTO `users` (`id`, `email`, `username`, `fullname`, `user_image`, `passw
 --
 
 CREATE TABLE `videos` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `type` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `videos`
@@ -1631,13 +1259,13 @@ INSERT INTO `videos` (`id`, `key`, `value`, `type`, `created_at`, `updated_at`, 
 --
 
 CREATE TABLE `workshopbroadcast` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `key` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `deleted_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `workshopbroadcast`
@@ -2038,343 +1666,343 @@ ALTER TABLE `workshopbroadcast`
 -- AUTO_INCREMENT for table `about`
 --
 ALTER TABLE `about`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `achievements`
 --
 ALTER TABLE `achievements`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `alumni`
 --
 ALTER TABLE `alumni`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `aruskas`
 --
 ALTER TABLE `aruskas`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `audios`
 --
 ALTER TABLE `audios`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `auth_activation_attempts`
 --
 ALTER TABLE `auth_activation_attempts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `auth_groups`
 --
 ALTER TABLE `auth_groups`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
 --
 ALTER TABLE `auth_permissions`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `auth_reset_attempts`
 --
 ALTER TABLE `auth_reset_attempts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `auth_tokens`
 --
 ALTER TABLE `auth_tokens`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `beritaweb`
 --
 ALTER TABLE `beritaweb`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `capeng`
 --
 ALTER TABLE `capeng`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `crew`
 --
 ALTER TABLE `crew`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `dendadlibs`
 --
 ALTER TABLE `dendadlibs`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `gmpa`
 --
 ALTER TABLE `gmpa`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `iklan`
 --
 ALTER TABLE `iklan`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `infografis`
 --
 ALTER TABLE `infografis`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `inventaris`
 --
 ALTER TABLE `inventaris`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `jadwalpiket`
 --
 ALTER TABLE `jadwalpiket`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `jadwalsiar`
 --
 ALTER TABLE `jadwalsiar`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `kepenyiaran`
 --
 ALTER TABLE `kepenyiaran`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `kerjabakti`
 --
 ALTER TABLE `kerjabakti`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `konten`
 --
 ALTER TABLE `konten`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `labelrekaman`
 --
 ALTER TABLE `labelrekaman`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `lagu`
 --
 ALTER TABLE `lagu`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `livereport`
 --
 ALTER TABLE `livereport`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `maganginternal`
 --
 ALTER TABLE `maganginternal`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `marketing`
 --
 ALTER TABLE `marketing`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `medpart`
 --
 ALTER TABLE `medpart`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `minigames`
 --
 ALTER TABLE `minigames`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `mtalent`
 --
 ALTER TABLE `mtalent`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `newsflash`
 --
 ALTER TABLE `newsflash`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pemancar`
 --
 ALTER TABLE `pemancar`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pemutaranserentak`
 --
 ALTER TABLE `pemutaranserentak`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pengurus`
 --
 ALTER TABLE `pengurus`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `penyiar`
 --
 ALTER TABLE `penyiar`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `personalia`
 --
 ALTER TABLE `personalia`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pesan`
 --
 ALTER TABLE `pesan`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `podcast`
 --
 ALTER TABLE `podcast`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `program`
 --
 ALTER TABLE `program`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `structure`
 --
 ALTER TABLE `structure`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `suratkeluar`
 --
 ALTER TABLE `suratkeluar`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `suratmasuk`
 --
 ALTER TABLE `suratmasuk`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `suratsp`
 --
 ALTER TABLE `suratsp`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `topchart`
 --
 ALTER TABLE `topchart`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `umum`
 --
 ALTER TABLE `umum`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `workshopbroadcast`
 --
 ALTER TABLE `workshopbroadcast`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
